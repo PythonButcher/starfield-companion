@@ -12,3 +12,20 @@
     @apply bg-space-black text-star-white font-mono;
   }
 }
+
+/* Interactive Map Styles */
+.menu-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #eee;
+  transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.star-map-container svg {
+  user-select: none;
+}
