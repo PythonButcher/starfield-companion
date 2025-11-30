@@ -159,8 +159,8 @@ const InteractiveMap = () => {
                     className="star-tooltip"
                     style={{
                         position: 'absolute',
-                        top: 20,
-                        right: 20,
+                        bottom: 20,
+                        left: 20,
                         backgroundColor: 'rgba(0, 0, 0, 0.8)',
                         border: '1px solid #333',
                         padding: '10px',
@@ -172,6 +172,32 @@ const InteractiveMap = () => {
                     <h4 style={{ margin: '0 0 5px 0', color: '#00d4ff' }}>{hoveredSystem.name}</h4>
                     <p style={{ margin: 0, fontSize: '0.9em' }}>{hoveredSystem.faction}</p>
                     <p style={{ margin: 0, fontSize: '0.8em', color: '#aaa' }}>{hoveredSystem.type} Class</p>
+                </div>
+            )}
+
+            {/* Selection Overlay */}
+            {selectedSystem && (
+                <div
+                    className="selection-overlay"
+                    style={{
+                        position: 'absolute',
+                        top: 20,
+                        right: 20,
+                        backgroundColor: 'rgba(11, 12, 21, 0.9)',
+                        border: '1px solid #00d4ff',
+                        padding: '20px',
+                        borderRadius: '8px',
+                        color: 'white',
+                        zIndex: 100,
+                        minWidth: '200px',
+                        backdropFilter: 'blur(5px)',
+                        boxShadow: '0 0 15px rgba(0, 212, 255, 0.2)'
+                    }}
+                >
+                    <h3 style={{ margin: '0 0 10px 0', color: '#00d4ff', fontSize: '1.2em', borderBottom: '1px solid rgba(0, 212, 255, 0.3)', paddingBottom: '5px' }}>TARGET LOCKED</h3>
+                    <div style={{ fontSize: '1.5em', fontWeight: 'bold', marginBottom: '5px' }}>{selectedSystem.name}</div>
+                    <div style={{ color: '#aaa', marginBottom: '10px' }}>{selectedSystem.faction}</div>
+                    <div style={{ fontSize: '0.9em', lineHeight: '1.4' }}>{selectedSystem.description}</div>
                 </div>
             )}
 
