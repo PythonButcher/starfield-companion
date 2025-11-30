@@ -1,11 +1,12 @@
 import React from 'react';
+import InteractiveMap from '../components/InteractiveMap';
 
 const Hub = () => {
     return (
-        <div className="flex flex-col items-center justify-center h-full pt-20">
-            <h1 className="text-4xl font-bold text-hud-blue mb-4 animate-pulse">EXPLORER'S HUB</h1>
-            <div className="border border-hud-blue/50 p-8 rounded bg-space-black/80 backdrop-blur-sm">
-                <p className="text-xl text-star-white tracking-widest">STAR MAP INITIALIZING...</p>
+        <div className="hub-container" style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <h1 style={{ padding: '20px', margin: 0, borderBottom: '1px solid #333' }}>Star Map</h1>
+            <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
+                <InteractiveMap />
             </div>
         </div>
     );
