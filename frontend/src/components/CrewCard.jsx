@@ -6,7 +6,7 @@ const CrewCard = ({ name, role, status, photo, email }) => {
     const borderColor = status === "Active" ? "border-hud-blue" : "border-warning-red";
 
     return (
-        <div className={`flex items-center gap-4 bg-gray-900 border ${borderColor} p-4 rounded-lg shadow-lg hover:bg-gray-800 transition-colors`}>
+        <div className={`flex items-center gap-4 bg-gray-900 border ${borderColor} p-4 rounded-lg shadow-lg hover:bg-gray-800 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(91,192,222,0.3)]`}>
             {/* Profile Photo (or placeholder) */}
             <div className="w-16 h-16 rounded-full overflow-hidden border border-gray-600">
                 <img src={photo || "https://placehold.co/150/0b0c15/e2e2e2?text=?"} alt={name} className="w-full h-full object-cover" />

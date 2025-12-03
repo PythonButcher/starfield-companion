@@ -2,39 +2,40 @@ import React, { useEffect, useState } from 'react'
 
 // StarDate component
 const StardateClock = () => {
-    const [time, setTime] = useState(new Date());
+    const [stardate, setStardate] = useState("");
 
-    // Update time every second
-    // effet pour mettre a jour le temps chaque seconde
     useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentTime(new Date())
-        }, 1000)
-        // nettoyage du setintervale au demontage du composant
-        return clearInterval(interval)
-    }, [])
+        const updateStardate = () => {
+            const now = new Date();
+            const startOfYear = new Date(now.getFullYear(), 0, 0);
+            const diff = now - startOfYear;
+            const oneDay = 1000 * 60 * 60 * 24;
+            const dayOfYear = Math.floor(diff / oneDay);
 
+            // Calculate year percentage
+            const yearPercent = (dayOfYear / 365).toFixed(2).split('.')[1]; // get the decimal part
 
-    // Formatting for the sci-fi look
-    const formattedTime = time.toLocaleTimeString([], { hour12: false });
-    const formattedDate = time.toLocaleDateString([], {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-    }).replace(/\//g, '.');
+            // Sci-fi format: Year.Percent (e.g., 2330.45)
+            // We'll offset the year to make it look futuristic (e.g., +300 years)
+            const sciFiYear = now.getFullYear() + 300;
 
+            setStardate(`${sciFiYear}.${yearPercent}`);
+        };
+
+        updateStardate();
+        const interval = setInterval(updateStardate, 60000); // Update every minute is enough for this format
+
+        return () => clearInterval(interval);
+    }, []);
 
     return (
-        <div className="border border-hud-blue/50 bg-gray-900/80 p-4 rounded text-center shadow-[0_0_10px_rgba(91,192,222,0.1)] min-w-[200px]">
-            <h1 className="text-xs font-bold text-gray-500 uppercase tracking-[0.2em] mb-2 border-b border-gray-700 pb-1">
-                System Time
-            </h1>
-            <p className="text-xl font-mono text-hud-blue tracking-widest font-bold">
-                {formattedTime}
-            </p>
-            <p className="text-sm font-mono text-gray-400 tracking-wider">
-                {formattedDate}
-            </p>
+        <div className="flex items-center gap-2 border-l-2 border-hud-blue/30 pl-4 ml-4">
+            <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">
+                STARDATE
+            </span>
+            <span className="text-lg font-mono text-hud-blue tracking-widest font-bold">
+                {stardate}
+            </span>
         </div>
     );
 };

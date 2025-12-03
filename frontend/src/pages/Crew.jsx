@@ -22,7 +22,7 @@ const Crew = () => {
                 <p className="text-gray-400 text-sm mt-1">PERSONNEL MANIFEST // ACTIVE</p>
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Fix: We map over 'roster' (the list).
                    We call each item 'member' (the person).
                 */}
