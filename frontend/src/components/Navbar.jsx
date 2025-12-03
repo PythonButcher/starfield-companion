@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import StardateClock from './StarDate';
 
 const Navbar = () => {
     return (
@@ -21,7 +22,9 @@ const Navbar = () => {
                     <Link to="/crew" className="text-star-white hover:text-hud-blue transition-colors uppercase text-sm tracking-wider">
                         Crew
                     </Link>
+
                 </div>
+                <StardateClock />
             </div>
         </nav>
     );
