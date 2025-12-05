@@ -1,47 +1,28 @@
-Starfield Companion App - Project Context
+# Starfield Companion App - Project Context
 
-Core Vision
+## Core Vision
+A Nasapunk-inspired companion web application for Starfield players that leans into immersion, narrative enhancement via AI, and strategic assistance. The UI should feel like an in-game console: dark, minimal, clean typography, and holographic accents.
 
-A "Nasapunk" styled companion web application for Starfield players. It focuses on immersion, narrative enhancement via AI, and strategic logistical assistance. The app mimics the in-game UI aesthetic: dark, minimal, clean typography, and holographic elements.
+## Architecture (Current)
+- **Framework**: Monolithic Next.js 14+ (App Router)
+- **Styling**: Tailwind CSS with custom space-ready palette
+- **APIs**: App Router route handlers (serverless-style) backed by lightweight in-memory data today; ready to swap to a persistent store later
+- **Data**: Local JSON/JS seeds in `lib/data` for crew, systems, and initial logs
 
-Architecture
+## Domain Entities
+- **ExpeditionLog**: ID, title, planet, date, raw notes/content, optional AI narrative, tags
+- **PlanetProfile**: Static data + user notes for hazards, resources, fauna
+- **CrewMember**: Roster with skills and traits
+- **MediaItem**: Screenshots or videos attached to logs
 
-Frontend: React (Vite) + Tailwind CSS (styled for high-contrast sci-fi look).
+## Core Modules (The "Big 5")
+- **Explorer’s Hub**: Dashboard with star map visualization and highlights
+- **Quantum Journal**: Log list + writing interface and "Generate Narrative" trigger
+- **PlanetPulse**: Planet database and hazard/resource intel
+- **Crew Command**: Roster management
+- **CosmoDrag**: Drag-and-drop media manager for organizing screenshots
 
-Backend: Flask (Python).
-
-Database: SQLite (initially), scalable to Postgres.
-
-AI Layer: OpenAI API (or similar) for narrative generation and strategy.
-
-Domain Entities
-
-ExpeditionLog: User entries with ID, Title, Planet, Date, Raw Notes, AI Narrative, Tags.
-
-PlanetProfile: Static data + user notes on Hazards, Resources, Fauna.
-
-CrewMember: Roster with Skills and Traits.
-
-MediaItem: Screenshots/Videos attached to logs.
-
-Core Modules (The "Big 5")
-
-Explorer’s Hub: Dashboard. Star map visualization, recent logs, AI Briefing panel.
-
-Quantum Journal: The core writing interface. Log creation, "Generate Narrative" AI trigger.
-
-PlanetPulse: Planet database. Hazard analysis, resource cataloging.
-
-Crew Command: Roster management and optimization algorithms.
-
-CosmoDrag: Drag-and-drop media manager for organizing screenshots.
-
-Key API Endpoints
-
-POST /api/generate_narrative: Transforms raw notes into a Captain's Log.
-
-GET/POST /api/logs: CRUD for ExpeditionLogs.
-
-POST /api/strategize: AI analysis of current loadout vs. planet hazards.
-
-POST /api/resourcehunt: Logic to find planets with specific resources.
+## Key API Endpoints (Next.js Routes)
+- `POST /api/generate_narrative`: Transform raw notes into a captain's log (placeholder mock)
+- `GET/POST /api/logs`: CRUD for expedition logs (in-memory seed with IDs)
+- `GET /api/health`: Simple health check for uptime verification
