@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Sol",
+        "x": 0,
+        "y": 0,
+        "type": "G2V",
+        "faction": "United Colonies",
+        "description": "The birthplace of humanity."
+    },
+    {
+        "id": 2,
+        "name": "Alpha Centauri",
+        "x": 120,
+        "y": -80,
+        "type": "G2V",
+        "faction": "United Colonies",
+        "description": "Capital of the UC."
+    },
+    {
+        "id": 3,
+        "name": "Cheyenne",
+        "x": -150,
+        "y": 200,
+        "type": "K",
+        "faction": "Freestar Collective",
+        "description": "Home of Akila City."
+    },
+    {
+        "id": 4,
+        "name": "Volii",
+        "x": 200,
+        "y": 150,
+        "type": "A",
+        "faction": "Freestar Collective",
+        "description": "A system known for Neon."
+    },
+    {
+        "id": 5,
+        "name": "Porrima",
+        "x": -300,
+        "y": -100,
+        "type": "F",
+        "faction": "Neutral",
+        "description": "A resort system."
+    },
+    {
+        "id": 6,
+        "name": "Kryx",
+        "x": 400,
+        "y": -50,
+        "type": "M",
+        "faction": "Crimson Fleet",
+        "description": "Headquarters of the Crimson Fleet."
+    },
+    {
+        "id": 7,
+        "name": "Narion",
+        "x": 50,
+        "y": -250,
+        "type": "K",
+        "faction": "United Colonies",
+        "description": "One of the settled systems."
+    },
+    {
+        "id": 8,
+        "name": "Olympus",
+        "x": -200,
+        "y": 50,
+        "type": "G",
+        "faction": "Neutral",
+        "description": "Home to the Dream Home."
+    },
+    {
+        "id": 9,
+        "name": "Bradbury",
+        "x": 300,
+        "y": 300,
+        "type": "M",
+        "faction": "Neutral",
+        "description": "A remote system."
+    },
+    {
+        "id": 10,
+        "name": "Bessel",
+        "x": -400,
+        "y": -300,
+        "type": "K",
+        "faction": "Neutral",
+        "description": "Rich in resources."
+    }
+]
