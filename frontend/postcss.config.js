@@ -1,26 +1,29 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-import { createRequire } from 'module';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const require = createRequire(import.meta.url);
 
-const resolveLocalPlugin = (pluginName) => {
+const resolveLocalPlugin = async (pluginName) => {
   const candidateRoots = [__dirname, path.join(__dirname, '..')];
   for (const root of candidateRoots) {
     const candidate = path.join(root, 'node_modules', pluginName);
     if (fs.existsSync(candidate)) {
-      return require(candidate);
+      return import(pathToFileURL(candidate));
     }
   }
-  return require(pluginName);
+  return import(pluginName);
 };
+
+const [{ default: tailwindcss }, { default: autoprefixer }] = await Promise.all([
+  resolveLocalPlugin('tailwindcss'),
+  resolveLocalPlugin('autoprefixer'),
+]);
 
 export default {
   plugins: {
-    tailwindcss: resolveLocalPlugin('tailwindcss'),
-    autoprefixer: resolveLocalPlugin('autoprefixer'),
+    tailwindcss,
+    autoprefixer,
   },
 };
