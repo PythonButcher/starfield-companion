@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model ExpeditionLog {
+  id          Int      @id @default(autoincrement())
+  title       String
+  planetName  String
+  rawNotes    String?
+  aiNarrative String?
+  createdAt   DateTime @default(now())
+}
+
+model PlanetProfile {
+  id       Int     @id @default(autoincrement())
+  name     String  @unique
+  resources String?
+  hazards   String?
+}
