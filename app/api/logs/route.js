@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { createLog, getAllLogs } from '@/lib/logs';
+import { createLog, getAllLogs } from '../../../lib/logs';
 
 export async function GET() {
   const logs = await getAllLogs();

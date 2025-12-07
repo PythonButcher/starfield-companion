@@ -1,4 +1,4 @@
-import crewData from '@/lib/data/crew_data.json';
+import crewData from '../../lib/data/crew_data.json';
 import CrewCard from '../components/CrewCard';
 
 export const metadata = { title: 'Crew | Starfield Companion' };
