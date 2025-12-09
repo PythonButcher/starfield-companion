@@ -39,5 +39,28 @@ def generate_narrative():
     # Placeholder for AI integration
     return jsonify({"narrative": "AI processing... [MOCK RESPONSE]"})
 
+@app.route('/api/systems', methods=['GET'])
+def get_systems_data():
+    """
+    Reads the static JSON file and serves it as an API response.
+    """
+    try:
+        # We need to find the file relative to where main.py is located.
+        # os.path.dirname(__file__) gets the folder this script is in (backend/).
+        current_directory = os.path.dirname(__file__)
+        file_path = os.path.join(current_directory, 'starfield_universe.json')
+
+        # Open the file in 'read' mode ('r')
+        with open(file_path, 'r') as file:
+            # json.load() converts the text file into a Python list of dictionaries
+            data = json.load(file)
+            
+        # jsonify converts that Python list back into a standard JSON HTTP response
+        return jsonify(data)
+
+    except FileNotFoundError:
+        # It's good practice to handle errors in case the file goes missing
+        return jsonify({"error": "System data not found"}), 404
+
 if __name__ == '__main__':
     app.run(debug=True)
