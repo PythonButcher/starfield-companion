@@ -5,6 +5,7 @@ import Hub from './pages/Hub';
 import Journal from './pages/Journal';
 import LogEntry from './pages/LogEntry';
 import Crew from './pages/Crew';
+import RamManager from './pages/RamManager';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/journal" element={<Journal />} />
           <Route path="/journal/new" element={<LogEntry />} />
           <Route path="/crew" element={<Crew />} />
+          <Route path="/ram" element={<RamManager />} />
           {/* Placeholders for other routes */}
           <Route path="/planet-pulse" element={<div className="text-center mt-20 text-xl text-hud-blue animate-pulse">PLANET PULSE MODULE OFFLINE</div>} />
 

@@ -1,4 +1,6 @@
 from flask import Flask, jsonify, request
+import json
+import os
 from flask_cors import CORS
 from config import Config
 from models import db, ExpeditionLog, PlanetProfile
@@ -38,6 +40,26 @@ def get_logs():
 def generate_narrative():
     # Placeholder for AI integration
     return jsonify({"narrative": "AI processing... [MOCK RESPONSE]"})
+
+@app.route('/api/research', methods=['GET'])
+def get_research_data():
+    try:
+        # readable_path for clean data
+        data_path = os.path.join(app.root_path, 'data', 'research_clean.json')
+        
+        # Fallback to raw data if clean doesn't exist
+        if not os.path.exists(data_path):
+            data_path = os.path.join(app.root_path, 'data', 'research_laboratory.json')
+            
+        if not os.path.exists(data_path):
+            return jsonify({"error": "Research data file not found"}), 500
+
+        with open(data_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({"error": f"Failed to load research data: {str(e)}"}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

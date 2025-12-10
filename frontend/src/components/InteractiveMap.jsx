@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import universeData from '../../../backend/starfield_universe.json';
+import universeData from '../../../backend/data/starfield_universe.json';
 
 const InteractiveMap = () => {
     const svgRef = useRef(null);

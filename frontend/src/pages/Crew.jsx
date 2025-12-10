@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import crewData from '../data/crew_data.json';
+import crewData from '../../../backend/data/crew_data.json';
 import CrewCard from '../components/CrewCard';
 
 

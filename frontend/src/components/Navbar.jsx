@@ -23,6 +23,9 @@ const Navbar = () => {
                         <Link to="/crew" className="text-star-white hover:text-hud-blue transition-colors uppercase text-sm tracking-wider">
                             Crew
                         </Link>
+                        <Link to="/ram" className="text-star-white hover:text-hud-blue transition-colors uppercase text-sm tracking-wider">
+                            R.A.M.
+                        </Link>
                     </div>
                 </div>
                 <StardateClock />
