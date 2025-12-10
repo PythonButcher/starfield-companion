@@ -44,5 +44,15 @@ class BackendTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn("narrative", response.json)
 
+    def test_get_research_data(self):
+        response = self.app.get('/api/research')
+        # Since the file exists in the real fs, but we are mocking things - wait, 
+        # flask test client will use the real file system for file operations unless mocked.
+        # The prompt implies we want to read the real file.
+        # Let's verify status code is 200.
+        self.assertEqual(response.status_code, 200)
+        data = response.json
+        self.assertIsInstance(data, (list, dict))
+
 if __name__ == '__main__':
     unittest.main()
