@@ -1,4 +1,6 @@
 from flask import Flask, jsonify, request
+import json
+import os
 from flask_cors import CORS
 from config import Config
 from models import db, ExpeditionLog, PlanetProfile
@@ -39,28 +41,25 @@ def generate_narrative():
     # Placeholder for AI integration
     return jsonify({"narrative": "AI processing... [MOCK RESPONSE]"})
 
-@app.route('/api/systems', methods=['GET'])
-def get_systems_data():
-    """
-    Reads the static JSON file and serves it as an API response.
-    """
+@app.route('/api/research', methods=['GET'])
+def get_research_data():
     try:
-        # We need to find the file relative to where main.py is located.
-        # os.path.dirname(__file__) gets the folder this script is in (backend/).
-        current_directory = os.path.dirname(__file__)
-        file_path = os.path.join(current_directory, 'starfield_universe.json')
-
-        # Open the file in 'read' mode ('r')
-        with open(file_path, 'r') as file:
-            # json.load() converts the text file into a Python list of dictionaries
-            data = json.load(file)
+        # readable_path for clean data
+        data_path = os.path.join(app.root_path, 'data', 'research_clean.json')
+        
+        # Fallback to raw data if clean doesn't exist
+        if not os.path.exists(data_path):
+            data_path = os.path.join(app.root_path, 'data', 'research_laboratory.json')
             
-        # jsonify converts that Python list back into a standard JSON HTTP response
-        return jsonify(data)
+        if not os.path.exists(data_path):
+            return jsonify({"error": "Research data file not found"}), 500
 
-    except FileNotFoundError:
-        # It's good practice to handle errors in case the file goes missing
-        return jsonify({"error": "System data not found"}), 404
+        with open(data_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            
+        return jsonify(data)
+    except Exception as e:
+        return jsonify({"error": f"Failed to load research data: {str(e)}"}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
