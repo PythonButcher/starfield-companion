@@ -25,3 +25,9 @@ dist-ssr
 
 # Databases
 *.db
+
+# Python
+venv/
+.venv/
+env/
+__pycache__/
