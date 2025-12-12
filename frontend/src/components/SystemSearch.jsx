@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import universeData from '../../../backend/data/starfield_universe.json';
+import { useSelectedSystems } from '../context/SelectedSystemsContext';
 
 const SystemSearch = () => {
     const [query, setQuery] = useState('');
@@ -9,6 +10,7 @@ const SystemSearch = () => {
     const [selectedIndex, setSelectedIndex] = useState(-1);
     const searchRef = useRef(null);
     const navigate = useNavigate();
+    const { selectSystem } = useSelectedSystems();
 
     // Filter systems based on query
     useEffect(() => {
@@ -41,6 +43,7 @@ const SystemSearch = () => {
         console.log(`[NAVIGATIONAL COMPUTER] Plotting course to ${system.name}...`);
         setQuery(system.name);
         setIsOpen(false);
+        selectSystem(system);
         // In a real implementation, this would update a Context or URL param
         navigate('/'); // Ensure we are on the Hub/Map view
     };

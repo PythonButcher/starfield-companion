@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import universeData from '../../../backend/data/starfield_universe.json';
+import { useSelectedSystems } from '../context/SelectedSystemsContext';
 
 const InteractiveMap = () => {
     const svgRef = useRef(null);
@@ -7,8 +8,10 @@ const InteractiveMap = () => {
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
     const [hoveredSystem, setHoveredSystem] = useState(null);
-    const [selectedSystem, setSelectedSystem] = useState(null);
+    //const [ choosenSystem, setChoosenSystem] = useState(null);
     const [contextMenu, setContextMenu] = useState(null);
+    const { selectedSystem, selectSystem } = useSelectedSystems();
+
 
     // Load data - in a real app this might be an API call, but importing JSON works for now
     // Note: Vite/React might not like importing from outside src directly without config, 
@@ -65,7 +68,7 @@ const InteractiveMap = () => {
 
     const handleSystemClick = (e, system) => {
         e.stopPropagation();
-        setSelectedSystem(system);
+        selectSystem(system);
         console.log("Selected System:", system);
         // Callback to open side panel would go here
     };
@@ -144,7 +147,7 @@ const InteractiveMap = () => {
                         />
 
                         {/* Label (only show on zoom in or hover/select) */}
-                        {(viewBox.width < 800 || hoveredSystem?.id === system.id || selectedSystem?.id === system.id) && (
+                        {(viewBox.width < 800 || hoveredSystem?.id === system.id || (selectedSystem?.id === system.id)) && (
                             <text y={20} textAnchor="middle" fill="white" fontSize="12" style={{ pointerEvents: 'none' }}>
                                 {system.name}
                             </text>
