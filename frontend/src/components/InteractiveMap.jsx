@@ -4,13 +4,14 @@ import { useSelectedSystems } from '../context/SelectedSystemsContext';
 
 const InteractiveMap = () => {
     const svgRef = useRef(null);
-    const [viewBox, setViewBox] = useState({ x: -500, y: -500, width: 1000, height: 1000 });
+    const INITIAL_VIEW_STATE = { x: -500, y: -500, width: 1000, height: 1000 };
+    const [viewBox, setViewBox] = useState(INITIAL_VIEW_STATE);
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
     const [hoveredSystem, setHoveredSystem] = useState(null);
     //const [ choosenSystem, setChoosenSystem] = useState(null);
     const [contextMenu, setContextMenu] = useState(null);
-    const { selectedSystem, selectSystem } = useSelectedSystems();
+    const { selectedSystem, selectSystem, clearSystem } = useSelectedSystems();
 
 
     // Load data - in a real app this might be an API call, but importing JSON works for now
@@ -66,6 +67,23 @@ const InteractiveMap = () => {
         setIsDragging(false);
     };
 
+    const handleBackgroundClick = (e) => {
+        // Calculate distance from drag start to distinguish click from drag
+        const dx = e.clientX - dragStart.x;
+        const dy = e.clientY - dragStart.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        // If moved less than 5px, it's a click, not a drag operation
+        if (dist < 5) {
+            resetView();
+        }
+    };
+
+    const resetView = () => {
+        clearSystem();
+        setViewBox(INITIAL_VIEW_STATE);
+    };
+
     const handleSystemClick = (e, system) => {
         e.stopPropagation();
         selectSystem(system);
@@ -89,6 +107,18 @@ const InteractiveMap = () => {
     useEffect(() => {
         window.addEventListener('click', closeContextMenu);
         return () => window.removeEventListener('click', closeContextMenu);
+    }, []);
+
+    // Handle Escape Key to Reset
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                resetView();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
     }, []);
 
     // Cinematic Lock-on Effect
@@ -118,6 +148,7 @@ const InteractiveMap = () => {
                 onMouseMove={handleMouseMove}
                 onMouseUp={handleMouseUp}
                 onMouseLeave={handleMouseUp}
+                onClick={handleBackgroundClick}
             >
                 {/* Grid (Optional, simple lines) */}
                 <defs>
