@@ -91,6 +91,22 @@ const InteractiveMap = () => {
         return () => window.removeEventListener('click', closeContextMenu);
     }, []);
 
+    // Cinematic Lock-on Effect
+    useEffect(() => {
+        if (selectedSystem) {
+            // Fixed cinematic zoom level (300-500 range as requested)
+            const targetWidth = 400;
+            const targetHeight = 400;
+
+            setViewBox({
+                x: selectedSystem.x - (targetWidth / 2),
+                y: selectedSystem.y - (targetHeight / 2),
+                width: targetWidth,
+                height: targetHeight
+            });
+        }
+    }, [selectedSystem]);
+
     return (
         <div className="star-map-container" style={{ width: '100%', height: '100%', overflow: 'hidden', position: 'relative', backgroundColor: 'transparent' }}>
             <svg
