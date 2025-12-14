@@ -1,14 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 import universeData from '../../../backend/data/starfield_universe.json';
+import { useSelectedSystems } from '../context/SelectedSystemsContext';
 
 const InteractiveMap = () => {
     const svgRef = useRef(null);
-    const [viewBox, setViewBox] = useState({ x: -500, y: -500, width: 1000, height: 1000 });
+    const INITIAL_VIEW_STATE = { x: -500, y: -500, width: 1000, height: 1000 };
+    const [viewBox, setViewBox] = useState(INITIAL_VIEW_STATE);
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
     const [hoveredSystem, setHoveredSystem] = useState(null);
-    const [selectedSystem, setSelectedSystem] = useState(null);
+    //const [ choosenSystem, setChoosenSystem] = useState(null);
     const [contextMenu, setContextMenu] = useState(null);
+    const { selectedSystem, selectSystem, clearSystem } = useSelectedSystems();
+
 
     // Load data - in a real app this might be an API call, but importing JSON works for now
     // Note: Vite/React might not like importing from outside src directly without config, 
@@ -63,9 +67,26 @@ const InteractiveMap = () => {
         setIsDragging(false);
     };
 
+    const handleBackgroundClick = (e) => {
+        // Calculate distance from drag start to distinguish click from drag
+        const dx = e.clientX - dragStart.x;
+        const dy = e.clientY - dragStart.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        // If moved less than 5px, it's a click, not a drag operation
+        if (dist < 5) {
+            resetView();
+        }
+    };
+
+    const resetView = () => {
+        clearSystem();
+        setViewBox(INITIAL_VIEW_STATE);
+    };
+
     const handleSystemClick = (e, system) => {
         e.stopPropagation();
-        setSelectedSystem(system);
+        selectSystem(system);
         console.log("Selected System:", system);
         // Callback to open side panel would go here
     };
@@ -88,6 +109,34 @@ const InteractiveMap = () => {
         return () => window.removeEventListener('click', closeContextMenu);
     }, []);
 
+    // Handle Escape Key to Reset
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                resetView();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, []);
+
+    // Cinematic Lock-on Effect
+    useEffect(() => {
+        if (selectedSystem) {
+            // Fixed cinematic zoom level (300-500 range as requested)
+            const targetWidth = 400;
+            const targetHeight = 400;
+
+            setViewBox({
+                x: selectedSystem.x - (targetWidth / 2),
+                y: selectedSystem.y - (targetHeight / 2),
+                width: targetWidth,
+                height: targetHeight
+            });
+        }
+    }, [selectedSystem]);
+
     return (
         <div className="star-map-container" style={{ width: '100%', height: '100%', overflow: 'hidden', position: 'relative', backgroundColor: 'transparent' }}>
             <svg
@@ -99,6 +148,7 @@ const InteractiveMap = () => {
                 onMouseMove={handleMouseMove}
                 onMouseUp={handleMouseUp}
                 onMouseLeave={handleMouseUp}
+                onClick={handleBackgroundClick}
             >
                 {/* Grid (Optional, simple lines) */}
                 <defs>
@@ -144,7 +194,7 @@ const InteractiveMap = () => {
                         />
 
                         {/* Label (only show on zoom in or hover/select) */}
-                        {(viewBox.width < 800 || hoveredSystem?.id === system.id || selectedSystem?.id === system.id) && (
+                        {(viewBox.width < 800 || hoveredSystem?.id === system.id || (selectedSystem?.id === system.id)) && (
                             <text y={20} textAnchor="middle" fill="white" fontSize="12" style={{ pointerEvents: 'none' }}>
                                 {system.name}
                             </text>
