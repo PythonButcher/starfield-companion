@@ -6,17 +6,17 @@ const Star = ({ system, selected, showLabel, onClick, onContextMenu, onHover, di
     const size = selected ? radius + 2 : radius;
 
     return (
-        <g
-            transform={`translate(${system.x}, ${system.y})`}
-            onClick={(e) => onClick(e, system)}
-            onContextMenu={(e) => onContextMenu(e, system)}
-            onMouseEnter={() => onHover(system)}
-            onMouseLeave={() => onHover(null)}
-            style={{ cursor: 'pointer', opacity: dimmed ? 0.35 : 1, transition: 'opacity 0.2s ease, transform 0.2s ease', transform: dimmed ? 'scale(0.9)' : 'scale(1)' }}
-        >
-            {selected && (
-                <g className="reticle">
-                    <path d="M -15 -15 L -5 -15 M -15 -15 L -15 -5" stroke="#00d4ff" strokeWidth="2" fill="none" />
+        <g transform={`translate(${system.x}, ${system.y})`}>
+            <g
+                onClick={(e) => onClick(e, system)}
+                onContextMenu={(e) => onContextMenu(e, system)}
+                onMouseEnter={() => onHover(system)}
+                onMouseLeave={() => onHover(null)}
+                style={{ cursor: 'pointer', opacity: dimmed ? 0.35 : 1, transition: 'opacity 0.2s ease, transform 0.2s ease', transform: dimmed ? 'scale(0.9)' : 'scale(1)' }}
+            >
+                {selected && (
+                    <g className="reticle">
+                        <path d="M -15 -15 L -5 -15 M -15 -15 L -15 -5" stroke="#00d4ff" strokeWidth="2" fill="none" />
                     <path d="M 15 -15 L 5 -15 M 15 -15 L 15 -5" stroke="#00d4ff" strokeWidth="2" fill="none" />
                     <path d="M -15 15 L -5 15 M -15 15 L -15 5" stroke="#00d4ff" strokeWidth="2" fill="none" />
                     <path d="M 15 15 L 5 15 M 15 15 L 15 5" stroke="#00d4ff" strokeWidth="2" fill="none" />
@@ -29,11 +29,12 @@ const Star = ({ system, selected, showLabel, onClick, onContextMenu, onHover, di
                 className="star-pulse"
                 style={{ '--base-radius': size }}
             />
-            {showLabel && (
-                <text y={20} textAnchor="middle" fill="white" fontSize="12" style={{ pointerEvents: 'none' }}>
-                    {system.name}
-                </text>
-            )}
+                {showLabel && (
+                    <text y={20} textAnchor="middle" fill="white" fontSize="12" style={{ pointerEvents: 'none' }}>
+                        {system.name}
+                    </text>
+                )}
+            </g>
         </g>
     );
 };
