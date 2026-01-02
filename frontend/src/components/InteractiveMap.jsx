@@ -190,40 +190,40 @@ const InteractiveMap = () => {
     );
 
     const filterControls = (
-        <div className="absolute top-4 left-4 flex gap-3 bg-[rgba(11,12,21,0.8)] border border-[rgba(91,192,222,0.3)] rounded-lg p-3 backdrop-blur z-20">
-            <div className="flex flex-col text-xs text-star-white gap-1">
-                <label className="opacity-70">Faction</label>
-                <select
-                    value={factionFilter}
-                    onChange={(e) => setFactionFilter(e.target.value)}
-                    className="bg-transparent border border-[rgba(91,192,222,0.4)] rounded px-2 py-1 text-star-white"
-                >
-                    {uniqueFactions.map((faction) => (
-                        <option key={faction} value={faction} className="bg-space-black">{faction}</option>
-                    ))}
-                </select>
-            </div>
-            <div className="flex flex-col text-xs text-star-white gap-1">
-                <label className="opacity-70">Spectral Type</label>
-                <select
-                    value={typeFilter}
-                    onChange={(e) => setTypeFilter(e.target.value)}
-                    className="bg-transparent border border-[rgba(91,192,222,0.4)] rounded px-2 py-1 text-star-white"
-                >
-                    {uniqueTypes.map((type) => (
-                        <option key={type} value={type} className="bg-space-black">{type}</option>
-                    ))}
-                </select>
-            </div>
-            <div className="flex flex-col justify-between text-xs text-star-white gap-1">
+        <div className="absolute top-4 left-4 flex flex-col gap-2 bg-[rgba(11,12,21,0.8)] border border-[rgba(91,192,222,0.3)] rounded-lg p-3 backdrop-blur z-20">
+            <div className="flex flex-wrap items-center gap-4 text-star-white">
+                <div className="flex items-center gap-2 text-xs">
+                    <span className="toolbar-label">Faction</span>
+                    <select
+                        value={factionFilter}
+                        onChange={(e) => setFactionFilter(e.target.value)}
+                        className="hud-select"
+                    >
+                        {uniqueFactions.map((faction) => (
+                            <option key={faction} value={faction} className="bg-space-black">{faction}</option>
+                        ))}
+                    </select>
+                </div>
+                <div className="flex items-center gap-2 text-xs">
+                    <span className="toolbar-label">Spectral Type</span>
+                    <select
+                        value={typeFilter}
+                        onChange={(e) => setTypeFilter(e.target.value)}
+                        className="hud-select"
+                    >
+                        {uniqueTypes.map((type) => (
+                            <option key={type} value={type} className="bg-space-black">{type}</option>
+                        ))}
+                    </select>
+                </div>
                 <button
-                    className="hud-button"
+                    className="hud-button h-9 whitespace-nowrap"
                     onClick={() => setShowMinimap((prev) => !prev)}
                 >
                     {showMinimap ? 'Hide Mini-map' : 'Show Mini-map'}
                 </button>
-                <div className="text-[10px] opacity-70">Zoom: mouse wheel, +/- keys. Pan: drag or arrows.</div>
             </div>
+            <div className="text-[10px] opacity-70 leading-tight pl-[2px]">Zoom: mouse wheel, +/- keys. Pan: drag or arrows.</div>
         </div>
     );
 
