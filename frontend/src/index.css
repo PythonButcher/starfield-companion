@@ -29,3 +29,35 @@
 .star-map-container svg {
   user-select: none;
 }
+
+.hud-button {
+  @apply text-star-white border border-[rgba(91,192,222,0.5)] rounded px-3 h-9 text-sm bg-[rgba(11,12,21,0.7)] hover:bg-[rgba(91,192,222,0.15)] transition flex items-center justify-center leading-tight tracking-wide;
+}
+
+.hud-select {
+  @apply bg-transparent border border-[rgba(91,192,222,0.4)] rounded px-3 h-9 text-sm text-star-white focus:outline-none focus:border-[rgba(91,192,222,0.7)] tracking-wide;
+}
+
+.toolbar-label {
+  @apply opacity-70 uppercase tracking-wide text-[11px] leading-none whitespace-nowrap;
+}
+
+@keyframes starPulse {
+  0% {
+    r: var(--base-radius);
+  }
+  50% {
+    r: calc(var(--base-radius) + 1px);
+  }
+  100% {
+    r: var(--base-radius);
+  }
+}
+
+.star-pulse {
+  animation: starPulse 2.6s ease-in-out infinite;
+}
+
+.minimap-panel {
+  box-shadow: 0 0 12px rgba(91, 192, 222, 0.2);
+}
