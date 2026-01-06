@@ -6,6 +6,7 @@ import { SelectionOverlay, StarTooltip } from './StarInfoOverlays';
 import StarMapMinimap from './StarMapMinimap';
 import usePanZoom from '../hooks/usePanZoom';
 import { getLegendEntries } from '../utils/starStyles';
+import ContextMenu from '../context/ContextMenu';
 
 const INITIAL_VIEW_STATE = { x: -500, y: -500, width: 1000, height: 1000 };
 const ZOOM_FACTOR = 1.1;
@@ -104,6 +105,11 @@ const InteractiveMap = () => {
             system,
         });
     };
+
+    const handleContextMenuAction = (command, context) => {
+    console.log("Command selected:", command, "for", context.system.name);
+    };
+
 
     const closeContextMenu = () => setContextMenu(null);
 
@@ -312,30 +318,12 @@ const InteractiveMap = () => {
             <StarTooltip system={hoveredSystem} />
             <SelectionOverlay system={selectedSystem} />
 
-            {contextMenu && (
-                <div
-                    className="context-menu"
-                    style={{
-                        position: 'absolute',
-                        top: contextMenu.y,
-                        left: contextMenu.x,
-                        backgroundColor: '#1a1a1a',
-                        border: '1px solid #444',
-                        borderRadius: '4px',
-                        zIndex: 1000,
-                        minWidth: '150px',
-                    }}
-                    onClick={(e) => e.stopPropagation()}
-                >
-                    <div style={{ padding: '8px 12px', borderBottom: '1px solid #333', color: '#888', fontSize: '0.8em' }}>
-                        {contextMenu.system.name} Actions
-                    </div>
-                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                        <li className="menu-item" onClick={() => console.log('Plot Course to', contextMenu.system.name)}>Plot Course</li>
-                        <li className="menu-item" onClick={() => console.log('Add Log for', contextMenu.system.name)}>Add Log</li>
-                        <li className="menu-item" onClick={() => console.log('View Profile of', contextMenu.system.name)}>View Planet Profile</li>
-                    </ul>
-                </div>
+           {contextMenu && (
+            <ContextMenu
+                context={contextMenu}
+                onClose={closeContextMenu}
+                onAction={handleContextMenuAction}
+            />
             )}
         </div>
     );
