@@ -1,8 +1,8 @@
 import React from "react";
-import { menuContainer } from "./ContextMenu.styles";
+import {  menuContainer, menuHeader, menuItem, menuItemDescription } from "./ContextMenu.styles";
 import { getContextMenuCommands } from "../commands/contextMenuCommands";
 
-export default function ContextMenu({ context }) {
+export default function ContextMenu({ context, onAction }) {
 
   if (!context) return null;
 
@@ -10,29 +10,31 @@ export default function ContextMenu({ context }) {
 
   const commands = Object.values(getContextMenuCommands);
 
-  const handleCommandClick = (cmd) => {
-  onAction?.(cmd, context);
-  onClose?.();
+  const handleCommandClick = (action) => {
+  onAction(action, context);
 };
 
 
    return (
         <div
-    style={{ ...menuContainer, top: y, left: x }}
-    onClick={(e) => e.stopPropagation()}
-    onContextMenu={(e) => e.preventDefault()}
+        style={{ ...menuContainer, top: context.y, left: context.x }}
+        onClick={(e) => e.stopPropagation()}
+        onContextMenu={(e) => e.preventDefault()}
     >
-    <div style={{ marginBottom: "6px", fontWeight: "bold" }}>
+    <div style={menuHeader}>
         {system?.name}
     </div>
 
     {commands.map((cmd) => (
-        <div key={cmd.id} 
-            style={{ padding: "4px 0" }}
-            onClick={() => handleCommandClick(cmd)}
-            >
-        {cmd.display}
-        
+        <div
+        key={cmd.id}
+        style={menuItem}
+        onClick={() => handleCommandClick(cmd.action)}
+        onMouseEnter={(e) => (e.currentTarget.style.background = "#1e293b")}
+        onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
+        >
+        <div>{cmd.display}</div>
+        <div style={menuItemDescription}>{cmd.description}</div>
         </div>
     ))}
     </div>

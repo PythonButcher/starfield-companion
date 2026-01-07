@@ -106,12 +106,15 @@ const InteractiveMap = () => {
         });
     };
 
-    const handleContextMenuAction = (command, context) => {
-    console.log("Command selected:", command, "for", context.system.name);
+    const closeContextMenu = () => setContextMenu(null);
+
+   const handleContextMenuAction = (action, context) => {
+    if (action === "plot_course") {
+        selectSystem(context.system);
+         closeContextMenu();
+    }
     };
 
-
-    const closeContextMenu = () => setContextMenu(null);
 
     useEffect(() => {
         window.addEventListener('click', closeContextMenu);
