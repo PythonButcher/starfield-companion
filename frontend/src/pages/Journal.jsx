@@ -55,9 +55,9 @@ const Journal = () => {
                     
                 ))}
              {/* Drop zone dynamically positioned toward the bottom */}
-        <div className="flex justify-center mt-200 mb-10">
-            <CosmoDropZone />
+        <div className="flex justify-center mt-200 mb-10">   
         </div>
+        <CosmoDropZone className="flex justify-center mt-100 mb-100"/>
             </div>
         </div>
     );

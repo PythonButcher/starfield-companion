@@ -46,7 +46,7 @@ const CosmoDropZone = ({ data }) => {
         padding: '20px',
         border: hovering ? '1px solid #00bfff' : '1px dashed #3a3f47',
         borderRadius: '6px',
-        width: '380px',
+        width: '480px',
         textAlign: 'center',
         boxShadow: hovering
           ? '0 0 12px 2px rgba(0, 191, 255, 0.4)'

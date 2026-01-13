@@ -21,6 +21,7 @@ export function registerHandler(handler) {
  * For now: no priorities, no async guarantees.
  */
 export function dispatch(payload, context) {
+  console.log(payload, dispatch, "We have this these handlers: ", {registerHandler})
   for (const handler of handlers) {
     try {
       if (handler.canHandle(payload, context)) {
