@@ -1,10 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'; // Added useLocation for context
 import StardateClock from './StarDate';
 import SystemSearch from './SystemSearch';
 import DriveBy from '../pages/DriveBy'; // <-- REQUIRED import
 
 const Navbar = () => {
+    // We define the context here and pass it down
+    const location = useLocation();
+    const routeContext = { route: location.pathname };
+
     return (
         <nav className="bg-space-black border-b border-hud-blue/30 p-4 sticky top-0 z-50 backdrop-blur-sm bg-opacity-90">
             <div className="container mx-auto flex justify-between items-center">
@@ -45,20 +49,16 @@ const Navbar = () => {
                             to="/ram"
                             className="text-star-white hover:text-hud-blue transition-colors uppercase text-xs tracking-[0.2em] font-bold border-b-2 border-transparent hover:border-hud-blue py-1"
                         >
-                            R.A.M.
+                           R.A.M.
                         </Link>
-                        {/* DriveBy trigger + dropdown */}
-                        <div className="relative driveby-wrapper">
-                            <div
-                                className="text-star-white hover:text-hud-blue transition-colors uppercase text-xs tracking-[0.2em] font-bold border-b-2 border-transparent hover:border-hud-blue py-1 cursor-pointer"
-                            >
-                                Drive By
-                            </div>
-                            {/* Dropdown panel */}
-                            <DriveBy />
+                        {/* Navbar.jsx - Simplified */}
+                        <div className="relative">
+                            {/* Remove the extra <div>Drive By</div> and just use the component */}
+                            <DriveBy context={routeContext} />
                         </div>
                     </div>
                 </div>
+
                 {/* Right Side: Search & Clock */}
                 <div className="flex items-center gap-6">
                     <SystemSearch />
