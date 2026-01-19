@@ -6,6 +6,7 @@ import Journal from './pages/Journal';
 import LogEntry from './pages/LogEntry';
 import Crew from './pages/Crew';
 import RamManager from './pages/RamManager';
+import DriveBy from './pages/DriveBy';
 import { SelectedSystemsProvider } from './context/SelectedSystemsContext';
 
 
@@ -23,7 +24,7 @@ function App() {
             <Route path="/ram" element={<RamManager />} />
             {/* Placeholders for other routes */}
             <Route path="/planet-pulse" element={<div className="text-center mt-20 text-xl text-hud-blue animate-pulse">PLANET PULSE MODULE OFFLINE</div>} />
-
+     
           </Routes>
         </Layout>
       </Router>

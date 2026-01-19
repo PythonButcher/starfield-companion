@@ -3,10 +3,13 @@ import { dispatch } from '../cosmodrag/cosmoDragDispatcher';
 
 const CosmoDropZone = ({ data }) => {
   const [hovering, setHovering] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const [selectedFileName, setSelectedFileName] = useState('');
   
   // Ref to trigger the hidden input
   const fileInputRef = useRef(null);
+
+  
 
   const handleFile = (e) => {
     // Check files from input change OR drag-and-drop

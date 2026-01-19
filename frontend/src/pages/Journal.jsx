@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import CosmoDropZone from '../components/CosmoDropZone';
+
 
 const Journal = () => {
     const [logs, setLogs] = useState([]);
@@ -57,7 +57,6 @@ const Journal = () => {
              {/* Drop zone dynamically positioned toward the bottom */}
         <div className="flex justify-center mt-200 mb-10">   
         </div>
-        <CosmoDropZone className="flex justify-center mt-100 mb-100"/>
             </div>
         </div>
     );

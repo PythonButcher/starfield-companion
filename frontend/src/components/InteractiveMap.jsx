@@ -34,10 +34,10 @@ const InteractiveMap = () => {
     const systemBounds = useMemo(() => {
         const xs = systems.map((s) => s.x);
         const ys = systems.map((s) => s.y);
-        const minX = Math.min(...xs) - 200;
-        const maxX = Math.max(...xs) + 200;
-        const minY = Math.min(...ys) - 200;
-        const maxY = Math.max(...ys) + 200;
+        const minX = Math.min(...xs) - 150;
+        const maxX = Math.max(...xs) + 150;
+        const minY = Math.min(...ys) - 150;
+        const maxY = Math.max(...ys) + 150;
         return { minX, maxX, minY, maxY, width: maxX - minX, height: maxY - minY };
     }, [systems]);
 
@@ -292,7 +292,7 @@ const InteractiveMap = () => {
                         </feMerge>
                     </filter>
                 </defs>
-                <rect x={viewBox.x - 5000} y={viewBox.y - 5000} width="10000" height="10000" fill="url(#grid)" />
+                <rect x={viewBox.x - 5000} y={viewBox.y - 5000} width="9000" height="8000" fill="url(#grid)" />
 
                 {ROUTE_PLANNING_ENABLED && routeEnabled && routeSystems.length > 1 && (
                     <polyline
