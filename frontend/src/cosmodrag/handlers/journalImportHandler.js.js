@@ -1,4 +1,4 @@
-const handler = {
+const journalHandler = {
     id: 'journal-import',
 
     canHandle(payload, context) {
@@ -19,4 +19,4 @@ const handler = {
     }
 };
 
-export default handler;
+export default journalHandler;

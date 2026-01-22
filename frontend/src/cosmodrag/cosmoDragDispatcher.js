@@ -1,7 +1,10 @@
 // frontend/src/cosmodrag/cosmoDragDispatcher.js
 
+// imports
+import journalHandler from "./handlers/journalImportHandler.js";
+
 // Internal registry of handlers
-const handlers = [];
+const handlers = [journalHandler];
 
 /**
  * Register a new handler.

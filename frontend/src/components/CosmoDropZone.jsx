@@ -3,7 +3,6 @@ import { dispatch } from '../cosmodrag/cosmoDragDispatcher';
 
 const CosmoDropZone = ({ data }) => {
   const [hovering, setHovering] = useState(false);
-  const [isActive, setIsActive] = useState(false);
   const [selectedFileName, setSelectedFileName] = useState('');
   
   // Ref to trigger the hidden input
@@ -11,16 +10,21 @@ const CosmoDropZone = ({ data }) => {
 
   
 
-  const handleFile = (e) => {
+  const handleFile = async (e) => {
     // Check files from input change OR drag-and-drop
     const file = e.target.files ? e.target.files[0] : e.dataTransfer.files[0];
-    
+
     if (!file) return;
 
     setSelectedFileName(file.name);
     console.log('Received file:', file);
 
-    dispatch({ type: 'FILE_DROPPED', file });
+    // Read file text and dispatch with route context
+    const text = await file.text();
+    dispatch(
+      { type: 'text', text }, 
+      { route: window.location.pathname }
+    );
   };
 
   const handleClear = (e) => {

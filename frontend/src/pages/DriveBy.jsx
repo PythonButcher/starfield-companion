@@ -1,13 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import CosmoDropZone from '../components/CosmoDropZone';
 
 export default function DriveBy({ context }) {
     const [isOpen, setIsOpen] = useState(false);
+    const driveByRef = useRef(null);
 
-    const togglePanel = () => setIsOpen(!isOpen);
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (
+                driveByRef.current &&
+                !driveByRef.current.contains(event.target)
+            ) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () =>
+            document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    const togglePanel = () => {
+        setIsOpen((prev) => !prev);
+    };
 
     return (
-        <>
+        /* IMPORTANT:
+           This wrapper is REQUIRED so the ref has a real DOM node.
+           Fragments cannot receive refs.
+        */
+        <div ref={driveByRef} className="relative">
             <style>{`
                 /* Precise Styling for the Dropdown Panel */
                 .driveby-panel {
@@ -41,23 +63,25 @@ export default function DriveBy({ context }) {
             <div
                 onClick={togglePanel}
                 className={`text-star-white hover:text-hud-blue transition-colors uppercase text-xs tracking-[0.2em] font-bold border-b-2 py-1 cursor-pointer ${
-                    isOpen ? 'border-hud-blue text-hud-blue' : 'border-transparent hover:border-hud-blue'
+                    isOpen
+                        ? 'border-hud-blue text-hud-blue'
+                        : 'border-transparent hover:border-hud-blue'
                 }`}
             >
                 Drive By
             </div>
 
             {/* 2. THE PANEL: Toggled by the is-active class */}
-            <div 
+            <div
                 className={`driveby-panel ${isOpen ? 'is-active' : ''}`}
                 onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside the dropzone
             >
-                {/* Integrated CosmoDropZone. 
-                   Redundant slot text and dashed borders removed here 
+                {/* Integrated CosmoDropZone.
+                   Redundant slot text and dashed borders removed here
                    to maintain the Starfield aesthetic.
                 */}
                 <CosmoDropZone context={context} />
             </div>
-        </>
+        </div>
     );
 }
