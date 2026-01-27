@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Journal = () => {
     const [logs, setLogs] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -33,14 +34,14 @@ const Journal = () => {
                     NEW ENTRY
                 </Link>
             </div>
-
+          
             {loading && <p className="text-hud-blue animate-pulse">Loading logs...</p>}
             {error && <p className="text-warning-red">Error: {error}</p>}
 
             {!loading && !error && logs.length === 0 && (
                 <p className="text-gray-500 italic">No logs found. Start your journey.</p>
             )}
-
+          
             <div className="space-y-4">
                 {logs.map((log) => (
                     <div key={log.id} className="border border-gray-700 p-4 rounded hover:border-hud-blue transition-colors bg-gray-900/50">
@@ -51,7 +52,11 @@ const Journal = () => {
                         <p className="text-gray-300 mb-2">{log.content}</p>
                         {log.planet && <span className="text-xs bg-gray-800 px-2 py-1 rounded text-gray-400">Planet: {log.planet}</span>}
                     </div>
+                    
                 ))}
+             {/* Drop zone dynamically positioned toward the bottom */}
+        <div className="flex justify-center mt-200 mb-10">   
+        </div>
             </div>
         </div>
     );
