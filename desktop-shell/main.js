@@ -8,8 +8,8 @@ let backendProcess;
 function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 1400,
-    height: 900,
+    width: 1280,
+    height: 800,
     backgroundColor: '#000000', // Match your dark theme immediately
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
