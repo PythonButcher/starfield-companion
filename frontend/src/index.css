@@ -7,6 +7,12 @@
   --color-warning-red: #d9534f;
 }
 
+/* Global Layout Fixes */
+html, body, #root {
+  height: 100vh;
+  overflow: hidden;
+}
+
 @layer base {
   body {
     @apply bg-space-black text-star-white font-mono;
