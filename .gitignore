@@ -6,3 +6,13 @@ __pycache__
 Resources
 frontend/.vite/
 .next/
+**/*.db
+**/*.db-*
+backend/instance/
+backend/uploads/
+.venv/
+.pytest_cache/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+!.env.example

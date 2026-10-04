@@ -1,36 +1,134 @@
+"""Persistent user records and separately seeded reference catalogs."""
+from datetime import datetime, timezone
 from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
 
 db = SQLAlchemy()
 
-class ExpeditionLog(db.Model):
+
+def utcnow():
+    return datetime.now(timezone.utc)
+
+
+def iso(value):
+    # SQLite returns naive datetimes; every timestamp stored here is UTC.
+    return value.replace(tzinfo=timezone.utc).isoformat() if value else None
+
+
+planet_resources = db.Table(
+    'planet_resources',
+    db.Column('planet_id', db.Integer, db.ForeignKey('planet_profile.id', ondelete='CASCADE'), primary_key=True),
+    db.Column('resource_id', db.Integer, db.ForeignKey('resource.id'), primary_key=True),
+)
+
+
+class Resource(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
-    planet_name = db.Column(db.String(100), nullable=False)
-    raw_notes = db.Column(db.Text, nullable=True)
-    ai_narrative = db.Column(db.Text, nullable=True)
-    date = db.Column(db.DateTime, default=datetime.utcnow)
+    name = db.Column(db.String(100), unique=True, nullable=False)
+    symbol = db.Column(db.String(30), default='')
+    type = db.Column(db.String(20), default='inorganic')
+    rarity = db.Column(db.String(30), default='unknown')
 
     def to_dict(self):
-        return {
-            'id': self.id,
-            'title': self.title,
-            'planet_name': self.planet_name,
-            'raw_notes': self.raw_notes,
-            'ai_narrative': self.ai_narrative,
-            'date': self.date.isoformat()
-        }
+        return {key: getattr(self, key) for key in ('id', 'name', 'symbol', 'type', 'rarity')}
+
 
 class PlanetProfile(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
-    resources = db.Column(db.String(200), nullable=True) # Storing as string for now, could be JSON
-    hazards = db.Column(db.String(200), nullable=True)
+    system_name = db.Column(db.String(100), default='')
+    type = db.Column(db.String(50), default='Unknown')
+    gravity = db.Column(db.Float, nullable=True)
+    temperature = db.Column(db.String(100), default='Unknown')
+    atmosphere = db.Column(db.String(100), default='Unknown')
+    magnetosphere = db.Column(db.String(100), default='Unknown')
+    water = db.Column(db.String(100), default='Unknown')
+    biomes = db.Column(db.JSON, default=list)
+    planetary_traits = db.Column(db.JSON, default=list)
+    resources = db.relationship(Resource, secondary=planet_resources, lazy='selectin')
+    flora = db.Column(db.Integer, nullable=True)
+    fauna = db.Column(db.Integer, nullable=True)
+    hazards = db.Column(db.JSON, default=list)
+    user_notes = db.Column(db.Text, default='')
+    surveyed_percent = db.Column(db.Integer, default=0)
+    favorite = db.Column(db.Boolean, default=False)
+    outpost_candidate = db.Column(db.Boolean, default=False)
+    approximate = db.Column(db.Boolean, default=False)
+    sources = db.Column(db.JSON, default=list)
 
     def to_dict(self):
-        return {
-            'id': self.id,
-            'name': self.name,
-            'resources': self.resources,
-            'hazards': self.hazards
-        }
+        data = {column.name: getattr(self, column.name) for column in self.__table__.columns}
+        data['_sources'] = data.pop('sources')
+        data['resources'] = [resource.to_dict() for resource in self.resources]
+        return data
+
+
+class ExpeditionLog(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    planet_name = db.Column(db.String(100), default='')
+    system_name = db.Column(db.String(100), default='')
+    location = db.Column(db.String(200), default='')
+    mood = db.Column(db.String(100), default='')
+    log_type = db.Column(db.String(30), default='Exploration')
+    raw_notes = db.Column(db.Text, default='')
+    ai_narrative = db.Column(db.Text, default='')
+    tags = db.Column(db.JSON, default=list)
+    date = db.Column(db.DateTime(timezone=True), default=utcnow)
+    updated_at = db.Column(db.DateTime(timezone=True), default=utcnow, onupdate=utcnow)
+    planet_id = db.Column(db.Integer, db.ForeignKey('planet_profile.id', ondelete='SET NULL'), nullable=True)
+
+    def to_dict(self):
+        data = {column.name: getattr(self, column.name) for column in self.__table__.columns}
+        data.update(date=iso(self.date), updated_at=iso(self.updated_at))
+        data['stardate'] = f'{self.date.year + 304}.{self.date.timetuple().tm_yday:03d}'
+        return data
+
+
+class CrewMember(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    role = db.Column(db.String(100), default='Crew')
+    faction = db.Column(db.String(100), default='Independent')
+    is_companion = db.Column(db.Boolean, default=False)
+    skills = db.Column(db.JSON, default=list)
+    traits = db.Column(db.JSON, default=list)
+    assigned_ship = db.Column(db.String(100), default='')
+    assigned_outpost = db.Column(db.String(100), default='')
+    affinity = db.Column(db.String(100), default='Unknown')
+    notes = db.Column(db.Text, default='')
+    portrait_url = db.Column(db.String(500), default='')
+    sources = db.Column(db.JSON, default=list)
+
+    def to_dict(self):
+        data = {column.name: getattr(self, column.name) for column in self.__table__.columns}
+        data['_sources'] = data.pop('sources')
+        return data
+
+
+class MediaItem(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    filename = db.Column(db.String(200), unique=True, nullable=False)
+    original_name = db.Column(db.String(200), nullable=False)
+    mime_type = db.Column(db.String(100), nullable=False)
+    size = db.Column(db.Integer, nullable=False)
+    caption = db.Column(db.Text, default='')
+    tags = db.Column(db.JSON, default=list)
+    created_at = db.Column(db.DateTime(timezone=True), default=utcnow)
+    log_id = db.Column(db.Integer, db.ForeignKey('expedition_log.id', ondelete='SET NULL'), nullable=True)
+    planet_id = db.Column(db.Integer, db.ForeignKey('planet_profile.id', ondelete='SET NULL'), nullable=True)
+
+    def to_dict(self):
+        data = {column.name: getattr(self, column.name) for column in self.__table__.columns}
+        data['created_at'] = iso(self.created_at)
+        data['url'] = f'/media/{self.filename}'
+        return data
+
+
+class ReferenceRecord(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    catalog = db.Column(db.String(30), nullable=False, index=True)
+    payload = db.Column(db.JSON, nullable=False)
+
+
+class SeedMarker(db.Model):
+    name = db.Column(db.String(100), primary_key=True)

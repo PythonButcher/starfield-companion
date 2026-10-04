@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CrewCard = ({ name, role, status, photo, email }) => {
+const CrewCard = ({ name, role, status, photo }) => {
     // Determine color based on status
     const statusColor = status === "Active" ? "text-green-400" : "text-warning-red";
     const borderColor = status === "Active" ? "border-hud-blue" : "border-warning-red";

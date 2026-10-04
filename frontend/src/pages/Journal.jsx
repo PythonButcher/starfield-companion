@@ -1,65 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-
-
-const Journal = () => {
-    const [logs, setLogs] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchLogs = async () => {
-            try {
-                const response = await fetch('http://127.0.0.1:5000/api/logs');
-                if (!response.ok) {
-                    throw new Error('Failed to fetch logs');
-                }
-                const data = await response.json();
-                setLogs(data);
-            } catch (err) {
-                setError(err.message);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchLogs();
-    }, []);
-
-    return (
-        <div className="max-w-4xl mx-auto">
-            <div className="flex justify-between items-center mb-8 border-b border-gray-700 pb-4">
-                <h1 className="text-3xl font-bold text-star-white">QUANTUM JOURNAL</h1>
-                <Link to="/journal/new" className="bg-hud-blue text-space-black px-4 py-2 rounded font-bold hover:bg-white transition-colors">
-                    NEW ENTRY
-                </Link>
-            </div>
-          
-            {loading && <p className="text-hud-blue animate-pulse">Loading logs...</p>}
-            {error && <p className="text-warning-red">Error: {error}</p>}
-
-            {!loading && !error && logs.length === 0 && (
-                <p className="text-gray-500 italic">No logs found. Start your journey.</p>
-            )}
-          
-            <div className="space-y-4">
-                {logs.map((log) => (
-                    <div key={log.id} className="border border-gray-700 p-4 rounded hover:border-hud-blue transition-colors bg-gray-900/50">
-                        <div className="flex justify-between items-start mb-2">
-                            <h2 className="text-xl font-bold text-hud-blue">{log.title || 'Untitled Log'}</h2>
-                            <span className="text-xs text-gray-400">{log.date}</span>
-                        </div>
-                        <p className="text-gray-300 mb-2">{log.content}</p>
-                        {log.planet && <span className="text-xs bg-gray-800 px-2 py-1 rounded text-gray-400">Planet: {log.planet}</span>}
-                    </div>
-                    
-                ))}
-             {/* Drop zone dynamically positioned toward the bottom */}
-        <div className="flex justify-center mt-200 mb-10">   
-        </div>
-            </div>
-        </div>
-    );
-};
-
-export default Journal;
+import { useState } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { logs } from '../api/logs';
+import { query } from '../api/client';
+import { useResource } from '../hooks/useResource';
+import { Panel, Input, SectionHeader, EmptyState, ResourceState, Tag, Pagination } from '../components/ui';
+export default function Journal() {
+  const [params] = useSearchParams();
+  const [search, setSearch] = useState(params.get('q') || '');
+  const [tag, setTag] = useState(''); const [offset, setOffset] = useState(0);
+  const resource = useResource(logs.path + query({ q: search, tag, limit: 12, offset }));
+  return <><SectionHeader eyebrow="01 / Expedition archive" title="Quantum Journal"><Link className="button button-primary" to="/journal/new">+ New log</Link></SectionHeader>
+    <div className="toolbar"><Input label="Search archive" placeholder="Title, notes, planet or system" value={search} onChange={(e) => { setSearch(e.target.value); setOffset(0); }} /><Input label="Filter by tag" placeholder="e.g. exploration" value={tag} onChange={(e) => { setTag(e.target.value); setOffset(0); }} /></div>
+    <ResourceState resource={resource}>{resource.data?.length ? <><div className="grid-cards">{resource.data.map((log) => <Panel key={log.id} className="log-card"><div className="card-heading"><p className="eyebrow">{log.log_type}</p><span className="small muted mono">{log.stardate}</span></div><h2><Link to={'/journal/' + log.id}>{log.title}</Link></h2><p className="small muted">{log.planet_name || 'Location unrecorded'} {log.system_name && '/ ' + log.system_name}</p><p className="log-preview">{(log.ai_narrative || log.raw_notes || 'No notes recorded.').slice(0, 180)}</p><div>{log.tags.map((item) => <Tag key={item}>{item}</Tag>)}</div><Link to={'/journal/' + log.id}>Open entry ↗</Link></Panel>)}</div><Pagination offset={offset} total={resource.total} onChange={setOffset} /></> : <EmptyState title="Your story is waiting">Record a landing, a discovery, or a moment between the stars.</EmptyState>}</ResourceState></>;
+}

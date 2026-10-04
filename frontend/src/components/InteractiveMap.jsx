@@ -1,335 +1,86 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import universeData from '../../../backend/data/starfield_universe.json';
-import { useSelectedSystems } from '../context/SelectedSystemsContext';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useSelectedSystems } from '../context/systems';
+import { ResourceState, EmptyState } from './ui';
 import Star from './Star';
 import { SelectionOverlay, StarTooltip } from './StarInfoOverlays';
 import StarMapMinimap from './StarMapMinimap';
-import usePanZoom from '../hooks/usePanZoom';
-import { getLegendEntries } from '../utils/starStyles';
 import ContextMenu from '../context/ContextMenu';
-
-const INITIAL_VIEW_STATE = { x: -500, y: -500, width: 1000, height: 1000 };
-const ZOOM_FACTOR = 1.1;
-const KEYBOARD_ZOOM = 1.25;
-const NUDGE_AMOUNT = 40;
-const ROUTE_PLANNING_ENABLED = true;
-
-const InteractiveMap = () => {
-    const svgRef = useRef(null);
-    const [isDragging, setIsDragging] = useState(false);
-    const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-    const [hoveredSystem, setHoveredSystem] = useState(null);
-    const [contextMenu, setContextMenu] = useState(null);
-    const [showMinimap, setShowMinimap] = useState(true);
-    const [factionFilter, setFactionFilter] = useState('all');
-    const [typeFilter, setTypeFilter] = useState('all');
-    const [routeEnabled, setRouteEnabled] = useState(false);
-    const [routeSystems, setRouteSystems] = useState([]);
-    const { selectedSystem, selectSystem, clearSystem } = useSelectedSystems();
-
-    const systems = universeData;
-
-    const { viewBox, setViewBox, resetView, panByPixels, zoomByFactor, screenToSvg } = usePanZoom(INITIAL_VIEW_STATE, svgRef);
-
-    const systemBounds = useMemo(() => {
-        const xs = systems.map((s) => s.x);
-        const ys = systems.map((s) => s.y);
-        const minX = Math.min(...xs) - 150;
-        const maxX = Math.max(...xs) + 150;
-        const minY = Math.min(...ys) - 150;
-        const maxY = Math.max(...ys) + 150;
-        return { minX, maxX, minY, maxY, width: maxX - minX, height: maxY - minY };
-    }, [systems]);
-
-    const uniqueFactions = useMemo(() => ['all', ...new Set(systems.map((s) => s.faction).filter(Boolean))], [systems]);
-    const uniqueTypes = useMemo(() => ['all', ...new Set(systems.map((s) => s.type).filter(Boolean))], [systems]);
-
-    const filteredSystems = useMemo(() => systems.map((system) => {
-        const factionMatch = factionFilter === 'all' || system.faction === factionFilter;
-        const typeMatch = typeFilter === 'all' || system.type === typeFilter;
-        return { ...system, visible: factionMatch && typeMatch };
-    }), [factionFilter, systems, typeFilter]);
-
-    const handleWheel = (e) => {
-        e.preventDefault();
-        const direction = e.deltaY > 0 ? 1 : -1;
-        const factor = direction === 1 ? ZOOM_FACTOR : 1 / ZOOM_FACTOR;
-        const centerPoint = screenToSvg(e.clientX, e.clientY);
-        zoomByFactor(factor, centerPoint);
-    };
-
-    const handleMouseDown = (e) => {
-        if (e.button === 0) {
-            setIsDragging(true);
-            setDragStart({ x: e.clientX, y: e.clientY });
-        }
-    };
-
-    const handleMouseMove = (e) => {
-        if (isDragging) {
-            const dx = e.clientX - dragStart.x;
-            const dy = e.clientY - dragStart.y;
-            panByPixels(dx, dy);
-            setDragStart({ x: e.clientX, y: e.clientY });
-        }
-    };
-
-    const handleMouseUp = () => {
-        setIsDragging(false);
-    };
-
-    const handleBackgroundClick = (e) => {
-        const dx = e.clientX - dragStart.x;
-        const dy = e.clientY - dragStart.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 5) {
-            resetView();
-            clearSystem();
-        }
-    };
-
-    const handleSystemClick = (e, system) => {
-        e.stopPropagation();
-        if (ROUTE_PLANNING_ENABLED && routeEnabled && e.shiftKey) {
-            setRouteSystems((prev) => [...prev, system]);
-            return;
-        }
-        selectSystem(system);
-    };
-
-    const handleContextMenu = (e, system) => {
-        e.preventDefault();
-        setContextMenu({
-            x: e.clientX,
-            y: e.clientY,
-            system,
-        });
-    };
-
-    const closeContextMenu = () => setContextMenu(null);
-
-   const handleContextMenuAction = (action, context) => {
-    if (action === "plot_course") {
-        selectSystem(context.system);
-         closeContextMenu();
-    }
-    };
-
-
-    useEffect(() => {
-        window.addEventListener('click', closeContextMenu);
-        return () => window.removeEventListener('click', closeContextMenu);
-    }, []);
-
-    useEffect(() => {
-        const handleKeyDown = (e) => {
-            if (e.key === 'Escape') {
-                resetView();
-                clearSystem();
-            }
-            if (e.key === '+' || e.key === '=') {
-                e.preventDefault();
-                zoomByFactor(1 / KEYBOARD_ZOOM);
-            }
-            if (e.key === '-') {
-                e.preventDefault();
-                zoomByFactor(KEYBOARD_ZOOM);
-            }
-            if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
-                e.preventDefault();
-                setViewBox((prev) => ({
-                    ...prev,
-                    x: e.key === 'ArrowLeft' ? prev.x - NUDGE_AMOUNT : e.key === 'ArrowRight' ? prev.x + NUDGE_AMOUNT : prev.x,
-                    y: e.key === 'ArrowUp' ? prev.y - NUDGE_AMOUNT : e.key === 'ArrowDown' ? prev.y + NUDGE_AMOUNT : prev.y,
-                }));
-            }
-        };
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [clearSystem, resetView, setViewBox, zoomByFactor]);
-
-    useEffect(() => {
-        if (selectedSystem) {
-            const targetWidth = 400;
-            const targetHeight = 400;
-            setViewBox({
-                x: selectedSystem.x - targetWidth / 2,
-                y: selectedSystem.y - targetHeight / 2,
-                width: targetWidth,
-                height: targetHeight,
-            });
-        }
-    }, [selectedSystem, setViewBox]);
-
-    const legendEntries = useMemo(() => getLegendEntries(), []);
-
-    const totalRouteDistance = useMemo(() => {
-        if (routeSystems.length < 2) return 0;
-        let distance = 0;
-        for (let i = 1; i < routeSystems.length; i += 1) {
-            const prev = routeSystems[i - 1];
-            const curr = routeSystems[i];
-            distance += Math.hypot(curr.x - prev.x, curr.y - prev.y);
-        }
-        return distance;
-    }, [routeSystems]);
-
-    const handleNavigateFromMinimap = (point) => {
-        setViewBox((prev) => ({
-            ...prev,
-            x: point.x - prev.width / 2,
-            y: point.y - prev.height / 2,
-        }));
-    };
-
-    const controls = (
-        <div className="absolute top-4 right-4 flex flex-col gap-2 z-20">
-            <button className="hud-button" onClick={() => zoomByFactor(1 / ZOOM_FACTOR)}>＋</button>
-            <button className="hud-button" onClick={() => zoomByFactor(ZOOM_FACTOR)}>−</button>
-            <button className="hud-button" onClick={resetView}>Reset</button>
-            {ROUTE_PLANNING_ENABLED && (
-                <button
-                    className={`hud-button ${routeEnabled ? 'bg-hud-blue/20 border-hud-blue' : ''}`}
-                    onClick={() => setRouteEnabled((prev) => !prev)}
-                >
-                    Route
-                </button>
-            )}
-        </div>
-    );
-
-    const filterControls = (
-        <div className="absolute top-4 left-4 flex flex-col gap-2 bg-[rgba(11,12,21,0.8)] border border-[rgba(91,192,222,0.3)] rounded-lg p-3 backdrop-blur z-20">
-            <div className="flex flex-wrap items-center gap-4 text-star-white">
-                <div className="flex items-center gap-2 text-xs">
-                    <span className="toolbar-label">Faction</span>
-                    <select
-                        value={factionFilter}
-                        onChange={(e) => setFactionFilter(e.target.value)}
-                        className="hud-select"
-                    >
-                        {uniqueFactions.map((faction) => (
-                            <option key={faction} value={faction} className="bg-space-black">{faction}</option>
-                        ))}
-                    </select>
-                </div>
-                <div className="flex items-center gap-2 text-xs">
-                    <span className="toolbar-label">Spectral Type</span>
-                    <select
-                        value={typeFilter}
-                        onChange={(e) => setTypeFilter(e.target.value)}
-                        className="hud-select"
-                    >
-                        {uniqueTypes.map((type) => (
-                            <option key={type} value={type} className="bg-space-black">{type}</option>
-                        ))}
-                    </select>
-                </div>
-                <button
-                    className="hud-button h-9 whitespace-nowrap"
-                    onClick={() => setShowMinimap((prev) => !prev)}
-                >
-                    {showMinimap ? 'Hide Mini-map' : 'Show Mini-map'}
-                </button>
-            </div>
-            <div className="text-[10px] opacity-70 leading-tight pl-[2px]">Zoom: mouse wheel, +/- keys. Pan: drag or arrows.</div>
-        </div>
-    );
-
-    const legend = (
-        <div className="absolute bottom-4 right-4 bg-[rgba(11,12,21,0.85)] border border-[rgba(91,192,222,0.3)] rounded-lg p-3 text-star-white text-xs backdrop-blur z-20">
-            <div className="font-semibold mb-2 text-[11px] tracking-wide">Legend</div>
-            <div className="flex flex-col gap-2">
-                {legendEntries.map((entry) => (
-                    <div key={entry.label} className="flex items-center gap-2">
-                        <span
-                            className="inline-block rounded-full"
-                            style={{ width: entry.radius * 2, height: entry.radius * 2, backgroundColor: entry.color, boxShadow: '0 0 8px rgba(91,192,222,0.4)' }}
-                        />
-                        <span>{entry.label}</span>
-                    </div>
-                ))}
-                {ROUTE_PLANNING_ENABLED && routeEnabled && (
-                    <div className="pt-2 border-t border-[rgba(91,192,222,0.2)]">Route Distance: {totalRouteDistance.toFixed(1)} ly</div>
-                )}
-            </div>
-        </div>
-    );
-
-    return (
-        <div className="star-map-container" style={{ width: '100%', height: '100%', overflow: 'hidden', position: 'relative', backgroundColor: 'transparent' }}>
-            {filterControls}
-            {controls}
-            {legend}
-            {showMinimap && (
-                <StarMapMinimap
-                    systems={systems}
-                    viewBox={viewBox}
-                    bounds={systemBounds}
-                    onNavigate={handleNavigateFromMinimap}
-                />
-            )}
-            <svg
-                ref={svgRef}
-                viewBox={`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`}
-                style={{ width: '100%', height: '100%', cursor: isDragging ? 'grabbing' : 'grab' }}
-                onWheel={handleWheel}
-                onMouseDown={handleMouseDown}
-                onMouseMove={handleMouseMove}
-                onMouseUp={handleMouseUp}
-                onMouseLeave={handleMouseUp}
-                onClick={handleBackgroundClick}
-            >
-                <defs>
-                    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
-                        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255, 255, 255, 0.1)" strokeWidth="1" />
-                    </pattern>
-                    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
-                        <feMerge>
-                            <feMergeNode in="coloredBlur" />
-                            <feMergeNode in="SourceGraphic" />
-                        </feMerge>
-                    </filter>
-                </defs>
-                <rect x={viewBox.x - 5000} y={viewBox.y - 5000} width="9000" height="8000" fill="url(#grid)" />
-
-                {ROUTE_PLANNING_ENABLED && routeEnabled && routeSystems.length > 1 && (
-                    <polyline
-                        points={routeSystems.map((s) => `${s.x},${s.y}`).join(' ')}
-                        fill="none"
-                        stroke="var(--color-hud-blue)"
-                        strokeWidth={1.5}
-                        strokeDasharray="4 2"
-                    />
-                )}
-
-                {filteredSystems.map((system) => (
-                    <Star
-                        key={system.id}
-                        system={system}
-                        selected={selectedSystem?.id === system.id}
-                        showLabel={viewBox.width < 800 || hoveredSystem?.id === system.id || selectedSystem?.id === system.id}
-                        onClick={handleSystemClick}
-                        onContextMenu={handleContextMenu}
-                        onHover={setHoveredSystem}
-                        dimmed={!system.visible}
-                    />
-                ))}
-            </svg>
-
-            <StarTooltip system={hoveredSystem} />
-            <SelectionOverlay system={selectedSystem} />
-
-           {contextMenu && (
-            <ContextMenu
-                context={contextMenu}
-                onClose={closeContextMenu}
-                onAction={handleContextMenuAction}
-            />
-            )}
-        </div>
-    );
-};
-
-export default InteractiveMap;
+import usePanZoom from '../hooks/usePanZoom';
+const INITIAL = { x: -550, y: -500, width: 1100, height: 1000 };
+export default function InteractiveMap() {
+  const { systems, resource, selectedSystem, selectSystem, clearSystem } = useSelectedSystems();
+  const svgRef = useRef(null); const drag = useRef(null);
+  const [dragging, setDragging] = useState(false); const [hovered, setHovered] = useState(null);
+  const [menu, setMenu] = useState(null); const [minimap, setMinimap] = useState(true);
+  const [faction, setFaction] = useState('all'); const [type, setType] = useState('all');
+  const [routing, setRouting] = useState(false); const [route, setRoute] = useState([]);
+  const navigate = useNavigate();
+  const { viewBox, setViewBox, resetView, screenToSvg, panByPixels, zoomByFactor } = usePanZoom(INITIAL, svgRef);
+  const bounds = useMemo(() => {
+    const xs = systems.map((s) => s.x); const ys = systems.map((s) => s.y);
+    const minX = Math.min(-450, ...xs) - 100; const maxX = Math.max(450, ...xs) + 100;
+    const minY = Math.min(-400, ...ys) - 100; const maxY = Math.max(400, ...ys) + 100;
+    return { minX, minY, maxX, maxY, width: maxX - minX, height: maxY - minY };
+  }, [systems]);
+  useEffect(() => {
+    if (!selectedSystem) return;
+    const frame = requestAnimationFrame(() => setViewBox({ x: selectedSystem.x - 200, y: selectedSystem.y - 200, width: 400, height: 400 }));
+    return () => cancelAnimationFrame(frame);
+  }, [selectedSystem, setViewBox]);
+  useEffect(() => {
+    const close = () => setMenu(null);
+    window.addEventListener('click', close);
+    return () => window.removeEventListener('click', close);
+  }, []);
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const wheel = (event) => { event.preventDefault(); zoomByFactor(event.deltaY > 0 ? 1.1 : 1 / 1.1, screenToSvg(event.clientX, event.clientY)); };
+    svg.addEventListener('wheel', wheel, { passive: false });
+    return () => svg.removeEventListener('wheel', wheel);
+  }, [resource.loading, resource.error, screenToSvg, zoomByFactor]);
+  function keydown(event) {
+    if (event.target.closest('button,select,a')) return;
+    if (['+', '=', '-', 'Escape', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) event.preventDefault();
+    if (event.key === '+' || event.key === '=') zoomByFactor(.8);
+    if (event.key === '-') zoomByFactor(1.25);
+    if (event.key === 'Escape') { resetView(); clearSystem(); setMenu(null); }
+    if (event.key.startsWith('Arrow')) setViewBox((old) => ({ ...old, x: old.x + (event.key === 'ArrowLeft' ? -40 : event.key === 'ArrowRight' ? 40 : 0), y: old.y + (event.key === 'ArrowUp' ? -40 : event.key === 'ArrowDown' ? 40 : 0) }));
+  }
+  function clickStar(event, system) {
+    event.stopPropagation();
+    if (drag.current?.moved) return;
+    if (routing && event.shiftKey) setRoute((old) => [...old, system]);
+    else selectSystem(system);
+  }
+  function action(command, context) {
+    setMenu(null);
+    if (command === 'plot_course') selectSystem(context.system);
+    else if (command === 'navigate_to_journal') navigate('/journal/new?system=' + encodeURIComponent(context.system.name));
+    else navigate('/planet-pulse?system=' + encodeURIComponent(context.system.name));
+  }
+  const distance = route.slice(1).reduce((total, system, index) => total + Math.hypot(system.x - route[index].x, system.y - route[index].y), 0);
+  return <ResourceState resource={resource}>{!systems.length ? <EmptyState title="No systems catalogued" /> : <div className="star-map-container" onKeyDown={keydown}>
+    <div className="absolute top-4 left-4 z-20 flex flex-wrap gap-2 max-w-[70%]">
+      <label className="toolbar-label">Faction<select aria-label="Map faction" className="hud-select block" value={faction} onChange={(e) => setFaction(e.target.value)}>{['all', ...new Set(systems.map((s) => s.faction))].map((item) => <option key={item}>{item}</option>)}</select></label>
+      <label className="toolbar-label">Spectral type<select aria-label="Map spectral type" className="hud-select block" value={type} onChange={(e) => setType(e.target.value)}>{['all', ...new Set(systems.map((s) => s.type))].map((item) => <option key={item}>{item}</option>)}</select></label>
+      <button className="hud-button" onClick={() => setMinimap(!minimap)}>{minimap ? 'Hide' : 'Show'} mini-map</button>
+    </div>
+    <div className="absolute right-4 top-4 z-20 flex flex-col gap-2"><button className="hud-button" aria-label="Zoom in" onClick={() => zoomByFactor(.8)}>+</button><button className="hud-button" aria-label="Zoom out" onClick={() => zoomByFactor(1.25)}>−</button><button className="hud-button" onClick={() => { resetView(); clearSystem(); }}>Reset</button><button className="hud-button" aria-pressed={routing} onClick={() => setRouting(!routing)}>Route {routing ? 'on' : 'off'}</button></div>
+    <svg aria-label="Interactive star map. Drag to pan, scroll to zoom, or focus and use arrow keys." tabIndex={0} ref={svgRef} viewBox={Object.values(viewBox).join(' ')} className={'star-map-svg ' + (dragging ? 'dragging' : '')}
+      onPointerDown={(e) => { if (e.button !== 0) return; drag.current = { x: e.clientX, y: e.clientY, total: 0, moved: false }; setDragging(true); }}
+      onPointerMove={(e) => { if (!dragging || !drag.current) return; const dx = e.clientX - drag.current.x; const dy = e.clientY - drag.current.y; drag.current.total += Math.hypot(dx, dy); drag.current.moved = drag.current.total > 4; panByPixels(dx, dy); drag.current.x = e.clientX; drag.current.y = e.clientY; }}
+      onPointerUp={() => setDragging(false)} onPointerLeave={() => setDragging(false)}
+      onDoubleClick={() => { resetView(); clearSystem(); }}>
+      <defs><pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M 80 0 L 0 0 0 80" fill="none" stroke="#aab5c0" strokeOpacity=".07" /></pattern><filter id="glow"><feGaussianBlur stdDeviation="1.8" /></filter></defs>
+      <rect x="-5000" y="-5000" width="10000" height="10000" fill="url(#grid)" />
+      {route.length > 1 && <polyline points={route.map((s) => s.x + ',' + s.y).join(' ')} fill="none" stroke="#e9a76a" strokeWidth="2" strokeDasharray="6 6" />}
+      {systems.map((system) => <Star key={system.id} system={system} selected={selectedSystem?.id === system.id} showLabel dimmed={(faction !== 'all' && system.faction !== faction) || (type !== 'all' && system.type !== type)} onClick={clickStar} onHover={setHovered} onContextMenu={(e, value) => { e.preventDefault(); setMenu({ x: Math.min(e.clientX, window.innerWidth - 300), y: Math.min(e.clientY, window.innerHeight - 320), system: value }); }} />)}
+    </svg>
+    {minimap && <StarMapMinimap systems={systems} viewBox={viewBox} bounds={bounds} onNavigate={(point) => setViewBox((old) => ({ ...old, x: point.x - old.width / 2, y: point.y - old.height / 2 }))} />}
+    <SelectionOverlay system={selectedSystem} /><StarTooltip system={hovered} />
+    <div className="absolute bottom-4 right-4 text-xs bg-space-black/90 p-2 max-w-[210px] text-muted"><p>Map positions are approximate.</p>{routing ? <><p>Shift-click stars to plan. {distance.toFixed(0)} map units.</p><button className="hud-button mt-2" onClick={() => setRoute([])}>Clear route</button></> : <p>Scroll to zoom • Drag to pan</p>}</div>
+    <ContextMenu context={menu} onAction={action} />
+  </div>}</ResourceState>;
+}

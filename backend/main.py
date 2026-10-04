@@ -1,86 +1,110 @@
-from flask import Flask, jsonify, request
-import json
-import os
-from flask_cors import CORS
+"""Application factory; python main.py remains the desktop entry point."""
+import sqlite3
+from pathlib import Path
+import click
+from flask import Flask, jsonify, send_from_directory
+from sqlalchemy import event
+from sqlalchemy.engine import Engine
+from werkzeug.exceptions import HTTPException
 from config import Config
-from models import db, ExpeditionLog, PlanetProfile
+from models import db, ExpeditionLog, SeedMarker
+from validation import ApiError
 
-app = Flask(__name__)
-app.config.from_object(Config)
-CORS(app)
 
-db.init_app(app)
+@event.listens_for(Engine, 'connect')
+def enable_foreign_keys(connection, _):
+    if isinstance(connection, sqlite3.Connection):
+        connection.execute('PRAGMA foreign_keys=ON')
 
-with app.app_context():
-    db.create_all()
 
-@app.route('/api/health', methods=['GET'])
-def health_check():
-    return jsonify({"status": "systems_nominal"})
+def create_app(config=None):
+    app = Flask(__name__)
+    app.config.from_object(Config)
+    if config:
+        app.config.update(config)
+    Path(app.instance_path).mkdir(parents=True, exist_ok=True)
+    Path(app.config['UPLOAD_FOLDER']).mkdir(parents=True, exist_ok=True)
+    db.init_app(app)
 
-@app.route('/api/logs', methods=['POST'])
-def create_log():
-    data = request.get_json()
-    new_log = ExpeditionLog(
-        title=data.get('title'),
-        planet_name=data.get('planet_name'),
-        raw_notes=data.get('raw_notes'),
-        ai_narrative=data.get('ai_narrative')
-    )
-    db.session.add(new_log)
-    db.session.commit()
-    return jsonify(new_log.to_dict()), 201
+    from routes import logs, reference, ai
+    for blueprint in (logs.bp, reference.bp, ai.bp):
+        app.register_blueprint(blueprint)
 
-@app.route('/api/logs', methods=['GET'])
-def get_logs():
-    logs = ExpeditionLog.query.order_by(ExpeditionLog.date.desc()).all()
-    return jsonify([log.to_dict() for log in logs])
+    @app.errorhandler(ApiError)
+    def api_error(error):
+        db.session.rollback()
+        return jsonify(error={'code': error.code, 'message': error.message}), error.status
 
-@app.route('/api/generate_narrative', methods=['POST'])
-def generate_narrative():
-    # Placeholder for AI integration
-    return jsonify({"narrative": "AI processing... [MOCK RESPONSE]"})
+    @app.errorhandler(HTTPException)
+    def http_error(error):
+        return jsonify(error={'code': error.name.lower().replace(' ', '_'), 'message': error.description}), error.code
 
-@app.route('/api/research', methods=['GET'])
-def get_research_data():
-    try:
-        # readable_path for clean data
-        data_path = os.path.join(app.root_path, 'data', 'research_clean.json')
-        
-        # Fallback to raw data if clean doesn't exist
-        if not os.path.exists(data_path):
-            data_path = os.path.join(app.root_path, 'data', 'research_laboratory.json')
-            
-        if not os.path.exists(data_path):
-            return jsonify({"error": "Research data file not found"}), 500
+    @app.errorhandler(Exception)
+    def unexpected_error(error):
+        db.session.rollback()
+        app.logger.exception('Unhandled request failure')
+        return jsonify(error={'code': 'internal_error', 'message': 'The ship computer could not complete this request.'}), 500
 
-        with open(data_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            
-        return jsonify(data)
-    except Exception as e:
-        return jsonify({"error": f"Failed to load research data: {str(e)}"}), 500
+    @app.after_request
+    def headers(response):
+        response.headers['X-Content-Type-Options'] = 'nosniff'
+        return response
 
-@app.route('/api/systems', methods=['GET'])
-def get_systems_data():
-    """
-    Reads the static JSON file from the backend/data folder
-    and returns it as an API response.
-    """
-    try:
-        # Folder that main.py resides in (backend/)
-        current_directory = os.path.dirname(__file__)
+    frontend = Path(app.root_path).parent / 'frontend' / 'dist'
 
-        # Build path: backend/data/starfield_universe.json
-        file_path = os.path.join(current_directory, 'data', 'starfield_universe.json')
+    @app.get('/')
+    @app.get('/<path:path>')
+    def frontend_file(path=''):
+        if path.startswith(('api/', 'media/')) or not (frontend / 'index.html').exists():
+            raise ApiError('Route not found.', 404, 'not_found')
+        if path and (frontend / path).is_file():
+            return send_from_directory(frontend, path)
+        return send_from_directory(frontend, 'index.html')
 
-        with open(file_path, 'r') as file:
-            data = json.load(file)
+    with app.app_context():
+        db.create_all()
+        if app.config['SEED_ON_STARTUP']:
+            from seed import seed_reference
+            seed_reference()
 
-        return jsonify(data)
+    @app.cli.command('reset-db')
+    @click.option('--yes', is_flag=True, help='Confirm deletion of this configured database schema.')
+    def reset_db(yes):
+        if not yes:
+            raise click.ClickException('Back up your database first. Pass --yes to confirm reset.')
+        db.drop_all()
+        db.create_all()
+        from seed import seed_reference
+        seed_reference()
+        click.echo('Database reset; upload files retained for manual reconciliation.')
 
-    except FileNotFoundError:
-        return jsonify({"error": "System data not found"}), 404
+    @app.cli.command('import-legacy')
+    @click.argument('path', type=click.Path(exists=True, dir_okay=False, path_type=Path))
+    def import_legacy(path):
+        marker = 'legacy-import:' + str(path.resolve())
+        if db.session.get(SeedMarker, marker):
+            click.echo('This legacy file has already been imported.')
+            return
+        # Read-only connection makes the original file a recoverable backup.
+        with sqlite3.connect(path.resolve().as_uri() + '?mode=ro', uri=True) as source:
+            source.row_factory = sqlite3.Row
+            rows = source.execute('SELECT title, planet_name, raw_notes, ai_narrative, date FROM expedition_log').fetchall()
+        from datetime import datetime, timezone
+        for row in rows:
+            values = dict(row)
+            date = values.pop('date')
+            values = {key: value or '' for key, value in values.items()}
+            if not values['title']:
+                values['title'] = 'Imported expedition'
+            if date:
+                values['date'] = datetime.fromisoformat(date).replace(tzinfo=timezone.utc)
+            db.session.add(ExpeditionLog(**values))
+        db.session.add(SeedMarker(name=marker))
+        db.session.commit()
+        click.echo(f'Imported {len(rows)} logs; source untouched.')
+
+    return app
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    create_app().run(host='127.0.0.1', port=5000, debug=False)

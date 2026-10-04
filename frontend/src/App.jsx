@@ -1,35 +1,20 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Hub from './pages/Hub';
 import Journal from './pages/Journal';
 import LogEntry from './pages/LogEntry';
+import LogDetail from './pages/LogDetail';
 import Crew from './pages/Crew';
 import RamManager from './pages/RamManager';
-import DriveBy from './pages/DriveBy';
 import { SelectedSystemsProvider } from './context/SelectedSystemsContext';
-
-
-
-function App() {
-  return (
-    <SelectedSystemsProvider>
-      <Router>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Hub />} />
-            <Route path="/journal" element={<Journal />} />
-            <Route path="/journal/new" element={<LogEntry />} />
-            <Route path="/crew" element={<Crew />} />
-            <Route path="/ram" element={<RamManager />} />
-            {/* Placeholders for other routes */}
-            <Route path="/planet-pulse" element={<div className="text-center mt-20 text-xl text-hud-blue animate-pulse">PLANET PULSE MODULE OFFLINE</div>} />
-     
-          </Routes>
-        </Layout>
-      </Router>
-    </SelectedSystemsProvider>
-  );
+import { EmptyState } from './components/ui';
+export default function App() {
+  return <SelectedSystemsProvider><BrowserRouter><Layout><Routes>
+    <Route path="/" element={<Hub />} /><Route path="/journal" element={<Journal />} />
+    <Route path="/journal/new" element={<LogEntry />} /><Route path="/journal/:id" element={<LogDetail />} /><Route path="/journal/:id/edit" element={<LogEntry />} />
+    <Route path="/crew" element={<Crew />} /><Route path="/ram" element={<RamManager />} />
+    <Route path="/planet-pulse" element={<EmptyState title="Planet catalog is being connected" />} />
+    <Route path="/media" element={<EmptyState title="Media archive is being connected" />} />
+    <Route path="*" element={<EmptyState title="Signal not found">This route is outside the charted systems. Choose a module above.</EmptyState>} />
+  </Routes></Layout></BrowserRouter></SelectedSystemsProvider>;
 }
-
-export default App;

@@ -1,38 +1,8 @@
-// frontend/src/cosmodrag/cosmoDragDispatcher.js
-
-// imports
-import journalHandler from "./handlers/journalImportHandler.js";
-
-// Internal registry of handlers
+import journalHandler from './handlers/journalImportHandler';
 const handlers = [journalHandler];
-
-/**
- * Register a new handler.
- * handler shape:
- * {
- *   id: string,
- *   canHandle: (payload, context) => boolean,
- *   handle: (payload, context) => void
- * }
- */
-export function registerHandler(handler) {
-  handlers.push(handler);
-}
-
-/**
- * Dispatch a payload to the first handler that can handle it.
- * For now: no priorities, no async guarantees.
- */
-export function dispatch(payload, context) {
-  console.log(payload, dispatch, "We have this these handlers: ", {registerHandler})
-  for (const handler of handlers) {
-    try {
-      if (handler.canHandle(payload, context)) {
-        return handler.handle(payload, context);
-      }
-    } catch (err) {
-      // Keep it simple — swallow or log
-      console.error(`Handler ${handler.id} failed`, err);
-    }
-  }
+export function registerHandler(handler) { handlers.unshift(handler); }
+export async function dispatch(payload, context = {}) {
+  const handler = handlers.find((candidate) => candidate.canHandle(payload, context));
+  if (!handler) throw new Error('This drop format is not supported.');
+  return handler.handle(payload, context);
 }

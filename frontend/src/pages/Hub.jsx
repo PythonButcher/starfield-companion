@@ -1,15 +1,6 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import InteractiveMap from '../components/InteractiveMap';
-
-const Hub = () => {
-    return (
-        <div className="hub-container" style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <h1 style={{ padding: '20px', margin: 0, borderBottom: '1px solid #333' }}>Star Map</h1>
-            <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
-                <InteractiveMap />
-            </div>
-        </div>
-    );
-};
-
-export default Hub;
+import { Panel, SectionHeader } from '../components/ui';
+export default function Hub() {
+  return <><SectionHeader eyebrow="Constellation / Navigation desk" title="The stars are waiting."><Link className="button button-primary" to="/journal/new">+ Record an expedition</Link></SectionHeader><Panel className="map-panel"><InteractiveMap /></Panel></>;
+}

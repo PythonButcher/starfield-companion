@@ -1,6 +1,20 @@
+"""Environment configuration. Defaults are local and require no API key."""
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+BASE_DIR = Path(__file__).resolve().parent
+load_dotenv(BASE_DIR.parent / '.env')
+load_dotenv(BASE_DIR / '.env')
+
 
 class Config:
-    BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'starfield.db')
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL') or f'sqlite:///{(BASE_DIR / "instance" / "companion.db").as_posix()}'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    AI_MODE = os.getenv('AI_MODE', 'mock')
+    OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')
+    OPENAI_MODEL = os.getenv('OPENAI_MODEL') or 'gpt-4.1-mini'
+    UPLOAD_FOLDER = str(BASE_DIR / 'uploads')
+    MAX_CONTENT_LENGTH = 26 * 1024 * 1024
+    MAX_FILE_SIZE = 25 * 1024 * 1024
+    SEED_ON_STARTUP = True

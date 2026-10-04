@@ -1,0 +1,28 @@
+# API contract
+
+All `/api` responses are JSON. Errors: `{"error":{"code":"validation_error","message":"Human-readable reason","details":{}}}` (details optional). Status codes: 400 invalid input, 404 missing record, 413 upload too large, 502 upstream AI failure, 500 unexpected server failure without leaked internals.
+
+List endpoints return arrays, expose `X-Total-Count`, and accept `q`, `tag`, `limit` (1–200, default 100), `offset` (>=0) where applicable. PATCH and PUT are partial updates; omitted fields are unchanged. DELETE returns `{"deleted":id}`. Timestamps are UTC ISO 8601.
+
+## Health and reference
+
+`GET /api/health` → `{"status":"systems_nominal"}`.
+`GET /api/systems?q=Sol&limit=1` → `[{"id":1,"name":"Sol","x":0,"y":0,"type":"G2V","faction":"United Colonies","description":"The birthplace of humanity."}]`. Coordinates are illustrative map units, never light years.
+`GET /api/research` → array of seed records, e.g. `{"research Project":"Medical Treatment 1","required Skills":"None","required Research":"None","required_materials_normalized":[{"name":"Aluminum","qty":2}]}` with additional inherited description fields. Quantities in the inherited catalog are not independently verified.
+
+## Journal
+
+`GET /api/logs` supports `q` across title, notes, narrative, planet and system; `tag` is case-insensitive exact membership. Results are newest first.
+`POST /api/logs` requires nonblank `title` (max 100). Optional: `planet_name`, `system_name`, `mood` (100), `location` (200), `raw_notes`, `ai_narrative` (30,000), `log_type` (Exploration/Combat/Trade/Faction/Personal), `tags` (up to 50 nonblank strings, each max 100), `planet_id` (existing ID or null). Unknown keys are 400.
+`GET /api/logs/<id>` returns a record; `PATCH|PUT /api/logs/<id>` validates supplied fields; `DELETE /api/logs/<id>` removes it and detaches linked media.
+
+Request fixture: `{"title":"Landing","planet_name":"Jemison","raw_notes":"Landed safely.","tags":["survey"]}`.
+Response (201 on create): `{"id":1,"title":"Landing","planet_name":"Jemison","system_name":"","location":"","mood":"","log_type":"Exploration","raw_notes":"Landed safely.","ai_narrative":"","tags":["survey"],"planet_id":null,"date":"2026-10-03T23:00:00+00:00","updated_at":"2026-10-03T23:00:00+00:00","stardate":"2330.276"}`. Stardate is a cosmetic year+304/day-of-year display, not game time synchronization.
+
+## AI
+
+`POST /api/generate_narrative`: `{"raw_notes":"Landed safely.","title":"Landing","planet_name":"Jemison","tone":"stoic","length":"short"}` → `{"narrative":"Captain’s log…","model":"ship-computer-mock-v1","mode":"mock"}`. Notes required, 1–10,000 characters; title/planet max 100. Tones: stoic, dramatic, noir, scientific; lengths: short, medium, long. Provider selected by server configuration, not the client. Missing key uses mock even if live requested. Live provider failures become clean 502 errors.
+
+`POST /api/strategize`: `{"hazards":["cold"],"environment":"Thin atmosphere","loadout":["Suit"],"skills":["Surveying"],"crew":["VASCO"]}` → `{"gear":["Check suit protection for cold."],"skills":["Review your Surveying rank before departure."],"crew_picks":["VASCO"],"risk_level":"moderate","explanation":"…","model":"ship-computer-mock-v1","mode":"mock"}`. Arrays follow the string-list constraints; environment max 1,000. Risk is low/moderate/high. Heuristic checklist, not a game mechanics simulation.
+
+`GET /api/briefing` → `{"briefing":"Systems nominal…","model":"ship-computer-mock-v1","mode":"mock","log_count":0}`. Uses up to five latest logs; an empty archive returns a fixed welcome without calling the provider.

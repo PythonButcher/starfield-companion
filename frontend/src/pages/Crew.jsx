@@ -1,17 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import crewData from '../../../backend/data/crew_data.json';
 import CrewCard from '../components/CrewCard';
 
 
 
 const Crew = () => {
-    // Renamed state to 'roster' (the list) to avoid confusion
-    const [roster, setRoster] = useState([]);
-
-    useEffect(() => {
-        // In the future, this is where we would fetch from Flask
-        setRoster(crewData);
-    }, []);
+    const roster = crewData;
 
     return (
         <div className="max-w-4xl mx-auto p-6">
