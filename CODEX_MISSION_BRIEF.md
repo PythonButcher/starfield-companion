@@ -1,5 +1,5 @@
-# Mission brief reference
+# Mission Run 2 reference
 
-Completed reference only. The [Mission Run 2 specification](project_docs/archive/mission-run-2/CODEX_MISSION_BRIEF.md) is archived; it does not authorize more implementation.
+The [amended mission brief](project_docs/archive/mission-run-2/AMENDED_MISSION_BRIEF.md) is preserved in the archive. Implementation and verification are recorded in the [run report](project_docs/active/status/RUN_REPORT.md).
 
-Read the [run report](project_docs/active/status/RUN_REPORT.md) for results and limitations, and the [active gate](project_docs/active/active_gate/README.md) for the current owner and scope.
+Start new work through the single [active gate](project_docs/active/active_gate/README.md).

@@ -8,17 +8,25 @@ A local NASApunk ship terminal for expedition journals, planet surveys, crew ass
 |---|---|
 | `/` | **Command Hub**: resume radar, ship briefing, home ship, crew/outpost telemetry, recent logs and quick actions |
 | `/galaxy` | **Galaxy & Surveys**: sector map, system inspector, 47 sourced worlds, resource hunt, planetary details and `/galaxy/surveys` ledger |
-| `/logistics` | **Logistics & Industry**: outposts, coverage matrix and crafting sub-tabs; research board under `/logistics/crafting/research` |
-| `/crew` | **Fleet & Crew**: The Frontier registry, roster, ship/outpost assignments and explainable skill ranking |
+| `/logistics` | **Logistics & Industry**: outposts, coverage matrix, crafting/research and `/logistics/supply-network` Cargo Link Mapper |
+| `/crew` | **Fleet & Crew**: The Frontier registry, assignments, skill ranking and `/crew/blueprints` Ship Forge |
 | `/journal` | **Logbook & Archives**: Captain's Logs, `/journal/missions` checklists and `/journal/media` archive |
 
 The Drive-By quick-action drawer is available throughout the terminal. `N` opens a log, `Ctrl/Cmd+K` searches systems. Legacy module URLs redirect into these workspaces, retaining queries and anchors.
+
+## Plan your supply network and next ship
+
+**Supply Chain Visualizer** opens with an editable three-system corridor. Place planned sites or link saved outposts, drag nodes (or use arrow keys), and draw directed cargo routes. The inspector separates supplied, fuel-starved, broken, paused and unmeasured routes. Cargo and Helium-3 share one supply budget; reorder routes to set allocation priority. Linked outposts use their actual planet, power balance and measured extraction rates. Save layouts, duplicate designs, undo edits and export JSON. Use **Refresh telemetry** to recalculate against outposts edited elsewhere.
+
+**Ship Forge** opens with a survey-cutter template and includes a cargo tender. Add from 34 attributed ship modules across A/B/C classes or enter custom module measurements. The loadout schematic, mass, hull, shield, cargo, crew limits, full-power speed, estimated mobility and estimated jump range update as you edit. Save separate refits, compare their stats and export a blueprint. Module snapshots preserve your measurements when reference catalogs change.
+
+These examples remain unsaved until you choose Save; existing profiles get no unsolicited player records. Cargo rates and fuel budgets are measured planning inputs, not simulated game timers. Mobility and jump range are documented estimates. Ship placement, landing thrust, weapon grouping, perks and flight legality still need the in-game ship builder. Sources and equations are available inside Ship Forge and in [provenance](backend/data/SOURCES.md).
 
 ## Constellation starter state
 
 A fresh database opens at **Vectera / Narion** with **The Frontier**, Barrett and VASCO assigned, the artifact-discovery log (stardate 2330.134), One Small Step and a Narion survey mission. Luna Extraction Post has one iron extractor, two solar arrays and solid storage. Its explicit sample solar factor produces **+3 net power**; replace that assumption with your own readings. Vectera is fully surveyed; Jemison is at 65% and Kreet at 25%.
 
-The starter playthrough is illustrative, not an imported game save. The footer's **Constellation starter settings** can clear unchanged samples after typed confirmation. Edited records, attached media, referenced logs and player additions are preserved. Cleared samples never reappear automatically. Existing databases receive missing new catalog worlds once, without replacing player edits or resurrecting deleted legacy worlds; they do not receive sample playthrough records.
+The starter playthrough is illustrative, not an imported game save. The footer's **Constellation starter settings** can clear unchanged samples after typed confirmation. Edited records, attached media, referenced logs, outposts used by saved supply networks and player additions are preserved. Cleared samples never reappear automatically. Existing databases receive missing new catalog worlds once, without replacing player edits or resurrecting deleted legacy worlds; they do not receive sample playthrough records.
 
 ## Install and run (PowerShell, repository root)
 
