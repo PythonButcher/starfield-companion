@@ -1,0 +1,2306 @@
+[
+  {
+    "name": "Al-Battani",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 35,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAl-Battani_System",
+      "revision": 105246,
+      "timestamp": "2025-05-21T01:35:40Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 1,
+    "x": -660,
+    "y": -500
+  },
+  {
+    "name": "Alchiba",
+    "type": "F0",
+    "faction": "Unrecorded",
+    "level": 50,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAlchiba_System",
+      "revision": 105247,
+      "timestamp": "2025-05-21T01:35:46Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 2,
+    "x": -540,
+    "y": -500
+  },
+  {
+    "name": "Algorab",
+    "type": "B9",
+    "faction": "Unrecorded",
+    "level": 70,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAlgorab_System",
+      "revision": 110790,
+      "timestamp": "2026-01-16T14:15:44Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 3,
+    "x": -420,
+    "y": -500
+  },
+  {
+    "name": "Alpha Andraste",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 30,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAlpha_Andraste_System",
+      "revision": 85768,
+      "timestamp": "2024-04-18T17:40:37Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 4,
+    "x": -300,
+    "y": -500
+  },
+  {
+    "name": "Alpha Centauri",
+    "type": "G2",
+    "faction": "United Colonies",
+    "level": 1,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAlpha_Centauri_System",
+      "revision": 105249,
+      "timestamp": "2025-05-21T01:36:12Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 5,
+    "x": 120,
+    "y": -80
+  },
+  {
+    "name": "Alpha Marae",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 45,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAlpha_Marae_System",
+      "revision": 105250,
+      "timestamp": "2025-05-21T01:36:19Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 6,
+    "x": -60,
+    "y": -500
+  },
+  {
+    "name": "Alpha Ternion",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 60,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAlpha_Ternion_System",
+      "revision": 105251,
+      "timestamp": "2025-05-21T01:36:23Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 7,
+    "x": 60,
+    "y": -500
+  },
+  {
+    "name": "Alpha Tirna",
+    "type": "G3",
+    "faction": "Unrecorded",
+    "level": 35,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAlpha_Tirna_System",
+      "revision": 105252,
+      "timestamp": "2025-05-21T01:36:26Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 8,
+    "x": 180,
+    "y": -500
+  },
+  {
+    "name": "Altair",
+    "type": "A7",
+    "faction": "Unrecorded",
+    "level": 15,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAltair_System",
+      "revision": 105253,
+      "timestamp": "2025-05-21T01:36:29Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 9,
+    "x": 300,
+    "y": -500
+  },
+  {
+    "name": "Andromas",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 15,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAndromas_System",
+      "revision": 105254,
+      "timestamp": "2025-05-21T01:36:32Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 10,
+    "x": 420,
+    "y": -500
+  },
+  {
+    "name": "Apollo",
+    "type": "K1",
+    "faction": "Unrecorded",
+    "level": null,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AApollo_System",
+      "revision": 85590,
+      "timestamp": "2024-04-18T13:48:22Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 11,
+    "x": 540,
+    "y": -500
+  },
+  {
+    "name": "Aranae",
+    "type": "K5",
+    "faction": "Unrecorded",
+    "level": 15,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAranae_System",
+      "revision": 105256,
+      "timestamp": "2025-05-21T01:36:41Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 12,
+    "x": 660,
+    "y": -500
+  },
+  {
+    "name": "Archimedes",
+    "type": "F5",
+    "faction": "Unrecorded",
+    "level": 75,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AArchimedes_System",
+      "revision": 110791,
+      "timestamp": "2026-01-16T14:17:29Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 13,
+    "x": -660,
+    "y": -380
+  },
+  {
+    "name": "Arcturus",
+    "type": "K2",
+    "faction": "Unrecorded",
+    "level": 15,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AArcturus_System",
+      "revision": 105260,
+      "timestamp": "2025-05-21T01:37:02Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 14,
+    "x": -540,
+    "y": -380
+  },
+  {
+    "name": "Artemis",
+    "type": "K2",
+    "faction": "Unrecorded",
+    "level": null,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AArtemis_System",
+      "revision": 85596,
+      "timestamp": "2024-04-18T13:53:08Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 15,
+    "x": -420,
+    "y": -380
+  },
+  {
+    "name": "Athena",
+    "type": "G4",
+    "faction": "Unrecorded",
+    "level": null,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAthena_System",
+      "revision": 85597,
+      "timestamp": "2024-04-18T13:53:23Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 16,
+    "x": -300,
+    "y": -380
+  },
+  {
+    "name": "Bannoc Secondus",
+    "type": "M4",
+    "faction": "Unrecorded",
+    "level": 50,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABannoc_Secondus_System",
+      "revision": 105261,
+      "timestamp": "2025-05-21T01:37:06Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 18,
+    "x": -60,
+    "y": -380
+  },
+  {
+    "name": "Bannoc",
+    "type": "K1",
+    "faction": "Unrecorded",
+    "level": 50,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABannoc_System",
+      "revision": 75450,
+      "timestamp": "2023-11-14T05:31:06Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 17,
+    "x": -180,
+    "y": -380
+  },
+  {
+    "name": "Bara",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 45,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABara_System",
+      "revision": 105263,
+      "timestamp": "2025-05-21T01:37:10Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 19,
+    "x": 60,
+    "y": -380
+  },
+  {
+    "name": "Bardeen",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 70,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABardeen_System",
+      "revision": 105264,
+      "timestamp": "2025-05-21T01:37:15Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 20,
+    "x": 180,
+    "y": -380
+  },
+  {
+    "name": "Barnard's Star",
+    "type": "M4",
+    "faction": "Unrecorded",
+    "level": 1,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABarnard%27s_Star_System",
+      "revision": 105265,
+      "timestamp": "2025-05-21T01:37:18Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 21,
+    "x": 300,
+    "y": -380
+  },
+  {
+    "name": "Bel",
+    "type": "G0",
+    "faction": "Unrecorded",
+    "level": 55,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABel_System",
+      "revision": 105266,
+      "timestamp": "2025-05-21T01:37:24Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 22,
+    "x": 420,
+    "y": -380
+  },
+  {
+    "name": "Bessel",
+    "type": "K7",
+    "faction": "Neutral",
+    "level": 10,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABessel_System",
+      "revision": 105267,
+      "timestamp": "2025-05-21T01:37:26Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 23,
+    "x": -400,
+    "y": -300
+  },
+  {
+    "name": "Beta Andraste",
+    "type": "M3",
+    "faction": "Unrecorded",
+    "level": 20,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABeta_Andraste_System",
+      "revision": 105268,
+      "timestamp": "2025-05-21T01:37:29Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 24,
+    "x": 660,
+    "y": -380
+  },
+  {
+    "name": "Beta Marae",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 45,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABeta_Marae_System",
+      "revision": 105269,
+      "timestamp": "2025-05-21T01:37:33Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 25,
+    "x": -660,
+    "y": -260
+  },
+  {
+    "name": "Beta Ternion",
+    "type": "F6",
+    "faction": "Unrecorded",
+    "level": 40,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABeta_Ternion_System",
+      "revision": 105270,
+      "timestamp": "2025-05-21T01:37:37Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 26,
+    "x": -540,
+    "y": -260
+  },
+  {
+    "name": "Beta Tirna",
+    "type": "M5",
+    "faction": "Unrecorded",
+    "level": 35,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABeta_Tirna_System",
+      "revision": 105271,
+      "timestamp": "2025-05-21T01:37:41Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 27,
+    "x": -420,
+    "y": -260
+  },
+  {
+    "name": "Bohr",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 75,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABohr_System",
+      "revision": 105272,
+      "timestamp": "2025-05-21T01:37:45Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 28,
+    "x": -300,
+    "y": -260
+  },
+  {
+    "name": "Bolivar",
+    "type": "M3",
+    "faction": "Unrecorded",
+    "level": 35,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABolivar_System",
+      "revision": 120476,
+      "timestamp": "2026-06-13T23:09:17Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 29,
+    "x": -180,
+    "y": -260
+  },
+  {
+    "name": "Bradbury",
+    "type": "F9",
+    "faction": "Neutral",
+    "level": 20,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABradbury_System",
+      "revision": 105274,
+      "timestamp": "2025-05-21T01:37:52Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 30,
+    "x": 300,
+    "y": 300
+  },
+  {
+    "name": "Canis",
+    "type": "WD",
+    "faction": "Unrecorded",
+    "level": null,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ACanis_System",
+      "revision": 85604,
+      "timestamp": "2024-04-18T14:02:17Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 31,
+    "x": 60,
+    "y": -260
+  },
+  {
+    "name": "Carinae",
+    "type": "K7",
+    "faction": "Unrecorded",
+    "level": 20,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ACarinae_System",
+      "revision": 105275,
+      "timestamp": "2025-05-21T01:38:00Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 32,
+    "x": 180,
+    "y": -260
+  },
+  {
+    "name": "Celebrai",
+    "type": "K2",
+    "faction": "Unrecorded",
+    "level": 70,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ACelebrai_System",
+      "revision": 105276,
+      "timestamp": "2025-05-21T01:38:04Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 33,
+    "x": 300,
+    "y": -260
+  },
+  {
+    "name": "Charybdis",
+    "type": "G0",
+    "faction": "Unrecorded",
+    "level": 65,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ACharybdis_System",
+      "revision": 105277,
+      "timestamp": "2025-05-21T01:38:08Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 34,
+    "x": 420,
+    "y": -260
+  },
+  {
+    "name": "Cheyenne",
+    "type": "G8",
+    "faction": "Freestar Collective",
+    "level": 1,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ACheyenne_System",
+      "revision": 105278,
+      "timestamp": "2025-05-21T01:38:23Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 35,
+    "x": -150,
+    "y": 200
+  },
+  {
+    "name": "Copernicus Minor",
+    "type": "M6",
+    "faction": "Unrecorded",
+    "level": 30,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ACopernicus_Minor_System",
+      "revision": 105279,
+      "timestamp": "2025-05-21T01:38:29Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 37,
+    "x": -660,
+    "y": -140
+  },
+  {
+    "name": "Copernicus",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 30,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ACopernicus_System",
+      "revision": 105280,
+      "timestamp": "2025-05-21T01:38:33Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 36,
+    "x": 660,
+    "y": -260
+  },
+  {
+    "name": "Corvi",
+    "type": "F0",
+    "faction": "Unrecorded",
+    "level": null,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ACorvi_System",
+      "revision": 120238,
+      "timestamp": "2026-06-05T16:43:26Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 38,
+    "x": -540,
+    "y": -140
+  },
+  {
+    "name": "Decaran",
+    "type": "G9",
+    "faction": "Unrecorded",
+    "level": 60,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ADecaran_System",
+      "revision": 105281,
+      "timestamp": "2025-05-21T01:38:37Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 39,
+    "x": -420,
+    "y": -140
+  },
+  {
+    "name": "Delta Pavonis",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 25,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ADelta_Pavonis_System",
+      "revision": 105282,
+      "timestamp": "2025-05-21T01:38:41Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 40,
+    "x": -300,
+    "y": -140
+  },
+  {
+    "name": "Delta Vulpes",
+    "type": "K2",
+    "faction": "Unrecorded",
+    "level": 50,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ADelta_Vulpes_System",
+      "revision": 105283,
+      "timestamp": "2025-05-21T01:38:46Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 41,
+    "x": -180,
+    "y": -140
+  },
+  {
+    "name": "Denebola",
+    "type": "A3",
+    "faction": "Unrecorded",
+    "level": 30,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ADenebola_System",
+      "revision": 105284,
+      "timestamp": "2025-05-21T01:38:50Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 42,
+    "x": -60,
+    "y": -140
+  },
+  {
+    "name": "Enlil",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 65,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AEnlil_System",
+      "revision": 105285,
+      "timestamp": "2025-05-21T01:38:56Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 43,
+    "x": 60,
+    "y": -140
+  },
+  {
+    "name": "Eridani",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 20,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AEridani_System",
+      "revision": 110787,
+      "timestamp": "2026-01-16T14:09:59Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 44,
+    "x": 180,
+    "y": -140
+  },
+  {
+    "name": "Eta Cassiopeia",
+    "type": "G0",
+    "faction": "Unrecorded",
+    "level": 20,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AEta_Cassiopeia_System",
+      "revision": 105288,
+      "timestamp": "2025-05-21T01:39:03Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 45,
+    "x": 300,
+    "y": -140
+  },
+  {
+    "name": "Fermi",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 75,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AFermi_System",
+      "revision": 105289,
+      "timestamp": "2025-05-21T01:39:11Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 46,
+    "x": 420,
+    "y": -140
+  },
+  {
+    "name": "Feynman",
+    "type": "F6",
+    "faction": "Unrecorded",
+    "level": 55,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AFeynman_System",
+      "revision": 110788,
+      "timestamp": "2026-01-16T14:12:53Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 47,
+    "x": 540,
+    "y": -140
+  },
+  {
+    "name": "Foucault",
+    "type": "F3",
+    "faction": "Unrecorded",
+    "level": 60,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AFoucault_System",
+      "revision": 105291,
+      "timestamp": "2025-05-21T01:39:21Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 48,
+    "x": 660,
+    "y": -140
+  },
+  {
+    "name": "Freya",
+    "type": "G2",
+    "faction": "Unrecorded",
+    "level": 40,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AFreya_System",
+      "revision": 105292,
+      "timestamp": "2025-05-21T01:39:26Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 49,
+    "x": -660,
+    "y": -20
+  },
+  {
+    "name": "Gamma Vulpes",
+    "type": "K2",
+    "faction": "Unrecorded",
+    "level": 50,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AGamma_Vulpes_System",
+      "revision": 105293,
+      "timestamp": "2025-05-21T01:39:31Z",
+      "fetched_at": "2026-10-04T06:33:33.448946+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 50,
+    "x": -540,
+    "y": -20
+  },
+  {
+    "name": "Groombridge",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 25,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AGroombridge_System",
+      "revision": 105294,
+      "timestamp": "2025-05-21T01:39:46Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 51,
+    "x": -420,
+    "y": -20
+  },
+  {
+    "name": "Guniibuu",
+    "type": "K2",
+    "faction": "Unrecorded",
+    "level": 20,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AGuniibuu_System",
+      "revision": 105295,
+      "timestamp": "2025-05-21T01:40:06Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 52,
+    "x": -300,
+    "y": -20
+  },
+  {
+    "name": "Hawking",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 75,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AHawking_System",
+      "revision": 105296,
+      "timestamp": "2025-05-21T01:40:13Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 53,
+    "x": -180,
+    "y": -20
+  },
+  {
+    "name": "Heinlein",
+    "type": "F2",
+    "faction": "Unrecorded",
+    "level": 45,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AHeinlein_System",
+      "revision": 105298,
+      "timestamp": "2025-05-21T01:40:17Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 54,
+    "x": -60,
+    "y": -20
+  },
+  {
+    "name": "Heisenberg",
+    "type": "F9",
+    "faction": "Unrecorded",
+    "level": 55,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AHeisenberg_System",
+      "revision": 105299,
+      "timestamp": "2025-05-21T01:40:21Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 55,
+    "x": 60,
+    "y": -20
+  },
+  {
+    "name": "Huygens",
+    "type": "F8",
+    "faction": "Unrecorded",
+    "level": 75,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AHuygens_System",
+      "revision": 105300,
+      "timestamp": "2025-05-21T01:40:26Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 56,
+    "x": 180,
+    "y": -20
+  },
+  {
+    "name": "Hyla",
+    "type": "G1",
+    "faction": "Unrecorded",
+    "level": 40,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AHyla_System",
+      "revision": 105301,
+      "timestamp": "2025-05-21T01:40:32Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 57,
+    "x": 300,
+    "y": -20
+  },
+  {
+    "name": "Indum",
+    "type": "K1",
+    "faction": "Unrecorded",
+    "level": 20,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AIndum_System",
+      "revision": 105302,
+      "timestamp": "2025-05-21T01:40:38Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 58,
+    "x": 420,
+    "y": -20
+  },
+  {
+    "name": "Ixyll",
+    "type": "G7",
+    "faction": "Unrecorded",
+    "level": 40,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AIxyll_System",
+      "revision": 105303,
+      "timestamp": "2025-05-21T01:40:43Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 59,
+    "x": 540,
+    "y": -20
+  },
+  {
+    "name": "Jaffa",
+    "type": "G1",
+    "faction": "Unrecorded",
+    "level": 35,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AJaffa_System",
+      "revision": 105305,
+      "timestamp": "2025-05-21T01:40:46Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 60,
+    "x": 660,
+    "y": -20
+  },
+  {
+    "name": "Kang",
+    "type": "G6",
+    "faction": "Unrecorded",
+    "level": 60,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AKang_System",
+      "revision": 105306,
+      "timestamp": "2025-05-21T01:40:55Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 61,
+    "x": -660,
+    "y": 100
+  },
+  {
+    "name": "Kapteyn's Star",
+    "type": "M0",
+    "faction": "Unrecorded",
+    "level": 10,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AKapteyn%27s_Star_System",
+      "revision": 105307,
+      "timestamp": "2025-05-21T01:40:58Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 62,
+    "x": -540,
+    "y": 100
+  },
+  {
+    "name": "Katydid",
+    "type": "A9",
+    "faction": "Unrecorded",
+    "level": 75,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AKatydid_System",
+      "revision": 105308,
+      "timestamp": "2025-05-21T01:41:01Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 63,
+    "x": -420,
+    "y": 100
+  },
+  {
+    "name": "Kavnyk",
+    "type": "A2",
+    "faction": "Unrecorded",
+    "level": 35,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AKavnyk_System",
+      "revision": 118160,
+      "timestamp": "2026-05-07T19:39:15Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 64,
+    "x": -300,
+    "y": 100
+  },
+  {
+    "name": "Khayyam",
+    "type": "G4",
+    "faction": "Unrecorded",
+    "level": 40,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AKhayyam_System",
+      "revision": 105311,
+      "timestamp": "2025-05-21T01:41:54Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 65,
+    "x": -180,
+    "y": 100
+  },
+  {
+    "name": "Kryx",
+    "type": "G0",
+    "faction": "Crimson Fleet",
+    "level": 20,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AKryx_System",
+      "revision": 105312,
+      "timestamp": "2025-05-21T01:42:07Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 66,
+    "x": 400,
+    "y": -50
+  },
+  {
+    "name": "Kumasi",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 25,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AKumasi_System",
+      "revision": 105313,
+      "timestamp": "2025-05-21T01:42:11Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 67,
+    "x": 60,
+    "y": 100
+  },
+  {
+    "name": "Lantana",
+    "type": "F8",
+    "faction": "Unrecorded",
+    "level": 30,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ALantana_System",
+      "revision": 105314,
+      "timestamp": "2025-05-21T01:42:15Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 68,
+    "x": 180,
+    "y": 100
+  },
+  {
+    "name": "Leonis",
+    "type": "F2",
+    "faction": "Unrecorded",
+    "level": 65,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ALeonis_System",
+      "revision": 105315,
+      "timestamp": "2025-05-21T01:42:19Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 69,
+    "x": 300,
+    "y": 100
+  },
+  {
+    "name": "Leviathan",
+    "type": "K0",
+    "faction": "Unrecorded",
+    "level": 55,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ALeviathan_System",
+      "revision": 110789,
+      "timestamp": "2026-01-16T14:14:02Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 70,
+    "x": 420,
+    "y": 100
+  },
+  {
+    "name": "Linnaeus",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 45,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ALinnaeus_System",
+      "revision": 105317,
+      "timestamp": "2025-05-21T01:42:27Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 71,
+    "x": 540,
+    "y": 100
+  },
+  {
+    "name": "Lunara",
+    "type": "G4",
+    "faction": "Unrecorded",
+    "level": 25,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ALunara_System",
+      "revision": 105318,
+      "timestamp": "2025-05-21T01:42:43Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 72,
+    "x": 660,
+    "y": 100
+  },
+  {
+    "name": "Luyten's Star",
+    "type": "M1",
+    "faction": "Unrecorded",
+    "level": 5,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ALuyten%27s_Star_System",
+      "revision": 105321,
+      "timestamp": "2025-05-21T01:42:50Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 73,
+    "x": -660,
+    "y": 220
+  },
+  {
+    "name": "Maal",
+    "type": "F8",
+    "faction": "Unrecorded",
+    "level": 60,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMaal_System",
+      "revision": 105322,
+      "timestamp": "2025-05-21T01:42:52Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 74,
+    "x": -540,
+    "y": 220
+  },
+  {
+    "name": "Maheo",
+    "type": "K4",
+    "faction": "Unrecorded",
+    "level": 1,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMaheo_System",
+      "revision": 117334,
+      "timestamp": "2026-04-28T13:01:45Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 75,
+    "x": -420,
+    "y": 220
+  },
+  {
+    "name": "Marduk",
+    "type": "G1",
+    "faction": "Unrecorded",
+    "level": 70,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMarduk_System",
+      "revision": 105324,
+      "timestamp": "2025-05-21T01:43:12Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 76,
+    "x": -300,
+    "y": 220
+  },
+  {
+    "name": "Masada",
+    "type": "G2",
+    "faction": "Unrecorded",
+    "level": 75,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMasada_System",
+      "revision": 105196,
+      "timestamp": "2025-05-21T01:27:20Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 77,
+    "x": -180,
+    "y": 220
+  },
+  {
+    "name": "McClure",
+    "type": "K0",
+    "faction": "Unrecorded",
+    "level": 20,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMcClure_System",
+      "revision": 105197,
+      "timestamp": "2025-05-21T01:27:26Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 78,
+    "x": -60,
+    "y": 220
+  },
+  {
+    "name": "Minerva",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": null,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMinerva_System",
+      "revision": 85743,
+      "timestamp": "2024-04-18T16:25:48Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 79,
+    "x": 60,
+    "y": 220
+  },
+  {
+    "name": "Moloch",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 40,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMoloch_System",
+      "revision": 105198,
+      "timestamp": "2025-05-21T01:27:30Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 80,
+    "x": 180,
+    "y": 220
+  },
+  {
+    "name": "Muphrid",
+    "type": "G0",
+    "faction": "Unrecorded",
+    "level": 15,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMuphrid_System",
+      "revision": 105199,
+      "timestamp": "2025-05-21T01:27:36Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 81,
+    "x": 300,
+    "y": 220
+  },
+  {
+    "name": "Narion",
+    "type": "K0",
+    "faction": "United Colonies",
+    "level": 1,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ANarion_System",
+      "revision": 105200,
+      "timestamp": "2025-05-21T01:28:11Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 82,
+    "x": 50,
+    "y": -250
+  },
+  {
+    "name": "Nemeria",
+    "type": "G0",
+    "faction": "Unrecorded",
+    "level": 35,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ANemeria_System",
+      "revision": 105201,
+      "timestamp": "2025-05-21T01:28:32Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 83,
+    "x": 540,
+    "y": 220
+  },
+  {
+    "name": "Newton",
+    "type": "F6",
+    "faction": "Unrecorded",
+    "level": 55,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ANewton_System",
+      "revision": 105202,
+      "timestamp": "2025-05-21T01:28:37Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 84,
+    "x": 660,
+    "y": 220
+  },
+  {
+    "name": "Nikola",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 40,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ANikola_System",
+      "revision": 105203,
+      "timestamp": "2025-05-21T01:28:41Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 85,
+    "x": -660,
+    "y": 340
+  },
+  {
+    "name": "Nirah",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 55,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ANirah_System",
+      "revision": 105204,
+      "timestamp": "2025-05-21T01:28:49Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 86,
+    "x": -540,
+    "y": 340
+  },
+  {
+    "name": "Nirvana",
+    "type": "K0",
+    "faction": "Unrecorded",
+    "level": 40,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ANirvana_System",
+      "revision": 105205,
+      "timestamp": "2025-05-21T01:29:06Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 87,
+    "x": -420,
+    "y": 340
+  },
+  {
+    "name": "Oborum Prime",
+    "type": "K3",
+    "faction": "Unrecorded",
+    "level": 20,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOborum_Prime_System",
+      "revision": 105206,
+      "timestamp": "2025-05-21T01:29:11Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 88,
+    "x": -300,
+    "y": 340
+  },
+  {
+    "name": "Oborum Proxima",
+    "type": "M2",
+    "faction": "Unrecorded",
+    "level": 25,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOborum_Proxima_System",
+      "revision": 105207,
+      "timestamp": "2025-05-21T01:29:17Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 89,
+    "x": -180,
+    "y": 340
+  },
+  {
+    "name": "Oborum Secondus",
+    "type": "M2",
+    "faction": "Unrecorded",
+    "level": null,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOborum_Secondus_System",
+      "revision": 120228,
+      "timestamp": "2026-06-05T16:19:54Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 90,
+    "x": -60,
+    "y": 340
+  },
+  {
+    "name": "Olympus",
+    "type": "K4",
+    "faction": "Neutral",
+    "level": 10,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOlympus_System",
+      "revision": 105208,
+      "timestamp": "2025-05-21T01:29:28Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 91,
+    "x": -200,
+    "y": 50
+  },
+  {
+    "name": "Ophion",
+    "type": "K0",
+    "faction": "Unrecorded",
+    "level": 45,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOphion_System",
+      "revision": 105209,
+      "timestamp": "2025-05-21T01:29:39Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 92,
+    "x": 180,
+    "y": 340
+  },
+  {
+    "name": "Piazzi",
+    "type": "K5",
+    "faction": "Unrecorded",
+    "level": 10,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3APiazzi_System",
+      "revision": 105210,
+      "timestamp": "2025-05-21T01:29:48Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 93,
+    "x": 300,
+    "y": 340
+  },
+  {
+    "name": "Porrima",
+    "type": "F0",
+    "faction": "Neutral",
+    "level": 30,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3APorrima_System",
+      "revision": 105211,
+      "timestamp": "2025-05-21T01:30:02Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 94,
+    "x": -300,
+    "y": -100
+  },
+  {
+    "name": "Procyon A",
+    "type": "F5",
+    "faction": "Unrecorded",
+    "level": 10,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AProcyon_A_System",
+      "revision": 105212,
+      "timestamp": "2025-05-21T01:30:26Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 95,
+    "x": 540,
+    "y": 340
+  },
+  {
+    "name": "Procyon B",
+    "type": "WD",
+    "faction": "Unrecorded",
+    "level": 5,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AProcyon_B_System",
+      "revision": 105213,
+      "timestamp": "2025-05-21T01:30:40Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 96,
+    "x": 660,
+    "y": 340
+  },
+  {
+    "name": "Proxima Ternion",
+    "type": "F6",
+    "faction": "Unrecorded",
+    "level": 65,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AProxima_Ternion_System",
+      "revision": 105214,
+      "timestamp": "2025-05-21T01:30:43Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 97,
+    "x": -660,
+    "y": 460
+  },
+  {
+    "name": "Pyraas",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 70,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3APyraas_System",
+      "revision": 105215,
+      "timestamp": "2025-05-21T01:30:47Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 98,
+    "x": -540,
+    "y": 460
+  },
+  {
+    "name": "Rana",
+    "type": "F5",
+    "faction": "Unrecorded",
+    "level": 65,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ARana_System",
+      "revision": 105216,
+      "timestamp": "2025-05-21T01:30:52Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 99,
+    "x": -420,
+    "y": 460
+  },
+  {
+    "name": "Rasalhague",
+    "type": "A5",
+    "faction": "Unrecorded",
+    "level": 40,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ARasalhague_System",
+      "revision": 105217,
+      "timestamp": "2025-05-21T01:30:55Z",
+      "fetched_at": "2026-10-04T06:33:34.587962+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 100,
+    "x": -300,
+    "y": 460
+  },
+  {
+    "name": "Rivera",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 35,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ARivera_System",
+      "revision": 120469,
+      "timestamp": "2026-06-13T23:01:06Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 101,
+    "x": -180,
+    "y": 460
+  },
+  {
+    "name": "Rutherford",
+    "type": "G0",
+    "faction": "Unrecorded",
+    "level": 45,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ARutherford_System",
+      "revision": 105219,
+      "timestamp": "2025-05-21T01:31:06Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 102,
+    "x": -60,
+    "y": 460
+  },
+  {
+    "name": "Sagan",
+    "type": "M2",
+    "faction": "Unrecorded",
+    "level": 15,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASagan_System",
+      "revision": 105220,
+      "timestamp": "2025-05-21T01:31:15Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 103,
+    "x": 60,
+    "y": 460
+  },
+  {
+    "name": "Sakharov",
+    "type": "M3",
+    "faction": "Unrecorded",
+    "level": 15,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASakharov_System",
+      "revision": 105221,
+      "timestamp": "2025-05-21T01:31:24Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 104,
+    "x": 180,
+    "y": 460
+  },
+  {
+    "name": "Schrodinger",
+    "type": "F3",
+    "faction": "Unrecorded",
+    "level": 65,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASchrodinger_System",
+      "revision": 105222,
+      "timestamp": "2025-05-21T01:31:29Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 105,
+    "x": 300,
+    "y": 460
+  },
+  {
+    "name": "Serpentis",
+    "type": "K2",
+    "faction": "Unrecorded",
+    "level": 55,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASerpentis_System",
+      "revision": 105223,
+      "timestamp": "2025-05-21T01:31:45Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 106,
+    "x": 420,
+    "y": 460
+  },
+  {
+    "name": "Shoza",
+    "type": "F7",
+    "faction": "Unrecorded",
+    "level": 35,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShoza_System",
+      "revision": 105224,
+      "timestamp": "2025-05-21T01:31:58Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 107,
+    "x": 540,
+    "y": 460
+  },
+  {
+    "name": "Sirius",
+    "type": "A1",
+    "faction": "Unrecorded",
+    "level": 5,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASirius_System",
+      "revision": 105225,
+      "timestamp": "2025-05-21T01:32:01Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 108,
+    "x": 660,
+    "y": 460
+  },
+  {
+    "name": "Sol",
+    "type": "G2",
+    "faction": "United Colonies",
+    "level": 1,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASol_System",
+      "revision": 105226,
+      "timestamp": "2025-05-21T01:32:11Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 109,
+    "x": 0,
+    "y": 0
+  },
+  {
+    "name": "Sparta",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 60,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASparta_System",
+      "revision": 105227,
+      "timestamp": "2025-05-21T01:32:32Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 110,
+    "x": -540,
+    "y": 580
+  },
+  {
+    "name": "Strix",
+    "type": "K0",
+    "faction": "Unrecorded",
+    "level": 70,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AStrix_System",
+      "revision": 105228,
+      "timestamp": "2025-05-21T01:32:37Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 111,
+    "x": -420,
+    "y": 580
+  },
+  {
+    "name": "Syrma",
+    "type": "F7",
+    "faction": "Unrecorded",
+    "level": 55,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASyrma_System",
+      "revision": 105229,
+      "timestamp": "2025-05-21T01:32:42Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 112,
+    "x": -300,
+    "y": 580
+  },
+  {
+    "name": "Tau Ceti",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 10,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ATau_Ceti_System",
+      "revision": 114611,
+      "timestamp": "2026-04-07T04:10:24Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 113,
+    "x": -180,
+    "y": 580
+  },
+  {
+    "name": "The Pup",
+    "type": "WD",
+    "faction": "Unrecorded",
+    "level": 10,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AThe_Pup_System",
+      "revision": 105231,
+      "timestamp": "2025-05-21T01:32:52Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 114,
+    "x": -60,
+    "y": 580
+  },
+  {
+    "name": "Tidacha",
+    "type": "G8",
+    "faction": "Unrecorded",
+    "level": 45,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ATidacha_System",
+      "revision": 105232,
+      "timestamp": "2025-05-21T01:32:56Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 115,
+    "x": 60,
+    "y": 580
+  },
+  {
+    "name": "Toliman",
+    "type": "K1",
+    "faction": "Unrecorded",
+    "level": 5,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AToliman_System",
+      "revision": 105233,
+      "timestamp": "2025-05-21T01:33:02Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 116,
+    "x": 180,
+    "y": 580
+  },
+  {
+    "name": "Ursae Majoris",
+    "type": "F8",
+    "faction": "Unrecorded",
+    "level": 30,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AUrsae_Majoris_System",
+      "revision": 105234,
+      "timestamp": "2025-05-21T01:33:14Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 117,
+    "x": 300,
+    "y": 580
+  },
+  {
+    "name": "Ursae Minoris",
+    "type": "G2",
+    "faction": "Unrecorded",
+    "level": 20,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AUrsae_Minoris_System",
+      "revision": 105235,
+      "timestamp": "2025-05-21T01:33:19Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 118,
+    "x": 420,
+    "y": 580
+  },
+  {
+    "name": "Valo",
+    "type": "K5",
+    "faction": "Unrecorded",
+    "level": 5,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AValo_System",
+      "revision": 105236,
+      "timestamp": "2025-05-21T01:33:34Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 119,
+    "x": 540,
+    "y": 580
+  },
+  {
+    "name": "Van Maanen's Star",
+    "type": "WD",
+    "faction": "Unrecorded",
+    "level": 10,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AVan_Maanen%27s_Star_System",
+      "revision": 105237,
+      "timestamp": "2025-05-21T01:33:42Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 120,
+    "x": 660,
+    "y": 580
+  },
+  {
+    "name": "Vega",
+    "type": "A0",
+    "faction": "Unrecorded",
+    "level": 25,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AVega_System",
+      "revision": 105238,
+      "timestamp": "2025-05-21T01:33:45Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 121,
+    "x": -660,
+    "y": 700
+  },
+  {
+    "name": "Verne",
+    "type": "G5",
+    "faction": "Unrecorded",
+    "level": 70,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AVerne_System",
+      "revision": 105239,
+      "timestamp": "2025-05-21T01:33:50Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 122,
+    "x": -540,
+    "y": 700
+  },
+  {
+    "name": "Volii",
+    "type": "G5",
+    "faction": "Freestar Collective",
+    "level": 5,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AVolii_System",
+      "revision": 105240,
+      "timestamp": "2025-05-21T01:34:04Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 123,
+    "x": 200,
+    "y": 150
+  },
+  {
+    "name": "Wolf",
+    "type": "M6",
+    "faction": "Unrecorded",
+    "level": 5,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AWolf_System",
+      "revision": 105241,
+      "timestamp": "2025-05-21T01:34:28Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 124,
+    "x": -300,
+    "y": 700
+  },
+  {
+    "name": "Xi Ophiuchi",
+    "type": "F2",
+    "faction": "Unrecorded",
+    "level": 50,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AXi_Ophiuchi_System",
+      "revision": 105242,
+      "timestamp": "2025-05-21T01:34:39Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 125,
+    "x": -180,
+    "y": 700
+  },
+  {
+    "name": "Zelazny",
+    "type": "G0",
+    "faction": "Unrecorded",
+    "level": 60,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AZelazny_System",
+      "revision": 105243,
+      "timestamp": "2025-05-21T01:34:44Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 126,
+    "x": -60,
+    "y": 700
+  },
+  {
+    "name": "Zeta Ophiuchi",
+    "type": "K3",
+    "faction": "Unrecorded",
+    "level": 50,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AZeta_Ophiuchi_System",
+      "revision": 105244,
+      "timestamp": "2025-05-21T01:34:57Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 127,
+    "x": 60,
+    "y": 700
+  },
+  {
+    "name": "Zosma",
+    "type": "A4",
+    "faction": "Unrecorded",
+    "level": 50,
+    "description": "Wiki system reference; schematic navigation coordinates.",
+    "layout_only": true,
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AZosma_System",
+      "revision": 105245,
+      "timestamp": "2025-05-21T01:35:10Z",
+      "fetched_at": "2026-10-04T06:33:35.612603+00:00",
+      "license": "CC-BY-SA-4.0"
+    },
+    "id": 128,
+    "x": 180,
+    "y": 700
+  }
+]

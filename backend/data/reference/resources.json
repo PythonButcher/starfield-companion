@@ -1,0 +1,1528 @@
+[
+  {
+    "name": "Aldumite",
+    "type": "inorganic",
+    "symbol": "Ad",
+    "state": "Solid",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Alkanes",
+    "type": "inorganic",
+    "symbol": "HnCn",
+    "state": "Gas",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Aluminum",
+    "type": "inorganic",
+    "symbol": "Al",
+    "state": "Solid",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Antimony",
+    "type": "inorganic",
+    "symbol": "Sb",
+    "state": "Solid",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Argon",
+    "type": "inorganic",
+    "symbol": "Ar",
+    "state": "Gas",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Benzene",
+    "type": "inorganic",
+    "symbol": "C6H6",
+    "state": "Gas",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Beryllium",
+    "type": "inorganic",
+    "symbol": "Be",
+    "state": "Solid",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Caelumite",
+    "type": "inorganic",
+    "symbol": "Ct",
+    "state": "Solid",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Caesium",
+    "type": "inorganic",
+    "symbol": "Cs",
+    "state": "Liquid",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Carboxylic Acids",
+    "type": "inorganic",
+    "symbol": "R-COOH",
+    "state": "Liquid",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Chlorine",
+    "type": "inorganic",
+    "symbol": "Cl",
+    "state": "Gas",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Chlorosilanes",
+    "type": "inorganic",
+    "symbol": "SiH3Cl",
+    "state": "Liquid",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Cobalt",
+    "type": "inorganic",
+    "symbol": "Co",
+    "state": "Solid",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Copper",
+    "type": "inorganic",
+    "symbol": "Cu",
+    "state": "Solid",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Dysprosium",
+    "type": "inorganic",
+    "symbol": "Dy",
+    "state": "Solid",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Europium",
+    "type": "inorganic",
+    "symbol": "Eu",
+    "state": "Solid",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Fluorine",
+    "type": "inorganic",
+    "symbol": "F",
+    "state": "Gas",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Gold",
+    "type": "inorganic",
+    "symbol": "Au",
+    "state": "Solid",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Helium-3",
+    "type": "inorganic",
+    "symbol": "He-3",
+    "state": "Gas",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Indicite",
+    "type": "inorganic",
+    "symbol": "Ie",
+    "state": "Solid",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Ionic Liquids",
+    "type": "inorganic",
+    "symbol": "IL",
+    "state": "Liquid",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Iridium",
+    "type": "inorganic",
+    "symbol": "Ir",
+    "state": "Solid",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Iron",
+    "type": "inorganic",
+    "symbol": "Fe",
+    "state": "Solid",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Lead",
+    "type": "inorganic",
+    "symbol": "Pb",
+    "state": "Solid",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Lithium",
+    "type": "inorganic",
+    "symbol": "Li",
+    "state": "Solid",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Mercury",
+    "type": "inorganic",
+    "symbol": "Hg",
+    "state": "Liquid",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Neodymium",
+    "type": "inorganic",
+    "symbol": "Nd",
+    "state": "Solid",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Neon",
+    "type": "inorganic",
+    "symbol": "Ne",
+    "state": "Gas",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Nickel",
+    "type": "inorganic",
+    "symbol": "Ni",
+    "state": "Solid",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Palladium",
+    "type": "inorganic",
+    "symbol": "Pd",
+    "state": "Solid",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Platinum",
+    "type": "inorganic",
+    "symbol": "Pt",
+    "state": "Solid",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Plutonium",
+    "type": "inorganic",
+    "symbol": "Pu",
+    "state": "Solid",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Rothicite",
+    "type": "inorganic",
+    "symbol": "Rc",
+    "state": "Solid",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Silver",
+    "type": "inorganic",
+    "symbol": "Ag",
+    "state": "Solid",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Tantalum",
+    "type": "inorganic",
+    "symbol": "Ta",
+    "state": "Solid",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Tasine",
+    "type": "inorganic",
+    "symbol": "Tsn",
+    "state": "Liquid",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Tetrafluorides",
+    "type": "inorganic",
+    "symbol": "xF4",
+    "state": "Gas",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Titanium",
+    "type": "inorganic",
+    "symbol": "Ti",
+    "state": "Solid",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Tungsten",
+    "type": "inorganic",
+    "symbol": "W",
+    "state": "Solid",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Uranium",
+    "type": "inorganic",
+    "symbol": "U",
+    "state": "Solid",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Vanadium",
+    "type": "inorganic",
+    "symbol": "V",
+    "state": "Solid",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Veryl",
+    "type": "inorganic",
+    "symbol": "Vr",
+    "state": "Gas",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Vytinium",
+    "type": "inorganic",
+    "symbol": "Vy",
+    "state": "Solid",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Water",
+    "type": "inorganic",
+    "symbol": "H2O",
+    "state": "Liquid",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Xenon",
+    "type": "inorganic",
+    "symbol": "Xe",
+    "state": "Gas",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Ytterbium",
+    "type": "inorganic",
+    "symbol": "Yb",
+    "state": "Solid",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Aqueous Hematite",
+    "type": "inorganic",
+    "symbol": "Aq",
+    "state": "Solid",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Adhesive",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Amino Acids",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Analgesic",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Antimicrobial",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Aromatic",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Biosuppressant",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Chasmbass Oil",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Cosmetic",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Fiber",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Gastronomic Delight",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Hallucinogen",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "High-Tensile Spidroin",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Hypercatalyst",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Immunostimulant",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Lubricant",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Luxury Textile",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Membrane",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Memory Substrate",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Metabolic Agent",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Neurologic",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Nutrient",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Ornamental",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Pigment",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Polymer",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Quark-Degenerate Tissues",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Sealant",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Sedative",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Solvent",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Spice",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Stimulant",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Structural",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Toxin",
+    "type": "organic",
+    "symbol": "",
+    "state": "",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Adaptive Frame",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Aldumite Drilling Rig",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Austenitic Manifold",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Comm Relay",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Control Rod",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Drilling Rig",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Indicite Wafer",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Isocentered Magnet",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Isotopic Coolant",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Mag Pressure Tank",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Microsecond Regulator",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Molecular Sieve",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Monopropellant",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Nuclear Fuel Rod",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Paramagnon Conductor",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Polytextile",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Positron Battery",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Power Circuit",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Reactive Gauge",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Rothicite Magnet",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Semimetal Wafer",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Sterile Nanotubes",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "exotic",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Substrate Molecule Sieve",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Supercooled Magnet",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Tasine Superconductor",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Tau Grade Rheostat",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "uncommon",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Veryl-Treated Manifold",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Vytinium Fuel Rod",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "unique",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Zero Wire",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "common",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Zero-G Gimbal",
+    "type": "manufactured",
+    "symbol": "",
+    "state": "",
+    "rarity": "rare",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResources",
+      "revision": 114701,
+      "timestamp": "2026-04-07T21:32:53Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  }
+]

@@ -132,3 +132,45 @@ class ReferenceRecord(db.Model):
 
 class SeedMarker(db.Model):
     name = db.Column(db.String(100), primary_key=True)
+
+class OutpostPlan(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    planet_id = db.Column(db.Integer, db.ForeignKey('planet_profile.id', ondelete='SET NULL'))
+    planet_name = db.Column(db.String(100), default='')
+    modules = db.Column(db.JSON, default=list)
+    environment = db.Column(db.JSON, default=dict)
+    stored_mass = db.Column(db.Float, default=0)
+    notes = db.Column(db.Text, default='')
+    created_at = db.Column(db.DateTime(timezone=True), default=utcnow)
+    updated_at = db.Column(db.DateTime(timezone=True), default=utcnow, onupdate=utcnow)
+
+
+class PlayerObjective(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    faction = db.Column(db.String(50), default='Independent')
+    category = db.Column(db.String(30), default='Personal')
+    status = db.Column(db.String(20), default='Active')
+    priority = db.Column(db.String(20), default='Medium')
+    target_planet_id = db.Column(db.Integer, db.ForeignKey('planet_profile.id', ondelete='SET NULL'))
+    target_system = db.Column(db.String(100), default='')
+    notes = db.Column(db.Text, default='')
+    checklist = db.Column(db.JSON, default=list)
+    linked_log_ids = db.Column(db.JSON, default=list)
+    created_at = db.Column(db.DateTime(timezone=True), default=utcnow)
+    completed_at = db.Column(db.DateTime(timezone=True))
+
+    def to_dict(self):
+        data = {c.name: getattr(self, c.name) for c in self.__table__.columns}
+        data.update(created_at=iso(self.created_at), completed_at=iso(self.completed_at))
+        return data
+
+
+class SurveyProgress(db.Model):
+    planet_id = db.Column(db.Integer, db.ForeignKey('planet_profile.id', ondelete='CASCADE'), primary_key=True)
+    scanned_flora = db.Column(db.Integer, nullable=True)
+    scanned_fauna = db.Column(db.Integer, nullable=True)
+    discovered_traits = db.Column(db.Integer, nullable=True)
+    scanned_resources = db.Column(db.Integer, nullable=True)
+    updated_at = db.Column(db.DateTime(timezone=True), default=utcnow, onupdate=utcnow)

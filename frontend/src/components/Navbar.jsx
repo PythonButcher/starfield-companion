@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import SystemSearch from './SystemSearch';
 import DriveBy from '../pages/DriveBy';
 import { StripeAccent } from './ui';
-const routes = [['/', 'Explorer’s Hub'], ['/journal', 'Quantum Journal'], ['/planet-pulse', 'PlanetPulse'], ['/crew', 'Crew Command'], ['/media', 'CosmoDrag'], ['/ram', 'R.A.M.']];
+const routes = [['/', 'Explorer’s Hub'], ['/journal', 'Quantum Journal'], ['/planet-pulse', 'PlanetPulse'], ['/crew', 'Crew Command'], ['/outposts', 'Outposts'], ['/media', 'CosmoDrag'], ['/ram', 'R.A.M.']];
 export default function Navbar() {
   const location = useLocation(); const navigate = useNavigate();
   useEffect(() => {

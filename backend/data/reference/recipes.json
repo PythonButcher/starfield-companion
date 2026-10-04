@@ -1,0 +1,2132 @@
+[
+  {
+    "name": "Adaptive Frame",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Aluminum": 1,
+      "Iron": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAdaptive_Frame",
+      "revision": 105739,
+      "timestamp": "2025-05-24T22:58:10Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Aldumite Drilling Rig",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Aldumite": 4,
+      "Caesium": 2,
+      "Drilling Rig": 1,
+      "Microsecond Regulator": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAldumite_Drilling_Rig",
+      "revision": 105752,
+      "timestamp": "2025-05-25T00:13:52Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Austenitic Manifold",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Iron": 2,
+      "Nickel": 2,
+      "Reactive Gauge": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAustenitic_Manifold",
+      "revision": 105759,
+      "timestamp": "2025-05-25T00:18:20Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Comm Relay",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Isocentered Magnet": 1,
+      "Tau Grade Rheostat": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AComm_Relay",
+      "revision": 105751,
+      "timestamp": "2025-05-25T00:12:34Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Control Rod",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Austenitic Manifold": 1,
+      "Dysprosium": 3,
+      "Isotopic Coolant": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AControl_Rod",
+      "revision": 105760,
+      "timestamp": "2025-05-25T00:35:18Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Drilling Rig",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Lubricant": 2,
+      "Reactive Gauge": 1,
+      "Tungsten": 3
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ADrilling_Rig",
+      "revision": 105761,
+      "timestamp": "2025-05-25T00:35:19Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Indicite Wafer",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Caesium": 2,
+      "Indicite": 4,
+      "Semimetal Wafer": 1,
+      "Solvent": 2
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AIndicite_Wafer",
+      "revision": 105762,
+      "timestamp": "2025-05-25T00:35:21Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Isocentered Magnet",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Nickel": 1,
+      "Cobalt": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AIsocentered_Magnet",
+      "revision": 105889,
+      "timestamp": "2025-05-25T20:28:38Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Isotopic Coolant",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Ionic Liquids": 1,
+      "Tetrafluorides": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AIsotopic_Coolant",
+      "revision": 105765,
+      "timestamp": "2025-05-25T01:44:21Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Mag Pressure Tank",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Aluminum": 2,
+      "Nickel": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMag_Pressure_Tank",
+      "revision": 105767,
+      "timestamp": "2025-05-25T01:44:23Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Microsecond Regulator",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Europium": 4,
+      "Lithium": 2,
+      "Supercooled Magnet": 1,
+      "Tau Grade Rheostat": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMicrosecond_Regulator",
+      "revision": 109879,
+      "timestamp": "2025-10-06T22:52:11Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Molecular Sieve",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Ionic Liquids": 2,
+      "Mag Pressure Tank": 1,
+      "Membrane": 2
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMolecular_Sieve",
+      "revision": 105887,
+      "timestamp": "2025-05-25T20:23:51Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Monopropellant",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Alkanes": 2,
+      "Mag Pressure Tank": 1,
+      "Reactive Gauge": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMonopropellant",
+      "revision": 105771,
+      "timestamp": "2025-05-25T01:44:30Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Nuclear Fuel Rod",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Semimetal Wafer": 1,
+      "Solvent": 2,
+      "Uranium": 3
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ANuclear_Fuel_Rod",
+      "revision": 105772,
+      "timestamp": "2025-05-25T01:44:31Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Paramagnon Conductor",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Gold": 1,
+      "Neodymium": 1,
+      "Zero Wire": 3
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AParamagnon_Conductor",
+      "revision": 105773,
+      "timestamp": "2025-05-25T01:44:33Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Polytextile",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Cosmetic": 1,
+      "Fiber": 2
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3APolytextile",
+      "revision": 105774,
+      "timestamp": "2025-05-25T01:44:35Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Positron Battery",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Antimony": 2,
+      "Tau Grade Rheostat": 1,
+      "Vanadium": 2
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3APositron_Battery",
+      "revision": 105775,
+      "timestamp": "2025-05-25T01:44:37Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Power Circuit",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Palladium": 4,
+      "Paramagnon Conductor": 1,
+      "Polymer": 2,
+      "Positron Battery": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3APower_Circuit",
+      "revision": 105776,
+      "timestamp": "2025-05-25T01:44:39Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Reactive Gauge",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Aluminum": 1,
+      "Copper": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AReactive_Gauge",
+      "revision": 105781,
+      "timestamp": "2025-05-25T01:48:40Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Rothicite Magnet",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Lithium": 2,
+      "Rothicite": 4,
+      "Semimetal Wafer": 1,
+      "Supercooled Magnet": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ARothicite_Magnet",
+      "revision": 105782,
+      "timestamp": "2025-05-25T01:50:54Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Semimetal Wafer",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Antimony": 2,
+      "Gold": 2,
+      "Zero Wire": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASemimetal_Wafer",
+      "revision": 105784,
+      "timestamp": "2025-05-25T01:59:18Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Sterile Nanotubes",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Molecular Sieve": 1,
+      "Solvent": 2,
+      "Vanadium": 2
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASterile_Nanotubes",
+      "revision": 105786,
+      "timestamp": "2025-05-25T02:17:01Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Substrate Molecule Sieve",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Biosuppressant": 2,
+      "Memory Substrate": 3,
+      "Molecular Sieve": 1,
+      "Sterile Nanotubes": 2
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASubstrate_Molecule_Sieve",
+      "revision": 105787,
+      "timestamp": "2025-05-25T02:17:03Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Supercooled Magnet",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Isocentered Magnet": 1,
+      "Isotopic Coolant": 1,
+      "Neodymium": 3
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASupercooled_Magnet",
+      "revision": 105788,
+      "timestamp": "2025-05-25T02:17:05Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Tasine Superconductor",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Palladium": 2,
+      "Paramagnon Conductor": 1,
+      "Polymer": 2,
+      "Tasine": 4
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ATasine_Superconductor",
+      "revision": 105789,
+      "timestamp": "2025-05-25T02:17:07Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Tau Grade Rheostat",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Beryllium": 1,
+      "Copper": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ATau_Grade_Rheostat",
+      "revision": 105785,
+      "timestamp": "2025-05-25T02:16:53Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Veryl-Treated Manifold",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Austenitic Manifold": 1,
+      "Lubricant": 2,
+      "Veryl": 4,
+      "Ytterbium": 2
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AVeryl-Treated_Manifold",
+      "revision": 105792,
+      "timestamp": "2025-05-25T02:20:00Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Vytinium Fuel Rod",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Indicite Wafer": 1,
+      "Nuclear Fuel Rod": 1,
+      "Plutonium": 2,
+      "Vytinium": 4
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AVytinium_Fuel_Rod",
+      "revision": 105793,
+      "timestamp": "2025-05-25T02:21:35Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Zero-G Gimbal",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Isocentered Magnet": 1,
+      "Lubricant": 2,
+      "Tantalum": 2
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AZero-G_Gimbal",
+      "revision": 105796,
+      "timestamp": "2025-05-25T02:32:50Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Zero Wire",
+    "kind": "component",
+    "output": 1,
+    "ingredients": {
+      "Copper": 1,
+      "Silver": 1
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AZero_Wire",
+      "revision": 105795,
+      "timestamp": "2025-05-25T02:31:20Z",
+      "fetched_at": "2026-10-04T06:33:31.461881+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Medical Treatment 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aluminum": 2,
+      "Amino Acids": 2,
+      "Antimicrobial": 3
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Medical Treatment 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Amino Acids": 10,
+      "Analgesic": 10,
+      "Antimicrobial": 10,
+      "Battlestim": 5,
+      "Heart+": 5
+    },
+    "prerequisites": "Medical Treatment 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Medical Treatment 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Antimicrobial": 10,
+      "Metabolic Agent": 20,
+      "Sealant": 10,
+      "Sedative": 10
+    },
+    "prerequisites": "Medical Treatment 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Medical Treatment 4",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Immunostimulant": 5,
+      "Membrane": 19,
+      "Heart+": 10,
+      "Trauma Pack": 10
+    },
+    "prerequisites": "Medical Treatment 3",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Performance Enhancement 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Argon": 2,
+      "Metabolic Agent": 3,
+      "Tetrafluorides": 2
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Performance Enhancement 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Carboxylic Acids": 10,
+      "Membrane": 10,
+      "Solvent": 10,
+      "Hippolyta": 5,
+      "Infantry Alpha": 5
+    },
+    "prerequisites": "Performance Enhancement 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Performance Enhancement 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Ionic Liquids": 10,
+      "Stimulant": 10,
+      "Toxin": 10,
+      "Squall": 5,
+      "Synapse Alpha": 5
+    },
+    "prerequisites": "Performance Enhancement 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Performance Enhancement 4",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Stimulant": 20,
+      "Aurora": 10,
+      "CQB-X": 10,
+      "Squall": 10,
+      "Whiteout": 10
+    },
+    "prerequisites": "Performance Enhancement 3",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Innovative Synthesis 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Alien Genetic Material": 3,
+      "Carboxylic Acids": 5,
+      "Mercury": 10,
+      "Solvent": 5,
+      "Tetrafluorides": 5
+    },
+    "prerequisites": "Performance Enhancement 4",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Innovative Synthesis 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Alien Genetic Material": 5,
+      "Carboxylic Acids": 10,
+      "Solvent": 5,
+      "Aurora": 5,
+      "Dwarf Star Heart": 5
+    },
+    "prerequisites": "Innovative Synthesis 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Innovative Synthesis 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Alien Genetic Material": 10,
+      "Carboxylic Acids": 10,
+      "Ionic Liquids": 8,
+      "Solvent": 10,
+      "Black Hole Heart": 5,
+      "Subgiant Heart": 5
+    },
+    "prerequisites": "Innovative Synthesis 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Old Earth Cuisine 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Bread-based items": 3,
+      "Cheese": 2,
+      "Red Meat-based items": 2
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Old Earth Cuisine 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Spice": 5,
+      "Butter": 5,
+      "Cheese": 5,
+      "Egg-based items": 5,
+      "Poultry-based items": 5
+    },
+    "prerequisites": "Old Earth Cuisine 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Old Earth Cuisine 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Nutrient": 20,
+      "Spice": 10,
+      "Beer-based items": 10,
+      "Dairy-based items": 10,
+      "Poultry-based items": 10
+    },
+    "prerequisites": "Old Earth Cuisine 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Old Earth Cuisine 4",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Nutrient": 40,
+      "Spice": 20,
+      "Bean-based items": 10,
+      "Bread-based items": 10,
+      "Butter": 10,
+      "Noodle-based items": 10,
+      "Poultry-based items": 10
+    },
+    "prerequisites": "Old Earth Cuisine 3",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Exotic Recipes 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aromatic": 8,
+      "Fiber": 10,
+      "Nutrient": 8,
+      "Spice": 8,
+      "Noodle-based items": 5
+    },
+    "prerequisites": "Old Earth Cuisine 4",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Exotic Recipes 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aromatic": 10,
+      "Membrane": 10,
+      "Spice": 10,
+      "Egg-based items": 8,
+      "Red Meat-based items": 8,
+      "Wine-based items": 5
+    },
+    "prerequisites": "Exotic Recipes 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Exotic Recipes 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aromatic": 10,
+      "Fiber": 20,
+      "Quark-Degenerate Tissues": 5,
+      "Butter": 10,
+      "Wine-based Items": 10
+    },
+    "prerequisites": "Exotic Recipes 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Exotic Recipes 4",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Nutrient": 40,
+      "Quark-Degenerate Tissues": 10,
+      "Spice": 30,
+      "Bean-based items": 10,
+      "Bread-based items": 10,
+      "Egg-based items": 20,
+      "Noodle-based items": 20
+    },
+    "prerequisites": "Exotic Recipes 3",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Beverage Development 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Fiber": 3,
+      "Spice": 2,
+      "Water": 3
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Beverage Development 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aromatic": 5,
+      "Benzene": 5,
+      "Metabolic Agent": 10,
+      "Spice": 5,
+      "Tranquilitea Sunray": 5
+    },
+    "prerequisites": "Beverage Development 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Beverage Development 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Fiber": 20,
+      "Nutrient": 10,
+      "Spice": 10,
+      "Water": 20,
+      "Coffee-based items": 10,
+      "Dairy-based items": 10
+    },
+    "prerequisites": "Beverage Development 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Beverage Development 4",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Spice": 30,
+      "Water": 30,
+      "Boom Pop! Black Licorice": 10,
+      "Boom Pop! Cola": 10,
+      "Tea-based items": 10
+    },
+    "prerequisites": "Beverage Development 3",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Mixology 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Alkanes": 2,
+      "Aromatic": 2,
+      "Spice": 3
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Mixology 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aromatic": 10,
+      "Spice": 10,
+      "CAN-uck! Poutine": 5,
+      "Liquor-based items": 5
+    },
+    "prerequisites": "Mixology 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Mixology 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aromatic": 20,
+      "Dairy-based items": 10,
+      "Liquor-based items": 10,
+      "Soda-based items": 10
+    },
+    "prerequisites": "Mixology 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Mixology 4",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Spice": 25,
+      "Liquor-based items": 20,
+      "Tomato": 10
+    },
+    "prerequisites": "Mixology 3",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Decoration 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Fiber": 3,
+      "Ornamental": 2,
+      "Structural": 3
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Decoration 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 10,
+      "Aluminum": 10,
+      "Fiber": 10,
+      "Pigment": 10,
+      "Structural": 10
+    },
+    "prerequisites": "Decoration 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Decoration 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 30,
+      "Aluminum": 30,
+      "Fiber": 20,
+      "Luxury Textile": 5,
+      "Nickel": 20,
+      "Structural": 30
+    },
+    "prerequisites": "Decoration 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Domestication 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adaptive Frame": 10,
+      "Adhesive": 10,
+      "Aluminum": 30,
+      "Molecular Sieve": 5,
+      "Sealant": 10
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Domestication 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adaptive Frame": 20,
+      "Adhesive": 30,
+      "Aluminum": 40,
+      "Hypercatalyst": 10,
+      "Sealant": 30,
+      "Substrate Molecule Sieve": 8
+    },
+    "prerequisites": "Domestication 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Horticulture 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adaptive Frame": 10,
+      "Mag Pressure Tank": 8,
+      "Metabolic Agent": 10,
+      "Nutrient": 10,
+      "Tungsten": 10
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Horticulture 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adaptive Frame": 20,
+      "Amino Acids": 10,
+      "Mag Pressure Tank": 10,
+      "Metabolic Agent": 30,
+      "Nutrient": 30,
+      "Tungsten": 20
+    },
+    "prerequisites": "Horticulture 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Manufacturing 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 3,
+      "Iron": 3,
+      "Sealant": 3,
+      "Zero Wire": 2
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Manufacturing 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adaptive Frame": 10,
+      "Iron": 30,
+      "Lubricant": 10,
+      "Reactive Gauge": 5,
+      "Sealant": 20,
+      "Tungsten": 20,
+      "Zero Wire": 10
+    },
+    "prerequisites": "Manufacturing 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Manufacturing 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adaptive Frame": 30,
+      "Iron": 40,
+      "Lubricant": 10,
+      "Positron Battery": 5,
+      "Reactive Gauge": 10,
+      "Sealant": 30,
+      "Tungsten": 30,
+      "Zero Wire": 20
+    },
+    "prerequisites": "Manufacturing 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Outpost Defense 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aluminum": 30,
+      "Copper": 5,
+      "Fluorine": 5,
+      "Positron Battery": 3,
+      "Titanium": 10,
+      "Zero Wire": 8
+    },
+    "prerequisites": "Robots 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Outpost Defense 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aluminum": 40,
+      "Copper": 10,
+      "Neon": 10,
+      "Positron Battery": 8,
+      "Power Circuit": 2,
+      "Titanium": 30,
+      "Veryl-Treated Manifold": 3
+    },
+    "prerequisites": "Outpost Defense 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Power Generation 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adaptive Frame": 10,
+      "Cobalt": 10,
+      "Copper": 20,
+      "Isocentered Magnet": 8,
+      "Silver": 30,
+      "Zero Wire": 10
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Power Generation 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Beryllium": 30,
+      "Caesium": 20,
+      "Power Circuit": 3,
+      "Supercooled Magnet": 3,
+      "Tau Grade Rheostat": 5,
+      "Titanium": 30,
+      "Zero Wire": 20
+    },
+    "prerequisites": "Power Generation 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Power Generation 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Control Rod": 8,
+      "Isotopic Coolant": 10,
+      "Lead": 30,
+      "Nuclear Fuel Rod": 10,
+      "Paramagnon Conductor": 10,
+      "Power Circuit": 5,
+      "Supercooled Magnet": 5,
+      "Tau Grade Rheostat": 10,
+      "Tungsten": 30
+    },
+    "prerequisites": "Power Generation 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Power Generation 4",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Control Rod": 10,
+      "Isotopic Coolant": 20,
+      "Lead": 50,
+      "Power Circuit": 10,
+      "Rothicite Magnet": 5,
+      "Tasine Superconductor": 8,
+      "Tau Grade Rheostat": 30,
+      "Tungsten": 40,
+      "Vytinium Fuel Rod": 10
+    },
+    "prerequisites": "Power Generation 3",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Resource Extraction 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adaptive Frame": 10,
+      "Aluminum": 30,
+      "Chlorosilanes": 10,
+      "Copper": 20,
+      "Drilling Rig": 5,
+      "Mag Pressure Tank": 8
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Resource Extraction 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adaptive Frame": 20,
+      "Aldumite Drilling Rig": 5,
+      "Aluminum": 40,
+      "Caesium": 20,
+      "Chlorosilanes": 20,
+      "Microsecond Regulator": 8
+    },
+    "prerequisites": "Resource Extraction 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Robots 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aluminum": 3,
+      "Beryllium": 3,
+      "Zero Wire": 2
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Robots 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Austenitic Manifold": 8,
+      "Chlorosilanes": 30,
+      "Cobalt": 30,
+      "Polymer": 10,
+      "Positron Battery": 8,
+      "Titanium": 30,
+      "Zero Wire": 30
+    },
+    "prerequisites": "Robots 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Helmet Mods 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Cosmetic": 2,
+      "Polymer": 3,
+      "Tungsten": 3
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Helmet Mods 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 4,
+      "Positron Battery": 5,
+      "Sterile Nanotubes": 5,
+      "Titanium": 10,
+      "Zero Wire": 8
+    },
+    "prerequisites": "Helmet Mods 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Helmet Mods 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Caelumite": 10,
+      "High-Tensile Spidroin": 8,
+      "Indicite Wafer": 5,
+      "Microsecond Regulator": 8,
+      "Polymer": 10,
+      "Tungsten": 30
+    },
+    "prerequisites": "Helmet Mods 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Pack Mods 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aluminum": 10,
+      "Beryllium": 10,
+      "Mag Pressure Tank": 8,
+      "Monopropellant": 5
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Pack Mods 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Beryllium": 10,
+      "Monopropellant": 10,
+      "Polymer": 8,
+      "Sealant": 10,
+      "Zero-G Gimbal": 5
+    },
+    "prerequisites": "Pack Mods 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Pack Mods 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Amino Acids": 20,
+      "Beryllium": 20,
+      "Biosuppressant": 10,
+      "Monopropellant": 20,
+      "Tau Grade Rheostat": 10,
+      "Zero-G Gimbal": 10
+    },
+    "prerequisites": "Pack Mods 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Spacesuit Mods 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Copper": 5,
+      "Cosmetic": 5,
+      "Polytextile": 8
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Spacesuit Mods 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 10,
+      "Polytextile": 10,
+      "Positron Battery": 5,
+      "Semimetal Wafer": 5,
+      "Titanium": 10
+    },
+    "prerequisites": "Spacesuit Mods 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Spacesuit Mods 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Caelumite": 10,
+      "Indicite Wafer": 5,
+      "Lubricant": 20,
+      "Microsecond Regulator": 8,
+      "Positron Battery": 8,
+      "Tungsten": 30
+    },
+    "prerequisites": "Spacesuit Mods 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Barrel Mods 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Iron": 3,
+      "Nickel": 3,
+      "Sealant": 2
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Barrel Mods 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Lubricant": 5,
+      "Nickel": 10,
+      "Tungsten": 5
+    },
+    "prerequisites": "Barrel Mods 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Grip and Stock Mods 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aluminum": 3,
+      "Nickel": 3,
+      "Sealant": 3
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Grip and Stock Mods 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 10,
+      "Polymer": 5,
+      "Tungsten": 8
+    },
+    "prerequisites": "Grip and Stock Mods 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Grip and Stock Mods 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 20,
+      "Polymer": 10,
+      "Titanium": 10
+    },
+    "prerequisites": "Grip and Stock Mods 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Internal Mods 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Iridium": 8,
+      "Sealant": 10,
+      "Tungsten": 10,
+      "Zero Wire": 5
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Internal Mods 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 10,
+      "Isocentered Magnet": 8,
+      "Tantalum": 10,
+      "Titanium": 10,
+      "Zero Wire": 8
+    },
+    "prerequisites": "Internal Mods 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Internal Mods 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Europium": 20,
+      "Polymer": 10,
+      "Power Circuit": 2,
+      "Titanium": 20,
+      "Ytterbium": 10,
+      "Zero Wire": 10
+    },
+    "prerequisites": "Internal Mods 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Magazine and Battery Mods 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 5,
+      "Lead": 8,
+      "Titanium": 5
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Magazine and Battery Mods 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 10,
+      "Isocentered Magnet": 8,
+      "Lead": 20,
+      "Tau Grade Rheostat": 8,
+      "Uranium": 10
+    },
+    "prerequisites": "Magazine and Battery Mods 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Magazine and Battery Mods 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 20,
+      "Lead": 30,
+      "Positron Battery": 8,
+      "Toxin": 20,
+      "Ytterbium": 20
+    },
+    "prerequisites": "Magazine and Battery Mods 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Muzzle Mods 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Sealant": 5,
+      "Titanium": 5,
+      "Tungsten": 10
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Muzzle Mods 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Polymer": 10,
+      "Tantalum": 10,
+      "Titanium": 10,
+      "Zero Wire": 8
+    },
+    "prerequisites": "Muzzle Mods 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Muzzle Mods 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 20,
+      "Isotopic Coolant": 10,
+      "Polymer": 10,
+      "Titanium": 20,
+      "Ytterbium": 10
+    },
+    "prerequisites": "Muzzle Mods 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Optics and Laser Mods 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Aluminum": 3,
+      "Chlorosilanes": 2,
+      "Sealant": 3
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Optics and Laser Mods 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 8,
+      "Aluminum": 10,
+      "Chlorosilanes": 8,
+      "Zero Wire": 8
+    },
+    "prerequisites": "Optics and Laser Mods 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Optics and Laser Mods 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Adhesive": 16,
+      "Iridium": 16,
+      "Vanadium": 16,
+      "Zero Wire": 8
+    },
+    "prerequisites": "Optics and Laser Mods 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Receiver Mods 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Isotopic Coolant": 5,
+      "Lubricant": 10,
+      "Microsecond Regulator": 3,
+      "Titanium": 30,
+      "Ytterbium": 10
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Receiver Mods 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Isotopic Coolant": 5,
+      "Lubricant": 10,
+      "Microsecond Regulator": 3,
+      "Titanium": 30,
+      "Ytterbium": 10
+    },
+    "prerequisites": "Receiver Mods 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Blade Mods 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Iron": 5,
+      "Titanium": 3,
+      "Vanadium": 3
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Blade Mods 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Iron": 10,
+      "Tantalum": 4,
+      "Titanium": 6,
+      "Vanadium": 6
+    },
+    "prerequisites": "Blade Mods 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Handle Mods 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Cosmetic": 4,
+      "Structural": 5,
+      "Titanium": 3
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Handle Mods 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Cosmetic": 4,
+      "Structural": 5,
+      "Titanium": 3
+    },
+    "prerequisites": "Handle Mods 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Ammunition 1",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Copper": 7,
+      "Lead": 7,
+      "Small Round Primer": 5
+    },
+    "prerequisites": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Ammunition 2",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Copper": 10,
+      "Large Round Primer": 8,
+      "Lead": 10,
+      "Zero Wire": 8
+    },
+    "prerequisites": "Ammunition 1",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "name": "Ammunition 3",
+    "kind": "research",
+    "output": 1,
+    "ingredients": {
+      "Charged Diodes": 10,
+      "Isocentered Magnet": 20,
+      "Magnetic Diodes": 10,
+      "Positron Battery": 20
+    },
+    "prerequisites": "Ammunition 2",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AResearch_Projects",
+      "revision": 117766,
+      "timestamp": "2026-05-06T21:03:33Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  }
+]

@@ -26,8 +26,8 @@ def create_app(config=None):
     Path(app.config['UPLOAD_FOLDER']).mkdir(parents=True, exist_ok=True)
     db.init_app(app)
 
-    from routes import logs, reference, ai, planets, crew, media
-    for blueprint in (logs.bp, reference.bp, ai.bp, planets.bp, crew.bp, media.bp):
+    from routes import logs, reference, ai, planets, crew, media, catalogs, outposts
+    for blueprint in (logs.bp, reference.bp, ai.bp, planets.bp, crew.bp, media.bp, catalogs.bp, outposts.bp):
         app.register_blueprint(blueprint)
 
     @app.errorhandler(ApiError)

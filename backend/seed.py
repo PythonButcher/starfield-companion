@@ -1,5 +1,6 @@
 """Idempotent versioned seed batches; never overwrite edits or re-add deletions."""
 import json
+import hashlib
 from pathlib import Path
 from models import db, ReferenceRecord, SeedMarker, PlanetProfile, CrewMember
 
@@ -28,6 +29,19 @@ def seed_reference():
             sources = payload.pop('_sources', [])
             db.session.add(CrewMember(sources=sources, **validate_crew(payload, True)))
         db.session.add(SeedMarker(name='crew-v1'))
+    # Only reference rows are replaceable. Player tables are never refreshed.
+    for name in ('recipes', 'outpost_modules', 'resources', 'systems'):
+        path = DATA / 'reference' / (name + '.json')
+        if not path.exists():
+            continue
+        raw = path.read_bytes()
+        marker = 'catalog:' + name + ':' + hashlib.sha256(raw).hexdigest()
+        if db.session.get(SeedMarker, marker):
+            continue
+        db.session.execute(db.delete(ReferenceRecord).where(ReferenceRecord.catalog == name))
+        for payload in json.loads(raw):
+            db.session.add(ReferenceRecord(catalog=name, payload=payload))
+        db.session.add(SeedMarker(name=marker))
     db.session.commit()
 
 

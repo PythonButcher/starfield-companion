@@ -1,0 +1,947 @@
+[
+  {
+    "id": "53c45a4ecf7aec94",
+    "name": "Animal Husbandry Facility",
+    "category": "Builders",
+    "power": -3,
+    "cost": {
+      "Adaptive Frame": 5,
+      "Aluminum": 8,
+      "Reactive Gauge": 3,
+      "Sealant": 3
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "58559869d18d3f99",
+    "name": "Animal Husbandry Facility - Commercial",
+    "category": "Builders",
+    "power": -3,
+    "cost": {
+      "Adaptive Frame": 7,
+      "Aluminum": 12,
+      "Molecular Sieve": 2,
+      "Sealant": 6
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "50769b8461e3a68c",
+    "name": "Animal Husbandry Facility - Industrial",
+    "category": "Builders",
+    "power": -3,
+    "cost": {
+      "Adaptive Frame": 9,
+      "Aluminum": 16,
+      "Sealant": 9,
+      "Substrate Molecule Sieve": 2
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "26b0283f1c347234",
+    "name": "Greenhouse",
+    "category": "Builders",
+    "power": -3,
+    "cost": {
+      "Adaptive Frame": 5,
+      "Fluorine": 4,
+      "Reactive Gauge": 3,
+      "Sealant": 3
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "459d08f9f24fbb66",
+    "name": "Greenhouse - Commercial",
+    "category": "Builders",
+    "power": -3,
+    "cost": {
+      "Adaptive Frame": 7,
+      "Fluorine": 8,
+      "Molecular Sieve": 2,
+      "Sealant": 6
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "c16db7274d9ffc50",
+    "name": "Greenhouse - Industrial",
+    "category": "Builders",
+    "power": -3,
+    "cost": {
+      "Adaptive Frame": 9,
+      "Fluorine": 12,
+      "Sealant": 9,
+      "Substrate Molecule Sieve": 2
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "a8d1248e4c63fe6e",
+    "name": "Simple Fabricator",
+    "category": "Builders",
+    "power": -5,
+    "cost": {
+      "Aluminum": 8,
+      "Sealant": 2,
+      "Tungsten": 4,
+      "Zero Wire": 3
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "78fe82d3da3ab554",
+    "name": "Compound Fabricator",
+    "category": "Builders",
+    "power": -8,
+    "cost": {
+      "Adhesive": 4,
+      "Isotopic Coolant": 2,
+      "Tungsten": 8,
+      "Zero Wire": 5
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "ab42e3a7ba58f90f",
+    "name": "Multiplex Fabricator",
+    "category": "Builders",
+    "power": -12,
+    "cost": {
+      "Lubricant": 6,
+      "Polymer": 8,
+      "Positron Battery": 3,
+      "Titanium": 8
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "6827afddb060f977",
+    "name": "Extractor - Gas",
+    "category": "Extractors",
+    "power": -5,
+    "cost": {
+      "Aluminum": 5,
+      "Copper": 3,
+      "Nickel": 4
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "daea46354bda0c34",
+    "name": "Extractor - Gas - Commercial",
+    "category": "Extractors",
+    "power": -5,
+    "cost": {
+      "Adaptive Frame": 3,
+      "Molecular Sieve": 2,
+      "Reactive Gauge": 2,
+      "Vanadium": 4
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "787b9c9d63575fb4",
+    "name": "Extractor - Gas - Industrial",
+    "category": "Extractors",
+    "power": -5,
+    "cost": {
+      "Adaptive Frame": 5,
+      "Reactive Gauge": 3,
+      "Substrate Molecule Sieve": 2,
+      "Vanadium": 6
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "5663815ca567cbbe",
+    "name": "Extractor - Liquid",
+    "category": "Extractors",
+    "power": -5,
+    "cost": {
+      "Aluminum": 5,
+      "Iron": 3,
+      "Nickel": 4
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "7c6b1e72607905ec",
+    "name": "Extractor - Liquid - Commercial",
+    "category": "Extractors",
+    "power": -10,
+    "cost": {
+      "Adaptive Frame": 3,
+      "Austenitic Manifold": 3,
+      "Molecular Sieve": 2,
+      "Titanium": 4
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "a6d33bda762ea1fe",
+    "name": "Extractor - Liquid - Industrial",
+    "category": "Extractors",
+    "power": -20,
+    "cost": {
+      "Adaptive Frame": 5,
+      "Substrate Molecule Sieve": 2,
+      "Titanium": 6,
+      "Veryl-Treated Manifold": 3
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "4d896c8078fe5040",
+    "name": "Extractor - Solid",
+    "category": "Extractors",
+    "power": -5,
+    "cost": {
+      "Aluminum": 4,
+      "Iron": 5,
+      "Tungsten": 2
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "3b58b487a0f80911",
+    "name": "Extractor - Solid - Commercial",
+    "category": "Extractors",
+    "power": -10,
+    "cost": {
+      "Adaptive Frame": 3,
+      "Drilling Rig": 1,
+      "Isotopic Coolant": 2,
+      "Tungsten": 4
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "6e02ea3ecfdeae41",
+    "name": "Extractor - Solid - Industrial",
+    "category": "Extractors",
+    "power": -20,
+    "cost": {
+      "Adaptive Frame": 5,
+      "Aldumite Drilling Rig": 1,
+      "Isotopic Coolant": 4,
+      "Tungsten": 6
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "e3ef25608942d354",
+    "name": "Extractor - X-Tech",
+    "category": "Extractors",
+    "power": -5,
+    "cost": {
+      "Aluminum": 4,
+      "Iron": 5,
+      "Tungsten": 2,
+      "X-Tech Power Core": 1
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "3dbb6b3311b94b03",
+    "name": "Fueled Generator",
+    "category": "Power",
+    "power": 20,
+    "cost": {
+      "Austenitic Manifold": 1,
+      "Isocentered Magnet": 1,
+      "Tau Grade Rheostat": 1,
+      "Tungsten": 4
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Requires He-3 as fuel.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "e2f4d93bac63c02e",
+    "name": "Industrial Light Post",
+    "category": "Power",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 4,
+      "Xenon": 4,
+      "Zero Wire": 3
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "24941533633f0688",
+    "name": "Industrial Wall Light",
+    "category": "Power",
+    "power": 0,
+    "cost": {
+      "Aluminum": 1,
+      "Argon": 1,
+      "Copper": 1
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "e55d56056a7a31c3",
+    "name": "Light Post",
+    "category": "Power",
+    "power": 0,
+    "cost": {
+      "Aluminum": 4,
+      "Copper": 3,
+      "Xenon": 2
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "1d6c12ea17ac1004",
+    "name": "Powered Switch",
+    "category": "Power",
+    "power": 0,
+    "cost": {
+      "Aluminum": 2,
+      "Copper": 2
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "04da4fc6d3414270",
+    "name": "Reactor",
+    "category": "Power",
+    "power": 30,
+    "cost": {
+      "Adaptive Frame": 6,
+      "Control Rod": 3,
+      "Lead": 10,
+      "Nuclear Fuel Rod": 8,
+      "Paramagnon Conductor": 4,
+      "Supercooled Magnet": 5,
+      "Tau Grade Rheostat": 3
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "3ada7750621b6737",
+    "name": "Reactor - Advanced",
+    "category": "Power",
+    "power": 100,
+    "cost": {
+      "Adaptive Frame": 10,
+      "Control Rod": 5,
+      "Lead": 20,
+      "Power Circuit": 3,
+      "Rothicite Magnet": 5,
+      "Tasine Superconductor": 4,
+      "Vytinium Fuel Rod": 8
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "-",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "73009a4dc777e681",
+    "name": "Solar Array",
+    "category": "Power",
+    "power": 6,
+    "cost": {
+      "Aluminum": 4,
+      "Beryllium": 2,
+      "Copper": 3
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Solar generators work best on planets that receive a lot of sunlight.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "8720ccb3ffca85d5",
+    "name": "Solar Dome",
+    "category": "Power",
+    "power": 12,
+    "cost": {
+      "Aluminum": 4,
+      "Tau Grade Rheostat": 2
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Solar generators work best on planets that receive a lot of sunlight.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "787f02ecc55eaa6d",
+    "name": "Wind Turbine",
+    "category": "Power",
+    "power": 6,
+    "cost": {
+      "Aluminum": 5,
+      "Cobalt": 2,
+      "Nickel": 3
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Wind turbines generate more power on planets with a thicker atmosphere.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "1deded5ce56983d3",
+    "name": "Wind Turbine - Advanced",
+    "category": "Power",
+    "power": 14,
+    "cost": {
+      "Aluminum": 5,
+      "Isocentered Magnet": 2
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Wind turbines generate more power on planets with a thicker atmosphere.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "c441363decc27b9e",
+    "name": "Shared Outpost Container",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Aluminum": 2,
+      "Structural": 4
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Items in the Shared Outpost Container are available in Shared Outpost Containers placed at other Outposts.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "74e832d3fd4e566d",
+    "name": "Storage - Gas",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 3,
+      "Copper": 6,
+      "Tungsten": 5
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Bulk storage for any kind of gas.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "fe82876634e03e21",
+    "name": "Storage - Gas - Large",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 10,
+      "Copper": 20,
+      "Tungsten": 16
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Bulk storage for any kind of gas.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "3b068b09cad09915",
+    "name": "Storage - Gas - Medium",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 5,
+      "Copper": 10,
+      "Tungsten": 8
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Bulk storage for any kind of gas.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "9eb6ed6f49baaa0e",
+    "name": "Storage - Liquid",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 3,
+      "Aluminum": 6,
+      "Nickel": 5
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Bulk storage for any kind of liquid.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "4591e1e5c0ff3652",
+    "name": "Storage - Liquid - Large",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 10,
+      "Aluminum": 20,
+      "Nickel": 16
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Bulk storage for any kind of liquid.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "62057e03887dee27",
+    "name": "Storage - Liquid - Medium",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 5,
+      "Aluminum": 10,
+      "Nickel": 8
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Bulk storage for any kind of liquid.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "fae7b25c44c48bac",
+    "name": "Storage - Solid",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 3,
+      "Aluminum": 5,
+      "Iron": 6
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Bulk storage for any kind of solid mineral or organic resource.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "f27c8f1da048de51",
+    "name": "Storage - Solid - Large",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 10,
+      "Aluminum": 16,
+      "Iron": 20
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Bulk storage for any kind of solid mineral or organic resource.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "ce37ab403782defd",
+    "name": "Storage - Solid - Medium",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 5,
+      "Aluminum": 8,
+      "Iron": 10
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Bulk storage for any kind of solid mineral or organic resource.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "f6efa509f0933148",
+    "name": "Transfer Container",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Iron": 8,
+      "Lubricant": 4,
+      "Tungsten": 5
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Build this to allow transfer of cargo while on board of your ship.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "d34903ab068d7462",
+    "name": "Warehouse - Large",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 10,
+      "Aluminum": 20,
+      "Titanium": 16
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Secure storage for manufactured goods.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "668257d9b9d6f2af",
+    "name": "Warehouse - Medium",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 5,
+      "Aluminum": 10,
+      "Titanium": 8
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Secure storage for manufactured goods.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "id": "574fc541f73f7608",
+    "name": "Warehouse - Small",
+    "category": "Storage",
+    "power": 0,
+    "cost": {
+      "Adaptive Frame": 3,
+      "Aluminum": 6,
+      "Titanium": 5
+    },
+    "capacity": null,
+    "rate_per_minute": null,
+    "notes": "Secure storage for manufactured goods.",
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOutpost_Modules",
+      "revision": 116310,
+      "timestamp": "2026-04-24T01:52:55Z",
+      "fetched_at": "2026-10-04T06:33:30.601233+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  }
+]
