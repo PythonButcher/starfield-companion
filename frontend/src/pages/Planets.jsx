@@ -14,7 +14,7 @@ const blank = { name: '', system_name: '', type: 'Rock', gravity: null, temperat
 export default function Planets() {
   const [params] = useSearchParams(); const navigate = useNavigate();
   const { systems, selectSystem } = useSelectedSystems();
-  const [filters, setFilters] = useState({ q: '', system: params.get('system') || '', resource: params.get('resource') || '', hazard: '', min_gravity: '', max_gravity: '' });
+  const [filters, setFilters] = useState({ q: params.get('q') || '', system: params.get('system') || '', resource: params.get('resource') || '', hazard: '', min_gravity: '', max_gravity: '' });
   const [offset, setOffset] = useState(0); const [detail, setDetail] = useState(null); const [editor, setEditor] = useState(null);
   const [confirm, setConfirm] = useState(false); const [error, setError] = useState(''); const [busy, setBusy] = useState(false);
   const resource = useResource(planets.path + query({ ...filters, limit: 12, offset }));

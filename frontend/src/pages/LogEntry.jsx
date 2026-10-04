@@ -10,15 +10,15 @@ const fields = Object.keys(empty);
 export default function LogEntry() {
   const { id } = useParams(); const [params] = useSearchParams();
   if (id) return <ExistingEditor key={id} id={id} />;
-  return <Editor key={params.toString()} missionId={params.get("mission_id")} initial={{ ...empty, title: params.get("title") || "", planet_name: params.get('planet') || '', system_name: params.get('system') || '', planet_id: params.get('planet_id') ? Number(params.get('planet_id')) : null }} />;
+  return <Editor key={params.toString()} draftContext={params.toString()} missionId={params.get("mission_id")} initial={{ ...empty, title: params.get("title") || "", planet_name: params.get('planet') || '', system_name: params.get('system') || '', planet_id: params.get('planet_id') ? Number(params.get('planet_id')) : null }} />;
 }
 function ExistingEditor({ id }) {
   const resource = useResource(logs.path + '/' + id);
   return <ResourceState resource={resource}>{resource.data && <Editor key={id} initial={resource.data} id={id} />}</ResourceState>;
 }
-function Editor({ initial, id, missionId }) {
+function Editor({ initial, id, missionId, draftContext }) {
   const navigate = useNavigate(); const saved = useRef(false);
-  const draftKey = 'starfield:log-draft:' + (id || (missionId ? 'mission-' + missionId : 'new'));
+  const draftKey = 'starfield:log-draft:' + (id || (missionId ? 'mission-' + missionId : draftContext ? 'new:' + draftContext : 'new'));
   const [draft, setDraft] = useState(() => readStorage(draftKey, null) || Object.fromEntries(fields.map((key) => [key, initial[key] ?? empty[key]])));
   const [tagsText, setTagsText] = useState(() => draft.tags.join(', '));
   const [candidate, setCandidate] = useState(''); const [aiInfo, setAiInfo] = useState(null);

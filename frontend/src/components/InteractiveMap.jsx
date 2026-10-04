@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelectedSystems } from '../context/systems';
 import { ResourceState, EmptyState } from './ui';
+import { useResource } from '../hooks/useResource';
 import Star from './Star';
 import { SelectionOverlay, StarTooltip } from './StarInfoOverlays';
 import StarMapMinimap from './StarMapMinimap';
@@ -9,6 +10,8 @@ import ContextMenu from '../context/ContextMenu';
 import usePanZoom from '../hooks/usePanZoom';
 const INITIAL = { x: -550, y: -500, width: 1100, height: 1000 };
 export default function InteractiveMap() {
+  const activity = useResource('/api/hub/map_activity');
+  const [activityFilter, setActivityFilter] = useState('all');
   const { systems, resource, selectedSystem, selectSystem, clearSystem } = useSelectedSystems();
   const svgRef = useRef(null); const drag = useRef(null);
   const [dragging, setDragging] = useState(false); const [hovered, setHovered] = useState(null);
@@ -63,6 +66,8 @@ export default function InteractiveMap() {
   const distance = route.slice(1).reduce((total, system, index) => total + Math.hypot(system.x - route[index].x, system.y - route[index].y), 0);
   return <ResourceState resource={resource}>{!systems.length ? <EmptyState title="No systems catalogued" /> : <div className="star-map-container" onKeyDown={keydown}>
     <div className="absolute top-4 left-4 z-20 flex flex-wrap gap-2 max-w-[70%]">
+      <label className="toolbar-label">Activity<select aria-label="Map activity" className="hud-select block" disabled={activity.loading || !!activity.error} value={activityFilter} onChange={(e) => setActivityFilter(e.target.value)}><option value="all">All systems</option><option value="outposts">My outposts</option><option value="missions">Active missions</option></select></label>
+      {activity.error && <button className="hud-button" onClick={activity.reload}>Retry activity filters</button>}
       <label className="toolbar-label">Faction<select aria-label="Map faction" className="hud-select block" value={faction} onChange={(e) => setFaction(e.target.value)}>{['all', ...new Set(systems.map((s) => s.faction))].map((item) => <option key={item}>{item}</option>)}</select></label>
       <label className="toolbar-label">Spectral type<select aria-label="Map spectral type" className="hud-select block" value={type} onChange={(e) => setType(e.target.value)}>{['all', ...new Set(systems.map((s) => s.type))].map((item) => <option key={item}>{item}</option>)}</select></label>
       <button className="hud-button" onClick={() => setMinimap(!minimap)}>{minimap ? 'Hide' : 'Show'} mini-map</button>
@@ -76,7 +81,7 @@ export default function InteractiveMap() {
       <defs><pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M 80 0 L 0 0 0 80" fill="none" stroke="#aab5c0" strokeOpacity=".07" /></pattern><filter id="glow"><feGaussianBlur stdDeviation="1.8" /></filter></defs>
       <rect x="-5000" y="-5000" width="10000" height="10000" fill="url(#grid)" />
       {route.length > 1 && <polyline points={route.map((s) => s.x + ',' + s.y).join(' ')} fill="none" stroke="#e9a76a" strokeWidth="2" strokeDasharray="6 6" />}
-      {systems.map((system) => <Star key={system.id} system={system} selected={selectedSystem?.id === system.id} showLabel dimmed={(faction !== 'all' && system.faction !== faction) || (type !== 'all' && system.type !== type)} onClick={clickStar} onHover={setHovered} onContextMenu={(e, value) => { e.preventDefault(); setMenu({ x: Math.min(e.clientX, window.innerWidth - 300), y: Math.min(e.clientY, window.innerHeight - 320), system: value }); }} />)}
+      {systems.map((system) => <Star key={system.id} system={system} selected={selectedSystem?.id === system.id} showLabel dimmed={(activityFilter !== 'all' && !activity.data?.[activityFilter]?.includes(system.name)) || (faction !== 'all' && system.faction !== faction) || (type !== 'all' && system.type !== type)} onClick={clickStar} onHover={setHovered} onContextMenu={(e, value) => { e.preventDefault(); setMenu({ x: Math.min(e.clientX, window.innerWidth - 300), y: Math.min(e.clientY, window.innerHeight - 320), system: value }); }} />)}
     </svg>
     {minimap && <StarMapMinimap systems={systems} viewBox={viewBox} bounds={bounds} onNavigate={(point) => setViewBox((old) => ({ ...old, x: point.x - old.width / 2, y: point.y - old.height / 2 }))} />}
     <SelectionOverlay system={selectedSystem} /><StarTooltip system={hovered} />

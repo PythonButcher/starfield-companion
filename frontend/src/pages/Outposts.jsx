@@ -13,7 +13,7 @@ export default function Outposts() {
   const records = useResource('/api/outposts?limit=200');
   const modules = useResource('/api/outposts/modules?limit=200');
   const planets = useResource('/api/planets?limit=200');
-  const [editing, setEditing] = useState({ ...blank, planet_id: Number(params.get('planet_id')) || null });
+  const [editing, setEditing] = useState(params.get('id') ? null : { ...blank, planet_id: Number(params.get('planet_id')) || null });
   const [version, setVersion] = useState(0);
   function select(item) {
     setEditing(item); setVersion((v) => v + 1);
@@ -23,7 +23,7 @@ export default function Outposts() {
     <Button onClick={() => select(blank)}>New plan</Button>
   </SectionHeader>
     <ResourceState resource={modules}><ResourceState resource={planets}>
-      {modules.data && planets.data && <Planner key={version} initial={editing} modules={modules.data} planets={planets.data}
+      {modules.data && planets.data && !records.loading && <Planner key={version} initial={editing || records.data?.find((r) => String(r.id) === params.get('id')) || blank} modules={modules.data} planets={planets.data}
         onSaved={(item) => { records.reload(); select(item); }} />}
     </ResourceState></ResourceState>
     <h2 className="mt-8 mb-4">Saved outposts</h2>

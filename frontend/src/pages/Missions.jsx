@@ -35,7 +35,7 @@ export default function Missions() {
           {item.checklist.map((step) => <label key={step.id} className="mission-step"><input type="checkbox" disabled={busy} checked={step.done} onChange={(e) => check(item, step.id, e.target.checked)} /> {step.text}</label>)}
           <p className="small muted">{item.checklist.filter((s) => s.done).length}/{item.checklist.length} steps complete</p>
           <div className="actions"><Button variant="ghost" onClick={() => setEditor(item)}>Edit mission</Button>
-            <Link to={'/journal/new?' + new URLSearchParams({ title: item.title, system: item.target_system, mission_id: item.id, ...(item.target_planet_id ? { planet_id: item.target_planet_id } : {}) })}>Log Entry for Mission</Link>
+            <Link to={'/journal/new?' + new URLSearchParams({ title: item.title, planet: item.target_planet_name || "", system: item.target_system, mission_id: item.id, ...(item.target_planet_id ? { planet_id: item.target_planet_id } : {}) })}>Log Entry for Mission</Link>
           </div>{item.linked_log_ids.map((id) => <Link key={id} to={'/journal/' + id}>Linked log #{id}</Link>)}
         </Panel>)}</div> : <EmptyState title="No missions on this channel">Record a personal goal without importing story spoilers.</EmptyState>}
     </ResourceState>

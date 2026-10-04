@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 @theme {
-  --color-space-black: #10151b; --color-panel: #19212a; --color-hairline: #39444e;
-  --color-star-white: #f0ede5; --color-muted: #aab5c0; --color-hud-blue: #9ac8e7;
+  --color-space-black: #0b0c15; --color-panel: #19212a; --color-hairline: #39444e;
+  --color-star-white: #f0ede5; --color-muted: #aab5c0; --color-hud-blue: #5bc0de;
   --color-accent-orange: #e9a76a; --color-warning-red: #f09a91; --color-success: #a3d9b5;
-  --color-stripe-red: #b9483b; --color-stripe-orange: #dd8750; --color-stripe-yellow: #e3bf68; --color-stripe-blue: #547e9b;
+  --color-stripe-red: #d9534f; --color-stripe-orange: #f0ad4e; --color-stripe-yellow: #e3bf68; --color-stripe-blue: #5bc0de;
   --font-sans: 'Barlow', system-ui, sans-serif; --font-display: 'Barlow Condensed', 'Barlow', sans-serif;
   --font-mono: 'JetBrains Mono', monospace; --shadow-glow: 0 0 20px #9ac8e714; --spacing-panel: 1.5rem;
 }
@@ -123,3 +123,13 @@ progress::-moz-progress-bar { background: var(--color-hud-blue); }
 @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 .media-preview { width: 100%; max-height: 420px; object-fit: contain; background: #070b12; }
 .recipe-tree { padding-left: 1rem; } .recipe-tree ul { padding-left: 1.25rem; border-left: 1px solid var(--color-hairline); } .recipe-tree li { padding: .4rem 0; list-style: none; }
+.resource-matrix { display: grid; grid-template-columns: repeat(auto-fill,minmax(115px,1fr)); gap: .5rem; }
+.resource-cell { border: 1px solid var(--color-hairline); padding: .7rem; display: flex; flex-direction: column; gap: .4rem; color: var(--color-muted); }
+.resource-cell.covered { border-color: var(--color-success); background: #1b332c; color: var(--color-success); }
+.resource-cell strong { font: 1.5rem var(--font-mono); }
+.resource-cell span { font-size: .7rem; }
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.stat-grid a { border: 1px solid var(--color-hairline); padding: 1rem; }
+.stat-grid strong { display: block; font: 2rem var(--font-display); margin-bottom: .5rem; }
+.mission-step { display: flex; gap: .75rem; align-items: center; padding: .7rem 0; }
+.nav-links { column-gap: 1.1rem; }

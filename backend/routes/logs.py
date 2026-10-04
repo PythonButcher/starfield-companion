@@ -33,7 +33,12 @@ def list_logs():
 def create_log():
     data = body(FIELDS | {'mission_id'})
     mission_id = foreign_key(data.pop('mission_id', None), 'mission_id', PlayerObjective)
-    item = ExpeditionLog(**validate_log(data, True))
+    values = validate_log(data, True)
+    if values.get('planet_id'):
+        planet = record(PlanetProfile, values['planet_id'])
+        values['planet_name'] = values.get('planet_name') or planet.name
+        values['system_name'] = values.get('system_name') or planet.system_name
+    item = ExpeditionLog(**values)
     db.session.add(item)
     db.session.flush()
     if mission_id:

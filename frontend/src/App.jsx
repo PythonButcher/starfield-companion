@@ -1,3 +1,6 @@
+import Radar from './pages/Radar';
+import Portfolio from './pages/Portfolio';
+import Surveys from './pages/Surveys';
 import Missions from './pages/Missions';
 import Crafting from './pages/Crafting';
 import Outposts from './pages/Outposts';
@@ -19,7 +22,7 @@ export default function App() {
     <Route path="/journal/new" element={<LogEntry />} /><Route path="/journal/:id" element={<LogDetail />} /><Route path="/journal/:id/edit" element={<LogEntry />} />
     <Route path="/crew" element={<Crew />} /><Route path="/ram" element={<RamManager />} />
     <Route path="/planet-pulse" element={<Planets />} />
-    <Route path="/missions" element={<Missions />} /><Route path="/crafting" element={<Crafting />} /><Route path="/outposts" element={<Outposts />} /><Route path="/media" element={<Media />} />
+    <Route path="/radar" element={<Radar />} /><Route path="/portfolio" element={<Portfolio />} /><Route path="/surveys" element={<Surveys />} /><Route path="/missions" element={<Missions />} /><Route path="/crafting" element={<Crafting />} /><Route path="/outposts" element={<Outposts />} /><Route path="/media" element={<Media />} />
     <Route path="*" element={<EmptyState title="Signal not found">This route is outside the charted systems. Choose a module above.</EmptyState>} />
   </Routes></Layout></BrowserRouter></SelectedSystemsProvider>;
 }

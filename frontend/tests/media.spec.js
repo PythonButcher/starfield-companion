@@ -1,0 +1,26 @@
+import { test, expect } from '@playwright/test';
+test('media upload caption edit drag attachment and deletion', async ({ page, request }) => {
+  await page.goto('/media');
+  await page.getByLabel('Choose media file').setInputFiles('tests/fixtures/test-image.png');
+  await expect(page.getByAltText('Upload preview')).toBeVisible();
+  const uploaded = page.waitForResponse((response) => response.url().endsWith('/api/media') && response.request().method() === 'POST');
+  await page.getByRole('button', { name: 'Upload media', exact: true }).click();
+  const item = await (await uploaded).json();
+  await page.getByRole('button', { name: 'View media ' + item.id, exact: true }).click();
+  await page.getByLabel('Media caption').fill('First landing screenshot');
+  await page.getByLabel('Media tags').fill('landing');
+  await page.getByRole('button', { name: 'Save media', exact: true }).click();
+  await expect(page.getByText('First landing screenshot', { exact: true })).toBeVisible();
+  const log = await (await request.post('/api/logs', { data: { title: 'Media attachment log' } })).json();
+  await page.goto('/journal');
+  const transfer = await page.evaluateHandle((id) => { const data = new DataTransfer(); data.setData('application/x-starfield-media', String(id)); return data; }, item.id);
+  await page.getByRole('link', { name: 'Media attachment log', exact: true }).dispatchEvent('drop', { dataTransfer: transfer });
+  await expect.poll(async () => (await (await request.get('/api/media/' + item.id)).json()).log_id).toBe(log.id);
+  await page.goto('/journal/' + log.id);
+  await expect(page.getByText('First landing screenshot', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'View media ' + item.id, exact: true }).click();
+  await page.getByRole('button', { name: 'Delete media', exact: true }).click();
+  await page.getByRole('button', { name: 'Confirm delete media' }).click();
+  await expect(page.getByRole('heading', { name: 'No media in this view' })).toBeVisible();
+  await request.delete('/api/logs/' + log.id);
+});

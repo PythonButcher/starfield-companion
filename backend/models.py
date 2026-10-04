@@ -164,6 +164,8 @@ class PlayerObjective(db.Model):
     def to_dict(self):
         data = {c.name: getattr(self, c.name) for c in self.__table__.columns}
         data.update(created_at=iso(self.created_at), completed_at=iso(self.completed_at))
+        planet = db.session.get(PlanetProfile, self.target_planet_id) if self.target_planet_id else None
+        data['target_planet_name'] = planet.name if planet else ''
         return data
 
 
