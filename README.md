@@ -4,20 +4,21 @@ A local NASApunk ship terminal for expedition journals, planet surveys, crew ass
 
 ## Explore the terminal
 
-| Route | Module |
+| Route | Workspace |
 |---|---|
-| `/` | Explorer's Hub: interactive map, resume radar, briefing, fleet statistics, recent logs, favorites and milestones |
-| `/journal` | Quantum Journal: drafts, narrative generation/review, CRUD, Markdown export and attached media |
-| `/planet-pulse` | PlanetPulse: environmental filters, resource hunt, surveys, favorites and outpost links |
-| `/crew` | Crew Command: roster, assignments and explainable skill ranking |
-| `/media` | CosmoDrag: validated uploads, gallery, caption/tag editing, log/planet attachments |
-| `/outposts` | Power & Logistics Planner: saved module plans, environment assumptions, power/storage alerts and shopping lists |
-| `/crafting` | Recursive Crafting Resolver: component/research dependency trees, inventory deficits and supplier worlds |
-| `/missions` | Mission Command: persistent objectives, checklists, priorities, factions and linked logs |
-| `/portfolio` | Resource Coverage Portfolio: powered extraction coverage and three greedy site recommendations |
-| `/surveys` | Survey Gap Ledger: player counters, missing categories and system completion |
-| `/radar` | Session Resume Radar: last position, urgent missions, outpost alerts and same-system survey targets |
-| `/ram` | Research board: pinned projects and procurement totals |
+| `/` | **Command Hub**: resume radar, ship briefing, home ship, crew/outpost telemetry, recent logs and quick actions |
+| `/galaxy` | **Galaxy & Surveys**: sector map, system inspector, 47 sourced worlds, resource hunt, planetary details and `/galaxy/surveys` ledger |
+| `/logistics` | **Logistics & Industry**: outposts, coverage matrix and crafting sub-tabs; research board under `/logistics/crafting/research` |
+| `/crew` | **Fleet & Crew**: The Frontier registry, roster, ship/outpost assignments and explainable skill ranking |
+| `/journal` | **Logbook & Archives**: Captain's Logs, `/journal/missions` checklists and `/journal/media` archive |
+
+The Drive-By quick-action drawer is available throughout the terminal. `N` opens a log, `Ctrl/Cmd+K` searches systems. Legacy module URLs redirect into these workspaces, retaining queries and anchors.
+
+## Constellation starter state
+
+A fresh database opens at **Vectera / Narion** with **The Frontier**, Barrett and VASCO assigned, the artifact-discovery log (stardate 2330.134), One Small Step and a Narion survey mission. Luna Extraction Post has one iron extractor, two solar arrays and solid storage. Its explicit sample solar factor produces **+3 net power**; replace that assumption with your own readings. Vectera is fully surveyed; Jemison is at 65% and Kreet at 25%.
+
+The starter playthrough is illustrative, not an imported game save. The footer's **Constellation starter settings** can clear unchanged samples after typed confirmation. Edited records, attached media, referenced logs and player additions are preserved. Cleared samples never reappear automatically. Existing databases receive missing new catalog worlds once, without replacing player edits or resurrecting deleted legacy worlds; they do not receive sample playthrough records.
 
 ## Install and run (PowerShell, repository root)
 
@@ -49,9 +50,9 @@ Media accepts JPEG, PNG, WebP, GIF and MP4, up to 10 MB per file. Images are dec
 
 ## Reference data and limits
 
-The reproducible Wiki builder supplies **128 systems, 109 resources, 112 recipes/research projects and 44 outpost modules**. Read [provenance](backend/data/SOURCES.md) and the [builder instructions](backend/data_pipeline/README.md). Adapted Wiki datasets retain contributor attribution and CC-BY-SA-4.0 licensing. The footer exposes reference freshness.
+The reproducible Wiki builders supply **47 worlds, 128 systems, 109 resources, 112 recipes/research projects and 44 outpost modules**. Read [provenance](backend/data/SOURCES.md) and the [builder instructions](backend/data_pipeline/README.md). Adapted Wiki datasets retain contributor attribution and CC-BY-SA-4.0 licensing. The footer exposes reference freshness.
 
-Planet supplier searches currently cover seven starter worlds plus player additions; crew starts with nine entries. System positions are schematic, never physical distances. Outpost power uses explicit assumptions; storage capacity and extraction rates require player measurements. Survey progress is player-entered. Coverage recommendations do not guarantee that all deposits share one landing site. Crafting excludes skill discounts and research prerequisites, and reports unresolved leaves as purchase requirements.
+Planet supplier searches cover 47 worlds in Sol, Alpha Centauri, Cheyenne, Volii, Narion, Kryx, Porrima, Olympus and Bessel, plus player additions. Crew starts with nine entries. System positions are schematic sector coordinates, never physical distances. Hazard labels are inferred preparation cautions, not game danger ratings. Outpost power uses explicit assumptions; storage capacity and extraction rates require player measurements. Survey progress is player-entered after the illustrative starter state. Jemison uses sourced totals (8 flora, 9 fauna, 3 traits); The Lock is a location on Suvorov, not a separate world. Coverage recommendations do not guarantee co-located deposits. Crafting excludes skill discounts and research prerequisites, and reports unresolved leaves as purchase requirements.
 
 ## Verify
 

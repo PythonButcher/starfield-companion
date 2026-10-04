@@ -1,18 +1,13 @@
 # Execution status
 
-Phase: mission run 2 / experience & immersion overhaul.
+Phase: Mission Run 2 / Experience & Immersion Overhaul.
 Branch: `codex/mission-run-1`.
-Status: mission run 1 complete and verified; mission run 2 queued in active gate and CODEX_MISSION_BRIEF.md.
+Status: complete and verified; control returned to the user for workflow review.
 
-Mission Run 1 completed: CosmoDrag, reference pipeline, Outpost Planner, Crafting Resolver, Mission Tracker, Coverage Portfolio, Survey Ledger, Session Radar, and Explorer's Hub (71 backend tests, 10 browser flows, 0 lint errors, production build clean).
+Five primary workspaces, compatible module redirects, the Constellation starter profile, 47 sourced worlds, sector-map system inspectors, survey details and delayed form validation are implemented. Existing profiles and uploads are preserved. Starter settings remove unchanged examples after confirmation and keep modified or referenced records.
 
-Mission Run 2 objectives:
-1. Consolidate 10-tab navbar into 5 unified workspaces (Command Hub, Galaxy & Surveys, Logistics & Industry, Fleet & Crew, Logbook & Archives).
-2. Seed rich Constellation starter state (The Frontier, Barrett/Vasco, Vectera artifact log, Luna outpost, Narion survey).
-3. Expand planet database from 7 to 40-60 canonical Settled Systems worlds with star system linkages.
-4. Star map interactivity: select star system -> inspect orbiting planets, local outposts, and active missions.
-5. Polish terminal immersion and remove premature form validation errors.
+Verification: **80 backend tests passed**, **15 browser tests passed**, zero lint errors, production build passed, 12 policy cases passed, active-gate validation passed, all active Markdown links valid, and Git whitespace check clean. A targeted browser follow-up also passed after allowing the starter plan's fractional solar calibration. The offline planet build reproduces all 47 records exactly.
 
-Active gate: [project_docs/active/active_gate/README.md](../active_gate/README.md).
-Mission brief: [CODEX_MISSION_BRIEF.md](../../../CODEX_MISSION_BRIEF.md).
+Source decisions: use actual Jemison totals (8 flora, 9 fauna, 3 traits); The Lock belongs to Suvorov; the +3 Luna plan uses an explicit sample solar factor. Coordinates and starter playthrough progress are illustrative.
 
+Results and limitations: [run report](RUN_REPORT.md). User review and any new request are routed through the [active gate](../active_gate/README.md). The [mission specification](../../archive/mission-run-2/CODEX_MISSION_BRIEF.md) is historical reference only.

@@ -7,8 +7,20 @@ List endpoints return arrays, expose `X-Total-Count`, and accept `q`, `tag`, `li
 ## Health and reference
 
 `GET /api/health` → `{"status":"systems_nominal"}`.
-`GET /api/systems?q=Sol&limit=1` → `[{"id":1,"name":"Sol","x":0,"y":0,"type":"G2V","faction":"United Colonies","description":"The birthplace of humanity."}]`. Coordinates are illustrative map units, never light years.
+`GET /api/systems?q=Sol&limit=1` returns an array of system records with `id,name,x,y,type,faction,description,level,layout_only,_source`. Sol is at `(0,0)` with spectral type G2 and level 1. Use IDs returned by the current catalog; they are not fixed game identifiers. Coordinates are illustrative map units, never light years.
 `GET /api/research` → array of seed records, e.g. `{"research Project":"Medical Treatment 1","required Skills":"None","required Research":"None","required_materials_normalized":[{"name":"Aluminum","qty":2}]}` with additional inherited description fields. Quantities in the inherited catalog are not independently verified.
+
+`GET /api/systems/<id>` returns `{system, planets, outposts, missions}`. The ID is the system payload ID returned by `/api/systems`, not an internal reference-row ID. Planets are full profiles with a case-insensitive system match; outposts use linked planet IDs and include analysis. Missions are Active, using their explicit target system when supplied or their linked world's system otherwise. An uncatalogued sector has empty arrays; an unknown system ID is JSON 404. Coordinates are stable schematic sector positions; level tags use <=15 safe, 16–39 caution and >=40 danger.
+
+## Constellation profile and fleet
+
+`GET /api/ships` returns an array of `{id,name,home_ship,notes,crew}`. Crew contains full roster records whose assigned_ship matches that registry name, independent of frontend roster filters. Existing crew assignment APIs remain unchanged.
+
+`GET /api/starter` returns `{status}`: `active`, `cleared`, `existing_profile` or `disabled`. Only an empty, previously unseeded profile receives the illustrative playthrough. Tests can set `SEED_STARTER_STATE=False` independently of reference seeding. Startup never applies samples to an existing profile, including one whose user content has been deleted.
+
+`POST /api/starter/clear` requires `{"confirm":"CLEAR STARTER"}` and returns `{removed,preserved,status}`. `removed` counts unchanged samples removed or restored to their pre-sample values. Modified rows, referenced logs, ships/outposts with retained crew assignments, and changed surveys are preserved. Uploaded files and reference worlds remain. Missing/incorrect confirmation returns 400. Repeated clearing is idempotent, and cleared samples never auto-return.
+
+Sample dates are fixed UTC timestamps, not live game time. The Vectera log's 2026-05-14 UTC date displays as stardate 2330.134. Luna's two 6-power arrays use an explicit sample solar_factor of 2/3: 8 generated minus 5 consumed = +3.
 
 ## Journal
 
@@ -35,6 +47,8 @@ Response (201 on create): `{"id":1,"title":"Landing","planet_name":"Jemison","sy
 Writable profile fixture: `{"name":"Test world","system_name":"Sol","type":"Rock","gravity":1.2,"temperature":"Cold","atmosphere":"Unknown","magnetosphere":"Unknown","water":"Unknown","biomes":[],"planetary_traits":[],"resources":["Iron","Copper"],"flora":null,"fauna":null,"hazards":["Cold"],"user_notes":"Landing site","surveyed_percent":25,"favorite":false,"outpost_candidate":true,"approximate":true}`. Names and environmental strings max 100 (type 50); notes max 30,000. String lists follow common list limits. Gravity 0–100 or null; flora/fauna integer 0–10,000 or null; survey integer 0–100; flags boolean. Unknown values remain unknown, never assumed zero.
 
 Response adds `id`, read-only `_sources` (URL strings), and replaces resource names with `{"id":1,"name":"Iron","symbol":"Fe","type":"inorganic","rarity":"unknown"}` objects. Resource writes also accept objects with `name`, optional `symbol` (30), `type` (inorganic/organic), `rarity` (30). Case-insensitive names reuse catalog entries without overwriting catalog metadata.
+
+Profiles additionally expose read-only `_reference`, null for uncatalogued identities, or `{source_url,revision,timestamp,fetched_at,license,orbits,body_type,orbital_position,landable,hazard_basis}` from PlanetReference. This is source metadata, independent of player edits. New databases contain 47 revision-attributed worlds in nine systems. Existing databases keep their legacy profiles and deletions while receiving only missing expansion identities. Gas/ice giants and asteroids are orbital entries; the inspector does not offer surface outpost creation for them. Unknown numerics remain null and hazard labels are explicitly inferred.
 `GET /api/resources?q=Iron` returns resource objects with standard pagination.
 `POST /api/resourcehunt` takes `{"resources":["Iron","Copper"]}` (at least one) and returns `{"resources":["iron","copper"],"method":"…","results":[{"planet":{},"matched_resources":["iron","copper"],"match_count":2,"hazard_count":1,"all_targets":true}]}`. `planet` is a full profile. Ranked by descending match count, ascending recorded hazard count, name and ID. This deterministic search neither calls AI nor infers unknown hazards.
 
@@ -49,7 +63,7 @@ Request fixture: `{"name":"Recruit","role":"Pilot","faction":"Independent","is_c
 
 ## Reference metadata and planning catalogs
 
-`GET /api/reference/meta` returns `{built_at, license, source, counts, limitations}`. This build contains 128 systems, 109 resources, 112 recipes/projects and 44 operational modules. System responses also carry `layout_only: true`, `level` and `_source` provenance; coordinates are schematic.
+`GET /api/reference/meta` returns `{built_at, license, source, counts, limitations}`. This build contains 47 worlds, 128 systems, 109 resources, 112 recipes/projects and 44 operational modules. System responses also carry `layout_only: true`, `level` and `_source` provenance; coordinates are schematic.
 
 `GET /api/outposts/modules` and `GET /api/crafting/recipes` return paginated arrays with `q` filtering. Modules contain `id, name, category, power, cost, capacity, rate_per_minute, notes, _source`; negative power consumes electricity, positive power generates it. Unknown capacity/rate is null. Recipes contain `name, kind, output, ingredients, _source`, with `prerequisites` on research records. Ingredients map names to integer quantities. Provenance includes URL, revision, source/fetch timestamps and CC-BY-SA-4.0.
 
@@ -125,11 +139,13 @@ Each recommendation has `{planet,new_resources,gain,rank}`. At each of up to thr
 
 Each entry contains `planet,counters,updated_at,hint`. Counters are keyed flora/fauna/traits/resources and hold `{field,scanned,total,remaining}`; unentered counters or unknown totals yield null remaining. Hints mention ocean/coastal biomes only when the profile records an ocean biome and a fauna gap.
 
+`GET /api/surveys/<planet_id>` returns one such entry at any completion percentage, including 0 and 100; unknown IDs return 404. Sourced empty trait/resource sets have a known total of zero, while empty custom-world sets retain unknown totals. Starter Jemison has 3/8 flora, 2/9 fauna and 1/3 traits, with independently recorded 65% completion.
+
 `PATCH /api/surveys/<planet_id>/counters` accepts `scanned_flora, scanned_fauna, discovered_traits, scanned_resources` (nonnegative integers bounded by known totals, otherwise 10,000; null clears to unknown), plus `surveyed_percent` (integer 0–100). Omitted counters are unchanged. The response is the updated ledger entry. Progress timestamps are UTC, and deleting a planet cascades its survey counters.
 
 ## Session radar and Hub
 
-`GET /api/radar/session_handover` returns `position, missions, outpost_alerts, survey_targets, recent_logs, narrative, favorites, milestones, stats, limitations`.
+`GET /api/radar/session_handover` returns `position, home_ship, missions, outpost_alerts, survey_targets, recent_logs, narrative, favorites, milestones, stats, limitations`. `home_ship` is `{id,name,home_ship,notes}` or null.
 
 - Position: `{planet,system,source,at}`, taking the newer of latest journal date and survey update; empty records report Unknown.
 - Missions: active High priority objectives, oldest first.
