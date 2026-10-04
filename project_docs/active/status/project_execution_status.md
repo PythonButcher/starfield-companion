@@ -1,13 +1,18 @@
 # Execution status
 
-Phase: mission run 1 / resumption and completion.
+Phase: mission run 2 / experience & immersion overhaul.
 Branch: `codex/mission-run-1`.
-Status: requested core modules and all six approved tools implemented and verified.
+Status: mission run 1 complete and verified; mission run 2 queued in active gate and CODEX_MISSION_BRIEF.md.
 
-CosmoDrag, the reference expansion, Outpost Planner, Crafting Resolver, Mission Tracker, Coverage Portfolio, Survey Ledger, Session Radar and Explorer's Hub are complete for this run. Journal, PlanetPulse and Crew regression checks pass.
+Mission Run 1 completed: CosmoDrag, reference pipeline, Outpost Planner, Crafting Resolver, Mission Tracker, Coverage Portfolio, Survey Ledger, Session Radar, and Explorer's Hub (71 backend tests, 10 browser flows, 0 lint errors, production build clean).
 
-Evidence: 71 backend tests; 10 browser flows; lint and production build; 12 policy-hook cases; desktop JavaScript syntax check; offline catalog rebuild; tested, backed-up migration to backend/starfield.db.
+Mission Run 2 objectives:
+1. Consolidate 10-tab navbar into 5 unified workspaces (Command Hub, Galaxy & Surveys, Logistics & Industry, Fleet & Crew, Logbook & Archives).
+2. Seed rich Constellation starter state (The Frontier, Barrett/Vasco, Vectera artifact log, Luna outpost, Narion survey).
+3. Expand planet database from 7 to 40-60 canonical Settled Systems worlds with star system linkages.
+4. Star map interactivity: select star system -> inspect orbiting planets, local outposts, and active missions.
+5. Polish terminal immersion and remove premature form validation errors.
 
-[Run report](RUN_REPORT.md) contains the feature showcase, decisions, tests and explicit coverage limits. [API contract](../architecture/API_CONTRACT.md) documents the implemented boundaries. [Active gate](../active_gate/README.md) names the next forward goal.
+Active gate: [project_docs/active/active_gate/README.md](../active_gate/README.md).
+Mission brief: [CODEX_MISSION_BRIEF.md](../../../CODEX_MISSION_BRIEF.md).
 
-Remaining verification limits: no live AI call or native Electron-window test. Planet suppliers retain the seven-world starter scope plus player additions; environment/rate/storage assumptions are visible in the planner. No blocking implementation issue remains in the requested run.

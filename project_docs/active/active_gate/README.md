@@ -1,27 +1,33 @@
-Goal: Expand licensed planet and moon reference coverage while preserving every player's survey, note, favorite, mission and outpost association.
+Goal: Execute Mission Run 2 to overhaul app experience, consolidate navigation into 5 unified workspaces, seed a rich Constellation starter state, and connect star systems to orbiting planets.
 
 ## User Outcome
-Players can search a broader planetary catalog, resolve more material suppliers and compare survey gaps without losing their own records.
+Players open a living, authentic NASApunk ship terminal that immediately provides context on their playthrough, seamlessly connects star systems to their planets and outposts, and eliminates the overwhelming 10-tab navbar.
 
 ## Scope
-Add an immutable planet/moon reference layer and explicit player overlays in backend models, the Wiki pipeline and PlanetPulse APIs. Add indexed server filtering and paginated selection controls before increasing record counts. Keep provenance and coverage limitations visible.
+- Consolidate navigation into 5 purpose-driven workspaces: Command Hub, Galaxy & Surveys, Logistics & Industry, Fleet & Crew, and Logbook & Archives.
+- Seed a rich default "Constellation Starter State" (The Frontier, Barrett & Vasco, Vectera artifact log, initial missions, Luna outpost, partial survey data).
+- Expand planetary database from 7 planets to 40-60 core Settled Systems worlds across Sol, Alpha Centauri, Cheyenne, Volii, Narion, etc.
+- Connect star systems on the map to an inspector showing orbiting worlds, local outposts, and missions.
+- Refine terminal language and polish form validation UX (no instant red errors on empty forms).
 
 ## Contracts
 - [API contract](../architecture/API_CONTRACT.md)
 - [Architecture](../architecture/README.md)
-- [Reference builder](../../../backend/data_pipeline/README.md)
+- [Mission Brief](../../../CODEX_MISSION_BRIEF.md)
 
 ## Acceptance
-Reference refreshes preserve player records and stable associations. Unknown data remains unknown. Catalog counts, missing fields and broken references are reported. Large lists are filtered and paginated on the server. Existing cross-module behavior remains usable.
+- Existing 71 backend tests continue to pass with 0 regressions.
+- Frontend lint and production build pass with 0 errors.
+- New users immediately see a populated, interactive terminal instead of empty cards and zeros.
+- Navigation has only 5 clean primary workspaces with sub-tabs for specific tools.
+- Selecting a star system on the map displays its orbiting planets and local assets.
 
 ## Verification
-- `./.venv/Scripts/python.exe -m pytest -q backend`
+- `python -m pytest -q backend`
 - `npm --prefix frontend run lint`
 - `npm --prefix frontend run build`
-- `npm --prefix frontend test`
 - `python .codex/hooks/pre_tool_use_policy.py --self-test`
 - `git diff --check`
-- Verify refresh preservation and resource/survey searches against sampled Wiki revisions.
 
 ## Owner
-Codex implements this bounded data expansion when requested and returns verified results to the user.
+Codex implements Mission Run 2 slice-by-slice, verifies each slice, and updates the run report and execution status.
