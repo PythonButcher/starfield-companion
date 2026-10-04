@@ -179,3 +179,14 @@ def test_planet_parser_retains_unknowns_and_rejects_non_planets():
     assert row['hazards'] == ['Cold exposure', 'Vacuum']
     with pytest.raises(ValueError):
         parse_planet({**page, 'wikitext': '{{Place Infobox|planet=Suvorov}}'}, {})
+
+
+def test_starter_clear_preserves_outpost_linked_to_player_network(starter_app):
+    client = starter_app.test_client()
+    outpost = client.get('/api/outposts').json[0]
+    network = client.post('/api/supply-networks', json={'name': 'Player logistics', 'nodes': [
+        {'id': 'luna', 'name': outpost['name'], 'outpost_id': outpost['id'], 'production': []}], 'links': []})
+    assert network.status_code == 201
+    assert client.post('/api/starter/clear', json={'confirm': 'CLEAR STARTER'}).status_code == 200
+    assert client.get(f'/api/outposts/{outpost["id"]}').status_code == 200
+    assert client.get(f'/api/supply-networks/{network.json["id"]}').json['analysis']['nodes'][0]['issues'] == []

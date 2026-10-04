@@ -24,3 +24,9 @@ Coverage in this build: 128 system records, 109 resource records, 112 recipes/pr
 From backend, run `../.venv/Scripts/python.exe -m data_pipeline.planet_catalog` (or add `--offline` / `--refresh`). The 47-name allowlist spans nine core systems. `Starfield:Deimos (planet)` resolves the ambiguous Deimos title. Only Planet Infobox facts are imported; expected names/systems, resource identities and source metadata are checked before writing `backend/data/planets.json`. `_reference` includes moon/planet type, orbital parent and provenance. Hazards are conservative environment-derived cautions, labeled approximate; no game images or article prose are copied.
 
 Startup refreshes PlanetReference separately from editable PlanetProfile. A versioned expansion adds missing non-legacy worlds once and preserves edits and deletions. The separate Constellation sample-state service runs only for a new profile. See [source decisions](../data/SOURCES.md) for Jemison totals, the Suvorov/Lock distinction and explicit sample solar calibration.
+
+## Ship module library
+
+From backend, run `../.venv/Scripts/python.exe -m data_pipeline.ship_catalog` or add `--offline`. It writes `data/reference/ship_modules.json` with 34 selected modules, preserving per-row revision, URL, timestamp and license. A/B/C representatives and the White Dwarf 3015 speed exception are selected deliberately. A count guard rejects changed or incomplete tables. Stats distinguish hull health from weapon damage, crew stations from crew rating, and grav thrust from jump range.
+
+Ship Forge serves this independent catalog through `/api/ship-blueprints/catalog`; the general reference manifest counts the older catalogs separately. Blueprints store editable module snapshots, so a new catalog cannot silently alter a saved build. Calculation assumptions and the separate source of the jump-range estimate are documented in [provenance](../data/SOURCES.md).

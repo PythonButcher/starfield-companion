@@ -20,6 +20,7 @@ export default function Outposts() {
   }
   return <><SectionHeader eyebrow="Industry / Power & logistics" title="Outpost Planner">
     <Link to="/logistics/portfolio">Resource portfolio ↗</Link>
+    <Link to="/logistics/supply-network">Supply Chain Visualizer ↗</Link>
     <Button onClick={() => select(blank)}>New plan</Button>
   </SectionHeader>
     <ResourceState resource={modules}><ResourceState resource={planets}>

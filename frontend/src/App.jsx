@@ -1,4 +1,6 @@
 import Portfolio from './pages/Portfolio';
+import SupplyNetworks from './pages/SupplyNetworks';
+import ShipForge from './pages/ShipForge';
 import Surveys from './pages/Surveys';
 import Missions from './pages/Missions';
 import Crafting from './pages/Crafting';
@@ -34,12 +36,16 @@ export default function App() {
     <Route path="/logistics" element={<Workspace name="Logistics & Industry" tabs={[
       ['/logistics/outposts', 'Outpost Planner'], ['/logistics/portfolio', 'Resource Coverage Matrix'],
       ['/logistics/crafting', 'Crafting & Research Trees'],
+      ['/logistics/supply-network', 'Supply Chain Visualizer'],
     ]} />}>
       <Route index element={<LegacyRoute to="/logistics/outposts" />} />
       <Route path="outposts" element={<Outposts />} /><Route path="portfolio" element={<Portfolio />} />
       <Route path="crafting" element={<Crafting />} /><Route path="crafting/research" element={<RamManager />} />
+      <Route path="supply-network" element={<SupplyNetworks />} />
     </Route>
-    <Route path="/crew" element={<Crew />} />
+    <Route path="/crew" element={<Workspace name="Fleet & Crew" tabs={[
+      ['/crew', 'Fleet & Crew Roster', true], ['/crew/blueprints', 'Ship Forge & Blueprints'],
+    ]} />}><Route index element={<Crew />} /><Route path="blueprints" element={<ShipForge />} /></Route>
     <Route path="/journal" element={<Workspace name="Logbook & Archives" tabs={[
       ['/journal', 'Captain’s Logs', true], ['/journal/missions', 'Mission Checklists'], ['/journal/media', 'Media Archive'],
     ]} />}>

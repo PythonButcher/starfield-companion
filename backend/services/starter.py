@@ -2,7 +2,7 @@
 from datetime import datetime, timedelta, timezone
 
 from models import (db, CrewMember, ExpeditionLog, MediaItem, OutpostPlan, PlanetProfile,
-                    PlayerObjective, SeedMarker, Ship, StarterState, SurveyProgress, iso)
+                    PlayerObjective, SeedMarker, Ship, StarterState, SurveyProgress, SupplyNetwork, ShipBlueprint, iso)
 from services.catalogs import catalog
 
 MODELS = {model.__name__: model for model in (
@@ -12,7 +12,7 @@ MODELS = {model.__name__: model for model in (
 def is_fresh_profile():
     """Decide before reference seeding; an existing save is never opted in."""
     return not any(db.session.scalar(db.select(db.func.count()).select_from(model))
-                   for model in (*MODELS.values(), MediaItem, SeedMarker, StarterState))
+                   for model in (*MODELS.values(), MediaItem, SeedMarker, StarterState, SupplyNetwork, ShipBlueprint))
 
 
 def snapshot(item):
@@ -105,6 +105,9 @@ def clear_starter():
         if isinstance(item, (Ship, OutpostPlan)):
             field = CrewMember.assigned_ship if isinstance(item, Ship) else CrewMember.assigned_outpost
             keep |= bool(db.session.scalar(db.select(CrewMember.id).where(field == item.name).limit(1)))
+        if isinstance(item, OutpostPlan):
+            keep |= any(node.get('outpost_id') == item.id
+                        for network in db.session.scalars(db.select(SupplyNetwork)) for node in network.nodes)
         if isinstance(item, PlanetProfile):
             keep |= db.session.get(SurveyProgress, item.id) is not None
         if keep:

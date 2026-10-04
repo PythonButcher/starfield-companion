@@ -200,3 +200,26 @@ class SurveyProgress(db.Model):
     discovered_traits = db.Column(db.Integer, nullable=True)
     scanned_resources = db.Column(db.Integer, nullable=True)
     updated_at = db.Column(db.DateTime(timezone=True), default=utcnow, onupdate=utcnow)
+
+
+class SupplyNetwork(db.Model):
+    """JSON graph references survive deleted outposts so broken links stay visible."""
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    notes = db.Column(db.Text, default='')
+    nodes = db.Column(db.JSON, default=list)
+    links = db.Column(db.JSON, default=list)
+    created_at = db.Column(db.DateTime(timezone=True), default=utcnow)
+    updated_at = db.Column(db.DateTime(timezone=True), default=utcnow, onupdate=utcnow)
+
+
+class ShipBlueprint(db.Model):
+    """Module snapshots preserve a player's design across reference refreshes."""
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    notes = db.Column(db.Text, default='')
+    modules = db.Column(db.JSON, default=list)
+    crew_limit = db.Column(db.Integer, default=3)
+    jump_bonus = db.Column(db.Float, default=0)
+    created_at = db.Column(db.DateTime(timezone=True), default=utcnow)
+    updated_at = db.Column(db.DateTime(timezone=True), default=utcnow, onupdate=utcnow)

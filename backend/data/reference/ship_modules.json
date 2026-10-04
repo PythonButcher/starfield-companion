@@ -1,0 +1,920 @@
+[
+  {
+    "catalog_id": "58f500421fae3995",
+    "name": "330T Stellarator",
+    "category": "Reactor",
+    "ship_class": "A",
+    "count": 1,
+    "stats": {
+      "mass": 23.0,
+      "hull": 320.0,
+      "power": 14.0,
+      "crew_capacity": 1.0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "58ec09a0abd99911",
+    "name": "Z-Machine 1000",
+    "category": "Reactor",
+    "ship_class": "B",
+    "count": 1,
+    "stats": {
+      "mass": 49.0,
+      "hull": 505.0,
+      "power": 14.0,
+      "crew_capacity": 2.0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "bf28ecb8c00714d8",
+    "name": "Theta Pinch A9",
+    "category": "Reactor",
+    "ship_class": "C",
+    "count": 1,
+    "stats": {
+      "mass": 85.0,
+      "hull": 680.0,
+      "power": 18.0,
+      "crew_capacity": 3.0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "49056f676ded5a5a",
+    "name": "340T Stellarator",
+    "category": "Reactor",
+    "ship_class": "A",
+    "count": 1,
+    "stats": {
+      "mass": 25.0,
+      "hull": 375.0,
+      "power": 16.0,
+      "crew_capacity": 1.0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "bd6aad0ef8486149",
+    "name": "Amun-1",
+    "category": "Engine",
+    "ship_class": "A",
+    "count": 1,
+    "stats": {
+      "mass": 100.0,
+      "hull": 5.0,
+      "power": 2.0,
+      "crew_capacity": 0.25,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 1550.0,
+      "grav_thrust": 0,
+      "top_speed": 150,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "5870b67debef5053",
+    "name": "Dunn-11",
+    "category": "Engine",
+    "ship_class": "B",
+    "count": 1,
+    "stats": {
+      "mass": 150.0,
+      "hull": 5.0,
+      "power": 3.0,
+      "crew_capacity": 0.25,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 3150.0,
+      "grav_thrust": 0,
+      "top_speed": 140,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "f71d4d92cbe49d79",
+    "name": "X-100",
+    "category": "Engine",
+    "ship_class": "C",
+    "count": 1,
+    "stats": {
+      "mass": 340.0,
+      "hull": 5.0,
+      "power": 3.0,
+      "crew_capacity": 0.25,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 6600.0,
+      "grav_thrust": 0,
+      "top_speed": 130,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "4fc77023cc064285",
+    "name": "White Dwarf 3015",
+    "category": "Engine",
+    "ship_class": "A",
+    "count": 1,
+    "stats": {
+      "mass": 95.0,
+      "hull": 5.0,
+      "power": 3.0,
+      "crew_capacity": 0.25,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 3150.0,
+      "grav_thrust": 0,
+      "top_speed": 180,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "18c79c1d245c2a6a",
+    "name": "Amun-2",
+    "category": "Engine",
+    "ship_class": "A",
+    "count": 1,
+    "stats": {
+      "mass": 99.0,
+      "hull": 5.0,
+      "power": 2.0,
+      "crew_capacity": 0.25,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 1830.0,
+      "grav_thrust": 0,
+      "top_speed": 150,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "b223356aec807bbe",
+    "name": "Helios 100",
+    "category": "Grav drive",
+    "ship_class": "A",
+    "count": 1,
+    "stats": {
+      "mass": 26.0,
+      "hull": 5.0,
+      "power": 9.0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 16.0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "bca8a8d787786dc0",
+    "name": "NG200",
+    "category": "Grav drive",
+    "ship_class": "B",
+    "count": 1,
+    "stats": {
+      "mass": 38.0,
+      "hull": 5.0,
+      "power": 10.0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 18.0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "8803db688f883bad",
+    "name": "Apollo GV100",
+    "category": "Grav drive",
+    "ship_class": "C",
+    "count": 1,
+    "stats": {
+      "mass": 99.0,
+      "hull": 5.0,
+      "power": 11.0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 34.0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "7e0bcb1cd975b6c2",
+    "name": "Helios 200",
+    "category": "Grav drive",
+    "ship_class": "A",
+    "count": 1,
+    "stats": {
+      "mass": 28.0,
+      "hull": 5.0,
+      "power": 9.0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 19.0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "a101e99061d081ae",
+    "name": "10S Protector",
+    "category": "Shield",
+    "ship_class": "A",
+    "count": 1,
+    "stats": {
+      "mass": 23.0,
+      "hull": 5.0,
+      "power": 3.0,
+      "crew_capacity": 0.5,
+      "crew_stations": 0,
+      "shield": 310.0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "f5ce9c1cb090ec81",
+    "name": "11T Defender",
+    "category": "Shield",
+    "ship_class": "B",
+    "count": 1,
+    "stats": {
+      "mass": 49.0,
+      "hull": 5.0,
+      "power": 5.0,
+      "crew_capacity": 0.5,
+      "crew_stations": 0,
+      "shield": 505.0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "27ad9616e2c5ff9e",
+    "name": "101D Guardian",
+    "category": "Shield",
+    "ship_class": "C",
+    "count": 1,
+    "stats": {
+      "mass": 85.0,
+      "hull": 5.0,
+      "power": 6.0,
+      "crew_capacity": 0.5,
+      "crew_stations": 0,
+      "shield": 680.0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "02fb4ae12ab964a5",
+    "name": "20S Protector",
+    "category": "Shield",
+    "ship_class": "A",
+    "count": 1,
+    "stats": {
+      "mass": 24.0,
+      "hull": 5.0,
+      "power": 4.0,
+      "crew_capacity": 0.5,
+      "crew_stations": 0,
+      "shield": 355.0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "3e8b92ef3537a864",
+    "name": "Armstrong 10 Cockpit",
+    "category": "Cockpit",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 5.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 2.0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 200.0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "e917c1e542fba553",
+    "name": "Armstrong 10R Cockpit",
+    "category": "Cockpit",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 6.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 2.0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 220.0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "070de0cb70eb9200",
+    "name": "Armstrong 20 Cockpit",
+    "category": "Cockpit",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 9.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 2.0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 240.0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "9e86f83682640f6f",
+    "name": "Deimos All-in-One Berth 2x1",
+    "category": "Hab",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 8.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 0.0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "cad69f827e0d7c85",
+    "name": "HopeTech All-in-One Berth 2x1",
+    "category": "Hab",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 8.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 0.0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "54e60dc0552d0f61",
+    "name": "Deimos Control Station 2x1",
+    "category": "Hab",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 8.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 4.0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "6634b2dbde7c73e0",
+    "name": "HopeTech Control Station 2x1",
+    "category": "Hab",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 8.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 4.0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "c873e36e73bbfe05",
+    "name": "Deimos Workshop 2x1",
+    "category": "Hab",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 8.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 0.0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "486206269309ccc9",
+    "name": "100CM Ballast",
+    "category": "Cargo",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 44.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 210.0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "95bc939ab16c26f9",
+    "name": "100CM Ballast Shielded",
+    "category": "Cargo",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 48.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 160.0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "1a8bd687f8615e58",
+    "name": "200CM Ballast",
+    "category": "Cargo",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 52.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 245.0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "90672d2ce3fe2a3d",
+    "name": "100G He3 Tank",
+    "category": "Fuel tank",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 10.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 50.0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "ef7f7761a90f1797",
+    "name": "200G He3 Tank",
+    "category": "Fuel tank",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 12.0,
+      "hull": 5.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 70.0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "081a397bfbbe827e",
+    "name": "220CB Landing Gear",
+    "category": "Landing gear",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 3.0,
+      "hull": 2.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "3d8ffe7566187ce4",
+    "name": "320CB Landing Gear",
+    "category": "Landing gear",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 6.0,
+      "hull": 4.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "604befe7ef5d2fbe",
+    "name": "120LD",
+    "category": "Landing bay",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 3.0,
+      "hull": 2.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  },
+  {
+    "catalog_id": "0a0ca7d36c8a5fad",
+    "name": "100DP Slim Docker - Top/Bottom",
+    "category": "Docker",
+    "ship_class": "",
+    "count": 1,
+    "stats": {
+      "mass": 1.0,
+      "hull": 3.0,
+      "power": 0,
+      "crew_capacity": 0,
+      "crew_stations": 0,
+      "shield": 0,
+      "maneuvering_thrust": 0,
+      "grav_thrust": 0,
+      "top_speed": 0,
+      "cargo": 0,
+      "fuel": 0
+    },
+    "_source": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AShip_Modules",
+      "revision": 119386,
+      "timestamp": "2026-05-30T22:34:11Z",
+      "fetched_at": "2026-10-04T18:41:38.222461+00:00",
+      "license": "CC-BY-SA-4.0"
+    }
+  }
+]

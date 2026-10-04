@@ -15,6 +15,8 @@ export default function Hub() {
     <Button variant="ghost" onClick={() => { resource.reload(); briefing.reload(); }}>Refresh terminal</Button>
   </SectionHeader>
     <div className="stack">
+      <div className="two-column planning-launchers"><Link to="/logistics/supply-network"><span className="eyebrow">Industry / Cargo-link mapper</span><strong>Chart your supply corridor <span aria-hidden="true">↗</span></strong><span>Connect outposts. Trace shipments. Keep the fuel flowing.</span></Link>
+        <Link to="/crew/blueprints"><span className="eyebrow">Fleet / Ship Forge</span><strong>Design your next vessel <span aria-hidden="true">↗</span></strong><span>Assemble modules, compare refits and archive your blueprints.</span></Link></div>
       <ResourceState resource={resource}>{data && <div className="two-column">
         <SessionRadar data={data} />
         <div className="stack"><Panel className="stack"><p className="eyebrow">Shipboard telemetry / recorded operations</p><h2>Fleet & outpost status</h2>
