@@ -9,7 +9,7 @@ load_dotenv(BASE_DIR / '.env')
 
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL') or f'sqlite:///{(BASE_DIR / "instance" / "companion.db").as_posix()}'
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL') or f'sqlite:///{(BASE_DIR / "starfield.db").as_posix()}'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     AI_MODE = os.getenv('AI_MODE', 'mock')
     OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')
