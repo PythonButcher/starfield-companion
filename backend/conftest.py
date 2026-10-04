@@ -8,7 +8,7 @@ def app(tmp_path):
     application = create_app({
         'TESTING': True, 'SQLALCHEMY_DATABASE_URI': 'sqlite:///:memory:',
         'UPLOAD_FOLDER': str(tmp_path / 'uploads'), 'AI_MODE': 'mock',
-        'OPENAI_API_KEY': '', 'SEED_ON_STARTUP': True,
+        'OPENAI_API_KEY': '', 'SEED_ON_STARTUP': True, 'SEED_STARTER_STATE': False,
     })
     yield application
     with application.app_context():

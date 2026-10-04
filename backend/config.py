@@ -18,3 +18,4 @@ class Config:
     MAX_CONTENT_LENGTH = 11 * 1024 * 1024
     MAX_FILE_SIZE = 10 * 1024 * 1024
     SEED_ON_STARTUP = True
+    SEED_STARTER_STATE = True

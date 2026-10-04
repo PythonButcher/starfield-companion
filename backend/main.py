@@ -26,8 +26,8 @@ def create_app(config=None):
     Path(app.config['UPLOAD_FOLDER']).mkdir(parents=True, exist_ok=True)
     db.init_app(app)
 
-    from routes import logs, reference, ai, planets, crew, media, catalogs, outposts, crafting, missions, operations
-    for blueprint in (logs.bp, reference.bp, ai.bp, planets.bp, crew.bp, media.bp, catalogs.bp, outposts.bp, crafting.bp, missions.bp, operations.bp):
+    from routes import logs, reference, ai, planets, crew, media, catalogs, outposts, crafting, missions, operations, starter
+    for blueprint in (logs.bp, reference.bp, ai.bp, planets.bp, crew.bp, media.bp, catalogs.bp, outposts.bp, crafting.bp, missions.bp, operations.bp, starter.bp):
         app.register_blueprint(blueprint)
 
     @app.errorhandler(ApiError)
@@ -64,8 +64,13 @@ def create_app(config=None):
     with app.app_context():
         db.create_all()
         if app.config['SEED_ON_STARTUP']:
+            from services.starter import initialize_starter, is_fresh_profile
+            fresh = is_fresh_profile()
             from seed import seed_reference
-            seed_reference()
+            seed_reference(commit=False)
+            if app.config['SEED_STARTER_STATE']:
+                initialize_starter(fresh)
+            db.session.commit()
 
     @app.cli.command('reset-db')
     @click.option('--yes', is_flag=True, help='Confirm deletion of this configured database schema.')

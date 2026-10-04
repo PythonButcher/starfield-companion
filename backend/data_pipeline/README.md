@@ -17,4 +17,10 @@ It emits resources, component/research recipes, operational outpost modules, sys
 
 The checked-in datasets run without a network connection. An offline rebuild requires the cache from an online build. Minimum-count guards and duplicate-key checks reject clearly incomplete parser results. Parser unit tests use literal offline fixtures. Application startup refreshes reference rows when file digests change; player tables are never replaced.
 
-Coverage in this build: 128 system records, 109 resource records, 112 recipes/projects, and 44 operational modules. This is not a claim of complete game coverage. Planet suppliers use seven starter profiles plus player additions. Coordinates are a schematic grid with inherited positions retained for named starter systems. Storage capacities and production rates remain null until the player measures them. Unresolved recipe leaves are explicitly returned as purchased components.
+Coverage in this build: 128 system records, 109 resource records, 112 recipes/projects, 44 operational modules and 47 worlds. This is not a claim of complete game coverage. Coordinates use deterministic sector placement with named anchors and minimum spacing, not an alphabetical grid or real distances. Storage capacities and production rates remain null until the player measures them. Unresolved recipe leaves are explicitly returned as purchased components.
+
+## Bounded planet catalog
+
+From backend, run `../.venv/Scripts/python.exe -m data_pipeline.planet_catalog` (or add `--offline` / `--refresh`). The 47-name allowlist spans nine core systems. `Starfield:Deimos (planet)` resolves the ambiguous Deimos title. Only Planet Infobox facts are imported; expected names/systems, resource identities and source metadata are checked before writing `backend/data/planets.json`. `_reference` includes moon/planet type, orbital parent and provenance. Hazards are conservative environment-derived cautions, labeled approximate; no game images or article prose are copied.
+
+Startup refreshes PlanetReference separately from editable PlanetProfile. A versioned expansion adds missing non-legacy worlds once and preserves edits and deletions. The separate Constellation sample-state service runs only for a new profile. See [source decisions](../data/SOURCES.md) for Jemison totals, the Suvorov/Lock distinction and explicit sample solar calibration.

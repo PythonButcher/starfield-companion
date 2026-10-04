@@ -1,389 +1,3103 @@
 [
   {
+    "name": "Bondar",
+    "system_name": "Alpha Centauri",
     "type": "Rock",
-    "biomes": [],
+    "gravity": 1.84,
+    "temperature": "Inferno (461°)",
+    "atmosphere": "Extreme CO₂",
+    "magnetosphere": "Powerful",
+    "water": "None",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Rocky Desert",
+      "Hills",
+      "Sandy Desert",
+      "Volcanic"
+    ],
+    "planetary_traits": [
+      "Active Faulting",
+      "Charred Ecosystem",
+      "Emerging Tectonics"
+    ],
+    "resources": [
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Nickel",
+        "symbol": "Ni",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Tungsten",
+        "symbol": "W",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Platinum",
+        "symbol": "Pt",
+        "type": "inorganic",
+        "rarity": "rare"
+      },
+      {
+        "name": "Xenon",
+        "symbol": "Xe",
+        "type": "inorganic",
+        "rarity": "exotic"
+      }
+    ],
+    "hazards": [
+      "Heat exposure"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ABondar"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABondar",
+      "revision": 102607,
+      "timestamp": "2025-05-19T21:55:09Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Alpha Centauri",
+      "body_type": "Planet",
+      "orbital_position": "1",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Chawla",
+    "system_name": "Alpha Centauri",
+    "type": "Ice",
+    "gravity": 0.43,
+    "temperature": "Frozen (-78°)",
+    "atmosphere": "Thin CO₂",
+    "magnetosphere": "None",
+    "water": "Heavy Metal",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Frozen Dunes"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Benzene",
+        "symbol": "C6H6",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Limited radiation protection",
+      "Heavy Metal water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AChawla"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AChawla",
+      "revision": 102615,
+      "timestamp": "2025-05-19T22:03:00Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Olivas",
+      "body_type": "Moon",
+      "orbital_position": "4",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Gagarin",
+    "system_name": "Alpha Centauri",
+    "type": "Rock",
+    "gravity": 0.89,
+    "temperature": "Temperate (46°)",
+    "atmosphere": "High O₂",
+    "magnetosphere": "Powerful",
+    "water": "Biological",
+    "flora": 5,
+    "fauna": 8,
+    "biomes": [
+      "Rocky Desert",
+      "Ocean",
+      "Swamp",
+      "Wetlands"
+    ],
+    "planetary_traits": [
+      "Coralline Landmass"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorosilanes",
+        "symbol": "SiH3Cl",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      }
+    ],
+    "hazards": [
+      "Biological water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AGagarin"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AGagarin",
+      "revision": 102610,
+      "timestamp": "2025-05-19T21:58:02Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Alpha Centauri",
+      "body_type": "Planet",
+      "orbital_position": "2",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Jemison",
+    "system_name": "Alpha Centauri",
+    "type": "Rock",
+    "gravity": 0.91,
+    "temperature": "Temperate (21°)",
+    "atmosphere": "Standard O₂",
+    "magnetosphere": "Strong",
+    "water": "Safe",
+    "flora": 8,
+    "fauna": 9,
+    "biomes": [
+      "Ocean",
+      "Deciduous Forest",
+      "Frozen Mountains",
+      "Mountains",
+      "Coniferous Forest"
+    ],
     "planetary_traits": [
       "Ecological Consortium",
       "Global Glacial Recession",
       "Sentient Microbial Colonies"
     ],
-    "flora": null,
-    "fauna": null,
-    "surveyed_percent": 0,
-    "favorite": false,
-    "outpost_candidate": false,
-    "approximate": true,
-    "name": "Jemison",
-    "system_name": "Alpha Centauri",
-    "gravity": 0.91,
-    "temperature": "Temperate",
-    "atmosphere": "Standard O2",
-    "magnetosphere": "Strong",
-    "water": "Safe",
     "resources": [
       {
         "name": "Water",
         "symbol": "H2O",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "common"
       },
       {
         "name": "Argon",
         "symbol": "Ar",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
       },
       {
         "name": "Chlorine",
         "symbol": "Cl",
         "type": "inorganic",
-        "rarity": "unknown"
-      },
-      {
-        "name": "Lead",
-        "symbol": "Pb",
-        "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
       },
       {
         "name": "Chlorosilanes",
         "symbol": "SiH3Cl",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "uncommon"
       }
     ],
     "hazards": [],
-    "_sources": [
-      "https://www.starfielddb.com/planets/jemison/",
-      "https://starfield.fandom.com/wiki/Jemison"
-    ]
-  },
-  {
-    "type": "Rock",
-    "biomes": [],
-    "planetary_traits": [
-      "Solar Storm Seasons",
-      "Pelted Fields"
-    ],
-    "flora": 0,
-    "fauna": 0,
+    "approximate": true,
     "surveyed_percent": 0,
     "favorite": false,
     "outpost_candidate": false,
-    "approximate": true,
-    "name": "Mars",
-    "system_name": "Sol",
-    "gravity": 0.38,
-    "temperature": "Cold",
-    "atmosphere": "Thin CO2",
-    "magnetosphere": "None",
-    "water": "Safe",
-    "resources": [
-      {
-        "name": "Water",
-        "symbol": "H2O",
-        "type": "inorganic",
-        "rarity": "unknown"
-      },
-      {
-        "name": "Chlorine",
-        "symbol": "Cl",
-        "type": "inorganic",
-        "rarity": "unknown"
-      },
-      {
-        "name": "Lead",
-        "symbol": "Pb",
-        "type": "inorganic",
-        "rarity": "unknown"
-      },
-      {
-        "name": "Chlorosilanes",
-        "symbol": "SiH3Cl",
-        "type": "inorganic",
-        "rarity": "unknown"
-      }
-    ],
-    "hazards": [
-      "Cold",
-      "Unbreathable atmosphere",
-      "Weak radiation protection"
-    ],
     "_sources": [
-      "https://www.starfielddb.com/planets/mars/",
-      "https://starfield.fandom.com/wiki/Mars"
-    ]
+      "https://starfieldwiki.net/wiki/Starfield%3AJemison"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AJemison",
+      "revision": 102612,
+      "timestamp": "2025-05-19T22:00:26Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Alpha Centauri",
+      "body_type": "Planet",
+      "orbital_position": "3",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
   },
   {
+    "name": "Kurtz",
+    "system_name": "Alpha Centauri",
     "type": "Barren",
-    "biomes": [],
-    "planetary_traits": [],
-    "flora": 0,
-    "fauna": 0,
-    "surveyed_percent": 0,
-    "favorite": false,
-    "outpost_candidate": false,
-    "approximate": true,
-    "name": "Luna",
-    "system_name": "Sol",
-    "gravity": null,
-    "temperature": "Temperate",
+    "gravity": 0.11,
+    "temperature": "Temperate (21°)",
     "atmosphere": "None",
     "magnetosphere": "None",
     "water": "None",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Craters"
+    ],
+    "planetary_traits": [],
     "resources": [
-      {
-        "name": "Iron",
-        "symbol": "Fe",
-        "type": "inorganic",
-        "rarity": "unknown"
-      },
       {
         "name": "Helium-3",
         "symbol": "He-3",
         "type": "inorganic",
-        "rarity": "unknown"
-      }
-    ],
-    "hazards": [
-      "Vacuum",
-      "Weak radiation protection"
-    ],
-    "_sources": [
-      "https://www.starfielddb.com/planets/luna/"
-    ]
-  },
-  {
-    "type": "Rock",
-    "biomes": [],
-    "planetary_traits": [
-      "Crystalline Crust",
-      "Primordial Network"
-    ],
-    "flora": null,
-    "fauna": null,
-    "surveyed_percent": 0,
-    "favorite": false,
-    "outpost_candidate": false,
-    "approximate": true,
-    "name": "Akila",
-    "system_name": "Cheyenne",
-    "gravity": 1.51,
-    "temperature": "Temperate",
-    "atmosphere": "O2",
-    "magnetosphere": "Very Strong",
-    "water": "Biological",
-    "resources": [
+        "rarity": "common"
+      },
       {
         "name": "Aluminum",
         "symbol": "Al",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
+      }
+    ],
+    "hazards": [
+      "Vacuum",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AKurtz"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AKurtz",
+      "revision": 102616,
+      "timestamp": "2025-05-19T22:06:03Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Jemison",
+      "body_type": "Moon",
+      "orbital_position": "1",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Olivas",
+    "system_name": "Alpha Centauri",
+    "type": "Gas Giant",
+    "gravity": 1.34,
+    "temperature": "Frozen (-77°)",
+    "atmosphere": "H₂",
+    "magnetosphere": "Strong",
+    "water": "Unknown",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [],
+    "planetary_traits": [],
+    "resources": [],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AOlivas"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AOlivas",
+      "revision": 102758,
+      "timestamp": "2025-05-19T23:07:45Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Alpha Centauri",
+      "body_type": "Planet",
+      "orbital_position": "4",
+      "landable": false,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Voss",
+    "system_name": "Alpha Centauri",
+    "type": "Rock",
+    "gravity": 0.41,
+    "temperature": "Frozen (-76°)",
+    "atmosphere": "Thin N₂",
+    "magnetosphere": "None",
+    "water": "Chemical",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Rocky Desert",
+      "Sandy Desert",
+      "Mountains",
+      "Frozen Mountains",
+      "Hills"
+    ],
+    "planetary_traits": [
+      "Solar Storm Seasons"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
       },
       {
-        "name": "Argon",
-        "symbol": "Ar",
+        "name": "Lead",
+        "symbol": "Pb",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
       },
       {
-        "name": "Benzene",
-        "symbol": "C6Hn",
+        "name": "Nickel",
+        "symbol": "Ni",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
+      },
+      {
+        "name": "Uranium",
+        "symbol": "U",
+        "type": "inorganic",
+        "rarity": "common"
       },
       {
         "name": "Cobalt",
         "symbol": "Co",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "uncommon"
       },
+      {
+        "name": "Tungsten",
+        "symbol": "W",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Vanadium",
+        "symbol": "V",
+        "type": "inorganic",
+        "rarity": "rare"
+      },
+      {
+        "name": "Dysprosium",
+        "symbol": "Dy",
+        "type": "inorganic",
+        "rarity": "exotic"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere",
+      "Limited radiation protection",
+      "Chemical water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AVoss"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AVoss",
+      "revision": 102620,
+      "timestamp": "2025-05-19T22:09:56Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Olivas",
+      "body_type": "Moon",
+      "orbital_position": "2",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Zamka",
+    "system_name": "Alpha Centauri",
+    "type": "Rock",
+    "gravity": 0.42,
+    "temperature": "Frozen (-78°)",
+    "atmosphere": "Thin M",
+    "magnetosphere": "None",
+    "water": "Chemical",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Craters",
+      "Frozen Plains",
+      "Mountains",
+      "Sandy Desert",
+      "Hills"
+    ],
+    "planetary_traits": [
+      "Crystalline Crust",
+      "Solar Storm Seasons"
+    ],
+    "resources": [
       {
         "name": "Water",
         "symbol": "H2O",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
       },
       {
-        "name": "Nickel",
-        "symbol": "Ni",
+        "name": "Helium-3",
+        "symbol": "He-3",
         "type": "inorganic",
-        "rarity": "unknown"
-      }
-    ],
-    "hazards": [
-      "High gravity",
-      "Biological water contamination",
-      "Hostile wildlife"
-    ],
-    "_sources": [
-      "https://www.starfielddb.com/planets/akila/",
-      "https://starfield.fandom.com/wiki/Akila"
-    ]
-  },
-  {
-    "type": "Rock",
-    "biomes": [],
-    "planetary_traits": [],
-    "flora": null,
-    "fauna": null,
-    "surveyed_percent": 0,
-    "favorite": false,
-    "outpost_candidate": false,
-    "approximate": true,
-    "name": "Volii Alpha",
-    "system_name": "Volii",
-    "gravity": null,
-    "temperature": "Temperate",
-    "atmosphere": "Unknown",
-    "magnetosphere": "Average",
-    "water": "Safe",
-    "resources": [
-      {
-        "name": "Benzene",
-        "symbol": "C6Hn",
-        "type": "inorganic",
-        "rarity": "unknown"
-      },
-      {
-        "name": "Water",
-        "symbol": "H2O",
-        "type": "inorganic",
-        "rarity": "unknown"
-      }
-    ],
-    "hazards": [
-      "Ocean terrain"
-    ],
-    "user_notes": "Neon is a city on Volii Alpha, not a separate planet.",
-    "_sources": [
-      "https://www.starfielddb.com/planets/volii-alpha/"
-    ]
-  },
-  {
-    "type": "Rock",
-    "biomes": [],
-    "planetary_traits": [],
-    "flora": null,
-    "fauna": null,
-    "surveyed_percent": 0,
-    "favorite": false,
-    "outpost_candidate": false,
-    "approximate": true,
-    "name": "Niira",
-    "system_name": "Narion",
-    "gravity": null,
-    "temperature": "Temperate",
-    "atmosphere": "Unknown",
-    "magnetosphere": "Weak",
-    "water": "Heavy Metal",
-    "resources": [
-      {
-        "name": "Argon",
-        "symbol": "Ar",
-        "type": "inorganic",
-        "rarity": "unknown"
-      },
-      {
-        "name": "Benzene",
-        "symbol": "C6Hn",
-        "type": "inorganic",
-        "rarity": "unknown"
-      },
-      {
-        "name": "Chlorine",
-        "symbol": "Cl",
-        "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
       },
       {
         "name": "Copper",
         "symbol": "Cu",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
       },
       {
-        "name": "Fluorine",
-        "symbol": "F",
+        "name": "Iron",
+        "symbol": "Fe",
         "type": "inorganic",
-        "rarity": "unknown"
-      },
-      {
-        "name": "Water",
-        "symbol": "H2O",
-        "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
       },
       {
         "name": "Nickel",
         "symbol": "Ni",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
+      },
+      {
+        "name": "Uranium",
+        "symbol": "U",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Cobalt",
+        "symbol": "Co",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Vanadium",
+        "symbol": "V",
+        "type": "inorganic",
+        "rarity": "rare"
       }
     ],
     "hazards": [
-      "Heavy metal water contamination",
-      "Weak radiation protection"
+      "Cold exposure",
+      "Non-breathable atmosphere",
+      "Limited radiation protection",
+      "Chemical water"
     ],
-    "_sources": [
-      "https://www.starfielddb.com/planets/niira/"
-    ]
-  },
-  {
-    "type": "Rock",
-    "biomes": [],
-    "planetary_traits": [],
-    "flora": 0,
-    "fauna": 0,
+    "approximate": true,
     "surveyed_percent": 0,
     "favorite": false,
     "outpost_candidate": false,
-    "approximate": true,
-    "name": "Earth",
-    "system_name": "Sol",
-    "gravity": null,
-    "temperature": "Cold",
-    "atmosphere": "Unknown",
-    "magnetosphere": "None",
-    "water": "Safe",
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AZamka"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AZamka",
+      "revision": 102621,
+      "timestamp": "2025-05-19T22:10:53Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Olivas",
+      "body_type": "Moon",
+      "orbital_position": "1",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Bessel III",
+    "system_name": "Bessel",
+    "type": "Barren",
+    "gravity": 1.12,
+    "temperature": "Deep Freeze (-193°)",
+    "atmosphere": "None",
+    "magnetosphere": "Weak",
+    "water": "None",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Craters"
+    ],
+    "planetary_traits": [],
     "resources": [
       {
-        "name": "Chlorine",
-        "symbol": "Cl",
+        "name": "Helium-3",
+        "symbol": "He-3",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
       },
+      {
+        "name": "Aluminum",
+        "symbol": "Al",
+        "type": "inorganic",
+        "rarity": "common"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Vacuum",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ABessel_III"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABessel_III",
+      "revision": 102844,
+      "timestamp": "2025-05-19T23:31:33Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Bessel",
+      "body_type": "Planet",
+      "orbital_position": "3",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Akila",
+    "system_name": "Cheyenne",
+    "type": "Rock",
+    "gravity": 1.51,
+    "temperature": "Temperate (11°)",
+    "atmosphere": "High O₂",
+    "magnetosphere": "Very Strong",
+    "water": "Biological",
+    "flora": 5,
+    "fauna": 10,
+    "biomes": [
+      "Ocean",
+      "Savanna",
+      "Coniferous Forest",
+      "Frozen Plains"
+    ],
+    "planetary_traits": [
+      "Crystalline Crust",
+      "Primordial Network"
+    ],
+    "resources": [
       {
         "name": "Water",
         "symbol": "H2O",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
       },
       {
-        "name": "Mercury",
-        "symbol": "Hg",
+        "name": "Aluminum",
+        "symbol": "Al",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
+      },
+      {
+        "name": "Nickel",
+        "symbol": "Ni",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Cobalt",
+        "symbol": "Co",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Benzene",
+        "symbol": "C6H6",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      }
+    ],
+    "hazards": [
+      "Biological water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AAkila"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAkila",
+      "revision": 107791,
+      "timestamp": "2025-06-07T07:48:53Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Cheyenne",
+      "body_type": "Planet",
+      "orbital_position": "2",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Bindi",
+    "system_name": "Cheyenne",
+    "type": "Barren",
+    "gravity": 0.23,
+    "temperature": "Temperate (12°)",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "None",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Rocky Desert",
+      "Craters",
+      "Plateau",
+      "Mountains"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Helium-3",
+        "symbol": "He-3",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Aluminum",
+        "symbol": "Al",
+        "type": "inorganic",
+        "rarity": "common"
       },
       {
         "name": "Lead",
         "symbol": "Pb",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "common"
+      },
+      {
+        "name": "Nickel",
+        "symbol": "Ni",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Uranium",
+        "symbol": "U",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Silver",
+        "symbol": "Ag",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      }
+    ],
+    "hazards": [
+      "Vacuum",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ABindi"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ABindi",
+      "revision": 102975,
+      "timestamp": "2025-05-20T00:17:21Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Akila",
+      "body_type": "Moon",
+      "orbital_position": "2",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Codos",
+    "system_name": "Cheyenne",
+    "type": "Rock",
+    "gravity": 0.4,
+    "temperature": "Temperate (15°)",
+    "atmosphere": "Standard O₂",
+    "magnetosphere": "Weak",
+    "water": "Safe",
+    "flora": 4,
+    "fauna": 4,
+    "biomes": [
+      "Ocean",
+      "Savanna",
+      "Frozen Mountains",
+      "Swamp",
+      "Mountains"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Aluminum",
+        "symbol": "Al",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Iron",
+        "symbol": "Fe",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Beryllium",
+        "symbol": "Be",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Alkanes",
+        "symbol": "HnCn",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Carboxylic Acids",
+        "symbol": "R-COOH",
+        "type": "inorganic",
+        "rarity": "rare"
+      }
+    ],
+    "hazards": [
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ACodos"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ACodos",
+      "revision": 115480,
+      "timestamp": "2026-04-15T21:16:13Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Akila",
+      "body_type": "Moon",
+      "orbital_position": "1",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Montara",
+    "system_name": "Cheyenne",
+    "type": "Gas Giant",
+    "gravity": 2.66,
+    "temperature": "Deep Freeze (-179°)",
+    "atmosphere": "H₂",
+    "magnetosphere": "Extreme",
+    "water": "Unknown",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [],
+    "planetary_traits": [],
+    "resources": [],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AMontara"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMontara",
+      "revision": 102982,
+      "timestamp": "2025-05-20T00:19:33Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Cheyenne",
+      "body_type": "Planet",
+      "orbital_position": "5",
+      "landable": false,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Montara Luna",
+    "system_name": "Cheyenne",
+    "type": "Rock",
+    "gravity": 0.39,
+    "temperature": "Temperate (13°)",
+    "atmosphere": "Thin O₂",
+    "magnetosphere": "Average",
+    "water": "Chemical",
+    "flora": 7,
+    "fauna": 7,
+    "biomes": [
+      "Ocean",
+      "Savanna",
+      "Swamp",
+      "Coniferous Forest",
+      "Hills",
+      "Frozen Plains"
+    ],
+    "planetary_traits": [
+      "Primordial Network",
+      "Psychotropic Biota"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Aluminum",
+        "symbol": "Al",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Nickel",
+        "symbol": "Ni",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Cobalt",
+        "symbol": "Co",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Benzene",
+        "symbol": "C6H6",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Carboxylic Acids",
+        "symbol": "R-COOH",
+        "type": "inorganic",
+        "rarity": "rare"
+      }
+    ],
+    "hazards": [
+      "Chemical water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AMontara_Luna"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMontara_Luna",
+      "revision": 102985,
+      "timestamp": "2025-05-20T00:23:57Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Montara",
+      "body_type": "Moon",
+      "orbital_position": "4",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Washakie",
+    "system_name": "Cheyenne",
+    "type": "Rock",
+    "gravity": 0.69,
+    "temperature": "Frozen (-54°)",
+    "atmosphere": "Standard M",
+    "magnetosphere": "Weak",
+    "water": "Heavy Metal",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Rocky Desert",
+      "Sandy Desert",
+      "Volcanic",
+      "Frozen Dunes"
+    ],
+    "planetary_traits": [
+      "Primed For Life",
+      "Sonorous Lithosphere"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Uranium",
+        "symbol": "U",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Silver",
+        "symbol": "Ag",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Benzene",
+        "symbol": "C6H6",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Neon",
+        "symbol": "Ne",
+        "type": "inorganic",
+        "rarity": "exotic"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere",
+      "Limited radiation protection",
+      "Heavy Metal water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AWashakie"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AWashakie",
+      "revision": 102977,
+      "timestamp": "2025-05-20T00:18:48Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Cheyenne",
+      "body_type": "Planet",
+      "orbital_position": "3",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Suvorov",
+    "system_name": "Kryx",
+    "type": "Rock",
+    "gravity": 1.04,
+    "temperature": "Frozen (-53°)",
+    "atmosphere": "Standard O₂",
+    "magnetosphere": "Powerful",
+    "water": "Chemical",
+    "flora": 1,
+    "fauna": 3,
+    "biomes": [
+      "Frozen Crevasses"
+    ],
+    "planetary_traits": [
+      "Frozen Ecosystem"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Copper",
+        "symbol": "Cu",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Fluorine",
+        "symbol": "F",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Chemical water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ASuvorov"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASuvorov",
+      "revision": 104001,
+      "timestamp": "2025-05-20T18:25:06Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Kryx",
+      "body_type": "Planet",
+      "orbital_position": "1",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Anselon",
+    "system_name": "Narion",
+    "type": "Gas Giant",
+    "gravity": 1.81,
+    "temperature": "Deep Freeze (-214°)",
+    "atmosphere": "H₂",
+    "magnetosphere": "Strong",
+    "water": "Unknown",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [],
+    "planetary_traits": [],
+    "resources": [],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AAnselon"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAnselon",
+      "revision": 104524,
+      "timestamp": "2025-05-20T21:21:49Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Narion",
+      "body_type": "Planet",
+      "orbital_position": "6",
+      "landable": false,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Kreet",
+    "system_name": "Narion",
+    "type": "Rock",
+    "gravity": 0.55,
+    "temperature": "Temperate (25°)",
+    "atmosphere": "Standard O₂",
+    "magnetosphere": "Very Strong",
+    "water": "Biological",
+    "flora": 3,
+    "fauna": 3,
+    "biomes": [
+      "Volcanic",
+      "Mountains",
+      "Frozen Volcanic"
+    ],
+    "planetary_traits": [
+      "Boiled Seas"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Helium-3",
+        "symbol": "He-3",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Iron",
+        "symbol": "Fe",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Silver",
+        "symbol": "Ag",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Alkanes",
+        "symbol": "HnCn",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Neon",
+        "symbol": "Ne",
+        "type": "inorganic",
+        "rarity": "exotic"
+      }
+    ],
+    "hazards": [
+      "Biological water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AKreet"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AKreet",
+      "revision": 104526,
+      "timestamp": "2025-05-20T21:22:43Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Anselon",
+      "body_type": "Moon",
+      "orbital_position": "2",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Niira",
+    "system_name": "Narion",
+    "type": "Rock",
+    "gravity": 0.61,
+    "temperature": "Temperate (31°)",
+    "atmosphere": "Standard M (Toxic)",
+    "magnetosphere": "Weak",
+    "water": "Heavy Metal",
+    "flora": 2,
+    "fauna": 4,
+    "biomes": [
+      "Ocean",
+      "Wetlands",
+      "Hills",
+      "Frozen Plains"
+    ],
+    "planetary_traits": [
+      "Charred Ecosystem",
+      "Coralline Landmass",
+      "Global Glacial Recession"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Copper",
+        "symbol": "Cu",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Nickel",
+        "symbol": "Ni",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Ionic Liquids",
+        "symbol": "IL",
+        "type": "inorganic",
+        "rarity": "exotic"
+      },
+      {
+        "name": "Benzene",
+        "symbol": "C6H6",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Fluorine",
+        "symbol": "F",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      }
+    ],
+    "hazards": [
+      "Non-breathable atmosphere",
+      "Limited radiation protection",
+      "Heavy Metal water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ANiira"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ANiira",
+      "revision": 118499,
+      "timestamp": "2026-05-14T21:32:16Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Narion",
+      "body_type": "Planet",
+      "orbital_position": "1",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Sumati",
+    "system_name": "Narion",
+    "type": "Rock",
+    "gravity": 0.89,
+    "temperature": "Temperate (7°)",
+    "atmosphere": "Standard M",
+    "magnetosphere": "Very Strong",
+    "water": "Safe",
+    "flora": 3,
+    "fauna": 4,
+    "biomes": [
+      "Ocean",
+      "Frozen Plains",
+      "Mountains",
+      "Coniferous Forest",
+      "Deciduous Forest"
+    ],
+    "planetary_traits": [
+      "Diseased Biosphere",
+      "Global Glacial Recession",
+      "Psychotropic Biota"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Copper",
+        "symbol": "Cu",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "common"
       },
       {
         "name": "Chlorosilanes",
         "symbol": "SiH3Cl",
         "type": "inorganic",
-        "rarity": "unknown"
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Fluorine",
+        "symbol": "F",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Tetrafluorides",
+        "symbol": "xF4",
+        "type": "inorganic",
+        "rarity": "rare"
       }
     ],
     "hazards": [
-      "Cold",
-      "Weak radiation protection"
+      "Non-breathable atmosphere"
     ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
     "_sources": [
-      "https://www.starfielddb.com/planets/earth/"
-    ]
+      "https://starfieldwiki.net/wiki/Starfield%3ASumati"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASumati",
+      "revision": 107804,
+      "timestamp": "2025-06-08T03:31:44Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Narion",
+      "body_type": "Planet",
+      "orbital_position": "2",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Vectera",
+    "system_name": "Narion",
+    "type": "Rock",
+    "gravity": 0.91,
+    "temperature": "Deep Freeze (-214°)",
+    "atmosphere": "Thin CO₂",
+    "magnetosphere": "Weak",
+    "water": "Safe",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Rocky Desert",
+      "Frozen Dunes",
+      "Craters",
+      "Hills"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Aluminum",
+        "symbol": "Al",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Nickel",
+        "symbol": "Ni",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Benzene",
+        "symbol": "C6H6",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AVectera"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AVectera",
+      "revision": 109744,
+      "timestamp": "2025-08-31T13:10:50Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Anselon",
+      "body_type": "Moon",
+      "orbital_position": "1",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Ananke",
+    "system_name": "Olympus",
+    "type": "Barren",
+    "gravity": 1.12,
+    "temperature": "Deep Freeze (-183°)",
+    "atmosphere": "High N₂",
+    "magnetosphere": "Powerful",
+    "water": "None",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Craters"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Helium-3",
+        "symbol": "He-3",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Aluminum",
+        "symbol": "Al",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Europium",
+        "symbol": "Eu",
+        "type": "inorganic",
+        "rarity": "exotic"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AAnanke"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AAnanke",
+      "revision": 120044,
+      "timestamp": "2026-06-04T15:21:10Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Olympus",
+      "body_type": "Planet",
+      "orbital_position": "4",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Nesoi",
+    "system_name": "Olympus",
+    "type": "Rock",
+    "gravity": 1.04,
+    "temperature": "Temperate (25°)",
+    "atmosphere": "Standard O₂",
+    "magnetosphere": "Average",
+    "water": "Biological",
+    "flora": 5,
+    "fauna": 8,
+    "biomes": [
+      "Ocean",
+      "Frozen Volcanic",
+      "Sandy Desert",
+      "Savanna",
+      "Deciduous Forest",
+      "Mountains"
+    ],
+    "planetary_traits": [
+      "Ecological Consortium",
+      "Sentient Microbial Colonies"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Iron",
+        "symbol": "Fe",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Uranium",
+        "symbol": "U",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Iridium",
+        "symbol": "Ir",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Benzene",
+        "symbol": "C6H6",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Tantalum",
+        "symbol": "Ta",
+        "type": "inorganic",
+        "rarity": "rare"
+      },
+      {
+        "name": "Carboxylic Acids",
+        "symbol": "R-COOH",
+        "type": "inorganic",
+        "rarity": "rare"
+      }
+    ],
+    "hazards": [
+      "Biological water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ANesoi"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ANesoi",
+      "revision": 104616,
+      "timestamp": "2025-05-20T21:52:57Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Olympus",
+      "body_type": "Planet",
+      "orbital_position": "1",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Porrima II",
+    "system_name": "Porrima",
+    "type": "Rock",
+    "gravity": 1.24,
+    "temperature": "Temperate (32°)",
+    "atmosphere": "Extreme O₂",
+    "magnetosphere": "Powerful",
+    "water": "Safe",
+    "flora": 5,
+    "fauna": 6,
+    "biomes": [
+      "Ocean",
+      "Tropical Forest"
+    ],
+    "planetary_traits": [
+      "Ecological Consortium"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Lithium",
+        "symbol": "Li",
+        "type": "inorganic",
+        "rarity": "rare"
+      },
+      {
+        "name": "Caesium",
+        "symbol": "Cs",
+        "type": "inorganic",
+        "rarity": "exotic"
+      }
+    ],
+    "hazards": [],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3APorrima_II"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3APorrima_II",
+      "revision": 104660,
+      "timestamp": "2025-05-20T22:25:58Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Porrima",
+      "body_type": "Planet",
+      "orbital_position": "2",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Porrima III",
+    "system_name": "Porrima",
+    "type": "Rock",
+    "gravity": 2.01,
+    "temperature": "Cold (-18°)",
+    "atmosphere": "Thin M",
+    "magnetosphere": "Average",
+    "water": "Safe",
+    "flora": 4,
+    "fauna": 4,
+    "biomes": [
+      "Frozen Plains",
+      "Ocean",
+      "Craters",
+      "Coniferous Forest"
+    ],
+    "planetary_traits": [
+      "Sentient Microbial Colonies"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Helium-3",
+        "symbol": "He-3",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Aluminum",
+        "symbol": "Al",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Lithium",
+        "symbol": "Li",
+        "type": "inorganic",
+        "rarity": "rare"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3APorrima_III"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3APorrima_III",
+      "revision": 104664,
+      "timestamp": "2025-05-20T22:28:39Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Porrima",
+      "body_type": "Planet",
+      "orbital_position": "3",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Callisto",
+    "system_name": "Sol",
+    "type": "Ice",
+    "gravity": 0.13,
+    "temperature": "Frozen (-138°)",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "Safe",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Craters"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Helium-3",
+        "symbol": "He-3",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Iron",
+        "symbol": "Fe",
+        "type": "inorganic",
+        "rarity": "common"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Vacuum",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ACallisto"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ACallisto",
+      "revision": 104891,
+      "timestamp": "2025-05-20T23:54:28Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Jupiter",
+      "body_type": "Moon",
+      "orbital_position": "4",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Deimos",
+    "system_name": "Sol",
+    "type": "Asteroid",
+    "gravity": 0.01,
+    "temperature": "Cold (-1°)",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "Unknown",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [],
+    "planetary_traits": [],
+    "resources": [],
+    "hazards": [
+      "Cold exposure",
+      "Vacuum",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ADeimos_%28planet%29"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ADeimos_%28planet%29",
+      "revision": 104886,
+      "timestamp": "2025-05-20T23:49:41Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Mars",
+      "body_type": "Moon",
+      "orbital_position": "2",
+      "landable": false,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Earth",
+    "system_name": "Sol",
+    "type": "Rock",
+    "gravity": 1.0,
+    "temperature": "Cold (-1°)",
+    "atmosphere": "Thin CO₂",
+    "magnetosphere": "None",
+    "water": "Safe",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Sandy Desert",
+      "Frozen Plains"
+    ],
+    "planetary_traits": [
+      "Solar Storm Seasons"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorosilanes",
+        "symbol": "SiH3Cl",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Mercury",
+        "symbol": "Hg",
+        "type": "inorganic",
+        "rarity": "rare"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AEarth"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AEarth",
+      "revision": 104882,
+      "timestamp": "2025-05-20T23:44:43Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Sol",
+      "body_type": "Planet",
+      "orbital_position": "3",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Enceladus",
+    "system_name": "Sol",
+    "type": "Ice",
+    "gravity": 0.01,
+    "temperature": "Deep Freeze (-183°)",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "Safe",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Frozen Plains"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Benzene",
+        "symbol": "C6H6",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Carboxylic Acids",
+        "symbol": "R-COOH",
+        "type": "inorganic",
+        "rarity": "rare"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Vacuum",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AEnceladus"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AEnceladus",
+      "revision": 104894,
+      "timestamp": "2025-05-20T23:55:12Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Saturn",
+      "body_type": "Moon",
+      "orbital_position": "2",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Europa",
+    "system_name": "Sol",
+    "type": "Barren",
+    "gravity": 0.13,
+    "temperature": "Frozen (-137°)",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "None",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Frozen Hills"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorosilanes",
+        "symbol": "SiH3Cl",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Vacuum",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AEuropa"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AEuropa",
+      "revision": 104889,
+      "timestamp": "2025-05-20T23:52:56Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Jupiter",
+      "body_type": "Moon",
+      "orbital_position": "2",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Ganymede",
+    "system_name": "Sol",
+    "type": "Ice",
+    "gravity": 0.15,
+    "temperature": "Frozen (-134°)",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "Chemical",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Frozen Plains"
+    ],
+    "planetary_traits": [
+      "Crystalline Crust"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "common"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Vacuum",
+      "Limited radiation protection",
+      "Chemical water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AGanymede"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AGanymede",
+      "revision": 104890,
+      "timestamp": "2025-05-20T23:53:44Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Jupiter",
+      "body_type": "Moon",
+      "orbital_position": "3",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Io",
+    "system_name": "Sol",
+    "type": "Barren",
+    "gravity": 0.18,
+    "temperature": "Frozen (-135°)",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "None",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Craters"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Helium-3",
+        "symbol": "He-3",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Iron",
+        "symbol": "Fe",
+        "type": "inorganic",
+        "rarity": "common"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Vacuum",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AIo"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AIo",
+      "revision": 104888,
+      "timestamp": "2025-05-20T23:51:55Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Jupiter",
+      "body_type": "Moon",
+      "orbital_position": "1",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Jupiter",
+    "system_name": "Sol",
+    "type": "Gas Giant",
+    "gravity": 2.65,
+    "temperature": "Frozen (-135°)",
+    "atmosphere": "H₂",
+    "magnetosphere": "Extreme",
+    "water": "Unknown",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [],
+    "planetary_traits": [],
+    "resources": [],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AJupiter"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AJupiter",
+      "revision": 104887,
+      "timestamp": "2025-05-20T23:50:15Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Sol",
+      "body_type": "Planet",
+      "orbital_position": "5",
+      "landable": false,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Luna",
+    "system_name": "Sol",
+    "type": "Barren",
+    "gravity": 0.17,
+    "temperature": "Temperate (29°)",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "None",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Craters"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Helium-3",
+        "symbol": "He-3",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Iron",
+        "symbol": "Fe",
+        "type": "inorganic",
+        "rarity": "common"
+      }
+    ],
+    "hazards": [
+      "Vacuum",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ALuna"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ALuna",
+      "revision": 104883,
+      "timestamp": "2025-05-20T23:46:18Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Earth",
+      "body_type": "Moon",
+      "orbital_position": "1",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Mars",
+    "system_name": "Sol",
+    "type": "Rock",
+    "gravity": 0.38,
+    "temperature": "Cold (-5°)",
+    "atmosphere": "Thin CO₂",
+    "magnetosphere": "None",
+    "water": "Safe",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Rocky Desert",
+      "Frozen Hills"
+    ],
+    "planetary_traits": [
+      "Pelted Fields",
+      "Solar Storm Seasons"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorosilanes",
+        "symbol": "SiH3Cl",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Aqueous Hematite",
+        "symbol": "Aq",
+        "type": "inorganic",
+        "rarity": "unique"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AMars"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMars",
+      "revision": 104884,
+      "timestamp": "2025-05-20T23:48:53Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Sol",
+      "body_type": "Planet",
+      "orbital_position": "4",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Mercury",
+    "system_name": "Sol",
+    "type": "Barren",
+    "gravity": 0.38,
+    "temperature": "Inferno (394°)",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "None",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Craters"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Helium-3",
+        "symbol": "He-3",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Aluminum",
+        "symbol": "Al",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Neodymium",
+        "symbol": "Nd",
+        "type": "inorganic",
+        "rarity": "rare"
+      }
+    ],
+    "hazards": [
+      "Heat exposure",
+      "Vacuum",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AMercury"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AMercury",
+      "revision": 104880,
+      "timestamp": "2025-05-20T23:39:55Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Sol",
+      "body_type": "Planet",
+      "orbital_position": "1",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Neptune",
+    "system_name": "Sol",
+    "type": "Ice Giant",
+    "gravity": 1.15,
+    "temperature": "Deep Freeze (-221°)",
+    "atmosphere": "H₂",
+    "magnetosphere": "Weak",
+    "water": "Unknown",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [],
+    "planetary_traits": [],
+    "resources": [],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ANeptune"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ANeptune",
+      "revision": 104906,
+      "timestamp": "2025-05-20T23:57:28Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Sol",
+      "body_type": "Planet",
+      "orbital_position": "8",
+      "landable": false,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Phobos",
+    "system_name": "Sol",
+    "type": "Asteroid",
+    "gravity": 0.01,
+    "temperature": "Cold (-1°)",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "Unknown",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [],
+    "planetary_traits": [],
+    "resources": [],
+    "hazards": [
+      "Cold exposure",
+      "Vacuum",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3APhobos"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3APhobos",
+      "revision": 104885,
+      "timestamp": "2025-05-20T23:49:19Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Mars",
+      "body_type": "Moon",
+      "orbital_position": "1",
+      "landable": false,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Pluto",
+    "system_name": "Sol",
+    "type": "Ice",
+    "gravity": 0.06,
+    "temperature": "Deep Freeze (-222°)",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "Safe",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Frozen Mountains"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Tungsten",
+        "symbol": "W",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Titanium",
+        "symbol": "Ti",
+        "type": "inorganic",
+        "rarity": "rare"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Vacuum",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3APluto"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3APluto",
+      "revision": 104910,
+      "timestamp": "2025-05-20T23:59:43Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Sol",
+      "body_type": "Planet",
+      "orbital_position": "9",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Rhea",
+    "system_name": "Sol",
+    "type": "Ice",
+    "gravity": 0.03,
+    "temperature": "Deep Freeze (-179°)",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "Chemical",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Frozen Plains"
+    ],
+    "planetary_traits": [
+      "Gaseous Font"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Copper",
+        "symbol": "Cu",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Fluorine",
+        "symbol": "F",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Vacuum",
+      "Limited radiation protection",
+      "Chemical water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ARhea"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ARhea",
+      "revision": 104897,
+      "timestamp": "2025-05-20T23:55:35Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Saturn",
+      "body_type": "Moon",
+      "orbital_position": "5",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Saturn",
+    "system_name": "Sol",
+    "type": "Gas Giant",
+    "gravity": 1.14,
+    "temperature": "Deep Freeze (-180°)",
+    "atmosphere": "H₂",
+    "magnetosphere": "Weak",
+    "water": "Unknown",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [],
+    "planetary_traits": [],
+    "resources": [],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ASaturn"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ASaturn",
+      "revision": 104892,
+      "timestamp": "2025-05-20T23:54:49Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Sol",
+      "body_type": "Planet",
+      "orbital_position": "6",
+      "landable": false,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Titan",
+    "system_name": "Sol",
+    "type": "Ice",
+    "gravity": 0.14,
+    "temperature": "Deep Freeze (-180°)",
+    "atmosphere": "Standard N₂",
+    "magnetosphere": "None",
+    "water": "Safe",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Frozen Plains"
+    ],
+    "planetary_traits": [
+      "Crystalline Crust",
+      "Frozen Ecosystem"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Tungsten",
+        "symbol": "W",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Titanium",
+        "symbol": "Ti",
+        "type": "inorganic",
+        "rarity": "rare"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3ATitan"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3ATitan",
+      "revision": 104898,
+      "timestamp": "2025-05-20T23:55:48Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Saturn",
+      "body_type": "Moon",
+      "orbital_position": "6",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Uranus",
+    "system_name": "Sol",
+    "type": "Ice Giant",
+    "gravity": 0.92,
+    "temperature": "Deep Freeze (-210°)",
+    "atmosphere": "H₂",
+    "magnetosphere": "Weak",
+    "water": "Unknown",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [],
+    "planetary_traits": [],
+    "resources": [],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AUranus"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AUranus",
+      "revision": 104900,
+      "timestamp": "2025-05-20T23:56:30Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Sol",
+      "body_type": "Planet",
+      "orbital_position": "7",
+      "landable": false,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Venus",
+    "system_name": "Sol",
+    "type": "Rock",
+    "gravity": 0.9,
+    "temperature": "Inferno (350°)",
+    "atmosphere": "Extreme CO₂ (Corrosive)",
+    "magnetosphere": "None",
+    "water": "None",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Rocky Desert",
+      "Hills"
+    ],
+    "planetary_traits": [
+      "Active Faulting"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Nickel",
+        "symbol": "Ni",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Cobalt",
+        "symbol": "Co",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Dysprosium",
+        "symbol": "Dy",
+        "type": "inorganic",
+        "rarity": "exotic"
+      }
+    ],
+    "hazards": [
+      "Heat exposure",
+      "Limited radiation protection"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AVenus"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AVenus",
+      "revision": 104881,
+      "timestamp": "2025-05-20T23:41:55Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Sol",
+      "body_type": "Planet",
+      "orbital_position": "2",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Volii Alpha",
+    "system_name": "Volii",
+    "type": "Rock",
+    "gravity": 1.47,
+    "temperature": "Temperate (27°)",
+    "atmosphere": "High O₂",
+    "magnetosphere": "Average",
+    "water": "Safe",
+    "flora": 0,
+    "fauna": 2,
+    "biomes": [
+      "Ocean"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Benzene",
+        "symbol": "C6H6",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      }
+    ],
+    "hazards": [],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AVolii_Alpha"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AVolii_Alpha",
+      "revision": 120430,
+      "timestamp": "2026-06-06T13:01:15Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Volii",
+      "body_type": "Planet",
+      "orbital_position": "2",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Volii Beta",
+    "system_name": "Volii",
+    "type": "Rock",
+    "gravity": 0.58,
+    "temperature": "Scorched (157°)",
+    "atmosphere": "None",
+    "magnetosphere": "Average",
+    "water": "None",
+    "flora": 0,
+    "fauna": 0,
+    "biomes": [
+      "Craters"
+    ],
+    "planetary_traits": [],
+    "resources": [
+      {
+        "name": "Helium-3",
+        "symbol": "He-3",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Aluminum",
+        "symbol": "Al",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Beryllium",
+        "symbol": "Be",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      }
+    ],
+    "hazards": [
+      "Heat exposure",
+      "Vacuum"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AVolii_Beta"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AVolii_Beta",
+      "revision": 105055,
+      "timestamp": "2025-05-21T00:52:29Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Volii",
+      "body_type": "Planet",
+      "orbital_position": "1",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
+  },
+  {
+    "name": "Volii Epsilon",
+    "system_name": "Volii",
+    "type": "Rock",
+    "gravity": 0.46,
+    "temperature": "Cold (-16°)",
+    "atmosphere": "Thin M",
+    "magnetosphere": "Weak",
+    "water": "Chemical",
+    "flora": 0,
+    "fauna": 2,
+    "biomes": [
+      "Ocean",
+      "Frozen Crevasses",
+      "Savanna",
+      "Coniferous Forest",
+      "Mountains"
+    ],
+    "planetary_traits": [
+      "Sentient Microbial Colonies"
+    ],
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Copper",
+        "symbol": "Cu",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "common"
+      },
+      {
+        "name": "Chlorosilanes",
+        "symbol": "SiH3Cl",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      },
+      {
+        "name": "Fluorine",
+        "symbol": "F",
+        "type": "inorganic",
+        "rarity": "uncommon"
+      }
+    ],
+    "hazards": [
+      "Cold exposure",
+      "Non-breathable atmosphere",
+      "Limited radiation protection",
+      "Chemical water"
+    ],
+    "approximate": true,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "_sources": [
+      "https://starfieldwiki.net/wiki/Starfield%3AVolii_Epsilon"
+    ],
+    "_reference": {
+      "source_url": "https://starfieldwiki.net/wiki/Starfield%3AVolii_Epsilon",
+      "revision": 105059,
+      "timestamp": "2025-05-21T00:53:54Z",
+      "fetched_at": "2026-10-04T17:47:58.857966+00:00",
+      "license": "CC-BY-SA-4.0",
+      "orbits": "Volii",
+      "body_type": "Planet",
+      "orbital_position": "3",
+      "landable": true,
+      "hazard_basis": "Preparation labels inferred from the recorded environment; not numeric game danger ratings."
+    }
   }
 ]

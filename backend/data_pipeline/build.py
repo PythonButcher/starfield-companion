@@ -5,6 +5,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 from data_pipeline.sources.starfield_wiki import WikiClient
 from data_pipeline.parsers import parse_resources, parse_recipe, parse_research, parse_modules, parse_system
+from data_pipeline.map_layout import sector_layout
 
 OUTPUT = Path(__file__).resolve().parents[1] / 'data' / 'reference'
 
@@ -32,7 +33,7 @@ def build(offline=False, refresh=False):
                       y=original.get('y', (index // 12) * 120 - 500),
                       faction=original.get('faction', 'Unrecorded'))
     catalogs = {'resources': resources, 'recipes': recipes + research,
-                'outpost_modules': parse_modules(roots['Starfield:Outpost Modules']), 'systems': systems}
+                'outpost_modules': parse_modules(roots['Starfield:Outpost Modules']), 'systems': sector_layout(systems)}
     for name, minimum in {'resources': 70, 'recipes': 50, 'outpost_modules': 20, 'systems': 50}.items():
         rows = catalogs[name]
         if len(rows) < minimum:
@@ -46,10 +47,13 @@ def build(offline=False, refresh=False):
     manifest = {'built_at': datetime.now(timezone.utc).isoformat(), 'license': 'CC-BY-SA-4.0',
                 'source': 'https://starfieldwiki.net', 'counts': {k: len(v) for k, v in catalogs.items()},
                 'limitations': ['System positions are schematic, not game distances.',
-                    'Planet suppliers use seven starter worlds plus user records.',
+                    'Planet suppliers use 47 sourced worlds plus user records.',
                     'Storage capacities and extraction rates require in-game measurements.',
                     'Research costs exclude skill discounts and sudden developments.',
                     'Unresolved recipe leaves are purchased components, not raw elements.']}
+    planet_path = OUTPUT.parent / 'planets.json'
+    if planet_path.exists():
+        manifest['counts']['planets'] = len(json.loads(planet_path.read_text(encoding='utf-8')))
     (OUTPUT / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(manifest['counts']))
 

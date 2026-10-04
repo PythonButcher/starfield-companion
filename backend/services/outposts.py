@@ -47,7 +47,8 @@ def evaluate(modules, planet_id=None, environment=None, stored_mass=0):
             if 'Wind' in module['name']:
                 vacuum = planet and planet.atmosphere.casefold() in ('none', 'vacuum')
                 power *= 0 if vacuum else environment.get('wind_factor', 1)
-                warnings.append('Wind is zero in a recorded vacuum; other atmospheres use your measured factor.')
+                warnings.append('Atmospheric Status: Vacuum (Wind Turbines Inactive)' if vacuum
+                                else 'Wind output uses your atmospheric calibration factor.')
             if module['name'] == 'Fueled Generator' and not environment.get('fuel_available', False):
                 power = 0
                 warnings.append('Fueled generators need a supplied He-3 source; confirm fuel availability.')

@@ -6,11 +6,12 @@
     "resources": 109,
     "recipes": 112,
     "outpost_modules": 44,
-    "systems": 128
+    "systems": 128,
+    "planets": 47
   },
   "limitations": [
     "System positions are schematic, not game distances.",
-    "Planet suppliers use seven starter worlds plus user records.",
+    "Planet suppliers use 47 sourced worlds plus user records.",
     "Storage capacities and extraction rates require in-game measurements.",
     "Research costs exclude skill discounts and sudden developments.",
     "Unresolved recipe leaves are purchased components, not raw elements."

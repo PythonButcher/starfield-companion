@@ -38,4 +38,6 @@ def briefing():
     if not logs:
         return jsonify(briefing='Systems nominal. No expedition logs on file. Record your first observation, Captain.', mode=provider.mode, model=provider.model, log_count=0)
     notes = '\n'.join(f'{log.title} ({log.planet_name or "location unrecorded"}): {log.raw_notes[:700]}' for log in logs)
-    return jsonify(briefing=provider.narrative({'raw_notes': notes, 'tone': 'stoic', 'length': 'short'}), mode=provider.mode, model=provider.model, log_count=len(logs))
+    return jsonify(briefing=provider.narrative({'raw_notes': notes, 'planet_name': logs[0].planet_name,
+                                               'tone': 'stoic', 'length': 'short'}),
+                   mode=provider.mode, model=provider.model, log_count=len(logs))

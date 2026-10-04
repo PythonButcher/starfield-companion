@@ -2,12 +2,12 @@
 import json
 import hashlib
 from pathlib import Path
-from models import db, ReferenceRecord, SeedMarker, PlanetProfile, CrewMember
+from models import db, ReferenceRecord, SeedMarker, PlanetProfile, PlanetReference, CrewMember
 
 DATA = Path(__file__).resolve().parent / 'data'
 
 
-def seed_reference():
+def seed_reference(commit=True):
     for name, filename in [('systems', 'starfield_universe.json'), ('research', 'research_clean.json')]:
         marker = f'{name}-v1'
         if db.session.get(SeedMarker, marker):
@@ -15,14 +15,7 @@ def seed_reference():
         for payload in json.loads((DATA / filename).read_text(encoding='utf-8')):
             db.session.add(ReferenceRecord(catalog=name, payload=payload))
         db.session.add(SeedMarker(name=marker))
-    if not db.session.get(SeedMarker, 'planets-v1'):
-        from routes.planets import apply_planet, validate_planet
-        for payload in json.loads((DATA / 'planets.json').read_text(encoding='utf-8')):
-            sources = payload.pop('_sources', [])
-            planet = PlanetProfile(sources=sources)
-            apply_planet(planet, validate_planet(payload, True))
-            db.session.add(planet)
-        db.session.add(SeedMarker(name='planets-v1'))
+    seed_planets()
     if not db.session.get(SeedMarker, 'crew-v1'):
         from routes.crew import validate_crew
         for payload in json.loads((DATA / 'crew_data.json').read_text(encoding='utf-8')):
@@ -42,7 +35,36 @@ def seed_reference():
         for payload in json.loads(raw):
             db.session.add(ReferenceRecord(catalog=name, payload=payload))
         db.session.add(SeedMarker(name=marker))
-    db.session.commit()
+    if commit:
+        db.session.commit()
+
+
+def seed_planets():
+    from routes.planets import apply_planet, validate_planet
+    rows = json.loads((DATA / 'planets.json').read_text(encoding='utf-8'))
+    # A named expansion batch must never resurrect a previously deleted starter.
+    legacy = {'Jemison', 'Mars', 'Luna', 'Akila', 'Volii Alpha', 'Niira', 'Earth'}
+    had_legacy = db.session.get(SeedMarker, 'planets-v1') is not None
+    expand = db.session.get(SeedMarker, 'planets-v2') is None
+    existing = {(p.system_name.casefold(), p.name.casefold()) for p in db.session.scalars(db.select(PlanetProfile))}
+    for payload in rows:
+        key = f"{payload['system_name']}:{payload['name']}".casefold()
+        reference = db.session.get(PlanetReference, key)
+        if reference:
+            reference.payload = payload
+        else:
+            db.session.add(PlanetReference(key=key, payload=payload))
+        identity = (payload['system_name'].casefold(), payload['name'].casefold())
+        if not expand or identity in existing or (had_legacy and payload['name'] in legacy):
+            continue
+        planet = PlanetProfile(sources=payload['_sources'])
+        apply_planet(planet, validate_planet({k: v for k, v in payload.items() if not k.startswith('_')}, True))
+        db.session.add(planet)
+        existing.add(identity)
+    if not had_legacy:
+        db.session.add(SeedMarker(name='planets-v1'))
+    if expand:
+        db.session.add(SeedMarker(name='planets-v2'))
 
 
 if __name__ == '__main__':

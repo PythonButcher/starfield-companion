@@ -59,6 +59,8 @@ class PlanetProfile(db.Model):
         data = {column.name: getattr(self, column.name) for column in self.__table__.columns}
         data['_sources'] = data.pop('sources')
         data['resources'] = [resource.to_dict() for resource in self.resources]
+        reference = db.session.get(PlanetReference, f'{self.system_name}:{self.name}'.casefold())
+        data['_reference'] = reference.payload['_reference'] if reference else None
         return data
 
 
@@ -132,6 +134,28 @@ class ReferenceRecord(db.Model):
 
 class SeedMarker(db.Model):
     name = db.Column(db.String(100), primary_key=True)
+
+
+class PlanetReference(db.Model):
+    """Refreshable source facts; player profiles remain editable and independent."""
+    key = db.Column(db.String(220), primary_key=True)
+    payload = db.Column(db.JSON, nullable=False)
+
+
+class Ship(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    home_ship = db.Column(db.Boolean, default=False)
+    notes = db.Column(db.Text, default='')
+
+    def to_dict(self):
+        return {column.name: getattr(self, column.name) for column in self.__table__.columns}
+
+
+class StarterState(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    status = db.Column(db.String(30), nullable=False)
+    manifest = db.Column(db.JSON, default=list)
 
 class OutpostPlan(db.Model):
     id = db.Column(db.Integer, primary_key=True)

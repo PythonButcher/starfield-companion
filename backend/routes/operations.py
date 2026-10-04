@@ -45,6 +45,11 @@ def counters(identifier):
     return jsonify(survey_entry(planet))
 
 
+@bp.get('/surveys/<int:identifier>')
+def survey_detail(identifier):
+    return jsonify(survey_entry(record(PlanetProfile, identifier)))
+
+
 @bp.get('/radar/session_handover')
 def radar():
     return jsonify(handover())

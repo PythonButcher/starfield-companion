@@ -4,11 +4,11 @@ from seed import seed_reference
 
 
 def test_seed_and_resource_search(app, client):
-    assert len(client.get('/api/planets').json) >= 7
+    assert 40 <= len(client.get('/api/planets').json) <= 60
     moon = client.get('/api/planets?q=Luna').json[0]
     assert moon['_sources']
     assert moon['surveyed_percent'] == 0
-    assert client.get('/api/planets?resource=He-3').json[0]['name'] == 'Luna'
+    assert 'Luna' in {p['name'] for p in client.get('/api/planets?resource=He-3').json}
     assert all(item['system_name'] == 'Sol' for item in client.get('/api/planets?system=Sol').json)
     assert client.get('/api/planets?hazard=vacuum').json
     assert all(.3 <= item['gravity'] <= 1 for item in client.get('/api/planets?min_gravity=.3&max_gravity=1').json)

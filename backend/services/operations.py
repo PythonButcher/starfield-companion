@@ -1,6 +1,6 @@
 """Cross-module summaries derived from persistent player records."""
 from collections import defaultdict
-from models import db, PlanetProfile, SurveyProgress, OutpostPlan, PlayerObjective, ExpeditionLog, CrewMember, MediaItem, iso
+from models import db, PlanetProfile, PlanetReference, SurveyProgress, OutpostPlan, PlayerObjective, ExpeditionLog, CrewMember, MediaItem, Ship, iso
 from services.catalogs import catalog
 from services.outposts import evaluate
 
@@ -35,14 +35,15 @@ def coverage():
             'covered_count': len(covered), 'catalog_count': len(master), 'inactive_plans': inactive,
             'resources': [{**r, 'covered': r['name'].casefold() in covered} for r in resources],
             'missing': sorted(master[n] for n in missing), 'recommendations': recommendations,
-            'method': 'Greedy marginal coverage: each recommendation adds resources still missing after earlier choices. Only selected extractors on non-deficit saved plans count. Planet-wide deposits do not guarantee a single landing site; catalog coverage is limited.'}
+            'method': 'Optimal Resource Prospecting Model: each proposed site adds deposits still missing from the preceding choices. This is a greedy heuristic, not a guarantee of a global optimum. Only selected extractors on powered plans count. Verify deposits at your landing site.'}
 
 
 def survey_entry(planet):
     progress = db.session.get(SurveyProgress, planet.id)
+    reference = db.session.get(PlanetReference, f'{planet.system_name}:{planet.name}'.casefold())
     fields = {'flora': ('scanned_flora', planet.flora), 'fauna': ('scanned_fauna', planet.fauna),
-              'traits': ('discovered_traits', len(planet.planetary_traits) if planet.planetary_traits else None),
-              'resources': ('scanned_resources', len(planet.resources) if planet.resources else None)}
+              'traits': ('discovered_traits', len(planet.planetary_traits) if planet.planetary_traits or reference else None),
+              'resources': ('scanned_resources', len(planet.resources) if planet.resources or reference else None)}
     counters = {}
     for name, (key, total) in fields.items():
         scanned = getattr(progress, key) if progress else None
@@ -91,7 +92,9 @@ def handover():
     crew = list(db.session.scalars(db.select(CrewMember)))
     favorites = list(db.session.scalars(db.select(PlanetProfile).where(PlanetProfile.favorite.is_(True)).order_by(PlanetProfile.name)))
     milestones = list(db.session.scalars(db.select(PlanetProfile).where(PlanetProfile.surveyed_percent == 100).order_by(PlanetProfile.name)))
-    return {'position': position, 'missions': [m.to_dict() for m in missions], 'outpost_alerts': alerts,
+    home_ship = db.session.scalar(db.select(Ship).where(Ship.home_ship.is_(True)).order_by(Ship.id))
+    return {'position': position, 'home_ship': home_ship.to_dict() if home_ship else None,
+            'missions': [m.to_dict() for m in missions], 'outpost_alerts': alerts,
             'survey_targets': [p for p in gaps['planets'] if position['system'] and p['planet']['system_name'] == position['system']],
             'recent_logs': [log.to_dict() for log in logs], 'narrative': logs[0].ai_narrative[:600] if logs else '',
             'favorites': [p.to_dict() for p in favorites], 'milestones': [p.to_dict() for p in milestones],
