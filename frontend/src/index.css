@@ -122,3 +122,4 @@ progress::-moz-progress-bar { background: var(--color-hud-blue); }
 }
 @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 .media-preview { width: 100%; max-height: 420px; object-fit: contain; background: #070b12; }
+.recipe-tree { padding-left: 1rem; } .recipe-tree ul { padding-left: 1.25rem; border-left: 1px solid var(--color-hairline); } .recipe-tree li { padding: .4rem 0; list-style: none; }

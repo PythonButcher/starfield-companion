@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify
-from models import db, ExpeditionLog, PlanetProfile
+from models import db, ExpeditionLog, PlanetProfile, PlayerObjective
 from validation import ApiError, body, foreign_key, page, record, string, strings, text_filter
 
 bp = Blueprint('logs', __name__, url_prefix='/api/logs')
@@ -31,8 +31,14 @@ def list_logs():
 
 @bp.post('')
 def create_log():
-    item = ExpeditionLog(**validate_log(body(FIELDS), True))
+    data = body(FIELDS | {'mission_id'})
+    mission_id = foreign_key(data.pop('mission_id', None), 'mission_id', PlayerObjective)
+    item = ExpeditionLog(**validate_log(data, True))
     db.session.add(item)
+    db.session.flush()
+    if mission_id:
+        mission = record(PlayerObjective, mission_id)
+        mission.linked_log_ids = [*mission.linked_log_ids, item.id]
     db.session.commit()
     return jsonify(item.to_dict()), 201
 
@@ -54,5 +60,8 @@ def update_log(identifier):
 @bp.delete('/<int:identifier>')
 def delete_log(identifier):
     db.session.delete(record(ExpeditionLog, identifier))
+    for mission in db.session.scalars(db.select(PlayerObjective)):
+        if identifier in mission.linked_log_ids:
+            mission.linked_log_ids = [value for value in mission.linked_log_ids if value != identifier]
     db.session.commit()
     return jsonify(deleted=identifier)
