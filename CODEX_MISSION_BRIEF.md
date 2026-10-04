@@ -21,6 +21,48 @@ You have **direct write access to this repository and a shell**. This is an auto
 
 ---
 
+## 0.5 Success Criteria — This Is a Product Run, Not a Facelift
+
+> [!IMPORTANT]
+> This run is judged mainly on **new, useful player-facing capability**. Visual polish alone counts for almost nothing. A run that re-skins the UI and finishes the existing modules but adds no new features has **failed**.
+
+**Hard requirements:**
+
+1. **Finish what exists.** All Big 5 modules work end-to-end with real persisted data (Sections 4–5).
+2. **Ship at least 6 NEW features** that don't exist in the repo today. Each must be a full vertical slice: data model and/or real logic, API endpoint(s), UI, tests, and an entry in `API_CONTRACT.md`. At least **3** of the 6 must be **your own ideas**, not taken from the suggestion list in Section 6.
+3. **Every new feature must have real logic or real data behind it**, such as a calculation, recommendation, search, simulation, AI generation, or cross-module link. Static pages, mock screens, and "coming soon" panels **do not count**.
+4. **Make the modules work together.** The app should feel like one connected tool, not five separate pages. Examples: logs link to planets, planets link to outposts and research, crew link to ships and outposts, media attach to anything, and the Hub summarizes everything.
+
+**Effort split (rough guide):**
+
+| Work | Share of effort |
+|---|---|
+| Harness bootstrap + P0 fixes | ~10% |
+| **Real game-data pipeline (Section 2.5)** | **~15%** |
+| Completing the Big 5 | ~30% |
+| **New features (Section 6)** | **~40%** |
+| Visual design system & polish | ≤5–10% (build it once as reusable primitives, then move on) |
+
+**Required ideation step (do this before writing code, ~5 min):**
+
+1. Web-search what Starfield players actually struggle with and wish they had. Good places to look: r/Starfield and r/starfieldmods threads, Steam discussions, popular community tools and wikis, and patch notes for newer systems (e.g., Shattered Space, Creations, surface vehicles/REV-8, Terran Armada).
+2. Write **10–15 candidate feature ideas** into `project_docs/active/active_gate/FEATURE_IDEAS.md`. For each idea, record:
+   - **Evidence of player demand:** at least one link to a real thread, review, or popular community tool that shows players want it. If you can't find evidence, the idea scores low.
+   - **Data it needs**, and whether Section 2.5 sources can provide that data.
+   - Scores (1–5) for **player value**, **data availability**, **feasibility this run**, and **novelty** (does it beat what INARA or the wiki already offer, e.g., by combining the player's *own* progress with game data?).
+3. Pick the top ones (at least 6, with at least 3 original), record why, and build them. Update the file as features ship.
+
+**Creativity guidance.** Think about what a dedicated player would keep open on a second monitor or tablet while playing. Some directions to spark ideas (don't copy them blindly):
+- **Decision support:** "where should I go next for X," best outpost site, cheapest way to level a skill.
+- **Memory aids:** "what was I doing on this planet," unfinished business, NPCs and vendors I met.
+- **Narrative play:** AI-generated side missions or rumors from my own logs, a "ship computer" that answers questions about my playthrough (RAG over the user's own logs/planets/crew), a captain's-log timeline or "season recap."
+- **Planning and optimization:** builds, crafting chains, outpost logistics, crew synergy, ship configurations.
+- **Playthrough meta:** NG+ universe tracking (what carries over), multiple character profiles, achievement/challenge tracking.
+
+**Budget rule:** if you run short, finish fewer new features *completely* rather than many halfway. But do **not** spend new-feature time on extra styling. Polish only after the 6-feature minimum is met.
+
+---
+
 ## 1. Project Vision
 
 A **"NASApunk"** companion app for Starfield players focused on:
@@ -70,6 +112,57 @@ Do not trust older descriptions over this table. Re-verify anything you depend o
 9. `cosmoDragDispatcher.dispatch` has a debug `console.log` that prints functions.
 10. `requirements.txt` is unpinned and missing `openai`, `python-dotenv`, `pytest`.
 11. `App.css` is leftover Vite boilerplate; `Hub.jsx` uses inline styles inconsistent with the Tailwind design system.
+
+---
+
+## 2.5 Real Game Data Strategy (MANDATORY — features must run on real data)
+
+> [!IMPORTANT]
+> The current data is toy-sized: `starfield_universe.json` has a handful of hand-made systems with invented coordinates, and `crew_data.json` is placeholder people. Features like resource hunting, outpost planning, crafting chains, and crew optimization are only useful with **complete, accurate game data**. Building a reproducible, license-clean data pipeline is a core deliverable of this run.
+
+### Source tiers (use in this order)
+
+| Tier | Source | How to use | Notes |
+|---|---|---|---|
+| **A — Preferred API** | **Starfield Wiki** (`https://starfieldwiki.net/w/api.php`, MediaWiki 1.38, run by the UESP team). Content license **CC BY-SA 4.0** (checked via `meta=siteinfo&siprop=rightsinfo`). | Use the MediaWiki API: `action=query&list=categorymembers` to enumerate pages (planets, systems, resources, skills, research projects, crafting recipes, companions, outpost modules, ship parts), then `action=parse&prop=wikitext` or `action=query&prop=revisions&rvprop=content` to fetch infobox templates. Parse the wikitext with `mwparserfromhell`. | Batch titles (up to 50 per request), send `maxlag=5`, set a descriptive `User-Agent` (e.g., `StarfieldCompanion/0.1 (personal project; contact in repo)`), throttle to about 1 request/second, and cache raw responses. |
+| **A — Alternate API** | Starfield Fandom wiki (`https://starfield.fandom.com/api.php`), CC BY-SA. | Same MediaWiki approach; use it to cross-check or fill gaps. | Same politeness rules. |
+| **B — Open datasets** | GitHub repos, gists, or Kaggle datasets with game data extracted to JSON/CSV. | Use **only if the repo has an explicit license** that allows reuse. Record repo URL, commit SHA, and license. | Search GitHub (`starfield planets json`, `starfield data`), and look for the community "Starfield data repository / complete list of everything" threads on r/Starfield. |
+| **C — Reference only (do NOT scrape)** | INARA (`inara.cz/starfield`), Starfield Compendium, StarfieldDB, Fextralife, mattgyver.com outpost guides. | Use for **manual spot-checks** of your pipeline output, and as **deep-link targets** in the UI (e.g., an "Open on INARA / Wiki" button next to a planet or resource). | Proprietary or unclear terms. Do not bulk-download, scrape HTML, or copy their tables. |
+| **D — The user's own game files (optional importer)** | The player's installed `Starfield.esm`, exported locally by the user with xEdit/SF1Edit into CSV/JSON. | Build an **import endpoint + UI** that accepts those exports, validates them against the same schema, and overrides or enriches reference data **locally**. | Never commit extracted game files. This is the most accurate source and also works after patches, Creations, and DLC. |
+
+Never use or commit Bethesda images, audio, fonts, or 3D models. Text facts (names, numbers, relationships) from Tier A/B with attribution are fine.
+
+### Pipeline requirements
+
+Build `backend/data_pipeline/` as a reproducible, testable package:
+
+```text
+backend/data_pipeline/
+  sources/        # starfield_wiki.py, fandom_wiki.py, github_dataset.py, local_import.py
+  parsers/        # infobox → dict, one module per entity type
+  normalize.py    # canonical names, units (gravity in g, temp class), resource symbols, slug IDs
+  validate.py     # schema checks (pydantic or jsonschema), referential integrity (planet→system, recipe→resource)
+  build.py        # CLI: python -m data_pipeline.build [--only planets] [--offline]
+  cache/          # raw API responses (gitignored)
+backend/data/reference/
+  systems.json  planets.json  resources.json  research.json  recipes.json
+  skills.json   crew.json     outpost_modules.json  ship_parts.json  factions.json
+  manifest.json   # per file: source(s), fetch timestamp (UTC), record count, license, pipeline version
+backend/data/SOURCES.md      # human-readable attribution + license notes (CC BY-SA ShareAlike applies to derived data files)
+```
+
+- **Coverage target:** aim for **complete** coverage of systems, planets/moons (with resources, traits, gravity, temperature, atmosphere, magnetosphere, flora/fauna counts), resources (type, rarity, symbol), research projects, crafting/outpost recipes, skills (tree, tier, ranks, rank challenges), and companions/crew (skills). Report the actual counts in the manifest. Do not claim completeness you didn't verify.
+- **Star map coordinates:** if real coordinates are available from a Tier A/B source, use them. Otherwise keep layout coordinates and mark them `"layout_only": true`.
+- **Quality gate:** `build.py` prints a data-quality report: counts per entity, % missing per field, broken references, and duplicates. **Spot-check at least 10 random records** against a Tier C site by hand and log any mismatches in `SOURCES.md`.
+- **Tests:** parser tests use saved wikitext fixtures in `backend/tests/fixtures/`. **No network calls in tests.**
+- **Seeding:** `seed.py` loads `backend/data/reference/*.json` into the DB idempotently. User-created data (logs, notes, favorites, crew assignments) is stored separately from reference data and is **never overwritten** by a re-seed.
+- **Existing files:** check where `research_clean.json` / `research_laboratory.json` came from. Keep them if they're verifiable; otherwise replace them with pipeline output and note it.
+- **Freshness:** add `GET /api/reference/meta` (returns the manifest) and show "Data as of <date> · Sources" in the app footer, with attribution links.
+- **If network access is unavailable** during the run, build the pipeline and parsers against fixtures anyway, commit the best verified seed data you can, and flag it clearly in `RUN_REPORT.md`.
+
+### Data → feature mandate
+
+Every feature in Sections 5–6 that touches game facts must query this reference data, not hard-coded arrays. In `RUN_REPORT.md`, list for each feature which reference datasets it uses.
 
 ---
 
@@ -127,13 +220,13 @@ Each module needs: model(s) → endpoints → tests → API module → UI with l
 
 ### 5.3 PlanetPulse
 - `PlanetProfile` expansion: `system_name`, `type`, `gravity`, `temperature`, `atmosphere`, `magnetosphere`, `water`, `biomes`, `planetary_traits`, `resources` (normalized `Resource` table: name, symbol, type inorganic/organic, rarity), `flora`/`fauna` counts, `hazards`, `user_notes`, `surveyed_percent`, `favorite`, `outpost_candidate`.
-- Seed a realistic starter dataset of well-known planets (e.g., Jemison, Mars, Luna, Akila, Neon/Volii, Niira, Earth, etc.) — **verify values via web search** and record sources. Mark anything uncertain as `"approximate": true`.
-- Endpoints: full CRUD + filters (`?resource=`, `?hazard=`, `?system=`, `?min_gravity=`, `?max_gravity=`).
-- UI: searchable/filterable grid + detail panel with hazard analysis badges, resource chips, survey progress bar, user notes editor, "Strategize" button (calls `/api/strategize`), and a **Resource Hunt** tool (calls `/api/resourcehunt`). Link a planet to its system on the Hub map and to related journal logs.
+- Data comes from the **reference pipeline (Section 2.5)**, covering every planet and moon, not a hand-picked sample. Keep reference fields read-only and store player fields (`user_notes`, `surveyed_percent`, `favorite`, `outpost_candidate`, `visited`) in a separate user-overlay table keyed by planet ID.
+- Endpoints: list/detail with server-side filtering, sorting, and pagination over the full dataset (`?resource=` (multiple values allowed, AND/OR), `?hazard=`, `?system=`, `?trait=`, `?min_gravity=`, `?max_gravity=`, `?has_flora=`, `?habitable=`), plus PATCH for the user overlay. Index the DB columns used for filtering so queries stay fast.
+- UI: searchable/filterable grid + detail panel with hazard analysis badges, resource chips, survey progress bar, user notes editor, "Strategize" button (calls `/api/strategize`), a **Resource Hunt** tool (calls `/api/resourcehunt`), and "Open on Starfield Wiki / INARA" deep links. Link a planet to its system on the Hub map and to related journal logs.
 
 ### 5.4 Crew Command
 - `CrewMember` model: `name`, `role`/`faction`, `is_companion`, `skills` (name + rank 1–4), `traits`, `assigned_ship`/`assigned_outpost`, `affinity`/notes, `portrait_url` (optional, no copyrighted image scraping — use initials/generated avatars).
-- Seed with real Starfield crew (Constellation companions like Sarah Morgan, Sam Coe, Barrett, Andreja, VASCO, plus several recruitable crew) — **verify skills via web search**. Replace current `crew_data.json` contents (keep the file as a seed source, fed through the API, not imported by the frontend).
+- Seed **all** companions and recruitable crew, with their real skills and ranks, from the reference pipeline (`crew.json`, sourced from the Starfield Wiki). Retire the placeholder `crew_data.json` (or regenerate it from the pipeline). Players can add custom crew and track which crew they've actually recruited.
 - Endpoints: full CRUD + `GET /api/crew/optimize?goal=ship|outpost|combat&slots=N` — a transparent, deterministic scoring algorithm that picks the best crew combo for the goal and explains why.
 - UI: roster grid with skill-rank pips, filters, assignment board (drag crew to Ship / Outpost slots — reuse CosmoDrag patterns), optimizer panel with explanation.
 
@@ -143,29 +236,34 @@ Each module needs: model(s) → endpoints → tests → API module → UI with l
 - UI: dedicated `/media` page — drag-and-drop zone (multi-file, progress), gallery grid, lightbox, tag/caption editing, drag a media item onto a log or planet to attach it. Make the dispatcher pattern real: handlers for image files, text drops (journal import), and JSON drops (bulk import logs/planets).
 
 ### 5.6 Explorer's Hub (Dashboard)
-- Keep and polish the interactive star map; expand `starfield_universe.json` with more real systems (verified positions are approximate — that's fine, mark them), and link systems → planets in PlanetPulse.
+- Keep and polish the interactive star map, but drive it from pipeline `systems.json` (every system, with star class, level range, faction, planet count). Add map filters, e.g., "systems containing resource X" or "systems with my outposts or logs," and link systems → planets in PlanetPulse.
 - Dashboard panels around/over the map: **Recent Logs**, **AI Ship-Computer Briefing**, **Quick Stats** (logs, planets surveyed, crew, media count), **Favorite Planets**, **Active Research** (from R.A.M.).
 
 ---
 
-## 6. Phase 3 — High-Value Enhancements (P2, do as many as possible, in this order)
+## 6. Phase 3 — NEW Features (P1, MANDATORY: at least 6, at least 3 of your own design)
 
-Pick from this list after P0/P1 are verified. Use web search to ground each feature in real game mechanics. Each must ship as a complete vertical slice.
+This phase is required, not a bonus. See Section 0.5. Use web search to base each feature on real game mechanics. Each must ship as a complete vertical slice and be listed in `FEATURE_IDEAS.md` with its score.
 
-1. **Outpost Planner** — choose a planet, pick resources/extractors, compute power budget & storage, flag missing resources for chains (e.g., which planets supply the inputs for common manufactured components). Save outpost plans.
-2. **Crafting / Research Chain Resolver** — extend R.A.M.: pick a research project or craftable item → full recursive tree of required resources, highlighting what the player already tracks as available.
-3. **Skill Tree Planner** — the five skill trees (Physical, Social, Combat, Science, Tech) with tiers & ranks; plan a build, save builds, show which challenges unlock the next rank.
-4. **Ship Loadout Notes** — ship records (class A/B/C, reactor, grav jump range, cargo, crew slots) linked to Crew Command assignments.
-5. **Mission / Quest Tracker** — lightweight quests with faction (UC Vanguard, Freestar Rangers, Ryujin, Crimson Fleet, House Va'ruun), status, linked logs. Spoiler-safe toggle.
-6. **Faction Reputation & Bounties panel**.
-7. **Temple / Starborn Power Tracker** (spoiler-gated behind a toggle).
-8. **Trade Route & Vendor Notes** — where to sell, credits caps, contraband notes.
-9. **Data portability** — full JSON export/import of the user's data; Markdown/PDF export of the journal.
-10. **Ambient immersion** — optional ship-computer UI sounds (muted by default), boot-sequence splash, stardate clock, subtle starfield background canvas.
-11. **Electron improvements** — production mode that serves the built frontend (`vite build`) instead of the dev server, use `python`/`py`/venv detection, graceful backend shutdown on quit, wait-for-health before showing window.
-12. **Accessibility & responsiveness** — keyboard nav, focus rings, ARIA labels, WCAG AA contrast, works at 1280px and on a tablet-width second screen (players often use a companion app on a tablet/second monitor).
+### 6A. Suggested features (count toward the 6; maximum 3 from this list)
+1. **Outpost Planner** — choose a planet, pick resources/extractors, compute power budget & storage, and flag missing resources for production chains (e.g., which planets supply the inputs for common manufactured components). Save outpost plans.
+2. **Crafting / Research Chain Resolver** — extend R.A.M.: pick a research project or craftable item → full recursive tree of required resources, highlighting what the player already tracks as available and *which known planets supply the rest*.
+3. **Skill Tree Planner** — the five skill trees (Physical, Social, Combat, Science, Tech) with tiers & ranks; plan a build, save builds, show which challenges unlock the next rank, and recommend crew whose skills fill your gaps.
+4. **Ship Registry & Loadout** — ship records (class A/B/C, reactor, grav jump range, cargo, crew slots) linked to Crew Command assignments, with a jump-range check against the star map.
+5. **Mission / Quest Tracker** — lightweight quests with faction (UC Vanguard, Freestar Rangers, Ryujin, Crimson Fleet, House Va'ruun), status, and linked logs/planets. Spoiler-safe toggle.
+6. **"Ship Computer" Q&A** — ask natural-language questions about *your own* playthrough ("where did I find Aluminum?", "which crew is best for my outpost on Jemison?"), answered from the user's logs/planets/crew (retrieval + AI, with a mock mode).
+7. **AI Rumor / Side-Mission Generator** — generates in-universe leads from the player's logs and planets that can be accepted into the quest tracker.
+8. **Playthrough / NG+ Profiles** — multiple characters or universes, each with its own data, and a summary of what carries over.
+9. **Faction Reputation & Bounties**, **Temple / Starborn Power Tracker** (spoiler-gated), **Trade & Vendor Notes** (credit caps, contraband).
 
-Feel free to add other features you judge more valuable; record why in the decision log.
+### 6B. Your own ideas (at least 3 required)
+Come up with these during the ideation step (Section 0.5). Prefer features that **connect multiple modules** and that a player would actually use mid-session. In `RUN_REPORT.md`, explain the player problem each one solves and how you validated that it's a real need (e.g., links to community threads).
+
+### 6C. Infrastructure & polish (valuable, but does NOT count toward the 6)
+- **Data portability:** full JSON export/import; Markdown export of the journal.
+- **Electron production mode:** serve the built frontend, detect venv/`py`, wait for the backend health check before showing the window, shut the backend down cleanly on quit.
+- **Accessibility & responsiveness:** keyboard nav, focus rings, ARIA, WCAG AA contrast, tablet/second-screen layout.
+- **Ambient immersion:** optional UI sounds (muted by default), boot splash, starfield background canvas.
 
 ---
 
@@ -212,6 +310,7 @@ A feature is **not done** if: it only works with hard-coded data, it lacks error
 ## 9. Final Deliverables (end of run)
 
 1. Write `project_docs/active/status/RUN_REPORT.md` containing:
+   - **New Features Showcase** (first section): for each new feature, give its name, the player problem it solves, how to try it (route + steps), whether it is original or from the suggested list, and its key endpoints.
    - Summary of what shipped, by phase, with commit hashes.
    - Verification output (pytest summary, lint, build).
    - **Decision log** — each non-obvious choice and why.
@@ -222,4 +321,4 @@ A feature is **not done** if: it only works with hard-coded data, it lacks error
 3. Ensure `AGENTS.md` and `project_docs/INDEX.md` reflect the new state.
 4. Archive this brief and `AGENT_HARNESS_INSTRUCTIONS.md` into `project_docs/archive/`.
 
-**Priority if you run low on budget:** P0 foundation → Journal + AI → PlanetPulse → Crew → CosmoDrag → Hub panels → P2 list. A smaller number of fully verified slices beats many half-finished ones. Always leave the repo building, tested, committed, and documented.
+**Priority order:** P0 foundation → **data pipeline (systems, planets, resources first; then skills, crew, research, recipes)** → Journal + AI → **2 new features** → PlanetPulse → Crew → **2 more new features** → CosmoDrag → Hub panels → **remaining new features (to reach ≥6)** → 6C infra/polish. New features are interleaved on purpose so they can't be squeezed out at the end. A smaller number of fully verified slices beats many half-finished ones. Always leave the repo building, tested, committed, and documented.
