@@ -121,3 +121,4 @@ progress::-moz-progress-bar { background: var(--color-hud-blue); }
   .minimap-panel svg { width: 130px; height: 130px; }
 }
 @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+.media-preview { width: 100%; max-height: 420px; object-fit: contain; background: #070b12; }

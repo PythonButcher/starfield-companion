@@ -15,6 +15,6 @@ class Config:
     OPENAI_API_KEY = os.getenv('OPENAI_API_KEY', '')
     OPENAI_MODEL = os.getenv('OPENAI_MODEL') or 'gpt-4.1-mini'
     UPLOAD_FOLDER = str(BASE_DIR / 'uploads')
-    MAX_CONTENT_LENGTH = 26 * 1024 * 1024
-    MAX_FILE_SIZE = 25 * 1024 * 1024
+    MAX_CONTENT_LENGTH = 11 * 1024 * 1024
+    MAX_FILE_SIZE = 10 * 1024 * 1024
     SEED_ON_STARTUP = True
