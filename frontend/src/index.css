@@ -108,6 +108,11 @@ progress::-moz-progress-bar { background: var(--color-hud-blue); }
 .context-menu small { display: block; font-size: .7rem; color: var(--color-muted); max-width: 260px; }
 .map-star { cursor: pointer; } .map-star.dimmed { opacity: .3; }
 .ram-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; }
+.crew-avatar { width: 48px; height: 48px; border: 1px solid #637381; background: #253442; display: grid; place-items: center; color: var(--color-hud-blue); font: 1.1rem var(--font-mono); flex-shrink: 0; }
+.skill-pips { display: inline-flex; gap: 4px; }
+.skill-pips i { display: block; width: 7px; height: 10px; border: 1px solid #6b7b89; }
+.skill-pips i.filled { background: var(--color-hud-blue); border-color: var(--color-hud-blue); }
+.assignment-zone { border-style: dashed; }
 @media (max-width: 850px) {
   .brand-row { flex-wrap: wrap; } .nav-links { gap: 1rem; }
   .two-column,.form-grid,.ram-layout { grid-template-columns: 1fr; }

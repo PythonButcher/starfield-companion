@@ -19,6 +19,11 @@
  */
 export {};
 /**
+ * @typedef {{name:string,rank:1|2|3|4}} CrewSkill
+ * @typedef {{id:number,name:string,role:string,faction:string,is_companion:boolean,skills:CrewSkill[],traits:string[],assigned_ship:string,assigned_outpost:string,affinity:string,notes:string,portrait_url:string,_sources:string[]}} CrewMember
+ * @typedef {{member:CrewMember,score:number,reasons:{skill:string,rank:number,weight:number,points:number}[]}} CrewRecommendation
+ */
+/**
  * @typedef {{id:number,name:string,symbol:string,type:'organic'|'inorganic',rarity:string}} Resource
  * @typedef {Object} PlanetProfile
  * @property {number} id

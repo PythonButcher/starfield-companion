@@ -1,34 +1,268 @@
 [
-    {
-        "id": 1,
-        "name": "Sarah Morgan",
-        "role": "Chair",
-        "status": "Active",
-        "email": "s.morgan@constellation.org",
-        "photo": "https://placehold.co/150/0b0c15/e2e2e2?text=SM"
-    },
-    {
-        "id": 2,
-        "name": "Barrett",
-        "role": "Explorer",
-        "status": "Missing",
-        "email": "barrett@constellation.org",
-        "photo": "https://placehold.co/150/0b0c15/e2e2e2?text=B"
-    },
-    {
-        "id": 3,
-        "name": "Vasco",
-        "role": "Logistics",
-        "status": "Active",
-        "email": "sys-admin@vasco.net",
-        "photo": "https://placehold.co/150/0b0c15/e2e2e2?text=V"
-    },
-    {
-        "id": 4,
-        "name": "Sam Coe",
-        "role": "Pilot",
-        "status": "Assigned",
-        "email": "coe.sam@freestar.col",
-        "photo": "https://placehold.co/150/0b0c15/e2e2e2?text=SC"
-    }
+  {
+    "name": "Sarah Morgan",
+    "role": "Constellation chair",
+    "is_companion": true,
+    "faction": "Constellation",
+    "skills": [
+      {
+        "name": "Astrodynamics",
+        "rank": 4
+      },
+      {
+        "name": "Lasers",
+        "rank": 3
+      },
+      {
+        "name": "Leadership",
+        "rank": 2
+      },
+      {
+        "name": "Botany",
+        "rank": 1
+      }
+    ],
+    "traits": [],
+    "assigned_ship": "",
+    "assigned_outpost": "",
+    "affinity": "Unknown",
+    "notes": "",
+    "portrait_url": "",
+    "_sources": [
+      "https://inara.cz/starfield/companions/",
+      "https://inara.cz/starfield/companion/3/"
+    ]
+  },
+  {
+    "name": "Sam Coe",
+    "role": "Pilot",
+    "is_companion": true,
+    "faction": "Constellation",
+    "skills": [
+      {
+        "name": "Piloting",
+        "rank": 4
+      },
+      {
+        "name": "Rifle Certification",
+        "rank": 3
+      },
+      {
+        "name": "Payloads",
+        "rank": 2
+      },
+      {
+        "name": "Geology",
+        "rank": 1
+      }
+    ],
+    "traits": [],
+    "assigned_ship": "",
+    "assigned_outpost": "",
+    "affinity": "Unknown",
+    "notes": "",
+    "portrait_url": "",
+    "_sources": [
+      "https://inara.cz/starfield/companions/"
+    ]
+  },
+  {
+    "name": "Barrett",
+    "role": "Engineer",
+    "is_companion": true,
+    "faction": "Constellation",
+    "skills": [
+      {
+        "name": "Starship Engineering",
+        "rank": 4
+      },
+      {
+        "name": "Particle Beam Weapon Systems",
+        "rank": 3
+      },
+      {
+        "name": "Robotics",
+        "rank": 2
+      },
+      {
+        "name": "Gastronomy",
+        "rank": 1
+      }
+    ],
+    "traits": [],
+    "assigned_ship": "",
+    "assigned_outpost": "",
+    "affinity": "Unknown",
+    "notes": "",
+    "portrait_url": "",
+    "_sources": [
+      "https://inara.cz/starfield/companions/"
+    ]
+  },
+  {
+    "name": "Andreja",
+    "role": "Field specialist",
+    "is_companion": true,
+    "faction": "Constellation",
+    "skills": [
+      {
+        "name": "Stealth",
+        "rank": 4
+      },
+      {
+        "name": "Particle Beams",
+        "rank": 3
+      },
+      {
+        "name": "Energy Weapon Systems",
+        "rank": 2
+      },
+      {
+        "name": "Theft",
+        "rank": 1
+      }
+    ],
+    "traits": [],
+    "assigned_ship": "",
+    "assigned_outpost": "",
+    "affinity": "Unknown",
+    "notes": "",
+    "portrait_url": "",
+    "_sources": [
+      "https://inara.cz/starfield/companions/"
+    ]
+  },
+  {
+    "name": "VASCO",
+    "role": "Expedition support",
+    "is_companion": true,
+    "faction": "Constellation",
+    "skills": [
+      {
+        "name": "Shield Systems",
+        "rank": 2
+      },
+      {
+        "name": "Aneutronic Fusion",
+        "rank": 1
+      },
+      {
+        "name": "EM Weapon Systems",
+        "rank": 1
+      }
+    ],
+    "traits": [],
+    "assigned_ship": "",
+    "assigned_outpost": "",
+    "affinity": "Unknown",
+    "notes": "",
+    "portrait_url": "",
+    "_sources": [
+      "https://inara.cz/starfield/companions/"
+    ]
+  },
+  {
+    "name": "Lin",
+    "role": "Outpost supervisor",
+    "is_companion": false,
+    "faction": "Argos Extractors",
+    "skills": [
+      {
+        "name": "Outpost Management",
+        "rank": 3
+      },
+      {
+        "name": "Demolitions",
+        "rank": 1
+      }
+    ],
+    "traits": [],
+    "assigned_ship": "",
+    "assigned_outpost": "",
+    "affinity": "Unknown",
+    "notes": "",
+    "portrait_url": "",
+    "_sources": [
+      "https://inara.cz/starfield/companions/"
+    ]
+  },
+  {
+    "name": "Heller",
+    "role": "Outpost engineer",
+    "is_companion": false,
+    "faction": "Argos Extractors",
+    "skills": [
+      {
+        "name": "Outpost Engineering",
+        "rank": 3
+      },
+      {
+        "name": "Geology",
+        "rank": 1
+      }
+    ],
+    "traits": [],
+    "assigned_ship": "",
+    "assigned_outpost": "",
+    "affinity": "Unknown",
+    "notes": "",
+    "portrait_url": "",
+    "_sources": [
+      "https://inara.cz/starfield/companions/"
+    ]
+  },
+  {
+    "name": "Gideon Aker",
+    "role": "Weapons specialist",
+    "is_companion": false,
+    "faction": "Independent",
+    "skills": [
+      {
+        "name": "Ballistic Weapon Systems",
+        "rank": 2
+      },
+      {
+        "name": "Missile Weapon Systems",
+        "rank": 2
+      }
+    ],
+    "traits": [],
+    "assigned_ship": "",
+    "assigned_outpost": "",
+    "affinity": "Unknown",
+    "notes": "",
+    "portrait_url": "",
+    "_sources": [
+      "https://inara.cz/starfield/companions/"
+    ]
+  },
+  {
+    "name": "Marika Boros",
+    "role": "Security",
+    "is_companion": true,
+    "faction": "Independent",
+    "skills": [
+      {
+        "name": "Ballistics",
+        "rank": 2
+      },
+      {
+        "name": "Shotgun Certification",
+        "rank": 1
+      },
+      {
+        "name": "Particle Beam Weapon Systems",
+        "rank": 1
+      }
+    ],
+    "traits": [],
+    "assigned_ship": "",
+    "assigned_outpost": "",
+    "affinity": "Unknown",
+    "notes": "",
+    "portrait_url": "",
+    "_sources": [
+      "https://inara.cz/starfield/companions/"
+    ]
+  }
 ]

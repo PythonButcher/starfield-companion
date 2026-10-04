@@ -16,3 +16,4 @@ frontend/dist/
 frontend/test-results/
 frontend/playwright-report/
 !.env.example
+backend/data_pipeline/cache/

@@ -1,5 +1,6 @@
 import journalHandler from './handlers/journalImportHandler';
-const handlers = [journalHandler];
+import crewHandler from './handlers/crewAssignmentHandler';
+const handlers = [crewHandler, journalHandler];
 export function registerHandler(handler) { handlers.unshift(handler); }
 export async function dispatch(payload, context = {}) {
   const handler = handlers.find((candidate) => candidate.canHandle(payload, context));
