@@ -26,3 +26,14 @@ Response (201 on create): `{"id":1,"title":"Landing","planet_name":"Jemison","sy
 `POST /api/strategize`: `{"hazards":["cold"],"environment":"Thin atmosphere","loadout":["Suit"],"skills":["Surveying"],"crew":["VASCO"]}` → `{"gear":["Check suit protection for cold."],"skills":["Review your Surveying rank before departure."],"crew_picks":["VASCO"],"risk_level":"moderate","explanation":"…","model":"ship-computer-mock-v1","mode":"mock"}`. Arrays follow the string-list constraints; environment max 1,000. Risk is low/moderate/high. Heuristic checklist, not a game mechanics simulation.
 
 `GET /api/briefing` → `{"briefing":"Systems nominal…","model":"ship-computer-mock-v1","mode":"mock","log_count":0}`. Uses up to five latest logs; an empty archive returns a fixed welcome without calling the provider.
+
+## Planets and resource hunt
+
+`GET /api/planets` accepts `q`, `system` (exact), `resource` (exact name or symbol), `hazard` (substring), `min_gravity`, `max_gravity`, `limit`, `offset`. Numeric filters exclude unknown gravity. `GET /api/planets/<id>` returns a profile.
+`POST /api/planets` requires `name`. `PATCH|PUT /api/planets/<id>` updates supplied fields. `DELETE /api/planets/<id>` detaches logs/media without deleting them.
+
+Writable profile fixture: `{"name":"Test world","system_name":"Sol","type":"Rock","gravity":1.2,"temperature":"Cold","atmosphere":"Unknown","magnetosphere":"Unknown","water":"Unknown","biomes":[],"planetary_traits":[],"resources":["Iron","Copper"],"flora":null,"fauna":null,"hazards":["Cold"],"user_notes":"Landing site","surveyed_percent":25,"favorite":false,"outpost_candidate":true,"approximate":true}`. Names and environmental strings max 100 (type 50); notes max 30,000. String lists follow common list limits. Gravity 0–100 or null; flora/fauna integer 0–10,000 or null; survey integer 0–100; flags boolean. Unknown values remain unknown, never assumed zero.
+
+Response adds `id`, read-only `_sources` (URL strings), and replaces resource names with `{"id":1,"name":"Iron","symbol":"Fe","type":"inorganic","rarity":"unknown"}` objects. Resource writes also accept objects with `name`, optional `symbol` (30), `type` (inorganic/organic), `rarity` (30). Case-insensitive names reuse catalog entries without overwriting catalog metadata.
+`GET /api/resources?q=Iron` returns resource objects with standard pagination.
+`POST /api/resourcehunt` takes `{"resources":["Iron","Copper"]}` (at least one) and returns `{"resources":["iron","copper"],"method":"…","results":[{"planet":{},"matched_resources":["iron","copper"],"match_count":2,"hazard_count":1,"all_targets":true}]}`. `planet` is a full profile. Ranked by descending match count, ascending recorded hazard count, name and ID. This deterministic search neither calls AI nor infers unknown hazards.

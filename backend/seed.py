@@ -1,7 +1,7 @@
 """Idempotent versioned seed batches; never overwrite edits or re-add deletions."""
 import json
 from pathlib import Path
-from models import db, ReferenceRecord, SeedMarker
+from models import db, ReferenceRecord, SeedMarker, PlanetProfile
 
 DATA = Path(__file__).resolve().parent / 'data'
 
@@ -14,6 +14,14 @@ def seed_reference():
         for payload in json.loads((DATA / filename).read_text(encoding='utf-8')):
             db.session.add(ReferenceRecord(catalog=name, payload=payload))
         db.session.add(SeedMarker(name=marker))
+    if not db.session.get(SeedMarker, 'planets-v1'):
+        from routes.planets import apply_planet, validate_planet
+        for payload in json.loads((DATA / 'planets.json').read_text(encoding='utf-8')):
+            sources = payload.pop('_sources', [])
+            planet = PlanetProfile(sources=sources)
+            apply_planet(planet, validate_planet(payload, True))
+            db.session.add(planet)
+        db.session.add(SeedMarker(name='planets-v1'))
     db.session.commit()
 
 

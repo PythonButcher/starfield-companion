@@ -1,0 +1,389 @@
+[
+  {
+    "type": "Rock",
+    "biomes": [],
+    "planetary_traits": [
+      "Ecological Consortium",
+      "Global Glacial Recession",
+      "Sentient Microbial Colonies"
+    ],
+    "flora": null,
+    "fauna": null,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "approximate": true,
+    "name": "Jemison",
+    "system_name": "Alpha Centauri",
+    "gravity": 0.91,
+    "temperature": "Temperate",
+    "atmosphere": "Standard O2",
+    "magnetosphere": "Strong",
+    "water": "Safe",
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Chlorosilanes",
+        "symbol": "SiH3Cl",
+        "type": "inorganic",
+        "rarity": "unknown"
+      }
+    ],
+    "hazards": [],
+    "_sources": [
+      "https://www.starfielddb.com/planets/jemison/",
+      "https://starfield.fandom.com/wiki/Jemison"
+    ]
+  },
+  {
+    "type": "Rock",
+    "biomes": [],
+    "planetary_traits": [
+      "Solar Storm Seasons",
+      "Pelted Fields"
+    ],
+    "flora": 0,
+    "fauna": 0,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "approximate": true,
+    "name": "Mars",
+    "system_name": "Sol",
+    "gravity": 0.38,
+    "temperature": "Cold",
+    "atmosphere": "Thin CO2",
+    "magnetosphere": "None",
+    "water": "Safe",
+    "resources": [
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Chlorosilanes",
+        "symbol": "SiH3Cl",
+        "type": "inorganic",
+        "rarity": "unknown"
+      }
+    ],
+    "hazards": [
+      "Cold",
+      "Unbreathable atmosphere",
+      "Weak radiation protection"
+    ],
+    "_sources": [
+      "https://www.starfielddb.com/planets/mars/",
+      "https://starfield.fandom.com/wiki/Mars"
+    ]
+  },
+  {
+    "type": "Barren",
+    "biomes": [],
+    "planetary_traits": [],
+    "flora": 0,
+    "fauna": 0,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "approximate": true,
+    "name": "Luna",
+    "system_name": "Sol",
+    "gravity": null,
+    "temperature": "Temperate",
+    "atmosphere": "None",
+    "magnetosphere": "None",
+    "water": "None",
+    "resources": [
+      {
+        "name": "Iron",
+        "symbol": "Fe",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Helium-3",
+        "symbol": "He-3",
+        "type": "inorganic",
+        "rarity": "unknown"
+      }
+    ],
+    "hazards": [
+      "Vacuum",
+      "Weak radiation protection"
+    ],
+    "_sources": [
+      "https://www.starfielddb.com/planets/luna/"
+    ]
+  },
+  {
+    "type": "Rock",
+    "biomes": [],
+    "planetary_traits": [
+      "Crystalline Crust",
+      "Primordial Network"
+    ],
+    "flora": null,
+    "fauna": null,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "approximate": true,
+    "name": "Akila",
+    "system_name": "Cheyenne",
+    "gravity": 1.51,
+    "temperature": "Temperate",
+    "atmosphere": "O2",
+    "magnetosphere": "Very Strong",
+    "water": "Biological",
+    "resources": [
+      {
+        "name": "Aluminum",
+        "symbol": "Al",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Benzene",
+        "symbol": "C6Hn",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Cobalt",
+        "symbol": "Co",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Nickel",
+        "symbol": "Ni",
+        "type": "inorganic",
+        "rarity": "unknown"
+      }
+    ],
+    "hazards": [
+      "High gravity",
+      "Biological water contamination",
+      "Hostile wildlife"
+    ],
+    "_sources": [
+      "https://www.starfielddb.com/planets/akila/",
+      "https://starfield.fandom.com/wiki/Akila"
+    ]
+  },
+  {
+    "type": "Rock",
+    "biomes": [],
+    "planetary_traits": [],
+    "flora": null,
+    "fauna": null,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "approximate": true,
+    "name": "Volii Alpha",
+    "system_name": "Volii",
+    "gravity": null,
+    "temperature": "Temperate",
+    "atmosphere": "Unknown",
+    "magnetosphere": "Average",
+    "water": "Safe",
+    "resources": [
+      {
+        "name": "Benzene",
+        "symbol": "C6Hn",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "unknown"
+      }
+    ],
+    "hazards": [
+      "Ocean terrain"
+    ],
+    "user_notes": "Neon is a city on Volii Alpha, not a separate planet.",
+    "_sources": [
+      "https://www.starfielddb.com/planets/volii-alpha/"
+    ]
+  },
+  {
+    "type": "Rock",
+    "biomes": [],
+    "planetary_traits": [],
+    "flora": null,
+    "fauna": null,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "approximate": true,
+    "name": "Niira",
+    "system_name": "Narion",
+    "gravity": null,
+    "temperature": "Temperate",
+    "atmosphere": "Unknown",
+    "magnetosphere": "Weak",
+    "water": "Heavy Metal",
+    "resources": [
+      {
+        "name": "Argon",
+        "symbol": "Ar",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Benzene",
+        "symbol": "C6Hn",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Copper",
+        "symbol": "Cu",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Fluorine",
+        "symbol": "F",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Nickel",
+        "symbol": "Ni",
+        "type": "inorganic",
+        "rarity": "unknown"
+      }
+    ],
+    "hazards": [
+      "Heavy metal water contamination",
+      "Weak radiation protection"
+    ],
+    "_sources": [
+      "https://www.starfielddb.com/planets/niira/"
+    ]
+  },
+  {
+    "type": "Rock",
+    "biomes": [],
+    "planetary_traits": [],
+    "flora": 0,
+    "fauna": 0,
+    "surveyed_percent": 0,
+    "favorite": false,
+    "outpost_candidate": false,
+    "approximate": true,
+    "name": "Earth",
+    "system_name": "Sol",
+    "gravity": null,
+    "temperature": "Cold",
+    "atmosphere": "Unknown",
+    "magnetosphere": "None",
+    "water": "Safe",
+    "resources": [
+      {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Water",
+        "symbol": "H2O",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Mercury",
+        "symbol": "Hg",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Lead",
+        "symbol": "Pb",
+        "type": "inorganic",
+        "rarity": "unknown"
+      },
+      {
+        "name": "Chlorosilanes",
+        "symbol": "SiH3Cl",
+        "type": "inorganic",
+        "rarity": "unknown"
+      }
+    ],
+    "hazards": [
+      "Cold",
+      "Weak radiation protection"
+    ],
+    "_sources": [
+      "https://www.starfielddb.com/planets/earth/"
+    ]
+  }
+]

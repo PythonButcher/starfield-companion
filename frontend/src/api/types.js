@@ -18,3 +18,28 @@
  * @typedef {{error:{code:string, message:string, details?:unknown}}} ErrorResponse
  */
 export {};
+/**
+ * @typedef {{id:number,name:string,symbol:string,type:'organic'|'inorganic',rarity:string}} Resource
+ * @typedef {Object} PlanetProfile
+ * @property {number} id
+ * @property {string} name
+ * @property {string} system_name
+ * @property {string} type
+ * @property {number|null} gravity
+ * @property {string} temperature
+ * @property {string} atmosphere
+ * @property {string} magnetosphere
+ * @property {string} water
+ * @property {string[]} biomes
+ * @property {string[]} planetary_traits
+ * @property {Resource[]} resources
+ * @property {number|null} flora
+ * @property {number|null} fauna
+ * @property {string[]} hazards
+ * @property {string} user_notes
+ * @property {number} surveyed_percent
+ * @property {boolean} favorite
+ * @property {boolean} outpost_candidate
+ * @property {boolean} approximate
+ * @property {string[]} _sources
+ */

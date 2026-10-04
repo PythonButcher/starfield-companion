@@ -1,0 +1,28 @@
+import { test, expect } from '@playwright/test';
+test('create, edit and delete a planet; filter resources and generate a strategy', async ({ page }) => {
+  await page.goto('/planet-pulse');
+  await page.getByRole('button', { name: '+ New planet' }).click();
+  await page.getByLabel('name', { exact: true }).fill('Smoke world');
+  await page.getByLabel('system name', { exact: true }).fill('Sol');
+  await page.getByLabel('resources (comma separated)', { exact: true }).fill('Iron, Copper');
+  await page.getByLabel('hazards (comma separated)').fill('Cold');
+  await page.getByRole('button', { name: 'Save planet' }).click();
+  await expect(page.getByRole('dialog')).toContainText('Smoke world');
+  await page.getByRole('button', { name: 'Strategize', exact: true }).click();
+  await expect(page.getByRole('dialog')).toContainText('moderate risk');
+  await page.getByRole('button', { name: 'Edit planet', exact: true }).click();
+  await page.getByLabel('User notes').fill('A promising landing site.');
+  await page.getByLabel('surveyed percent').fill('75');
+  await page.getByRole('button', { name: 'Save planet' }).click();
+  await expect(page.getByRole('dialog')).toContainText('A promising landing site.');
+  await page.getByRole('button', { name: 'Close dialog' }).click();
+  await page.getByLabel('Resource filter', { exact: true }).fill('Copper');
+  await expect(page.getByRole('button', { name: 'Open Smoke world' })).toBeVisible();
+  await page.getByLabel('Target resources (comma separated)').fill('Iron, Copper');
+  await page.getByRole('button', { name: 'Find resources' }).click();
+  await expect(page.getByText('2 matches • 1 recorded hazards')).toBeVisible();
+  await page.getByRole('button', { name: 'Open Smoke world' }).click();
+  await page.getByRole('button', { name: 'Delete planet', exact: true }).click();
+  await page.getByRole('button', { name: 'Confirm delete planet' }).click();
+  await expect(page.getByRole('button', { name: 'Open Smoke world' })).toHaveCount(0);
+});
