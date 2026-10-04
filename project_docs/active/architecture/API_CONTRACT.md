@@ -46,3 +46,97 @@ Response adds `id`, read-only `_sources` (URL strings), and replaces resource na
 Request fixture: `{"name":"Recruit","role":"Pilot","faction":"Independent","is_companion":false,"skills":[{"name":"Piloting","rank":3}],"traits":[],"assigned_ship":"Frontier","assigned_outpost":"","affinity":"Unknown","notes":"Ready","portrait_url":""}`. Response adds `id` and `_sources`. String fields max 100, notes 30,000, portrait URL 500 (HTTP(S) or blank). Skills require unique names and integer ranks 1–4; maximum 30. Traits follow list rules. Assignment to both a ship and outpost is rejected; switching requires clearing the other field in the same request.
 
 `GET /api/crew/optimize?goal=ship&slots=3` accepts ship/outpost/combat and integer slots 1–20. Response: `{"goal":"ship","slots":3,"selected":[{"member":{},"score":12,"reasons":[{"skill":"Piloting","rank":4,"weight":3,"points":12}]}],"total_score":12,"weights":{"Piloting":3},"method":"…","limitations":"…"}`. Full member records and the complete goal weight map are returned. It maximizes additive rank × weight by selecting the highest positive individual scores, breaking ties by name then ID. Assignments are unchanged. It does not model stacking, exact skill effects, recruitment or Leadership slot exceptions; the UI exposes this limitation.
+
+## Reference metadata and planning catalogs
+
+`GET /api/reference/meta` returns `{built_at, license, source, counts, limitations}`. This build contains 128 systems, 109 resources, 112 recipes/projects and 44 operational modules. System responses also carry `layout_only: true`, `level` and `_source` provenance; coordinates are schematic.
+
+`GET /api/outposts/modules` and `GET /api/crafting/recipes` return paginated arrays with `q` filtering. Modules contain `id, name, category, power, cost, capacity, rate_per_minute, notes, _source`; negative power consumes electricity, positive power generates it. Unknown capacity/rate is null. Recipes contain `name, kind, output, ingredients, _source`, with `prerequisites` on research records. Ingredients map names to integer quantities. Provenance includes URL, revision, source/fetch timestamps and CC-BY-SA-4.0.
+
+## Media
+
+`POST /api/media` accepts multipart `file`, optional `caption`, JSON-encoded `tags`, and integer-string `planet_id`/`log_id`. Exactly one file is required. Maximum file size is 10 MiB; total request limit is 11 MiB. Accepted raster formats: JPEG, PNG, WebP, GIF. Accepted video container: MP4 with a recognized ftyp brand and bounded moov/mdat boxes. MIME comes from inspected content, not the submitted extension. Unsupported/spoofed content returns 400; oversized uploads return 413.
+
+`GET /api/media` supports `q, tag, planet_id, log_id, limit, offset`. `GET /api/media/<id>` returns one record. `PATCH /api/media/<id>` accepts `caption` (max 5,000), `tags` (common string-list rules), `planet_id` and `log_id` (existing FK or null). Unknown keys and missing foreign references are 400. `DELETE /api/media/<id>` removes file and metadata.
+
+Response example: `{"id":1,"filename":"<uuid>.png","original_name":"landing.png","mime_type":"image/png","size":2450,"caption":"Arrival","tags":["survey"],"planet_id":1,"log_id":2,"created_at":"2026-10-04T00:00:00+00:00","url":"/media/<uuid>.png"}`.
+
+`GET /media/<filename>` serves only a registered UUID filename, with nosniff, restricted CSP and conditional/range handling. It never resolves arbitrary source paths. Log/planet deletion sets associations null and preserves uploaded files.
+
+## Outposts
+
+`GET/POST /api/outposts`, `GET/PATCH/DELETE /api/outposts/<id>`: persistent plans, standard list pagination and `q` over name/planet. Creation requires a nonblank name. Supported fields:
+
+```json
+{
+  "name": "Luna iron base",
+  "planet_id": 3,
+  "planet_name": "Luna",
+  "modules": [
+    {"module_id": "<catalog-id>", "count": 2, "resource": "Iron", "rate_per_minute": null, "capacity": null}
+  ],
+  "environment": {"solar_factor": 1, "wind_factor": 1, "fuel_available": false},
+  "stored_mass": 0,
+  "notes": ""
+}
+```
+
+Names max 100, notes max 30,000, count integer 1–1,000, maximum 100 module rows. Module IDs must exist. Only extractors accept a selected resource. Measured rate/capacity are nonnegative finite numbers up to 1,000,000 or null. Factors are 0–10; fuel is boolean; stored mass is 0–100,000,000. Linked planet name is derived from the referenced planet.
+
+`POST /api/outposts/plan` accepts the same fields but does not require a name or persist anything. It returns `{generation, consumption, net_power, storage_capacity, known_storage_capacity, storage_overflow, shopping_list, extracted_resources, rates_per_minute, warnings, method}`. CRUD responses add this under `analysis`, along with id and UTC created/updated timestamps.
+
+Calculation sums module baseline power × count, applies entered solar/wind factors, sets wind to zero for a recorded vacuum and disables fueled generation unless fuel is confirmed. Selected deposits absent from the linked planet are excluded with a warning. A deficit conservatively makes known extraction rates zero. Unknown measured rates remain null. Any unknown selected storage capacity makes total capacity and overflow null; known subtotal is still exposed. No live inventory or game telemetry is inferred. Planet deletion detaches plans while preserving their name/notes.
+
+## Crafting resolver
+
+`POST /api/crafting/resolve`:
+
+```json
+{"target":"Adaptive Frame","quantity":3,"inventory":{"Adaptive Frame":1,"Iron":1}}
+```
+
+Target is a catalog name, case-insensitive; quantity integer 1–10,000. Inventory maps at most 200 unique case-insensitive names to integer counts 0–100,000,000. Invalid types/counts are 400; unknown target 404; dependency cycles 422 `recipe_cycle`. Traversal is bounded to 40 dependency levels and 10,000 visited nodes.
+
+Response contains `target, quantity, tree, raw_totals, deficits, purchased_components, gross_purchased_components, suppliers, prerequisites, method`. A tree node has `name, quantity, inventory_used, needed, children`. The example returns raw deficits `{"Aluminum":2,"Iron":1}`. Gross raw totals are computed without inventory; net expansion consumes each inventory item once across all branches. Suppliers map each missing raw resource to recorded `{id,name,system_name}` planets; no match is an empty array. Non-resource leaves with no recipe are purchase requirements, never mislabeled as raw elements. Research prerequisites, skill discounts and random bonuses are excluded.
+
+## Missions and linked journal creation
+
+`GET/POST /api/missions`, `GET/PATCH/DELETE /api/missions/<id>`. List filters: `q, faction, status, planet_id, limit, offset`.
+
+Creation requires `title` (nonblank, max 100). Writable fields are `title, faction, category, status, priority, target_planet_id, target_system, notes, checklist, linked_log_ids`. Factions: Constellation, UC Vanguard, Freestar, Ryujin, Crimson Fleet, Independent. Categories: Main, Faction, Survey, Outpost, Personal. Status: Active, Completed, Paused. Priority: High, Medium, Low. Defaults: Independent/Personal/Active/Medium. System max 100; notes max 30,000.
+
+Checklist has at most 100 `{id,text,done}` objects: unique nonblank string ID (max 100), nonblank text (max 500), boolean done. Linked logs are up to 100 existing integer IDs. Planet may be an existing ID or null. Response adds `id, target_planet_name, created_at, completed_at`. Entering Completed sets UTC completion time; reopening/pausing clears it.
+
+`POST /api/logs` additionally accepts optional `mission_id`. Log creation and mission linkage commit atomically; a missing mission is 400 with no orphan log. Missing planet/system names are derived from linked `planet_id`. Log deletion removes that ID from every mission. Mission deletion preserves its logs.
+
+## Coverage portfolio
+
+`GET /api/portfolio/coverage` returns:
+
+`{coverage_percent, covered_count, catalog_count, inactive_plans, resources, missing, recommendations, method}`.
+
+Resources carry reference fields plus boolean `covered`. Only selected extractor resources present on the linked world count; plans with a power deficit are excluded. The denominator is the reference catalog's inorganic resource count.
+
+Each recommendation has `{planet,new_resources,gain,rank}`. At each of up to three steps, candidates are ranked by additional still-missing resources, then name/ID; that marginal set is removed before ranking the next choice. Existing outpost planets are excluded. It is a heuristic over planet-wide recorded deposits, not a guaranteed one-site layout or globally optimal solution.
+
+## Survey ledger
+
+`GET /api/surveys/gaps?system=Sol&tier=nearly` returns `{planets,systems,method}`. System filter is case-insensitive exact match. Tier is blank/all incomplete or `nearly` (>75%). Only worlds with 0 < surveyed_percent < 100 are included. System rollups always count catalogued worlds, with `name,total,complete,completion_percent`.
+
+Each entry contains `planet,counters,updated_at,hint`. Counters are keyed flora/fauna/traits/resources and hold `{field,scanned,total,remaining}`; unentered counters or unknown totals yield null remaining. Hints mention ocean/coastal biomes only when the profile records an ocean biome and a fauna gap.
+
+`PATCH /api/surveys/<planet_id>/counters` accepts `scanned_flora, scanned_fauna, discovered_traits, scanned_resources` (nonnegative integers bounded by known totals, otherwise 10,000; null clears to unknown), plus `surveyed_percent` (integer 0–100). Omitted counters are unchanged. The response is the updated ledger entry. Progress timestamps are UTC, and deleting a planet cascades its survey counters.
+
+## Session radar and Hub
+
+`GET /api/radar/session_handover` returns `position, missions, outpost_alerts, survey_targets, recent_logs, narrative, favorites, milestones, stats, limitations`.
+
+- Position: `{planet,system,source,at}`, taking the newer of latest journal date and survey update; empty records report Unknown.
+- Missions: active High priority objectives, oldest first.
+- Alerts: `{id,name,net_power,storage_overflow}` for negative power or known overflow.
+- Survey targets: incomplete worlds in the exact current system. Schematic map coordinates are not used to infer nearby systems.
+- Recent logs: newest three full journal records; narrative is the latest AI narrative truncated to 600 characters.
+- Favorites and milestones: favored worlds and 100%-surveyed worlds.
+- Stats: `assigned_crew,outposts,coverage_percent,media`. Crew count means an assigned ship or outpost, not recruitment status.
+
+`GET /api/hub/map_activity` returns `{outposts:[system names],missions:[system names]}`; missions are Active only. Hub separately loads `GET /api/briefing` and uses existing log/planet APIs for deep links.

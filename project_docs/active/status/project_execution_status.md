@@ -1,13 +1,13 @@
 # Execution status
 
-Phase: 2 / core modules and required data pipeline.
-Current slice: reference-data ingestion and six-feature implementation.
-Branch: codex/mission-run-1.
+Phase: mission run 1 / resumption and completion.
+Branch: `codex/mission-run-1`.
+Status: requested core modules and all six approved tools implemented and verified.
 
-Foundation/Journal: b64422f — 23 backend tests, lint/build, 2 browser flows passed.
-PlanetPulse: 4612661 — 40 backend tests, lint/build, 3 browser flows passed.
-Crew: 56 backend tests, lint/build passed. All four browser flows verified; the crew flow needed a selector fix to distinguish the rank select from skill-rank display labels.
-The mission brief was expanded during the run. The revision is preserved, and the active gate now includes a license-clean pipeline plus six player tools. Feature selection evidence is in the active gate.
+CosmoDrag, the reference expansion, Outpost Planner, Crafting Resolver, Mission Tracker, Coverage Portfolio, Survey Ledger, Session Radar and Explorer's Hub are complete for this run. Journal, PlanetPulse and Crew regression checks pass.
 
-Open: pipeline coverage/overlays, six tools, media, Hub.
-Blocked: none.
+Evidence: 71 backend tests; 10 browser flows; lint and production build; 12 policy-hook cases; desktop JavaScript syntax check; offline catalog rebuild; tested, backed-up migration to backend/starfield.db.
+
+[Run report](RUN_REPORT.md) contains the feature showcase, decisions, tests and explicit coverage limits. [API contract](../architecture/API_CONTRACT.md) documents the implemented boundaries. [Active gate](../active_gate/README.md) names the next forward goal.
+
+Remaining verification limits: no live AI call or native Electron-window test. Planet suppliers retain the seven-world starter scope plus player additions; environment/rate/storage assumptions are visible in the planner. No blocking implementation issue remains in the requested run.

@@ -1,3 +1,5 @@
+> Historical feature selection for mission run 1; not an active work plan.
+
 # Feature selection
 
 Evidence checked 2026-10-03. Scores: value / data availability / feasibility / novelty (1–5). Novelty means connecting a player's own records, not inventing game rules. Select six bounded tools below; use shared reference catalogs and player records. Detailed verification belongs in the run report.

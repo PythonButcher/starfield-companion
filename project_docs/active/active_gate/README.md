@@ -1,25 +1,27 @@
-Goal: Deliver a verified Starfield companion with a reproducible reference-data pipeline, connected core modules, and six useful player tools.
+Goal: Expand licensed planet and moon reference coverage while preserving every player's survey, note, favorite, mission and outpost association.
 
 ## User Outcome
-Players can record expeditions, generate and accept captain's logs, survey planets, plan crew assignments, organize screenshots, and navigate their data from the Hub.
+Players can search a broader planetary catalog, resolve more material suppliers and compare survey gaps without losing their own records.
 
 ## Scope
-Foundation, reference pipeline, core modules and the six selections in [Feature ideas](FEATURE_IDEAS.md), across `backend/`, `frontend/`, the agent harness and documentation. Reference facts remain attributable; player overlays survive data refreshes. Add outpost planning, recursive material resolution, mission tracking, resource coverage planning, survey gaps and a session resume radar.
+Add an immutable planet/moon reference layer and explicit player overlays in backend models, the Wiki pipeline and PlanetPulse APIs. Add indexed server filtering and paginated selection controls before increasing record counts. Keep provenance and coverage limitations visible.
 
 ## Contracts
 - [API contract](../architecture/API_CONTRACT.md)
 - [Architecture](../architecture/README.md)
+- [Reference builder](../../../backend/data_pipeline/README.md)
 
 ## Acceptance
-Domain CRUD, validation and missing-record errors are tested. Mock AI needs no key. Frontend handles loading, empty and error states. Map controls, R.A.M. and Drive-By remain usable. User data survives startup. Source data has provenance, coverage counts and freshness metadata. Every selected tool has real logic, an API, usable UI and tests. Coverage limitations are explicit.
+Reference refreshes preserve player records and stable associations. Unknown data remains unknown. Catalog counts, missing fields and broken references are reported. Large lists are filtered and paginated on the server. Existing cross-module behavior remains usable.
 
 ## Verification
-- `.venv/Scripts/python -m pytest -q backend`
+- `./.venv/Scripts/python.exe -m pytest -q backend`
 - `npm --prefix frontend run lint`
 - `npm --prefix frontend run build`
+- `npm --prefix frontend test`
 - `python .codex/hooks/pre_tool_use_policy.py --self-test`
-- Start backend and frontend; exercise journal generation/edit/delete, planet filtering, resource hunt, crew optimization, media attachment, and Hub panels.
 - `git diff --check`
+- Verify refresh preservation and resource/survey searches against sampled Wiki revisions.
 
 ## Owner
-Codex implements and verifies each slice, then returns evidence and remaining scope to the user.
+Codex implements this bounded data expansion when requested and returns verified results to the user.
