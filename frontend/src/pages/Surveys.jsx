@@ -5,10 +5,10 @@ import { useResource } from '../hooks/useResource';
 import { Panel, SectionHeader, Input, Select, Button, Modal, ResourceState, EmptyState, Toast, Tag } from '../components/ui';
 export default function Surveys() {
   const [params] = useSearchParams(); const [system, setSystem] = useState(params.get('system') || ''); const [tier, setTier] = useState('');
-  const [editor, setEditor] = useState(null); const [planetId, setPlanetId] = useState('');
+  const [editor, setEditor] = useState(null); const [planetId, setPlanetId] = useState(params.get('planet_id') || '');
   const resource = useResource('/api/surveys/gaps' + query({ system, tier }));
   const worlds = useResource('/api/planets?limit=200');
-  return <><SectionHeader eyebrow="Survey / Field ledger" title="Survey Gap Ledger"><Link to="/planet-pulse">PlanetPulse ↗</Link></SectionHeader>
+  return <><SectionHeader eyebrow="Survey / Field ledger" title="Survey Gap Ledger"><Link to="/galaxy">World Catalog ↗</Link></SectionHeader>
     <div className="toolbar"><Input label="Survey system filter" value={system} onChange={(e) => setSystem(e.target.value)} />
       <Select label="Completion tier" value={tier} onChange={(e) => setTier(e.target.value)}><option value="">All incomplete</option><option value="nearly">Nearly done (&gt;75%)</option></Select>
     </div>

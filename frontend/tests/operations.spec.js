@@ -57,7 +57,7 @@ test('missions link logs transactionally and radar resumes them', async ({ page,
   await expect(page.getByText('1/1 steps complete')).toBeVisible();
   await page.reload();
   await expect(page.getByLabel('Land at the lodge', { exact: true })).toBeChecked();
-  await page.getByRole('link', { name: 'Log Entry for Mission' }).click();
+  await page.locator('.panel').filter({ has: page.getByRole('heading', { name: 'Browser mission', exact: true }) }).getByRole('link', { name: 'Log Entry for Mission' }).click();
   await expect(page.getByLabel('Title', { exact: true })).toHaveValue('Browser mission');
   await expect(page.getByLabel('Planet', { exact: true })).toHaveValue('Jemison');
   await page.getByRole('button', { name: 'Save log', exact: true }).click();

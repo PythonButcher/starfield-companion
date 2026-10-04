@@ -19,7 +19,7 @@ export default function Outposts() {
     setEditing(item); setVersion((v) => v + 1);
   }
   return <><SectionHeader eyebrow="Industry / Power & logistics" title="Outpost Planner">
-    <Link to="/portfolio">Resource portfolio ↗</Link>
+    <Link to="/logistics/portfolio">Resource portfolio ↗</Link>
     <Button onClick={() => select(blank)}>New plan</Button>
   </SectionHeader>
     <ResourceState resource={modules}><ResourceState resource={planets}>
@@ -43,11 +43,14 @@ function Planner({ initial, modules, planets, onSaved }) {
   const [analysis, setAnalysis] = useState(null); const [busy, setBusy] = useState(false);
   const [error, setError] = useState(''); const [calculationError, setCalculationError] = useState('');
   const [confirm, setConfirm] = useState(false);
+  const [showValidation, setShowValidation] = useState(false);
   const references = Object.fromEntries(modules.map((m) => [m.id, m]));
   function change(key, value) { setDraft((old) => ({ ...old, [key]: value })); }
   function row(index, key, value) { change('modules', draft.modules.map((m, i) => i === index ? { ...m, [key]: value } : m)); }
   const payload = JSON.stringify(Object.fromEntries(Object.keys(blank).map((key) => [key, draft[key]])));
   useEffect(() => {
+    // A new, unnamed draft is not ready for the server's required-name validation.
+    if (!JSON.parse(payload).name.trim()) return;
     const controller = new AbortController();
     const timer = setTimeout(() => {
       request('/api/outposts/plan', { method: 'POST', body: JSON.parse(payload), signal: controller.signal })
@@ -58,7 +61,7 @@ function Planner({ initial, modules, planets, onSaved }) {
   }, [payload]);
   const result = analysis?.key === payload ? analysis.data : null;
   async function save(event) {
-    event.preventDefault(); setBusy(true); setError('');
+    event.preventDefault(); setBusy(true); setError(''); setShowValidation(true);
     try { onSaved(draft.id ? await api.update(draft.id, JSON.parse(payload)) : await api.create(JSON.parse(payload))); }
     catch (err) { setError(err.message); } finally { setBusy(false); }
   }
@@ -66,17 +69,17 @@ function Planner({ initial, modules, planets, onSaved }) {
     setBusy(true); setError('');
     try { await api.remove(draft.id); onSaved(blank); } catch (err) { setError(err.message); setBusy(false); }
   }
-  return <form className="stack" onSubmit={save}>
-    <Toast error message={error || calculationError} />
+  return <form className="stack" onSubmit={save} onBlurCapture={() => setShowValidation(true)} onChange={() => setShowValidation(false)}>
+    <Toast error message={error || (showValidation && draft.name.trim() ? calculationError : '')} />
     <div className="form-grid">
       <Input label="Outpost name" value={draft.name} maxLength={100} required onChange={(e) => change('name', e.target.value)} />
       <Select label="Outpost planet" value={draft.planet_id || ''} onChange={(e) => change('planet_id', Number(e.target.value) || null)}>
         <option value="">Unlinked world</option>{planets.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
       </Select>
     </div>
-    <Panel className="stack"><h2>Environment assumptions</h2><p className="small muted">Use the output shown in-game divided by reference power. A factor of 1 uses the Wiki baseline. Storage and rates stay unknown until measured.</p>
+    <Panel className="stack"><h2>Atmospheric & Orbital Calibration</h2><p className="small muted">Calibrate output against your surface readings. Divide in-game power by reference power; 1 uses the catalog baseline. Storage and extraction rates await field measurements.</p>
       <div className="form-grid">{['solar_factor', 'wind_factor'].map((key) =>
-        <Input key={key} label={key.replace('_', ' ')} type="number" min="0" max="10" step=".1" value={draft.environment[key] ?? 1}
+        <Input key={key} label={key.replace('_', ' ')} type="number" min="0" max="10" step="any" value={draft.environment[key] ?? 1}
           onChange={(e) => change('environment', { ...draft.environment, [key]: Number(e.target.value) })} />)}
         <Input label="Stored cargo mass" type="number" min="0" value={draft.stored_mass} onChange={(e) => change('stored_mass', Number(e.target.value))} />
       </div><label><input type="checkbox" checked={draft.environment.fuel_available || false}
@@ -99,7 +102,7 @@ function Planner({ initial, modules, planets, onSaved }) {
       </Panel>;
     })}
     <Panel className="stack" aria-live="polite"><h2>Power balance</h2>
-      {!result ? <p>Calculating plan…</p> : <>
+      {!result ? <p>{draft.name.trim() ? 'Calculating plan…' : 'Name your outpost to begin power calibration.'}</p> : <>
         <p className={result.net_power < 0 ? 'notice error' : 'notice'}>{result.generation} generated − {result.consumption} required = <strong>{result.net_power} net power</strong></p>
         <progress aria-label="Power supplied" max={Math.max(result.consumption, result.generation, 1)} value={result.generation} />
         <p>Storage: {result.storage_capacity ?? 'Unknown'} / stored {draft.stored_mass}{result.storage_overflow && ' — OVER CAPACITY'}</p>
@@ -110,7 +113,7 @@ function Planner({ initial, modules, planets, onSaved }) {
       </>}
     </Panel>
     <TextArea label="Outpost notes" value={draft.notes} onChange={(e) => change('notes', e.target.value)} />
-    <div className="actions"><Button type="submit" disabled={busy || !result}>Save Plan</Button>
+    <div className="actions"><Button type="submit" disabled={busy}>Save Plan</Button>
       {draft.id && <Button variant="danger" disabled={busy} onClick={() => setConfirm(true)}>Delete plan</Button>}</div>
     {confirm && <div className="notice error"><p>Delete this saved plan?</p><Button variant="danger" disabled={busy} onClick={remove}>Confirm delete plan</Button></div>}
   </form>;

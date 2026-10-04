@@ -24,7 +24,7 @@ export default function Crafting() {
     } catch (err) { setError(err.message); } finally { setBusy(false); }
   }
   function inventory(index, key, value) { setStock((old) => old.map((r, i) => i === index ? { ...r, [key]: value } : r)); }
-  return <><SectionHeader eyebrow="R.A.M. / Dependency resolver" title="Crafting Resolver"><Link to="/ram">Research board ↗</Link></SectionHeader>
+  return <><SectionHeader eyebrow="R.A.M. / Dependency resolver" title="Crafting Resolver"><Link to="/logistics/crafting/research">Research board ↗</Link></SectionHeader>
     <ResourceState resource={recipes}><form onSubmit={resolve} className="stack">
       <Input label="Search recipes" value={search} onChange={(e) => setSearch(e.target.value)} />
       <div className="form-grid"><Select label="Target recipe" value={target} required onChange={(e) => setTarget(e.target.value)}>
@@ -46,7 +46,7 @@ export default function Crafting() {
         <Panel className="stack"><h2>Raw Materials Shopping List</h2>
           {!Object.keys(result.deficits).length && <EmptyState title="No raw material deficit" />}
           {Object.entries(result.deficits).map(([name, count]) => <div key={name}>
-            <div className="card-heading"><strong>{name} × {count}</strong><Link to={'/planet-pulse?resource=' + encodeURIComponent(name)}>Find on Planets</Link></div>
+            <div className="card-heading"><strong>{name} × {count}</strong><Link to={'/galaxy?resource=' + encodeURIComponent(name)}>Find on Planets</Link></div>
             <p className="small muted">Full recipe: {result.raw_totals[name] || 0}. Suppliers: {result.suppliers[name]?.map((p) => p.name).join(', ') || 'No recorded supplier in this catalog'}</p>
           </div>)}
           {!!Object.keys(result.purchased_components).length && <><h3>Purchase / unresolved recipes</h3>

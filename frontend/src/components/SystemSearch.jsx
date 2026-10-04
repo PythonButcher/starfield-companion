@@ -17,7 +17,7 @@ export default function SystemSearch() {
     window.addEventListener('keydown', shortcut); document.addEventListener('pointerdown', outside);
     return () => { window.removeEventListener('keydown', shortcut); document.removeEventListener('pointerdown', outside); };
   }, []);
-  function choose(system) { selectSystem(system); setQuery(system.name); setOpen(false); navigate('/'); }
+  function choose(system) { selectSystem(system); setQuery(system.name); setOpen(false); navigate('/galaxy?system=' + encodeURIComponent(system.name)); }
   return <div className="search-box" ref={container}><Input ref={input} aria-label="System search" placeholder="Search systems / Ctrl K" role="combobox" aria-expanded={open} aria-controls="system-results" aria-activedescendant={open && results[index] ? 'system-' + results[index].id : undefined} value={query} onFocus={() => setOpen(true)} onChange={(event) => { setQuery(event.target.value); setIndex(0); setOpen(true); }} onKeyDown={(event) => {
     if (event.key === 'Escape') setOpen(false);
     if (event.key === 'ArrowDown') { event.preventDefault(); setIndex(Math.min(index + 1, results.length - 1)); }

@@ -10,5 +10,5 @@ export default function DriveBy({ context }) {
     document.addEventListener('pointerdown', outside); document.addEventListener('keydown', escape);
     return () => { document.removeEventListener('pointerdown', outside); document.removeEventListener('keydown', escape); };
   }, []);
-  return <div className="driveby" ref={ref}><Button variant="ghost" aria-expanded={open} onClick={() => setOpen(!open)}>Drive-By +</Button>{open && <div className="driveby-panel stack"><h2>Quick actions</h2><div className="actions"><Link onClick={() => setOpen(false)} to="/journal/new">New log</Link><Link onClick={() => setOpen(false)} to="/media">Media gallery</Link></div><CosmoDropZone context={context} /></div>}</div>;
+  return <div className="driveby" ref={ref}><Button variant="ghost" aria-expanded={open} onClick={() => setOpen(!open)}>Drive-By +</Button>{open && <div className="driveby-panel stack"><h2>Quick actions</h2><div className="actions"><Link onClick={() => setOpen(false)} to="/journal/new">New log</Link><Link onClick={() => setOpen(false)} to="/journal/media">Media gallery</Link></div><CosmoDropZone context={context} /></div>}</div>;
 }

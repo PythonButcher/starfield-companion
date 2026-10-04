@@ -21,10 +21,11 @@ test('journal draft, mock generation, accept, save, edit, export and delete', as
   await expect(page.getByRole('heading', { name: 'Smoke revised' })).toBeVisible();
   await page.getByRole('button', { name: 'Delete', exact: true }).click();
   await page.getByRole('button', { name: 'Delete log', exact: true }).click();
-  await expect(page.getByRole('heading', { name: 'Your story is waiting' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Captain’s Logs' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Smoke revised', exact: true })).toHaveCount(0);
 });
 test('map selection, pan, zoom, minimap, search and research remain available', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('/galaxy');
   const map = page.getByRole('img', { name: /Interactive star map/ });
   const svg = page.locator('.star-map-svg');
   await expect(svg).toBeVisible();
@@ -34,7 +35,7 @@ test('map selection, pan, zoom, minimap, search and research remain available', 
   await page.getByRole('button', { name: 'Reset', exact: true }).click();
   await page.getByRole('combobox', { name: 'System search' }).fill('Sol');
   await page.getByRole('option', { name: /^Sol / }).click();
-  await expect(page.locator('.selection-overlay')).toContainText('Sol');
+  await expect(page.locator('.system-inspector')).toContainText('Sol');
   await page.goto('/ram');
   await expect(page.getByRole('heading', { name: 'Research & procurement' })).toBeVisible();
   await page.getByRole('button', { name: 'Pin', exact: true }).first().click();

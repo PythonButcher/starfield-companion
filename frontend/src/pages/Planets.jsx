@@ -1,12 +1,13 @@
 import MediaArchive, { AttachmentDrop } from '../components/MediaArchive';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import PlanetSurvey from '../components/PlanetSurvey';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { planets } from '../api/planets';
 import { ai } from '../api/ai';
 import { query } from '../api/client';
 import { useResource } from '../hooks/useResource';
 import { useSelectedSystems } from '../context/systems';
-import { Panel, Button, Input, TextArea, Modal, Tag, StatBar, Toast, SectionHeader, ResourceState, EmptyState, Pagination } from '../components/ui';
+import { Panel, Button, Input, TextArea, Modal, Tag, StatBar, Toast, ResourceState, EmptyState, Pagination } from '../components/ui';
 
 const split = (text) => text.split(',').map((item) => item.trim()).filter(Boolean);
 const blank = { name: '', system_name: '', type: 'Rock', gravity: null, temperature: 'Unknown', atmosphere: 'Unknown', magnetosphere: 'Unknown', water: 'Unknown', biomes: [], planetary_traits: [], resources: [], flora: null, fauna: null, hazards: [], user_notes: '', surveyed_percent: 0, favorite: false, outpost_candidate: false, approximate: true };
@@ -18,23 +19,39 @@ export default function Planets() {
   const [offset, setOffset] = useState(0); const [detail, setDetail] = useState(null); const [editor, setEditor] = useState(null);
   const [confirm, setConfirm] = useState(false); const [error, setError] = useState(''); const [busy, setBusy] = useState(false);
   const resource = useResource(planets.path + query({ ...filters, limit: 12, offset }));
+  const selectedPlanetId = params.get('planet_id');
+  useEffect(() => {
+    if (!selectedPlanetId) return;
+    let active = true;
+    planets.get(selectedPlanetId).then((planet) => { if (active) setDetail(planet); })
+      .catch((err) => { if (active) setError(err.message); });
+    return () => { active = false; };
+  }, [selectedPlanetId]);
   function filter(key, value) { setFilters((old) => ({ ...old, [key]: value })); setOffset(0); }
+  function closeDetail() {
+    setDetail(null);
+    if (selectedPlanetId) {
+      const next = new URLSearchParams(params);
+      next.delete('planet_id');
+      navigate({ search: next.toString() }, { replace: true });
+    }
+  }
   async function remove() {
     setBusy(true);
-    try { await planets.remove(detail.id); setConfirm(false); setDetail(null); resource.reload(); }
+    try { await planets.remove(detail.id); setConfirm(false); closeDetail(); resource.reload(); }
     catch (err) { setError(err.message); } finally { setBusy(false); }
   }
   function mapPlanet(planet) {
     const system = systems.find((item) => item.name === planet.system_name);
     if (system) selectSystem(system);
-    navigate('/');
+    setDetail(null); navigate('/galaxy?system=' + encodeURIComponent(planet.system_name));
   }
-  return <><SectionHeader eyebrow="02 / Survey & reconnaissance" title="PlanetPulse"><Button onClick={() => setEditor(blank)}>+ New planet</Button></SectionHeader><Toast message={error} error />
+  return <><header className="section-header"><div><p className="eyebrow">Surface reconnaissance</p><h2>World Catalog</h2></div><div className="actions"><Button onClick={() => setEditor(blank)}>+ New planet</Button></div></header><Toast message={error} error />
     <div className="toolbar"><Input label="Search planets" placeholder="Name, system or notes" value={filters.q} onChange={(e) => filter('q', e.target.value)} /><Input label="Resource filter" placeholder="Name or symbol, e.g. Fe" value={filters.resource} onChange={(e) => filter('resource', e.target.value)} /><Input label="System filter" value={filters.system} onChange={(e) => filter('system', e.target.value)} /></div>
     <details className="mb-6"><summary className="small muted cursor-pointer">Environment filters</summary><div className="toolbar mt-4"><Input label="Hazard filter" value={filters.hazard} onChange={(e) => filter('hazard', e.target.value)} /><Input label="Minimum gravity" type="number" min="0" max="100" step=".01" value={filters.min_gravity} onChange={(e) => filter('min_gravity', e.target.value)} /><Input label="Maximum gravity" type="number" min="0" max="100" step=".01" value={filters.max_gravity} onChange={(e) => filter('max_gravity', e.target.value)} /></div></details>
     <ResourceState resource={resource}>{resource.data?.length ? <><div className="grid-cards">{resource.data.map((planet) => <AttachmentDrop key={planet.id} associations={{ planet_id: planet.id }}><Panel className="stack"><div className="card-heading"><p className="eyebrow">{planet.system_name || 'Uncharted system'}</p>{planet.favorite && <Tag>Favorite</Tag>}</div><h2>{planet.name}</h2><p className="small muted">{planet.type} / {planet.gravity ?? '?'} G / {planet.temperature}</p><div>{planet.resources.map((item) => <Tag key={item.id}>{item.symbol || item.name}</Tag>)}</div><div>{planet.hazards.map((item) => <Tag key={item} tone="warning">{item}</Tag>)}</div><StatBar label="Survey" value={planet.surveyed_percent} /><Button variant="ghost" onClick={() => { setDetail(planet); setError(''); }}>Open {planet.name}</Button></Panel></AttachmentDrop>)}</div><Pagination offset={offset} total={resource.total} onChange={setOffset} /></> : <EmptyState title="No planets match this scan">Adjust filters or record a new world.</EmptyState>}</ResourceState>
     <ResourceHunt onSelect={setDetail} initial={params.get('resource') || ''} />
-    {detail && !editor && !confirm && <Modal title={detail.name} onClose={() => setDetail(null)}><div className="stack"><p className="eyebrow">{detail.system_name} / {detail.type}</p><div className="form-grid">{['gravity', 'temperature', 'atmosphere', 'magnetosphere', 'water', 'flora', 'fauna'].map((key) => <div key={key}><p className="small muted uppercase">{key}</p><p>{detail[key] ?? 'Unknown'}</p></div>)}</div><div>{detail.resources.map((item) => <Tag key={item.id}>{item.name} ({item.symbol || '?'})</Tag>)}</div><div>{detail.hazards.map((item) => <Tag key={item} tone="warning">{item}</Tag>)}</div><p className="small muted">Biomes: {detail.biomes.join(', ') || 'Unrecorded'}<br />Traits: {detail.planetary_traits.join(', ') || 'Unrecorded'}</p><StatBar value={detail.surveyed_percent} label="Survey progress" /><p className="prose-text">{detail.user_notes || 'No field notes yet.'}</p>{detail.approximate && <p className="small muted">Starter data / inferred hazards may be approximate. Verify conditions in-game.</p>}<div className="actions"><Button onClick={() => setEditor(detail)}>Edit planet</Button><Button variant="ghost" onClick={() => mapPlanet(detail)}>Show system on map</Button><Link to={'/journal?q=' + encodeURIComponent(detail.name)}>Related logs</Link><Link to={'/journal/new?planet=' + encodeURIComponent(detail.name) + '&system=' + encodeURIComponent(detail.system_name) + '&planet_id=' + detail.id}>Write a log</Link><Button variant="danger" onClick={() => setConfirm(true)}>Delete planet</Button></div><Link className="button button-primary" to={"/outposts?planet_id=" + detail.id}>Build Outpost Here</Link><PlanetStrategy planet={detail} /><MediaArchive compact associations={{ planet_id: detail.id }} /><div className="small">{detail._sources?.map((url) => <p key={url}><a href={url} target="_blank" rel="noreferrer">Reference: {new URL(url).hostname}</a></p>)}</div></div></Modal>}
+    {detail && !editor && !confirm && <Modal title={detail.name} onClose={closeDetail}><div className="stack"><p className="eyebrow">{detail.system_name} / {detail.type}</p><div className="form-grid">{['gravity', 'temperature', 'atmosphere', 'magnetosphere', 'water', 'flora', 'fauna'].map((key) => <div key={key}><p className="small muted uppercase">{key}</p><p>{detail[key] ?? 'Unknown'}</p></div>)}</div><div>{detail.resources.map((item) => <Tag key={item.id}>{item.name} ({item.symbol || '?'})</Tag>)}</div><div>{detail.hazards.map((item) => <Tag key={item} tone="warning">{item}</Tag>)}</div><p className="small muted">Biomes: {detail.biomes.join(', ') || 'Unrecorded'}<br />Traits: {detail.planetary_traits.join(', ') || (detail._reference ? 'None catalogued' : 'Unrecorded')}</p><StatBar value={detail.surveyed_percent} label="Survey progress" /><PlanetSurvey key={JSON.stringify(detail)} planet={detail} /><p className="prose-text">{detail.user_notes || 'No field notes yet.'}</p>{detail.approximate && <p className="small muted">Environmental cautions are inferred from catalog readings. Confirm local conditions before landing.</p>}<div className="actions"><Button onClick={() => setEditor(detail)}>Edit planet</Button><Button variant="ghost" onClick={() => mapPlanet(detail)}>Show system on map</Button><Link to={'/journal?q=' + encodeURIComponent(detail.name)}>Related logs</Link><Link to={'/journal/new?planet=' + encodeURIComponent(detail.name) + '&system=' + encodeURIComponent(detail.system_name) + '&planet_id=' + detail.id}>Launch Expedition Log</Link><Button variant="danger" onClick={() => setConfirm(true)}>Delete planet</Button></div>{detail._reference?.landable !== false ? <Link className="button button-primary" to={"/logistics/outposts?planet_id=" + detail.id}>Build Outpost Here</Link> : <p className="small muted">Orbital survey only — no surface outpost site.</p>}<PlanetStrategy planet={detail} /><MediaArchive compact associations={{ planet_id: detail.id }} /><div className="small">{detail._sources?.map((url) => <p key={url}><a href={url} target="_blank" rel="noreferrer">Reference: {new URL(url).hostname}</a></p>)}</div></div></Modal>}
     {editor && <PlanetEditor initial={editor} onClose={() => setEditor(null)} onSaved={(planet) => { setEditor(null); setDetail(planet); resource.reload(); }} />}
     {confirm && <Modal title={'Delete ' + detail.name + '?'} onClose={() => setConfirm(false)}><p>Logs and media remain in your archive; their planet links will be detached.</p><Toast message={error} error /><div className="actions mt-4"><Button variant="danger" disabled={busy} onClick={remove}>Confirm delete planet</Button><Button variant="ghost" onClick={() => setConfirm(false)}>Cancel</Button></div></Modal>}
   </>;

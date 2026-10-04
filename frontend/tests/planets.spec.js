@@ -17,10 +17,11 @@ test('create, edit and delete a planet; filter resources and generate a strategy
   await expect(page.getByRole('dialog')).toContainText('A promising landing site.');
   await page.getByRole('button', { name: 'Close dialog' }).click();
   await page.getByLabel('Resource filter', { exact: true }).fill('Copper');
+  await page.getByLabel('Search planets').fill('Smoke world');
   await expect(page.getByRole('button', { name: 'Open Smoke world' })).toBeVisible();
   await page.getByLabel('Target resources (comma separated)').fill('Iron, Copper');
   await page.getByRole('button', { name: 'Find resources' }).click();
-  await expect(page.getByText('2 matches • 1 recorded hazards')).toBeVisible();
+  await expect(page.locator('.card-heading').filter({ has: page.getByRole('button', { name: 'Smoke world / Sol', exact: true }) })).toContainText('2 matches');
   await page.getByRole('button', { name: 'Open Smoke world' }).click();
   await page.getByRole('button', { name: 'Delete planet', exact: true }).click();
   await page.getByRole('button', { name: 'Confirm delete planet' }).click();

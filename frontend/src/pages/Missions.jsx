@@ -13,7 +13,7 @@ export default function Missions() {
   const [params] = useSearchParams();
   const [faction, setFaction] = useState(''); const [status, setStatus] = useState('');
   const [spoilers, setSpoilers] = useState(() => readStorage('starfield:spoiler-safe', true));
-  const [editor, setEditor] = useState(null); const [error, setError] = useState('');
+  const [editor, setEditor] = useState(params.get('new') === '1' ? blank : null); const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
   const resource = useResource('/api/missions' + query({ faction, status, planet_id: params.get('planet_id'), limit: 200 }));
   async function check(item, id, done) {

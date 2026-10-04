@@ -9,9 +9,10 @@ const blank = { name: '', role: 'Crew', faction: 'Independent', is_companion: fa
 
 export default function Crew() {
   const [filters, setFilters] = useState({ q: '', skill: '', assignment: '' }); const [offset, setOffset] = useState(0);
-  const [editor, setEditor] = useState(null); const [ship, setShip] = useState('Frontier'); const [outpost, setOutpost] = useState('Outpost Alpha');
+  const [editor, setEditor] = useState(null); const [ship, setShip] = useState('The Frontier'); const [outpost, setOutpost] = useState('Luna Extraction Post');
   const [message, setMessage] = useState(''); const [error, setError] = useState(''); const [busy, setBusy] = useState(false);
   const resource = useResource(crew.path + query({ ...filters, limit: 12, offset }));
+  const fleet = useResource('/api/ships' + query({ roster: resource.key }));
   function filter(key, value) { setFilters((old) => ({ ...old, [key]: value })); setOffset(0); }
   async function assign(id, target) {
     if (busy) return;
@@ -22,7 +23,8 @@ export default function Crew() {
       resource.reload();
     } catch (err) { setError(err.message); } finally { setBusy(false); }
   }
-  return <><SectionHeader eyebrow="03 / Personnel & assignments" title="Crew Command"><Button onClick={() => setEditor(blank)}>+ Add crew</Button></SectionHeader><Toast message={message} /><Toast message={error} error />
+  return <><SectionHeader eyebrow="03 / Personnel & assignments" title="Fleet & Crew"><Button onClick={() => setEditor(blank)}>+ Add crew</Button></SectionHeader><Toast message={message} /><Toast message={error} error />
+    <ResourceState resource={fleet}>{fleet.data?.length > 0 && <div className="grid-cards mb-6">{fleet.data.map((vessel) => <Panel key={vessel.id} className="home-ship stack"><p className="eyebrow">{vessel.home_ship ? "Home ship / Constellation" : "Fleet registry"}</p><h2>{vessel.name}</h2><p>{vessel.crew.map((member) => member.name).join(" · ") || "Awaiting crew assignment"}</p><p className="small muted">{vessel.notes}</p></Panel>)}</div>}</ResourceState>
     <div className="two-column mb-6">{[['ship', ship, setShip], ['outpost', outpost, setOutpost]].map(([target, name, setter]) => <Panel key={target} className="stack assignment-zone" onDragOver={(e) => { if (e.dataTransfer.types.includes('application/x-starfield-crew')) e.preventDefault(); }} onDrop={(e) => { e.preventDefault(); assign(Number(e.dataTransfer.getData('application/x-starfield-crew')), target); }}><p className="eyebrow">{target} assignment</p><Input label={target === 'ship' ? 'Target ship' : 'Target outpost'} maxLength={100} value={name} onChange={(e) => setter(e.target.value)} /><p className="small muted">Drop a crew card here, or use its {target} button.</p><div>{resource.data?.filter((member) => member['assigned_' + target] === name).map((member) => <Tag key={member.id}>{member.name}</Tag>)}</div><p className="small muted">Assigned names shown from the displayed roster.</p></Panel>)}</div>
     <div className="toolbar"><Input label="Search crew" value={filters.q} onChange={(e) => filter('q', e.target.value)} /><Input label="Skill filter" value={filters.skill} onChange={(e) => filter('skill', e.target.value)} /><Select label="Assignment filter" value={filters.assignment} onChange={(e) => filter('assignment', e.target.value)}><option value="">All assignments</option><option value="ship">Ship</option><option value="outpost">Outpost</option><option value="unassigned">Unassigned</option></Select></div>
     <ResourceState resource={resource}>{resource.data?.length ? <><div className="grid-cards">{resource.data.map((member) => <CrewCard key={member.id} member={member} onEdit={setEditor} onAssign={assign} busy={busy} />)}</div><Pagination offset={offset} total={resource.total} onChange={setOffset} /></> : <EmptyState title="No crew match this roster">Change filters or add a recruit.</EmptyState>}</ResourceState>

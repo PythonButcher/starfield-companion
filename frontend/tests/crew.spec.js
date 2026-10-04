@@ -11,9 +11,9 @@ test('crew CRUD, assignments and transparent optimization', async ({ page }) => 
   const card = page.getByRole('region', { name: 'Smoke recruit crew card' });
   await expect(card).toBeVisible();
   await card.getByRole('button', { name: 'Ship', exact: true }).click();
-  await expect(card).toContainText('Ship / Frontier');
+  await expect(card).toContainText('Ship / The Frontier');
   await card.getByRole('button', { name: 'Outpost', exact: true }).click();
-  await expect(card).toContainText('Outpost / Outpost Alpha');
+  await expect(card).toContainText('Outpost / Luna Extraction Post');
   await page.getByLabel('Optimization goal').selectOption('outpost');
   await page.getByLabel('Available slots').fill('2');
   await page.getByRole('button', { name: 'Optimize crew' }).click();

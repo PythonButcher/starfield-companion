@@ -133,3 +133,25 @@ progress::-moz-progress-bar { background: var(--color-hud-blue); }
 .stat-grid strong { display: block; font: 2rem var(--font-display); margin-bottom: .5rem; }
 .mission-step { display: flex; gap: .75rem; align-items: center; padding: .7rem 0; }
 .nav-links { column-gap: 1.1rem; }
+.workspace-tabs { display: flex; flex-wrap: wrap; gap: .5rem; padding-bottom: 1.5rem; }
+.workspace-tabs a { padding: .7rem 1rem; border: 1px solid var(--color-hairline); color: var(--color-muted); font: .75rem var(--font-mono); }
+.workspace-tabs a.active { color: var(--color-star-white); border-color: var(--color-hud-blue); background: var(--color-panel); }
+.galaxy-map-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; }
+.system-inspector { padding: 1.3rem; max-height: 650px; overflow-y: auto; border: 0; border-left: 1px solid var(--color-hairline); background: var(--color-panel); }
+.system-inspector::before,.system-inspector::after { display: none; }
+.orbit-list { display: flex; flex-direction: column; gap: .25rem; }
+.orbit-list a { display: flex; align-items: center; justify-content: space-between; gap: .5rem; padding: .65rem .3rem; border-bottom: 1px solid var(--color-hairline); }
+.orbit-list small { display: block; color: var(--color-muted); margin-top: .25rem; }
+.orbit-list .mono { font-size: .65rem; }
+.tag.level-safe { color: var(--color-success); border-color: var(--color-success); }
+.tag.level-caution { color: var(--color-accent-orange); border-color: var(--color-accent-orange); }
+.tag.level-danger { color: var(--color-warning-red); border-color: var(--color-warning-red); }
+.survey-counters { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; }
+.survey-counters > div { border: 1px solid var(--color-hairline); padding: .7rem; display: flex; flex-direction: column; gap: .4rem; }
+.survey-counters strong { font: 1.3rem var(--font-mono); }
+.survey-counters small { color: var(--color-muted); }
+.home-ship { border-left: 3px solid var(--color-accent-orange); padding: .5rem 1rem; background: var(--color-space-black); }
+.home-ship h3 { font-size: 2rem; }
+.starter-settings { border: 0; color: var(--color-hud-blue); background: transparent; font: inherit; text-align: left; }
+@media (max-width: 1050px) { .galaxy-map-layout { grid-template-columns: 1fr; } .system-inspector { max-height: none; border-left: 0; border-top: 1px solid var(--color-hairline); } }
+@media (max-width: 600px) { .survey-counters { grid-template-columns: repeat(2, 1fr); } .nav-links { gap: .3rem 1rem; } .nav-links > a { font-size: .65rem; } }

@@ -15,7 +15,7 @@ export const getContextMenuCommands = {
     id: "cmd-log",
     command: "/log",
     display: "Add Log Entry",
-    description: "Opens the Quantum Journal to create a new entry for this planet.",
+    description: "Opens the Captain’s Logs to create a new entry for this planet.",
     action: "navigate_to_journal", // Should route to /journal/new?planet=name
     params: ["planetName"],
     icon: "FaEdit", // Placeholder for writing/journal icon
@@ -24,7 +24,7 @@ export const getContextMenuCommands = {
     id: "cmd-profile",
     command: "/profile",
     display: "View System Profile",
-    description: "Accesses PlanetPulse data for detailed hazard and resource analysis.",
+    description: "Accesses World Catalog data for detailed hazard and resource analysis.",
     action: "fetch_system_detail", // Calls GET /api/systems or /api/research
     params: ["systemId"],
     icon: "FaDatabase", // Placeholder for data/info icon
