@@ -8,5 +8,6 @@ Start with the [active gate](active/active_gate/README.md) for project work.
 - [Architecture](active/architecture/README.md)
 - [API contract](active/architecture/API_CONTRACT.md)
 - [Reference pipeline](../backend/data_pipeline/README.md)
+- [Copied-save extractor](../backend/save_reader/README.md)
 - [Harness](active/agent_harness/README.md)
 - [Archive](archive/README.md) — historical reference only

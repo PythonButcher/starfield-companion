@@ -1,5 +1,14 @@
 # Architecture
 
+The [save extractor](../../../backend/save_reader/README.md) is an independent,
+standard-library Python module with no Flask, database or network dependency.
+`extract_save(path)` returns schema-versioned metadata and optional decompressed
+research bytes; `newest_save(folder)` selects a copy by modification time. The
+CLI exports JSON without overwriting files. It decodes player/save headers and
+supported plugin lists, explicitly labels gameplay as undecoded, and bounds
+decompression. No HTTP endpoint, automatic watcher, model writes or React display
+are connected to this module. Only save format 153 has real-copy verification.
+
 Flask's `create_app(config)` applies configuration before SQLAlchemy initialization. Domain blueprints expose JSON APIs; services implement crafting expansion, outpost estimates and cross-module summaries. Shared validators reject unknown fields and invalid types. Lists return arrays with X-Total-Count, limit and offset. Some filters operate on in-memory lists; full-game planet ingestion requires indexed queries and paginated pickers.
 
 SQLite defaults to `backend/starfield.db`. Startup creates missing tables and refreshes reference catalogs by content digest; player tables are never dropped or replaced. The checkpoint migration uses SQLite backup transactions, retains the original companion database, backs up an empty legacy destination and refuses any populated destination. Back up the database and uploads together with servers stopped.

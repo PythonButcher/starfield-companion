@@ -1,4 +1,64 @@
-# Mission Run 2 report
+# Project run report
+
+## Copied-save extraction — 2026-10-11 (America/New_York)
+
+Branch: `codex/mission-run-1`. Scope: an independently implemented local Python
+extractor, not an app UI or live game connection.
+
+Delivered `backend/save_reader/` and `scripts/extract_save.py` using only the
+Python standard library. The tool decodes the BCPS/zlib container, known player
+and save headers, and full/light/medium plugin lists into schema-versioned JSON.
+It can select the newest copied `.sfs` file by modification time and optionally
+export the complete decompressed binary for research. Output publication refuses
+existing files. Input sizes, offsets, chunk expansion and plugin counts are
+bounded. The module has no database, game-folder writes or network dependency.
+Published format research is attributed in the extractor guide; no upstream
+source or executable is vendored.
+
+Read-only verification covered all five files in the separate copy folder,
+`D:\Starfield\StarfieldCompanionSaves`. All player headers and plugin lists
+decoded, each using engine 27/save format 153/game version 1.16.244.0. Folder mode
+selected the exit save with the highest modification time. SHA-256 digests and
+modification times matched before and after the five-file run. The newest save
+expanded to 38,532,276 bytes in 147 chunks. A private JSON preview is stored at
+ignored `backend/instance/save_extracts/preview-20261011-final.json`. Real save bytes,
+research exports and private snapshots are excluded from the commit.
+
+Verification:
+
+- `.venv/Scripts/python.exe -m pytest -q backend --basetemp=backend/instance/save-reader-final-tests`: **126 passed**, including 29 extractor cases.
+- Real five-file extraction and source-preservation check: **passed**.
+- CLI newest-file JSON export to the ignored preview path: **passed**.
+- `npm --prefix frontend run lint`: **passed**.
+- `npm --prefix frontend run build`: **passed** outside the Windows sandbox.
+- Policy hook self-test: **12 cases passed**.
+- Active-gate validator, active/root Markdown links and `git diff --check`: **passed**.
+
+Tests cover multichunk padding and nondefault table offsets, metadata values,
+UTF-8 names, creation details, unknown versions, invalid lengths/offsets,
+checksums, oversized expansion, non-finite values, timestamp overflow,
+undecoded plugin warnings, changing inputs, newest-file selection, `.partial`
+exclusion, no silent stale fallback, atomic output and overwrite refusal.
+Artificial fixture bytes are generated at test time; player saves are not fixtures.
+
+The initial runs reported 28/29 and 125/126 passing tests: Windows sandbox
+temporary-directory permissions blocked output publication in a child process.
+The full suite passed with workspace-local temporary files. A sandboxed Vite
+build failed on resolving `frontend/index.html`; the approved build outside that
+sandbox passed. Browser tests were not rerun because no UI or HTTP routes changed.
+The Context Ledger-specific documentation audit does not apply to this project's
+unnumbered gate; the project's active-gate validator and link audit were used.
+
+Limits: known save-layout family 140–153 is accepted, with synthetic evidence for
+140/143/153 and real evidence only for 153. Gameplay records remain undecoded;
+inventory, ship builds, outposts, missions and surveys are not inferred from raw
+bytes. Unknown plugin layouts preserve the player header with a warning. File
+age and read-time identity checks supplement, but do not replace, temporary-name
+publication by the copy job. No original game-save folder was inspected, and no
+player database, uploads or frontend behavior was changed. The next user decision
+is which extracted fields should first appear in the app.
+
+## Mission Run 2 report
 
 Date: 2026-10-04 (America/New_York). Branch: `codex/mission-run-1`.
 

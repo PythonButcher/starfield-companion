@@ -1,27 +1,31 @@
-Goal: Review the terminal workflows and identify the next concrete user request.
+Goal: Review extracted save data and choose the first app connection.
 
 ## User Outcome
-The player can assess cargo planning, ship loadouts, exploration and session tracking using their own playthrough.
+The player can inspect readable data from their copied saves and choose which information should appear in the companion app.
 
 ## Scope
-- User workflow review of the five workspaces, Cargo Link Mapper and Ship Forge.
-- Capture a specific requested behavior before authorizing a new implementation scope.
-- Preserve player records, saved designs and uploaded media.
+- Review player details, save timestamps, game versions and plugin lists using the extractor.
+- Confirm the separate copy-folder process publishes complete `.sfs` files with preserved modification times.
+- Capture a bounded request for the app surface, refresh behavior and handling of stale or unreadable saves.
+- Preserve player records and copied saves. Inventory, ship builds and other undecoded gameplay require their own feasibility investigation.
 
 ## Contracts
 - [Application setup](../../../README.md)
 - [API contract](../architecture/API_CONTRACT.md)
 - [Architecture](../architecture/README.md)
+- [Extractor guide and data contract](../../../backend/save_reader/README.md)
 
 ## Acceptance
-- The user can describe the desired outcome and the affected workspace.
-- Any implementation request has bounded acceptance criteria and proportionate verification.
+- The user can distinguish decoded metadata from undecoded gameplay records.
+- The requested app display and refresh behavior have observable acceptance criteria.
+- Any implementation scope has proportionate verification and preserves player data.
 
 ## Verification
-- Start the local terminal with `.venv/Scripts/python.exe backend/main.py` and inspect the relevant workflow.
-- For a code change, run `.venv/Scripts/python.exe -m pytest -q backend`, `npm --prefix frontend run lint`, `npm --prefix frontend run build` and relevant browser tests.
+- `.venv/Scripts/python.exe -m pytest -q backend/test_save_reader.py --basetemp=backend/instance/save-reader-review-tests`
+- `.venv/Scripts/python.exe scripts/extract_save.py --latest "D:\Starfield\StarfieldCompanionSaves"`
+- `.venv/Scripts/python.exe .codex/hooks/pre_tool_use_policy.py --self-test`
 - Run `.venv/Scripts/python.exe C:/Users/18022/.codex/skills/active-gate-governance/scripts/check_active_gate.py project_docs/active/active_gate .` after changing this gate.
 - Run `git diff --check` before committing.
 
 ## Owner
-The user chooses the next outcome. Codex scopes and implements a concrete request, then returns control after verification and documentation.
+The user selects the first app connection. Codex scopes a concrete implementation request and its verification.

@@ -56,6 +56,21 @@ For another checkout still using that checkpoint path, stop its servers and run 
 
 Media accepts JPEG, PNG, WebP, GIF and MP4, up to 10 MB per file. Images are decoded/verified; MP4 container boundaries are checked without transcoding or promising codec compatibility. Stored filenames are UUIDs. Deleting a planet/log detaches its media; deleting media removes the stored file.
 
+## Read your copied saves
+
+The local Python extractor reads the newest `.sfs` in your separate copy folder
+and prints JSON with character details, save time, game versions and plugin lists:
+
+```powershell
+./.venv/Scripts/python.exe scripts/extract_save.py --latest "D:\Starfield\StarfieldCompanionSaves"
+```
+
+It has been verified with five real copied saves using format 153. It opens saves
+read-only and never modifies player records. Inventory, ship builds, outposts,
+missions and surveys are not decoded. Folder monitoring and an app display are
+not yet connected. See the [extractor guide](backend/save_reader/README.md) for
+JSON exports, copy-process requirements, supported formats and safety limits.
+
 ## Reference data and limits
 
 The reproducible Wiki builders supply **47 worlds, 128 systems, 109 resources, 112 recipes/research projects and 44 outpost modules**. Read [provenance](backend/data/SOURCES.md) and the [builder instructions](backend/data_pipeline/README.md). Adapted Wiki datasets retain contributor attribution and CC-BY-SA-4.0 licensing. The footer exposes reference freshness.

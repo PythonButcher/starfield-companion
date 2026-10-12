@@ -1,15 +1,15 @@
 # Execution status
 
-Phase: Mission Run 2 / Experience & Immersion Overhaul.
+Phase: Copied-save extraction experiment.
 Branch: `codex/mission-run-1`.
-Status: amended Mission Run 2 implemented, verified and documented; ready for user workflow review.
+Status: local extractor verified; ready for user review of extracted data and selection of an app connection.
 
-Five primary workspaces, compatible module redirects, the Constellation starter profile, 47 sourced worlds, sector-map system inspectors, survey details and delayed form validation are implemented. Existing profiles and uploads are preserved. Starter settings remove unchanged examples after confirmation and keep modified or referenced records.
+The independent Python module and CLI decode copied saves into versioned JSON containing player details, save timestamps, game versions and plugin lists. Folder mode selects the newest direct `.sfs` file by modification time. Resource limits, integrity checks and read-only input handling protect the extraction boundary. JSON and optional research exports refuse existing output names.
 
-Supply Chain Visualizer now saves directed cargo networks and canvas positions, resolves real outpost production/power, and diagnoses missing endpoints, shared supply and Helium-3 budgets. Ship Forge saves custom loadouts from 34 sourced modules or entered measurements, compares refits, exports JSON and exposes explainable totals and estimates. Both open with editable examples. Saved network references protect starter outposts during sample clearing.
+Five real copied saves in the user's separate folder decoded successfully using format 153. SHA-256 hashes and modification times were unchanged after verification. A private JSON preview remains under ignored `backend/instance/save_extracts/`. Save files and exports are not committed. The app's existing player database and uploads were not touched.
 
-Verification: **97 backend tests passed**, **19 browser tests passed**, zero lint errors, production build passed, 12 policy cases passed, active-gate validation passed, active Markdown links valid, and Git whitespace check clean. Desktop/mobile screenshots were inspected. Offline builders reproduce the 47-world and 34-module catalogs exactly. Tests use isolated data and mock AI.
+Verification: **126 backend tests passed**, including 29 extractor cases; frontend lint and production build passed; 12 policy cases passed. Backend tests used workspace-local temporary storage because Windows sandbox temp-directory renames were blocked. The frontend build passed outside the sandbox after a Vite path-resolution restriction. Documentation checks and final whitespace results are recorded in the run report. AI tests use mock mode.
 
-Source decisions: use actual Jemison totals (8 flora, 9 fauna, 3 traits); The Lock belongs to Suvorov; the +3 Luna plan uses an explicit sample solar factor. Coordinates and starter playthrough progress are illustrative.
+Limits: inventory, ship construction, outposts, missions and surveys remain undecoded. A saved location that names a ship does not supply its ship stats. Only format 153 has real-save evidence; synthetic fixtures exercise 140 and 143. The copy job must publish completed files using a temporary extension. Automatic monitoring, app UI and API integration are not implemented.
 
-Results and limits: [run report](RUN_REPORT.md). Cargo rates are measured planning inputs; mobility and jump range are estimates, and ship geometry/flight legality remain in-game checks. User review and new requests are routed through the [active gate](../active_gate/README.md). The [amended specification](../../archive/mission-run-2/AMENDED_MISSION_BRIEF.md) is historical reference only.
+Results and limits: [run report](RUN_REPORT.md). Usage and format references: [extractor guide](../../../backend/save_reader/README.md). The [active gate](../active_gate/README.md) routes the next bounded request. Existing terminal functionality and its verification history are documented in the run report.
