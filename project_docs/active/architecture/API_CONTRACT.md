@@ -6,6 +6,20 @@ List endpoints return arrays, expose `X-Total-Count`, and accept `q`, `tag`, `li
 
 ## Health and reference
 
+`GET /api/playthrough` reads the newest `.sfs` from the server-configured copied-save
+folder. No folder/file parameter or write method is supported. Response is
+`{status,snapshot,error,checked_at}` with `Cache-Control: no-store`. Operational
+connection states return HTTP 200: `not_configured` (no folder), `unavailable`
+(cannot read a save and no successful snapshot), `ready` (successful extraction),
+or `stale` (refresh failed, retaining the last successful snapshot in this backend
+process). `error` is null or `{code,message}` from the extractor; `snapshot` is
+null or the [schema-versioned metadata](../../../backend/save_reader/README.md).
+`checked_at` is UTC; `snapshot.extracted_at` is the last successful read, and
+`snapshot.save.saved_at` is when the player saved. A changed folder clears retained
+data. Each GET performs a fresh read; there is no background polling, model
+import or snapshot persistence. Unexpected server failures use the standard JSON
+500 error contract. UI entry, Refresh save and Refresh terminal request this route.
+
 `GET /api/health` → `{"status":"systems_nominal"}`.
 `GET /api/systems?q=Sol&limit=1` returns an array of system records with `id,name,x,y,type,faction,description,level,layout_only,_source`. Sol is at `(0,0)` with spectral type G2 and level 1. Use IDs returned by the current catalog; they are not fixed game identifiers. Coordinates are illustrative map units, never light years.
 `GET /api/research` → array of seed records, e.g. `{"research Project":"Medical Treatment 1","required Skills":"None","required Research":"None","required_materials_normalized":[{"name":"Aluminum","qty":2}]}` with additional inherited description fields. Quantities in the inherited catalog are not independently verified.

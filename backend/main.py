@@ -26,8 +26,11 @@ def create_app(config=None):
     Path(app.config['UPLOAD_FOLDER']).mkdir(parents=True, exist_ok=True)
     db.init_app(app)
 
-    from routes import logs, reference, ai, planets, crew, media, catalogs, outposts, crafting, missions, operations, starter, supply_networks, ship_blueprints
-    for blueprint in (logs.bp, reference.bp, ai.bp, planets.bp, crew.bp, media.bp, catalogs.bp, outposts.bp, crafting.bp, missions.bp, operations.bp, starter.bp, supply_networks.bp, ship_blueprints.bp):
+    from services.playthrough import PlaythroughConnection
+    app.extensions['playthrough'] = PlaythroughConnection()
+
+    from routes import logs, reference, ai, planets, crew, media, catalogs, outposts, crafting, missions, operations, starter, supply_networks, ship_blueprints, playthrough
+    for blueprint in (logs.bp, reference.bp, ai.bp, planets.bp, crew.bp, media.bp, catalogs.bp, outposts.bp, crafting.bp, missions.bp, operations.bp, starter.bp, supply_networks.bp, ship_blueprints.bp, playthrough.bp):
         app.register_blueprint(blueprint)
 
     @app.errorhandler(ApiError)

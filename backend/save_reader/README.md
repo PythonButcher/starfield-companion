@@ -3,8 +3,8 @@
 This is an independent Python implementation maintained in this repository. It
 uses only the standard library: no external executable, .NET runtime, game mod,
 network service or AI call. It reads copied saves and does not update the app's
-database. A Flask service can import the module directly when app integration is
-requested.
+database. The app's read-only playthrough service calls this module and displays
+metadata in Command Hub; the standalone extractor remains independent of Flask.
 
 ## Run
 
@@ -35,7 +35,8 @@ Configure your separate process to copy completed saves, preserve their original
 filenames and modification times, and publish each copy by renaming a temporary
 `.partial` file to `.sfs` after the copy completes. The app/tool never monitors or
 writes to the game's original save folder. Folder mode is one extraction per
-invocation, not an automatic watcher.
+invocation, not an automatic watcher. The app reads the configured copy folder
+on Command Hub entry and manual refresh; it does not copy or monitor game saves.
 
 Only direct, regular `.sfs` files are candidates (case-insensitive extension;
 symlinks and subdirectories are excluded). Newest means highest modification time,

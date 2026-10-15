@@ -65,10 +65,18 @@ and prints JSON with character details, save time, game versions and plugin list
 ./.venv/Scripts/python.exe scripts/extract_save.py --latest "D:\Starfield\StarfieldCompanionSaves"
 ```
 
-It has been verified with five real copied saves using format 153. It opens saves
-read-only and never modifies player records. Inventory, ship builds, outposts,
-missions and surveys are not decoded. Folder monitoring and an app display are
-not yet connected. See the [extractor guide](backend/save_reader/README.md) for
+The **Current playthrough** panel in Command Hub shows the newest copied save's
+character, level, saved location, playtime, experience, save date, game versions
+and plugin list. It reads on page entry or when you choose **Refresh save** or
+**Refresh terminal**. A failed refresh labels the last successful reading as
+potentially out of date; this in-memory reading resets when the backend restarts.
+
+Set `STARFIELD_SAVE_FOLDER=D:/Starfield/StarfieldCompanionSaves` in your local
+`.env` and restart the backend to connect this folder. Blank leaves the connection
+disabled. Only the configured folder is read; the browser cannot select arbitrary
+local paths. No player record is overwritten. Automatic copying and background
+refresh are not enabled. Inventory, ship builds, outposts, missions and surveys
+are not decoded. See the [extractor guide](backend/save_reader/README.md) for
 JSON exports, copy-process requirements, supported formats and safety limits.
 
 ## Reference data and limits

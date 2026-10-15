@@ -6,8 +6,17 @@ standard-library Python module with no Flask, database or network dependency.
 research bytes; `newest_save(folder)` selects a copy by modification time. The
 CLI exports JSON without overwriting files. It decodes player/save headers and
 supported plugin lists, explicitly labels gameplay as undecoded, and bounds
-decompression. No HTTP endpoint, automatic watcher, model writes or React display
-are connected to this module. Only save format 153 has real-copy verification.
+decompression. Only save format 153 has real-copy verification.
+
+The read-only playthrough blueprint exposes the extractor through
+`GET /api/playthrough`. Server-side `SAVE_COPY_FOLDER` comes from the local
+`STARFIELD_SAVE_FOLDER` environment setting. A per-app service serializes reads
+with a lock, retains only the latest successful metadata snapshot in memory, and
+labels it stale on extraction failure. It clears the snapshot if the configured
+folder changes. No raw binary, database writes or file-path requests are accepted
+from the browser. The Command Hub panel reads on entry and explicit refresh,
+displays save and read timestamps, and keeps notes/plans separate. There is no
+automatic copy process, polling or persisted playthrough snapshot.
 
 Flask's `create_app(config)` applies configuration before SQLAlchemy initialization. Domain blueprints expose JSON APIs; services implement crafting expansion, outpost estimates and cross-module summaries. Shared validators reject unknown fields and invalid types. Lists return arrays with X-Total-Count, limit and offset. Some filters operate on in-memory lists; full-game planet ingestion requires indexed queries and paginated pickers.
 

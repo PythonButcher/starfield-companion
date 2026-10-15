@@ -1,20 +1,23 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SessionRadar from '../components/SessionRadar';
+import PlaythroughPanel from '../components/PlaythroughPanel';
 import { useResource } from '../hooks/useResource';
 import { Panel, SectionHeader, ResourceState, EmptyState, Button, Modal, Tag } from '../components/ui';
 
 export default function Hub() {
   const resource = useResource('/api/radar/session_handover');
   const briefing = useResource('/api/briefing');
+  const playthrough = useResource('/api/playthrough');
   const [reading, setReading] = useState(null); const data = resource.data;
   return <><SectionHeader eyebrow="Constellation / Navigation desk" title="Command Hub">
     <Link className="button button-primary" to="/journal/new">+ Record Log</Link>
     <Link className="button button-ghost" to="/logistics/outposts">+ Plan Outpost</Link>
     <Link className="button button-ghost" to="/journal/missions?new=1">+ New Mission</Link>
-    <Button variant="ghost" onClick={() => { resource.reload(); briefing.reload(); }}>Refresh terminal</Button>
+    <Button variant="ghost" onClick={() => { resource.reload(); briefing.reload(); playthrough.reload(); }}>Refresh terminal</Button>
   </SectionHeader>
     <div className="stack">
+      <PlaythroughPanel resource={playthrough} />
       <div className="two-column planning-launchers"><Link to="/logistics/supply-network"><span className="eyebrow">Industry / Cargo-link mapper</span><strong>Chart your supply corridor <span aria-hidden="true">↗</span></strong><span>Connect outposts. Trace shipments. Keep the fuel flowing.</span></Link>
         <Link to="/crew/blueprints"><span className="eyebrow">Fleet / Ship Forge</span><strong>Design your next vessel <span aria-hidden="true">↗</span></strong><span>Assemble modules, compare refits and archive your blueprints.</span></Link></div>
       <ResourceState resource={resource}>{data && <div className="two-column">

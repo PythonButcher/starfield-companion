@@ -19,3 +19,4 @@ class Config:
     MAX_FILE_SIZE = 10 * 1024 * 1024
     SEED_ON_STARTUP = True
     SEED_STARTER_STATE = True
+    SAVE_COPY_FOLDER = os.getenv('STARFIELD_SAVE_FOLDER', '')

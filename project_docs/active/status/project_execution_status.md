@@ -1,15 +1,15 @@
 # Execution status
 
-Phase: Copied-save extraction experiment.
+Phase: Manual copied-save app connection.
 Branch: `codex/mission-run-1`.
-Status: local extractor verified; ready for user review of extracted data and selection of an app connection.
+Status: Current playthrough is connected and verified; ready for user review in Command Hub.
 
-The independent Python module and CLI decode copied saves into versioned JSON containing player details, save timestamps, game versions and plugin lists. Folder mode selects the newest direct `.sfs` file by modification time. Resource limits, integrity checks and read-only input handling protect the extraction boundary. JSON and optional research exports refuse existing output names.
+Command Hub displays character, level, saved location, playtime, experience, save date, game versions and plugin lists from the configured copied-save folder. The read-only API runs on page entry, Refresh save or Refresh terminal. Extraction failures retain the process's last successful reading with an explicit stale label. Folder changes clear that retained reading. No player models are imported or overwritten.
 
-Five real copied saves in the user's separate folder decoded successfully using format 153. SHA-256 hashes and modification times were unchanged after verification. A private JSON preview remains under ignored `backend/instance/save_extracts/`. Save files and exports are not committed. The app's existing player database and uploads were not touched.
+The local ignored `.env` points to `D:/Starfield/StarfieldCompanionSaves`. A real-folder API check succeeded, and source hashes and modification times were unchanged. The built app displayed the real character and location, refreshed successfully, fit a 390px viewport and had no browser errors. Private desktop/mobile screenshots remain under ignored `backend/instance/save_extracts/`. The verified review instance is running at `http://127.0.0.1:5002` using mock AI.
 
-Verification: **126 backend tests passed**, including 29 extractor cases; frontend lint and production build passed; 12 policy cases passed. Backend tests used workspace-local temporary storage because Windows sandbox temp-directory renames were blocked. The frontend build passed outside the sandbox after a Vite path-resolution restriction. Documentation checks and final whitespace results are recorded in the run report. AI tests use mock mode.
+Verification: **131 backend tests passed**, **21 browser tests passed**, frontend lint and production build passed, and 12 policy cases passed. Two targeted browser cases also cover the final playtime formatting. Browser tests used isolated data, artificial save responses and mock AI outside the Windows sandbox. Final documentation checks and whitespace results are recorded in the run report.
 
-Limits: inventory, ship construction, outposts, missions and surveys remain undecoded. A saved location that names a ship does not supply its ship stats. Only format 153 has real-save evidence; synthetic fixtures exercise 140 and 143. The copy job must publish completed files using a temporary extension. Automatic monitoring, app UI and API integration are not implemented.
+Limits: inventory, ship construction, outposts, missions and surveys remain undecoded. A saved location that names a ship does not supply its ship stats. Last-successful readings are in memory and reset on backend restart. Automatic copying and background refresh are not enabled. The copy process must publish complete `.sfs` files with preserved modification times. The default-port verification issue is documented in the run report; the real app was verified on port 5002.
 
 Results and limits: [run report](RUN_REPORT.md). Usage and format references: [extractor guide](../../../backend/save_reader/README.md). The [active gate](../active_gate/README.md) routes the next bounded request. Existing terminal functionality and its verification history are documented in the run report.

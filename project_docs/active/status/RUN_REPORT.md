@@ -1,5 +1,59 @@
 # Project run report
 
+## Manual copied-save app connection — 2026-10-14 (America/New_York)
+
+Branch: `codex/mission-run-1`. Command Hub's **Current playthrough** panel reads
+the configured separate copy folder through `GET /api/playthrough`. It displays
+character, level, location, playtime, experience, save date, game versions and
+plugin groups. Reads happen on page entry or Refresh save / Refresh terminal.
+Known compact playtime strings are presented in plain English; unfamiliar formats
+stay unchanged. Save/read/check timestamps distinguish game progress from app reads.
+
+The per-app service uses a lock and retains only the last successful metadata
+snapshot in memory. Failed extraction labels it stale, while missing setup or
+an unreadable initial save has a clear empty/error state. A changed folder clears
+the snapshot. The server accepts no client-selected path or write method, returns
+no-store responses, and performs no save writes or player-model imports. There
+is no background polling, persisted snapshot or automatic copy job. The local
+ignored `.env` was configured with `STARFIELD_SAVE_FOLDER`; committed example
+configuration leaves it blank. All existing secret/configuration lines were retained.
+
+Verification:
+
+- Backend suite with workspace-local temporary storage: **131 passed**, including five new API integration cases and 29 extractor cases.
+- Frontend lint and production build: **passed**, 99 modules.
+- Full isolated browser suite: **21 passed**, including two new playthrough flows.
+- Final targeted playthrough browser tests after plain-English playtime display: **2 passed**.
+- Real copied-folder endpoint: **ready**, with player header and all three plugin groups decoded. All copied-save SHA-256 hashes and modification times were unchanged.
+- Built frontend against the real save: character/location visible, manual refresh successful, no browser errors, and no horizontal overflow at 390px.
+- Private desktop/mobile screenshots were visually inspected; they remain under ignored `backend/instance/save_extracts/app-desktop.png` and `app-mobile.png`.
+- Policy self-test: **12 cases passed**. Active-gate validation, local Markdown links and whitespace checks: **passed**.
+
+API tests exercise the real Python extractor with artificial saves, refresh to a
+newer file, corrupt-file retention and recovery, missing/changed configuration,
+path-selection refusal and unchanged player-model counts. Browser tests cover
+visible values, manual refresh, stale labels, recovery, plugin details, shared
+terminal refresh and desktop/mobile layouts. The browser-test backend explicitly
+disables the real copy-folder setting and uses an in-memory database, temporary
+uploads and mock AI.
+
+Initial browser startup was restricted by the Windows sandbox, so browser checks
+ran outside it. The first full suite passed 20/21: the new request-count assertion
+assumed one initial request, while React StrictMode intentionally mounts twice.
+The corrected assertion checks one additional read per click; the suite passed.
+The local server on port 5000 returned a missing-route response while a fresh
+factory/test-client route worked. Restarting that verification process did not
+resolve the default-port response. A fresh app-factory instance on port 5002
+served the actual player database and real copied save correctly; that instance
+is left running with mock AI for user review. The default-port issue is not
+claimed fixed, and the user-facing review link uses port 5002.
+
+Limits: this snapshot represents the saved game, not continuously live gameplay.
+Inventory, ship builds, outposts, missions and survey data remain undecoded, and
+manual app records stay separate. Automatic copying will be scoped after the
+user reviews this connection. The Context Ledger-specific audit is not applicable;
+the project's active-gate validator and local-link audit are used.
+
 ## Copied-save extraction — 2026-10-11 (America/New_York)
 
 Branch: `codex/mission-run-1`. Scope: an independently implemented local Python

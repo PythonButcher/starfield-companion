@@ -7,5 +7,5 @@ from main import create_app
 
 if __name__ == '__main__':
     with tempfile.TemporaryDirectory(prefix='starfield-smoke-') as folder:
-        app = create_app({'SQLALCHEMY_DATABASE_URI': 'sqlite:///:memory:', 'UPLOAD_FOLDER': folder, 'AI_MODE': 'mock', 'OPENAI_API_KEY': ''})
+        app = create_app({'SQLALCHEMY_DATABASE_URI': 'sqlite:///:memory:', 'UPLOAD_FOLDER': folder, 'AI_MODE': 'mock', 'OPENAI_API_KEY': '', 'SAVE_COPY_FOLDER': ''})
         app.run(host='127.0.0.1', port=5001, debug=False, use_reloader=False)
