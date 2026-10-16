@@ -21,7 +21,10 @@ test('Command Hub fits desktop windows and the slate supports keyboard selection
   await page.route('**/api/playthrough', (route) => route.fulfill({ json: save }));
   await page.goto('/');
   await expect(page.getByText('Alex Morgan', { exact: true })).toBeVisible();
-  await expect(page.getByRole('link', { name: /^One Small Step/ })).toBeVisible();
+  const opener = page.getByRole('button', { name: 'Open Data Slate', exact: true });
+  const drawer = page.getByRole('dialog', { name: 'Data Slate', exact: true });
+  await expect(opener).toHaveAttribute('aria-expanded', 'false');
+  await expect(drawer).not.toBeVisible();
   for (const size of [{ width: 1440, height: 900 }, { width: 1280, height: 720 }, { width: 1024, height: 768 }]) {
     await page.setViewportSize(size);
     await expectDocumentFits(page);
@@ -29,7 +32,16 @@ test('Command Hub fits desktop windows and the slate supports keyboard selection
     // The normal save summary and telemetry fit without a second scrollbar.
     await expect.poll(() => page.locator('.command-overview').evaluate((el) => Math.max(0, el.scrollHeight - el.clientHeight - 1))).toBe(0);
     await expect(page.getByRole('navigation', { name: 'Command shortcuts' })).toBeInViewport();
+    await opener.click();
+    await expect(drawer).toBeVisible();
+    await expect(page.getByRole('link', { name: /^One Small Step/ })).toBeVisible();
+    await expectDocumentFits(page);
+    await page.screenshot({ path: `test-results/slate-drawer-${size.width}.png`, fullPage: true, animations: 'disabled' });
+    await page.getByRole('button', { name: 'Close Data Slate', exact: true }).click();
+    await expect(drawer).not.toBeVisible();
+    await expect(opener).toBeFocused();
   }
+  await opener.click();
   const resume = page.getByRole('radio', { name: 'Resume', exact: true });
   await resume.focus();
   await page.keyboard.press('ArrowRight');
@@ -38,12 +50,17 @@ test('Command Hub fits desktop windows and the slate supports keyboard selection
   await page.getByRole('radio', { name: 'Logs', exact: true }).check();
   const read = page.getByRole('region', { name: 'Logs slate' }).getByRole('button', { name: /^Read / }).first();
   await read.click();
-  await expect(page.getByRole('dialog')).toBeVisible();
+  await expect(page.locator('dialog.modal')).toBeVisible();
   await page.keyboard.press('Escape');
+  await expect(page.locator('dialog.modal')).toHaveCount(0);
+  await expect(drawer).toBeVisible();
   await expect(read).toBeFocused();
   await page.getByRole('radio', { name: 'Worlds', exact: true }).check();
   await expect(page.getByRole('region', { name: 'Worlds slate' })).toContainText('100% surveyed');
   await expect(page.getByRole('region', { name: 'Worlds slate' }).getByRole('link', { name: /Vectera/ })).toHaveCount(1);
+  await page.keyboard.press('Escape');
+  await expect(drawer).not.toBeVisible();
+  await expect(opener).toBeFocused();
   await page.getByRole('button', { name: 'Save details and plugins', exact: true }).click();
   await expect(page.getByRole('dialog')).toContainText('Starfield.esm');
   await page.keyboard.press('Escape');
@@ -51,6 +68,44 @@ test('Command Hub fits desktop windows and the slate supports keyboard selection
   await page.setViewportSize({ width: 390, height: 844 });
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({ path: 'test-results/terminal-hub-mobile.png', fullPage: true });
+  await opener.click();
+  await expect(page.getByRole('radio', { name: 'Worlds', exact: true })).toBeChecked();
+  await expect(page.getByRole('button', { name: 'Close Data Slate', exact: true })).toBeInViewport();
+  await expect.poll(() => drawer.evaluate((el) => {
+    const rect = el.getBoundingClientRect();
+    return rect.left >= 0 && rect.right <= innerWidth && rect.top >= 0 && rect.bottom <= innerHeight;
+  })).toBe(true);
+  await page.screenshot({ path: 'test-results/slate-drawer-mobile.png', animations: 'disabled' });
+  await page.getByRole('button', { name: 'Close Data Slate', exact: true }).click();
+  await expect(opener).toBeFocused();
+});
+
+test('slate drawer keeps the covered Hub inert, dismisses from the backdrop and respects reduced motion', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/');
+  const opener = page.getByRole('button', { name: 'Open Data Slate', exact: true });
+  const drawer = page.getByRole('dialog', { name: 'Data Slate', exact: true });
+  await opener.click();
+  const close = page.getByRole('button', { name: 'Close Data Slate', exact: true });
+  await expect(close).toBeFocused();
+  await expect(page.getByRole('link', { name: /^One Small Step/ })).toBeVisible();
+  // Native dialogs may let focus visit browser chrome at the ends of the tab
+  // sequence, but covered application controls must never receive focus.
+  await page.getByRole('button', { name: 'Refresh terminal', exact: true }).evaluate((el) => el.focus());
+  await expect(close).toBeFocused();
+  await page.keyboard.press('Tab');
+  await expect(page.getByRole('radio', { name: 'Resume', exact: true })).toBeFocused();
+  await page.keyboard.press('Shift+Tab');
+  await expect(close).toBeFocused();
+  await expect.poll(() => drawer.evaluate((el) => getComputedStyle(el).transitionDuration)).toBe('0s');
+  await page.mouse.click(10, 300);
+  await expect(drawer).not.toBeVisible();
+  await expect(opener).toBeFocused();
+  await expect(opener).toHaveAttribute('aria-expanded', 'false');
+  await opener.click();
+  await page.getByRole('link', { name: /^One Small Step/ }).click();
+  await expect(page).toHaveURL(/\/journal\/missions#mission-/);
+  await expect(drawer).toHaveCount(0);
 });
 
 test('long slate content stays accessible without extending the desktop shell', async ({ page }) => {
@@ -58,6 +113,7 @@ test('long slate content stays accessible without extending the desktop shell', 
   await page.route('**/api/briefing', (route) => route.fulfill({ json: { mode: 'mock', briefing: 'An extended ship briefing. '.repeat(300) + 'End of briefing.' } }));
   await page.setViewportSize({ width: 1280, height: 720 });
   await page.goto('/');
+  await page.getByRole('button', { name: 'Open Data Slate', exact: true }).click();
   await page.getByRole('radio', { name: 'Briefing', exact: true }).check();
   const screen = page.getByRole('region', { name: 'Briefing slate' });
   await expect(screen).toContainText('End of briefing.');

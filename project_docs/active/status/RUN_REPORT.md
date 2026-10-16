@@ -1,5 +1,35 @@
 # Project run report
 
+## Data Slate slide-out drawer — 2026-10-16 (America/New_York)
+
+The Command Hub slate starts closed and slides in from the right through a
+labelled, original tablet/slate icon. The matching close icon has an outward
+arrow. Escape and clicking the backdrop dismiss the drawer and return focus to
+the opener. Its native modal dialog makes the covered Hub inert. Closing a nested
+log reader leaves the slate open. The selected channel is retained while closed
+until leaving the Hub. CSS transitions honor reduced motion. The Hub uses the
+space freed by the slate; Galaxy & Surveys and API behavior are unchanged.
+
+Verification: **12 affected workflow browser cases passed**, plus **all four
+drawer/layout cases on the final focused rerun**. These cover default-closed
+state, three desktop sizes, 390×844 mobile fit, icon dismissal, Escape, backdrop,
+focus return, the inert Hub, channel retention, nested log reading, reduced
+motion, navigation and long content. Existing mission/outpost tests now open the
+slate before following resume links. Desktop/mobile screenshots were inspected.
+An initial focus test assumed Shift+Tab wraps directly from the first control to
+the last; native dialogs can visit browser chrome. The corrected test verifies
+that covered Hub controls cannot take focus and that in-dialog tab navigation
+works. A captured trigger ref also resolved the initial lint warning.
+
+Frontend lint and production build passed. Policy self-test: **12 passed**.
+Active-gate validation, active/root/supporting Markdown links and
+`git diff --check`: **passed**. Tests ran outside the Windows network sandbox with
+an in-memory database, temporary uploads, synthetic save responses and mock AI.
+No backend, dependency, API, player database or save-file changes were made.
+Backend unit tests and native Electron-window checks were not rerun for this UI
+slice. Long slate content retains its own scrollbar; narrow Hub layouts retain
+normal document scrolling. Screenshots and browser logs remain ignored.
+
 ## Compact terminal and Data Slate — 2026-10-15 (America/New_York)
 
 Command Hub replaces its stacked cards with a condensed, dark command display:

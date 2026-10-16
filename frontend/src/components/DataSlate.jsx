@@ -4,15 +4,25 @@ import { Button, EmptyState, Modal, ResourceState, Tag } from './ui';
 
 const channels = ['Resume', 'Briefing', 'Logs', 'Worlds'];
 
-export default function DataSlate({ resource, briefing }) {
+export function DataSlateIcon({ closing = false }) {
+  return <svg className="slate-icon" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M6 3h13l3 3v18a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
+    <path d="M9 7h9M9 11h6M9 15h4M11 21h5" />
+    <path className="slate-icon-arrow" d={closing ? 'M17 16h9m-3-3 3 3-3 3' : 'M26 16h-9m3-3-3 3 3 3'} />
+  </svg>;
+}
+
+export default function DataSlate({ resource, briefing, titleId = 'slate-title', onClose }) {
   const [channel, setChannel] = useState('Resume');
   const [reading, setReading] = useState(null);
   const data = resource.data;
   const favoriteIds = new Set(data?.favorites.map((planet) => planet.id));
   // A favorite can also be a milestone; show one entry with both attributes.
   const worlds = [...new Map([...(data?.favorites || []), ...(data?.milestones || [])].map((planet) => [planet.id, planet])).values()];
-  return <section className="data-slate" aria-labelledby="slate-title">
-    <header className="slate-header"><div><p className="eyebrow">Personal archive / DS–01</p><h2 id="slate-title">Data Slate</h2></div><span className="slate-mark" aria-hidden="true">▤</span></header>
+  return <section className="data-slate" aria-labelledby={titleId}>
+    <header className="slate-header"><div><p className="eyebrow">Personal archive / DS–01</p><h2 id={titleId}>Data Slate</h2></div>
+      <Button variant="ghost" className="slate-toggle" onClick={onClose} aria-label="Close Data Slate" title="Close Data Slate"><DataSlateIcon closing /><span>Close</span></Button>
+    </header>
     <fieldset className="slate-channels"><legend className="sr-only">Data Slate channel</legend>
       {channels.map((name) => <label key={name}><input type="radio" name="slate-channel" value={name} checked={channel === name} onChange={() => setChannel(name)} /><span>{name}</span></label>)}
     </fieldset>

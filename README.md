@@ -14,9 +14,12 @@ A local NASApunk ship terminal for expedition journals, planet surveys, crew ass
 
 The Drive-By quick-action drawer is available throughout the terminal. `N` opens a log, `Ctrl/Cmd+K` searches systems. Legacy module URLs redirect into these workspaces, retaining queries and anchors.
 
-Command Hub uses a dark, condensed terminal layout with a **Data Slate** for
-Resume, Briefing, Logs and Worlds. Select a channel (or use the arrow keys while
-its selector is focused) to read that part of the archive. Save metadata and
+Command Hub uses a dark, condensed terminal layout with an optional **Data Slate**
+drawer for Resume, Briefing, Logs and Worlds. Choose the slate icon in the Hub
+header to slide it in from the right. The matching Close icon, Escape or clicking
+outside dismisses it. Your selected channel is retained until you leave the Hub.
+Select a channel (or use the arrow keys while its selector is focused) to read
+that part of the archive. Save metadata and
 plugins open in a separate dialog. Copied-save readings remain distinct from
 app-recorded positions, ships, notes and plans.
 

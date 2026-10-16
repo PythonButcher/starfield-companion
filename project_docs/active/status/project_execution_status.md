@@ -1,32 +1,27 @@
 # Execution status
 
-Phase: Command Hub interface review.
+Phase: Data Slate drawer review.
 Branch: `codex/mission-run-1`.
-Status: UI pass verified and built; ready for user review.
+Status: Optional slide-out Data Slate verified and built; ready for user review.
 
-Command Hub uses a dark, condensed terminal layout with thin dividers, an original
-navigation schematic, compact copied-save details and a selectable Data Slate.
-Resume, Briefing, Logs and Worlds share the slate screen. Save metadata/plugins
-and full log reading open in focus-restoring dialogs. Favorite worlds that are
-also survey milestones appear once. Copied-save readings and app records remain
-explicitly separated; save refresh and stale/error behavior are unchanged.
+The Command Hub Data Slate starts closed. A labelled tablet/slate icon opens the
+right-side drawer, and the matching icon with an outward arrow closes it. Escape
+and backdrop dismissal also work. The native dialog makes the covered Hub inert
+and restores focus to the opener. Closing a nested log reader leaves the slate
+open. Selected channels persist between openings until the user leaves the Hub.
+Reduced-motion settings disable the slide animation.
 
-The desktop Hub fits 1280×720, 1440×900 and 1024×768 without document or overview
-scrolling under normal fixture content. The other terminal workspaces retain
-navigation while long forms/lists scroll inside their content area. Galaxy &
-Surveys keeps its existing styles and interactions. Narrow/short windows use
-normal scrolling; 390px layouts have no horizontal overflow. Long slate text,
-expanded notes and unusually large/error content retain bounded scrolling.
+The Hub uses the available width and retains its desktop fit. The drawer fits
+1280×720, 1440×900, 1024×768 and 390×844 windows; its header/close control stays
+visible while long content scrolls inside. Galaxy & Surveys and the other
+workspaces retain their behavior. No API or player/save data changes were made.
 
-Verification: **24 browser tests passed**, frontend lint and production build
-passed, and 12 policy cases passed. The browser suite uses an in-memory database,
-temporary uploads, synthetic save responses and mock AI outside the Windows
-sandbox. Desktop/mobile screenshots were inspected. No backend source, API
-contract, dependencies, player database, uploads or save files were changed.
-Backend unit tests were not rerun for this frontend-only slice.
+Verification: 12 affected workflow browser cases passed, followed by all four
+focused drawer/layout cases on the final rerun. Lint is clean and production
+build passed. Tests used isolated in-memory data, synthetic save responses and
+mock AI. Desktop/mobile drawer screenshots were visually inspected. Backend unit
+tests and the native Electron window were not exercised for this frontend slice.
 
-The existing review app at `http://127.0.0.1:5002` serves the current built HTML.
-No Electron native-window verification was performed. The browser screenshots
-and verification log remain ignored. Gate, link and whitespace checks are
-recorded in the [run report](RUN_REPORT.md). The [active gate](../active_gate/README.md)
-returns the display and interaction review to the user.
+Policy, gate, Markdown links and whitespace checks are recorded in the
+[run report](RUN_REPORT.md). The [active gate](../active_gate/README.md) returns
+interaction and display review to the user.

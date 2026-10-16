@@ -11,6 +11,7 @@ test('outpost power planning, export, portfolio and Hub alerts', async ({ page, 
   await page.getByRole('button', { name: 'Save Plan', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Browser iron base', exact: true })).toBeVisible();
   await page.goto('/');
+  await page.getByRole('button', { name: 'Open Data Slate', exact: true }).click();
   await page.getByRole('link', { name: 'Fix Browser iron base' }).click();
   await expect(page.getByLabel('Outpost name')).toHaveValue('Browser iron base');
   await page.getByLabel('Module catalog').selectOption({ label: 'Solar Array (6 power)' });
@@ -63,6 +64,7 @@ test('missions link logs transactionally and radar resumes them', async ({ page,
   await page.getByRole('button', { name: 'Save log', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Browser mission' })).toBeVisible();
   await page.goto('/radar');
+  await page.getByRole('button', { name: 'Open Data Slate', exact: true }).click();
   await expect(page.getByRole('link', { name: /^Browser mission/ })).toBeVisible();
   const missions = await (await request.get('/api/missions')).json();
   const mission = missions.find((m) => m.title === 'Browser mission');

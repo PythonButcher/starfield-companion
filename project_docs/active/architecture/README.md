@@ -36,9 +36,13 @@ React uses a centralized JSON client plus an XHR multipart transport for upload 
 
 The desktop terminal shell uses dynamic viewport height with bounded content
 overflow; Galaxy & Surveys is excluded from this styling. Command Hub combines
-the copied-save summary and recorded operations with a Data Slate whose native
-radio controls select resume actions, briefing, logs or worlds. Channel changes
-reset the slate's scroll position. Log reading and save metadata use the shared
+the copied-save summary and recorded operations with an optional right-side Data
+Slate drawer. Its native dialog makes the covered Hub inert, restores focus to
+the slate-icon opener, and supports Escape/backdrop dismissal. The mounted slate
+retains its selected channel while closed. CSS transitions slide the drawer in
+and out, honoring reduced motion. Native radio controls select resume actions,
+briefing, logs or worlds; channel changes reset the slate's scroll position.
+Log reading and save metadata use the shared
 focus-restoring dialog. There is no additional persistence or API contract.
 Narrow/short windows fall back to document scrolling instead of clipping controls.
 

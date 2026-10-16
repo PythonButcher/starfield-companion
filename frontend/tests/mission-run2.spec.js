@@ -11,7 +11,9 @@ test('five workspaces open with a living starter profile and no browser errors',
   ]);
   await expect(page.getByRole('heading', { name: 'The Frontier', exact: true })).toBeVisible();
   await expect(page.getByText('Vectera / Narion', { exact: true })).toBeVisible();
+  await page.getByRole('button', { name: 'Open Data Slate', exact: true }).click();
   await expect(page.getByRole('link', { name: /^One Small Step/ })).toBeVisible();
+  await page.getByRole('button', { name: 'Close Data Slate', exact: true }).click();
   await page.screenshot({ path: 'test-results/run2-command-hub.png', fullPage: true });
   await page.getByRole('link', { name: '+ New Mission', exact: true }).click();
   await expect(page.getByRole('dialog')).toBeVisible();

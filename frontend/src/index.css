@@ -275,7 +275,7 @@ details[open] > summary { margin-bottom: 1rem; }
 .workspace-screen { scrollbar-color: #536673 transparent; scrollbar-width: thin; scroll-padding-top: 90px; }
 .command-hub { display: flex; flex-direction: column; gap: 1rem; }
 .command-hub > .section-header { margin: 0; flex-shrink: 0; }
-.command-workspace { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(330px, 1fr); gap: clamp(1.2rem, 2.5vw, 2.8rem); flex: 1; }
+.command-workspace { display: grid; grid-template-columns: minmax(0, 1fr); flex: 1; }
 .command-overview { display: flex; flex-direction: column; }
 .terminal-shell .playthrough-panel { background: transparent; padding: 0 0 1rem; border: 0; border-bottom: 1px solid var(--color-terminal-rule); flex-shrink: 0; gap: .7rem; }
 .playthrough-heading h2 { font-size: 1.4rem; }
@@ -309,7 +309,20 @@ details[open] > summary { margin-bottom: 1rem; }
 .slate-header { display: flex; align-items: center; justify-content: space-between; padding: 0 .3rem .8rem; }
 .slate-header h2 { text-transform: uppercase; letter-spacing: .14em; font-size: 1.55rem; }
 .slate-header .eyebrow { color: var(--color-slate-ink); font-size: .52rem; }
-.slate-mark { color: var(--color-muted); font-size: 1.7rem; }
+.slate-icon { width: 26px; height: 26px; flex-shrink: 0; }
+.slate-icon-arrow { color: var(--color-accent-orange); }
+.terminal-shell .slate-toggle { min-height: 42px; gap: .6rem; }
+/* Keep the drawer mounted so its channel survives closing. The browser handles
+   focus containment; discrete transitions let the native dialog slide both ways. */
+.slate-drawer { position: fixed; inset: 0 0 0 auto; width: min(480px, 100%); height: 100dvh; max-width: 100%; max-height: 100dvh; margin: 0; padding: .75rem; border: 0; background: transparent; color: var(--color-star-white); overflow: visible; opacity: 0; transform: translateX(100%); transition: transform .24s ease, opacity .24s ease, display .24s allow-discrete, overlay .24s allow-discrete; }
+.slate-drawer[open] { display: flex; opacity: 1; transform: translateX(0); }
+.slate-drawer::backdrop { background: #02060b99; backdrop-filter: blur(2px); opacity: 0; transition: opacity .24s ease, display .24s allow-discrete, overlay .24s allow-discrete; }
+.slate-drawer[open]::backdrop { opacity: 1; }
+@starting-style { .slate-drawer[open] { opacity: 0; transform: translateX(100%); } .slate-drawer[open]::backdrop { opacity: 0; } }
+.slate-drawer > .data-slate { width: 100%; height: 100%; min-height: 0; }
+.slate-drawer .slate-header, .slate-drawer .slate-footer { flex-shrink: 0; }
+.slate-drawer .slate-screen { max-height: none; overscroll-behavior: contain; }
+body:has(.slate-drawer[open]) { overflow: hidden; }
 .slate-channels { display: flex; margin: 0; padding: 0; border: 0; flex-shrink: 0; background: #0b131a; }
 .slate-channels label { flex: 1; position: relative; text-align: center; cursor: pointer; }
 .slate-channels input { position: absolute; opacity: 0; width: 100%; height: 100%; inset: 0; margin: 0; cursor: pointer; }

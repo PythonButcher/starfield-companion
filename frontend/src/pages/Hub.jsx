@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import PlaythroughPanel from '../components/PlaythroughPanel';
-import DataSlate from '../components/DataSlate';
+import DataSlateDrawer from '../components/DataSlateDrawer';
 import { useResource } from '../hooks/useResource';
 import { SectionHeader, ResourceState, Button } from '../components/ui';
 
@@ -23,6 +23,7 @@ export default function Hub() {
     <SectionHeader eyebrow="Constellation / Personal terminal" title="Command Hub">
       <Link className="button button-primary" to="/journal/new">+ Record Log</Link>
       <Button variant="ghost" onClick={() => { resource.reload(); briefing.reload(); playthrough.reload(); }}>Refresh terminal</Button>
+      <DataSlateDrawer resource={resource} briefing={briefing} />
     </SectionHeader>
     <div className="command-workspace">
       <div className="command-overview">
@@ -49,7 +50,6 @@ export default function Hub() {
           </>}</ResourceState>
         </section>
       </div>
-      <DataSlate resource={resource} briefing={briefing} />
     </div>
     <nav className="command-dock" aria-label="Command shortcuts">
       <Link to="/logistics/supply-network"><span>01 / Industry</span><strong>Supply corridor ↗</strong></Link>
