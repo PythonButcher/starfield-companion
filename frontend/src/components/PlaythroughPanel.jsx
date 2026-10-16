@@ -1,4 +1,5 @@
-import { Button, EmptyState, Panel, ResourceState, Tag } from './ui';
+import { useState } from 'react';
+import { Button, EmptyState, Modal, Panel, ResourceState, Tag } from './ui';
 
 function Timestamp({ value }) {
   return <time dateTime={value}>{new Date(value).toLocaleString()}</time>;
@@ -11,6 +12,7 @@ function playtimeLabel(value) {
 }
 
 export default function PlaythroughPanel({ resource }) {
+  const [detailsOpen, setDetailsOpen] = useState(false);
   const connection = resource.data;
   const snapshot = connection?.snapshot;
   const groups = snapshot?.plugins && Object.entries(snapshot.plugins);
@@ -43,16 +45,18 @@ export default function PlaythroughPanel({ resource }) {
           <div><dt>Experience / next level</dt><dd className="playthrough-detail">{snapshot.player.experience.toLocaleString(undefined, { maximumFractionDigits: 2 })} / {snapshot.player.experience_required.toLocaleString(undefined, { maximumFractionDigits: 2 })}</dd></div>
           <div><dt>Game version</dt><dd className="playthrough-detail">{snapshot.save.current_game_version}</dd></div>
         </dl>
-        <p className="small muted">A snapshot from when you saved, refreshed when you open this page or choose Refresh save. App notes and plans are kept separately.</p>
-        <details><summary>Save details and plugins</summary><div className="stack small">
+        <div className="playthrough-footnote"><p className="small muted">App notes and plans are kept separately.</p>
+          <Button variant="ghost" onClick={() => setDetailsOpen(true)}>Save details and plugins</Button></div>
+        {detailsOpen && <Modal title="Save details and plugins" onClose={() => setDetailsOpen(false)}><div className="stack small">
+          <p>A snapshot from when you saved, refreshed when you open this page or choose Refresh save.</p>
           <p className="playthrough-filename">File: {snapshot.source.filename}</p>
           <p>Last read: <Timestamp value={snapshot.extracted_at} /> · Last checked: <Timestamp value={connection.checked_at} /></p>
           <p>Created with game version {snapshot.save.created_game_version} · Save format {snapshot.save.format_version}</p>
           {groups ? groups.map(([group, plugins]) => <div key={group}><h3>{group[0].toUpperCase() + group.slice(1)} plugins ({plugins.length})</h3>
             {plugins.length ? <ul className="playthrough-plugins">{plugins.map((plugin, index) => <li key={plugin.name + index}>{plugin.name}{plugin.creation_name ? ` — ${plugin.creation_name}` : ''}</li>)}</ul> : <p className="muted">None</p>}
           </div>) : <p>Plugin details could not be decoded.</p>}
-        </div></details>
-        <p className="small muted">Inventory, ship builds, outposts, missions and surveys are not available from this reading yet.</p>
+          <p className="muted">Inventory, ship builds, outposts, missions and surveys are not available from this reading yet.</p>
+        </div></Modal>}
       </>}
     </ResourceState>
   </Panel>;

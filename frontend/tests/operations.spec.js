@@ -63,7 +63,7 @@ test('missions link logs transactionally and radar resumes them', async ({ page,
   await page.getByRole('button', { name: 'Save log', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Browser mission' })).toBeVisible();
   await page.goto('/radar');
-  await expect(page.getByRole('link', { name: 'Browser mission', exact: true })).toBeVisible();
+  await expect(page.getByRole('link', { name: /^Browser mission/ })).toBeVisible();
   const missions = await (await request.get('/api/missions')).json();
   const mission = missions.find((m) => m.title === 'Browser mission');
   expect(mission.linked_log_ids).toHaveLength(1);
@@ -99,6 +99,6 @@ test('new module errors are recoverable and mobile layout fits', async ({ page }
     await expect(page.locator('h1')).toBeVisible();
     await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   }
-  await expect(page.getByRole('heading', { name: 'Fleet & outpost status' })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Recorded operations' })).toBeVisible();
   await page.screenshot({ path: 'test-results/hub-mobile.png', fullPage: true });
 });

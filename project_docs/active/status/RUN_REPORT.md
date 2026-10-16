@@ -1,5 +1,51 @@
 # Project run report
 
+## Compact terminal and Data Slate — 2026-10-15 (America/New_York)
+
+Command Hub replaces its stacked cards with a condensed, dark command display:
+compact copied-save details, a separately labelled logged position, an original
+orbital navigation schematic, a fleet metrics row and four launch shortcuts.
+The Data Slate switches between resume actions, briefing, recent logs and saved
+worlds using native radio selectors with arrow-key support. Switching channels
+resets the reading area's scroll. A world that is both a favorite and a completed
+survey appears once. Save metadata/plugins and full log text use the shared
+dialog with Escape dismissal and focus restoration.
+
+The fitted desktop shell applies only outside Galaxy & Surveys. At widths of
+1000px or more and heights of 650px or more, navigation and the footer remain
+visible while long forms and lists scroll within a bounded workspace. Main
+workspace headings stay visible while reading those forms. Smaller/shorter
+windows use normal document scrolling so controls remain accessible. Galaxy's
+styling, map, inspectors and survey interactions were preserved.
+
+Verification: frontend lint and production build passed; **all 24 browser tests
+passed**, including the 21 existing flows and three focused layout/interaction
+cases. The Hub's normal save summary and telemetry fit without document or
+overview scrolling at **1280×720, 1440×900 and 1024×768**. Tests cover slate
+keyboard selection, log reading, dialog focus return, deduplicated saved worlds,
+long-text keyboard scrolling, nine fitted workspace routes and 390px horizontal
+fit. Existing tests retain save refresh, stale/error recovery, Galaxy, surveys,
+crew, media, journal, mission, outpost, cargo-network and Ship Forge coverage.
+Desktop and mobile screenshots under ignored `frontend/test-results/` were
+visually inspected. The existing review server on port 5002 returned HTML matching
+the final production build.
+
+The first sandboxed browser run could not establish the local server health
+connection and was stopped. Isolated Edge tests ran successfully outside that
+restriction with mock AI, an in-memory database, temporary uploads and synthetic
+save data. Initial UI checks identified nine pixels of laptop overview overflow;
+compact spacing resolved it. Existing selectors for mission names and the removed
+fleet-card heading were adjusted to the new semantic layout. The final full suite
+passed in 1.5 minutes. Lint/build were rerun for the final source.
+
+Policy self-test: **12 passed**. Active gate validator, active/root/supporting
+Markdown links and `git diff --check`: **passed**. Documentation is aligned with
+the UI review gate. No backend source, API contract, dependency or player/save
+data changes were made; backend unit tests were not rerun for this frontend slice.
+No Electron native-window test or external publication was performed. Very long
+records, expanded handover notes, error messages and narrow displays can still
+require content scrolling; the layout preserves access instead of clipping them.
+
 ## Manual copied-save app connection — 2026-10-14 (America/New_York)
 
 Branch: `codex/mission-run-1`. Command Hub's **Current playthrough** panel reads

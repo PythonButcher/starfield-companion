@@ -6,13 +6,24 @@ A local NASApunk ship terminal for expedition journals, planet surveys, crew ass
 
 | Route | Workspace |
 |---|---|
-| `/` | **Command Hub**: resume radar, ship briefing, home ship, crew/outpost telemetry, recent logs and quick actions |
+| `/` | **Command Hub**: compact save summary, recorded position, fleet telemetry, quick actions and a selectable Data Slate |
 | `/galaxy` | **Galaxy & Surveys**: sector map, system inspector, 47 sourced worlds, resource hunt, planetary details and `/galaxy/surveys` ledger |
 | `/logistics` | **Logistics & Industry**: outposts, coverage matrix, crafting/research and `/logistics/supply-network` Cargo Link Mapper |
 | `/crew` | **Fleet & Crew**: The Frontier registry, assignments, skill ranking and `/crew/blueprints` Ship Forge |
 | `/journal` | **Logbook & Archives**: Captain's Logs, `/journal/missions` checklists and `/journal/media` archive |
 
 The Drive-By quick-action drawer is available throughout the terminal. `N` opens a log, `Ctrl/Cmd+K` searches systems. Legacy module URLs redirect into these workspaces, retaining queries and anchors.
+
+Command Hub uses a dark, condensed terminal layout with a **Data Slate** for
+Resume, Briefing, Logs and Worlds. Select a channel (or use the arrow keys while
+its selector is focused) to read that part of the archive. Save metadata and
+plugins open in a separate dialog. Copied-save readings remain distinct from
+app-recorded positions, ships, notes and plans.
+
+At desktop sizes of at least 1000×650, the terminal workspaces fit the window.
+Navigation stays visible while long records and forms scroll within their content
+area. Galaxy & Surveys retains its existing layout. Narrow or short windows use
+normal page scrolling to keep controls readable.
 
 ## Plan your supply network and next ship
 

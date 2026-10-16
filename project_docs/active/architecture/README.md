@@ -34,6 +34,14 @@ AI providers share narrative/strategy interfaces. Mock mode is deterministic and
 
 React uses a centralized JSON client plus an XHR multipart transport for upload progress. useResource cancels obsolete reads and exposes retry/loading/error state. Tailwind v4 tokens and shared primitives govern layout, focus, dialogs, status and panels. Five primary workspaces own nested tool routes; compatibility redirects preserve queries and hashes. World inspectors use planet_id deep links and read individual survey counters even at 0% or 100%. Views connect through stable IDs; locally saved journal drafts remain scoped to their mission/expedition context. The planner delays unnamed preview requests and displays validation errors after blur or submission.
 
+The desktop terminal shell uses dynamic viewport height with bounded content
+overflow; Galaxy & Surveys is excluded from this styling. Command Hub combines
+the copied-save summary and recorded operations with a Data Slate whose native
+radio controls select resume actions, briefing, logs or worlds. Channel changes
+reset the slate's scroll position. Log reading and save metadata use the shared
+focus-restoring dialog. There is no additional persistence or API contract.
+Narrow/short windows fall back to document scrolling instead of clipping controls.
+
 The Electron shell uses the repository virtual environment, waits for backend health and loads Flask's built frontend by default. An existing healthy companion process is reused; only a child it owns is stopped on exit. Native packaging/window behavior requires a separate platform smoke test.
 
 SupplyNetwork and ShipBlueprint add two isolated player tables without changing existing columns. SupplyNetwork stores bounded JSON nodes and directed links; referenced outpost IDs deliberately survive deletion so the graph can explain broken routes. The analysis service resolves real outpost power/production, then reserves complete shipments and Helium-3 from a shared budget. Routes execute at most once and are retried after imports, avoiding supply creation by unseeded cycles. Starter clearing preserves outposts referenced by these graphs.

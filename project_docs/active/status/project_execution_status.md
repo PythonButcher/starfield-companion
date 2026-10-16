@@ -1,15 +1,32 @@
 # Execution status
 
-Phase: Manual copied-save app connection.
+Phase: Command Hub interface review.
 Branch: `codex/mission-run-1`.
-Status: Current playthrough is connected and verified; ready for user review in Command Hub.
+Status: UI pass verified and built; ready for user review.
 
-Command Hub displays character, level, saved location, playtime, experience, save date, game versions and plugin lists from the configured copied-save folder. The read-only API runs on page entry, Refresh save or Refresh terminal. Extraction failures retain the process's last successful reading with an explicit stale label. Folder changes clear that retained reading. No player models are imported or overwritten.
+Command Hub uses a dark, condensed terminal layout with thin dividers, an original
+navigation schematic, compact copied-save details and a selectable Data Slate.
+Resume, Briefing, Logs and Worlds share the slate screen. Save metadata/plugins
+and full log reading open in focus-restoring dialogs. Favorite worlds that are
+also survey milestones appear once. Copied-save readings and app records remain
+explicitly separated; save refresh and stale/error behavior are unchanged.
 
-The local ignored `.env` points to `D:/Starfield/StarfieldCompanionSaves`. A real-folder API check succeeded, and source hashes and modification times were unchanged. The built app displayed the real character and location, refreshed successfully, fit a 390px viewport and had no browser errors. Private desktop/mobile screenshots remain under ignored `backend/instance/save_extracts/`. The verified review instance is running at `http://127.0.0.1:5002` using mock AI.
+The desktop Hub fits 1280×720, 1440×900 and 1024×768 without document or overview
+scrolling under normal fixture content. The other terminal workspaces retain
+navigation while long forms/lists scroll inside their content area. Galaxy &
+Surveys keeps its existing styles and interactions. Narrow/short windows use
+normal scrolling; 390px layouts have no horizontal overflow. Long slate text,
+expanded notes and unusually large/error content retain bounded scrolling.
 
-Verification: **131 backend tests passed**, **21 browser tests passed**, frontend lint and production build passed, and 12 policy cases passed. Two targeted browser cases also cover the final playtime formatting. Browser tests used isolated data, artificial save responses and mock AI outside the Windows sandbox. Final documentation checks and whitespace results are recorded in the run report.
+Verification: **24 browser tests passed**, frontend lint and production build
+passed, and 12 policy cases passed. The browser suite uses an in-memory database,
+temporary uploads, synthetic save responses and mock AI outside the Windows
+sandbox. Desktop/mobile screenshots were inspected. No backend source, API
+contract, dependencies, player database, uploads or save files were changed.
+Backend unit tests were not rerun for this frontend-only slice.
 
-Limits: inventory, ship construction, outposts, missions and surveys remain undecoded. A saved location that names a ship does not supply its ship stats. Last-successful readings are in memory and reset on backend restart. Automatic copying and background refresh are not enabled. The copy process must publish complete `.sfs` files with preserved modification times. The default-port verification issue is documented in the run report; the real app was verified on port 5002.
-
-Results and limits: [run report](RUN_REPORT.md). Usage and format references: [extractor guide](../../../backend/save_reader/README.md). The [active gate](../active_gate/README.md) routes the next bounded request. Existing terminal functionality and its verification history are documented in the run report.
+The existing review app at `http://127.0.0.1:5002` serves the current built HTML.
+No Electron native-window verification was performed. The browser screenshots
+and verification log remain ignored. Gate, link and whitespace checks are
+recorded in the [run report](RUN_REPORT.md). The [active gate](../active_gate/README.md)
+returns the display and interaction review to the user.
